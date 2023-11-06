@@ -368,11 +368,11 @@
       Fluid.utils.createCssLink('https://cdn.staticfile.org/waline/2.15.5/waline.min.css')
       Fluid.utils.createScript('https://cdn.staticfile.org/waline/2.15.5/waline.min.js', function() {
         var options = Object.assign(
-          {"serverURL":"https://waline-d2twry5qe-sagis-projects-a15e760b.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {"serverURL":"https://waline-d2twry5qe-sagis-projects-a15e760b.vercel.app","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
           {
             el: '#waline',
             path: window.location.pathname, 
-            serverURL: 'https://waline-d2twry5qe-sagis-projects-a15e760b.vercel.app/',
+            serverURL: 'https://waline-d2twry5qe-sagis-projects-a15e760b.vercel.app',
           }
         )
         Waline.init(options);
