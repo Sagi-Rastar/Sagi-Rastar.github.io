@@ -16,17 +16,21 @@
   <meta name="author" content="SagiRastar">
   <meta name="keywords" content="">
   
-    <meta name="description" content="#linux #网络编程 #作业   202103092130 杜崇源 21电信3班  linux作业 | 网络编程作业实验环境 硬件：树莓派3b+ 系统：Raspbian GNU&#x2F;Linux 11 (bullseye) 编辑器与连接方式：vscode远程ssh 编译器：gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1)   作业概述通过实际运">
+    <meta name="description" content="#linux #网络编程 #作业  linux作业 | 网络编程作业实验环境 硬件：树莓派3b+ 系统：Raspbian GNU&#x2F;Linux 11 (bullseye) 编辑器与连接方式：vscode远程ssh 编译器：gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1)   作业概述通过实际运行tcp&#x2F;udp实例代码，了解linux网">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【嵌入式linux】网络编程实验报告">
 <meta property="og:url" content="http://example.com/2023/11/07/%E3%80%90%E5%B5%8C%E5%85%A5%E5%BC%8Flinux%E3%80%91%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/index.html">
 <meta property="og:site_name" content="⭐SagiRastar&#39;s Blog⭐">
-<meta property="og:description" content="#linux #网络编程 #作业   202103092130 杜崇源 21电信3班  linux作业 | 网络编程作业实验环境 硬件：树莓派3b+ 系统：Raspbian GNU&#x2F;Linux 11 (bullseye) 编辑器与连接方式：vscode远程ssh 编译器：gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1)   作业概述通过实际运">
+<meta property="og:description" content="#linux #网络编程 #作业  linux作业 | 网络编程作业实验环境 硬件：树莓派3b+ 系统：Raspbian GNU&#x2F;Linux 11 (bullseye) 编辑器与连接方式：vscode远程ssh 编译器：gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1)   作业概述通过实际运行tcp&#x2F;udp实例代码，了解linux网">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029160553.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png">
 <meta property="article:published_time" content="2023-11-07T03:16:01.000Z">
-<meta property="article:modified_time" content="2023-11-07T03:16:13.888Z">
+<meta property="article:modified_time" content="2023-11-07T03:48:33.891Z">
 <meta property="article:author" content="SagiRastar">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png">
   
   
   
@@ -219,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.5k 字
+          4.4k 字
         
       </span>
     
@@ -230,7 +234,7 @@
         
         
         
-          38 分钟
+          37 分钟
         
       </span>
     
@@ -273,9 +277,6 @@
               <div class="markdown-body">
                 
                 <p>#linux #网络编程 #作业 </p>
-<blockquote>
-<p>202103092130 杜崇源 21电信3班</p>
-</blockquote>
 <h1 id="linux作业-网络编程"><a href="#linux作业-网络编程" class="headerlink" title="linux作业 | 网络编程"></a>linux作业 | 网络编程</h1><h2 id="作业实验环境"><a href="#作业实验环境" class="headerlink" title="作业实验环境"></a>作业实验环境</h2><ul>
 <li>硬件：<code>树莓派3b+</code></li>
 <li>系统：<code>Raspbian GNU/Linux 11 (bullseye)</code></li>
@@ -287,7 +288,7 @@
 <li>TCP回环测试</li>
 <li>UDP回环测试<br>将分别记录各自过程</li>
 </ul>
-<h2 id="TCP回环实验测试"><a href="#TCP回环实验测试" class="headerlink" title="TCP回环实验测试"></a>TCP回环实验测试</h2><h3 id="实验效果"><a href="#实验效果" class="headerlink" title="实验效果"></a>实验效果</h3><p>![[Pasted image 20231029154045.png]]<br>如上图所示，左侧为 <code>tcp_client</code> 端，右侧为 <code>tcp_server</code> 端，对应为各自所运行的终端。</p>
+<h2 id="TCP回环实验测试"><a href="#TCP回环实验测试" class="headerlink" title="TCP回环实验测试"></a>TCP回环实验测试</h2><h3 id="实验效果"><a href="#实验效果" class="headerlink" title="实验效果"></a>实验效果</h3><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png" srcset="/img/loading.gif" lazyload><br>如上图所示，左侧为 <code>tcp_client</code> 端，右侧为 <code>tcp_server</code> 端，对应为各自所运行的终端。</p>
 <ul>
 <li>先运行右侧 <code>server</code> 端，传入参数为 <code>127.0.0.1 55566</code> ，开始阻塞等待 <code>client</code> 端连接</li>
 <li>再运行左侧 <code>client</code> 端，传入参数一致，此时右侧 <code>server</code> 端打印 <code>client</code> 端 <code>ip</code> 与 <code>port</code> ，结果为 <code>127.0.0.1:41292</code> ，可见 <code>client</code> 端程序为其套接字分配了一个随机的未被占用的端口</li>
@@ -303,7 +304,7 @@
 <li><code>struct sockaddr_in serveraddr;</code> - 存储 <code>server</code> 端信息所用结构体<ul>
 <li>存储地址与端口</li>
 <li><code>sockaddr_in</code> 源码注释： <code>/* Structure describing an Internet socket address.  */</code></li>
-<li>后面暂时看不懂，手敲了一下好像有四个成员变量（ #need_to_search<br>![[Pasted image 20231029160553.png]]</li>
+<li>后面暂时看不懂，手敲了一下好像有四个成员变量（ #need_to_search<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029160553.png" srcset="/img/loading.gif" lazyload>)</li>
 </ul>
 </li>
 <li>地址长度和缓冲区略</li>
@@ -406,7 +407,7 @@
 </li>
 </ul>
 <p> 没了</p>
-<h2 id="UDP回环实验测试"><a href="#UDP回环实验测试" class="headerlink" title="UDP回环实验测试"></a>UDP回环实验测试</h2><h3 id="实验效果-1"><a href="#实验效果-1" class="headerlink" title="实验效果"></a>实验效果</h3><p>![[Pasted image 20231029174022.png]]<br>实验效果跟tcp大差不差，只是右侧的 <code>server</code> 端的显示每一次接收到消息都会打印出地址和端口</p>
+<h2 id="UDP回环实验测试"><a href="#UDP回环实验测试" class="headerlink" title="UDP回环实验测试"></a>UDP回环实验测试</h2><h3 id="实验效果-1"><a href="#实验效果-1" class="headerlink" title="实验效果"></a>实验效果</h3><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png" srcset="/img/loading.gif" lazyload><br>实验效果跟tcp大差不差，只是右侧的 <code>server</code> 端的显示每一次接收到消息都会打印出地址和端口</p>
 <h3 id="udp-client端过程"><a href="#udp-client端过程" class="headerlink" title="udp_client端过程"></a>udp_client端过程</h3><p>跟上面tcp的过程也差不多，主要留意几个区别的地方：</p>
 <ul>
 <li>UDP（User Datagram Protocol）套接字，与TCP（Transmission Control Protocol）套接字的创建有一些关键区别：<ul>
