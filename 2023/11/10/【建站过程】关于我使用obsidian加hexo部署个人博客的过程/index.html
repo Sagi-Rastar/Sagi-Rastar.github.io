@@ -19,14 +19,14 @@
     <meta name="description" content="00-前言从很早之前就一直希望搭建一个属于自己的博客。不管是折腾各种有趣项目还是在看完了那些精彩的文学作品，总觉得没有留下一点什么，实在是可惜。发空间或者朋友圈这样的形式，实在不足以记录当时的心情，向有文章区的社交网站投稿文章，又显得不大合适。 兜兜转转，还是下定决心搭建一个属于自己的个人博客。一来是个人博客的形式更适合自己，在自己的站点碎碎念，不必考虑文章是否合乎投稿社群氛围；二来是近年来，随着">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【建站过程】关于我使用obsidian加hexo部署个人博客的过程">
-<meta property="og:url" content="http://example.com/2023/11/10/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/index.html">
+<meta property="og:url" content="https://sagi-rastar.github.io/2023/11/10/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/index.html">
 <meta property="og:site_name" content="⭐SagiRastar&#39;s Blog⭐">
 <meta property="og:description" content="00-前言从很早之前就一直希望搭建一个属于自己的博客。不管是折腾各种有趣项目还是在看完了那些精彩的文学作品，总觉得没有留下一点什么，实在是可惜。发空间或者朋友圈这样的形式，实在不足以记录当时的心情，向有文章区的社交网站投稿文章，又显得不大合适。 兜兜转转，还是下定决心搭建一个属于自己的个人博客。一来是个人博客的形式更适合自己，在自己的站点碎碎念，不必考虑文章是否合乎投稿社群氛围；二来是近年来，随着">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/source/_posts/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/image-20231110115126650.png">
-<meta property="og:image" content="http://example.com/source/_posts/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/image-20231110115305759.png">
-<meta property="og:image" content="http://example.com/source/_posts/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/image-20231110115759893.png">
-<meta property="og:image" content="http://example.com/source/_posts/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/image-20231110115742882.png">
+<meta property="og:image" content="https://sagi-rastar.github.io/source/_posts/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/image-20231110115126650.png">
+<meta property="og:image" content="https://sagi-rastar.github.io/source/_posts/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/image-20231110115305759.png">
+<meta property="og:image" content="https://sagi-rastar.github.io/source/_posts/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/image-20231110115759893.png">
+<meta property="og:image" content="https://sagi-rastar.github.io/source/_posts/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/image-20231110115742882.png">
 <meta property="article:published_time" content="2023-11-10T02:18:47.000Z">
 <meta property="article:modified_time" content="2023-11-11T09:02:03.552Z">
 <meta property="article:author" content="SagiRastar">
@@ -35,7 +35,7 @@
 <meta property="article:tag" content="个人博客">
 <meta property="article:tag" content="建站">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/source/_posts/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/image-20231110115126650.png">
+<meta name="twitter:image" content="https://sagi-rastar.github.io/source/_posts/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/image-20231110115126650.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -84,7 +84,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"sagi-rastar.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -320,7 +320,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：几秒前
+                    本文最后更新于：3 分钟前
                   
                 
               </p>
@@ -491,7 +491,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>【建站过程】关于我使用obsidian加hexo部署个人博客的过程</div>
-      <div>http://example.com/2023/11/10/【建站过程】关于我使用obsidian加hexo部署个人博客的过程/</div>
+      <div>https://sagi-rastar.github.io/2023/11/10/【建站过程】关于我使用obsidian加hexo部署个人博客的过程/</div>
     </div>
     <div class="license-meta">
       
