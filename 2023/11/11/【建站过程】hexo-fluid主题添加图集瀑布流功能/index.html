@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://sagi-rastar.github.io/2023/11/11/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/image-20231111164045874.png">
 <meta property="og:image" content="https://sagi-rastar.github.io/2023/11/11/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/image-20231111165046333.png">
 <meta property="article:published_time" content="2023-11-11T08:30:59.000Z">
-<meta property="article:modified_time" content="2023-11-11T12:04:58.513Z">
+<meta property="article:modified_time" content="2023-11-15T13:13:56.321Z">
 <meta property="article:author" content="SagiRastar">
 <meta property="article:tag" content="过程记录">
 <meta property="article:tag" content="个人博客">
@@ -319,7 +319,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：4 天前
+                    本文最后更新于：14 分钟前
                   
                 
               </p>
@@ -331,7 +331,7 @@
 <h1 id="01-搭建方案"><a href="#01-搭建方案" class="headerlink" title="01-搭建方案"></a>01-搭建方案</h1><p>通过查阅和参考其他大佬们的博客，发现hexo5有的一个功能 <code>注入代码</code> 是一个不错的方案。本次初步实现图集瀑布流的功能主要参考了<a target="_blank" rel="noopener" href="https://4dtree.github.io/2022/06/21/Hexo-Fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">@四维树大佬的这篇博客</a> 受益匪浅，感谢！</p>
 <p>其中，对于 <code>scripts</code> 文件夹，如果之前没有使用过hexo注入代码功能的朋友，可能会感到疑惑，可以先去<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/advance/#hexo-%E6%B3%A8%E5%85%A5%E4%BB%A3%E7%A0%81">官方文档</a> 了解一下注入代码的功能：</p>
 <blockquote>
-<p>Hexo 注入代码的方法：<br><em>编写注入代码，需要在博客的根目录下创建 <code>scripts</code> 文件夹，然后在里面任意命名创建一个 js 文件即可。</em></p>
+<p>Hexo 注入代码的方法：<br><em>编写注入代码，需要在博客的根目录下创建  <code>scripts</code> 文件夹，然后在里面任意命名创建一个 js 文件即可。</em></p>
 </blockquote>
 <p>主要的过程在这位大佬的博客里面叙述的非常详细，此处就不重造轮子，重点记录一下后面添加图片以及站点显示的一些文本如何对应源代码设置：<br><img src="/2023/11/11/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/image-20231111164045874.png" srcset="/img/loading.gif" lazyload></p>
 <ol>
