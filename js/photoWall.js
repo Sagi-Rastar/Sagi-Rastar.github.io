@@ -44,7 +44,7 @@ const photo = {
                             <img  class="lazyload" data-src="${imgPath}${imgNameWithPattern}"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                             onload="lzld(this)"
-                            lazyload="auto">
+                            lazyload="true">
                     </a>
                   </div>
                 

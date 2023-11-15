@@ -86,7 +86,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"sagi-rastar.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"sagi-rastar.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -323,7 +323,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：7 分钟前
+                    本文最后更新于：14 分钟前
                   
                 
               </p>
@@ -331,7 +331,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="【学习笔记】STM32中的GPIO框图解析与软件配置"><a href="#【学习笔记】STM32中的GPIO框图解析与软件配置" class="headerlink" title="【学习笔记】STM32中的GPIO框图解析与软件配置"></a>【学习笔记】STM32中的GPIO框图解析与软件配置</h1><h2 id="GPIO简介"><a href="#GPIO简介" class="headerlink" title="GPIO简介"></a>GPIO简介</h2><p>GPIO全称为General-purpose I&#x2F;O ports，一般译为“通用输入输出端口”，是STM32单片机中最基础的外设之一。<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106182513.png" srcset="/img/loading.gif" lazyload>  </p>
+                <h1 id="【学习笔记】STM32中的GPIO框图解析与软件配置"><a href="#【学习笔记】STM32中的GPIO框图解析与软件配置" class="headerlink" title="【学习笔记】STM32中的GPIO框图解析与软件配置"></a>【学习笔记】STM32中的GPIO框图解析与软件配置</h1><h2 id="GPIO简介"><a href="#GPIO简介" class="headerlink" title="GPIO简介"></a>GPIO简介</h2><p>GPIO全称为General-purpose I&#x2F;O ports，一般译为“通用输入输出端口”，是STM32单片机中最基础的外设之一。<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106182513.png">  </p>
 <blockquote>
 <p>STM32芯片架构简图 参考&lt;STM32库开发实战指南——基于野火MINI开发板&gt;</p>
 </blockquote>
@@ -340,7 +340,7 @@
 <p>GPIOA12，为A组第12号引脚。（关于port和pin的叫法属于个人习惯）</p>
 </blockquote>
 <p><code>输出功能</code>可以实现控制引脚输出高低电平，实现开关控制，也可以接入继电器# 【学习笔记】STM32中的GPIO框图解析与软件配置</p>
-<h2 id="GPIO简介-1"><a href="#GPIO简介-1" class="headerlink" title="GPIO简介"></a>GPIO简介</h2><p>GPIO全称为General-purpose I&#x2F;O ports，一般译为“通用输入输出端口”，是STM32单片机中最基础的外设之一。<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106182513.png" srcset="/img/loading.gif" lazyload>  </p>
+<h2 id="GPIO简介-1"><a href="#GPIO简介-1" class="headerlink" title="GPIO简介"></a>GPIO简介</h2><p>GPIO全称为General-purpose I&#x2F;O ports，一般译为“通用输入输出端口”，是STM32单片机中最基础的外设之一。<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106182513.png">  </p>
 <blockquote>
 <p>STM32芯片架构简图 参考&lt;STM32库开发实战指南——基于野火MINI开发板&gt;</p>
 </blockquote>
@@ -354,7 +354,7 @@
 <blockquote>
 <p>过一遍理解就可，有个印象</p>
 </blockquote>
-<h2 id="GPIO基本框图"><a href="#GPIO基本框图" class="headerlink" title="GPIO基本框图"></a>GPIO基本框图</h2><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106151230.png" srcset="/img/loading.gif" lazyload alt="GPIO基本框图"><br>虽然标注的有点花花绿绿（）但是大致上可以分为三个部分：</p>
+<h2 id="GPIO基本框图"><a href="#GPIO基本框图" class="headerlink" title="GPIO基本框图"></a>GPIO基本框图</h2><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106151230.png" alt="GPIO基本框图"><br>虽然标注的有点花花绿绿（）但是大致上可以分为三个部分：</p>
 <ul>
 <li>紫色为引脚与外部设备连接的端口。</li>
 <li>以蓝色箭头为主线的一串冷色相关的，为输入模式相关的电路。</li>
@@ -400,7 +400,7 @@
 <p>对bsp的个人理解：不同外设的控制代码。</p>
 </blockquote>
 <p>本次使用的开发板是<code>野火的F103-MINI 开发板</code>，下面是本次例程所涉及的硬件原理图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111150900.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111150900.png"></p>
 <p>如图所示容易看出，若将这两个GPIO引脚设置为低电平即可点亮LED。</p>
 <p>本次例程中关于引脚定义的宏：</p>
 <blockquote>
@@ -412,7 +412,7 @@
 
 <p>此处控制LED亮灭的操作是直接向<code>BSRR</code>写入控制指令来实现的，对<code>BSRR</code>低 16 位 写 1 输出高电平，对<code>BSRR</code>高 16 位写 1 输出低电平。同时，对<code>ODR</code>某位进行异或操作可反转位的状态。</p>
 <blockquote>
-<p><code>BSRR</code>和<code>ODR</code>在前文详解GPIO框图的输出模式时候提到过<br><code>BSRR</code>：置位&#x2F;复位寄存器 GPIOx_BSRR，Bit Set&#x2F;Reset Register<br><code>ODR</code>：输出数据寄存器GPIOx_ODR，Output Data Register<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111155258.png" srcset="/img/loading.gif" lazyload></p>
+<p><code>BSRR</code>和<code>ODR</code>在前文详解GPIO框图的输出模式时候提到过<br><code>BSRR</code>：置位&#x2F;复位寄存器 GPIOx_BSRR，Bit Set&#x2F;Reset Register<br><code>ODR</code>：输出数据寄存器GPIOx_ODR，Output Data Register<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111155258.png"></p>
 </blockquote>
 <blockquote>
 <p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。<br>除此之外对<code>置位/复位寄存器 GPIOx_BSRR</code>的值进行修改也可以影响”输出数据寄存器“的值。</p>
@@ -459,7 +459,7 @@
 <blockquote>
 <p>过一遍理解就可，有个印象</p>
 </blockquote>
-<h2 id="GPIO基本框图-1"><a href="#GPIO基本框图-1" class="headerlink" title="GPIO基本框图"></a>GPIO基本框图</h2><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106151230.png" srcset="/img/loading.gif" lazyload alt="GPIO基本框图"><br>虽然标注的有点花花绿绿（）但是大致上可以分为三个部分：</p>
+<h2 id="GPIO基本框图-1"><a href="#GPIO基本框图-1" class="headerlink" title="GPIO基本框图"></a>GPIO基本框图</h2><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106151230.png" alt="GPIO基本框图"><br>虽然标注的有点花花绿绿（）但是大致上可以分为三个部分：</p>
 <ul>
 <li>紫色为引脚与外部设备连接的端口。</li>
 <li>以蓝色箭头为主线的一串冷色相关的，为输入模式相关的电路。</li>
@@ -505,7 +505,7 @@
 <p>对bsp的个人理解：不同外设的控制代码。</p>
 </blockquote>
 <p>本次使用的开发板是<code>野火的F103-MINI 开发板</code>，下面是本次例程所涉及的硬件原理图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111150900.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111150900.png"></p>
 <p>如图所示容易看出，若将这两个GPIO引脚设置为低电平即可点亮LED。</p>
 <p>本次例程中关于引脚定义的宏：</p>
 <blockquote>
@@ -517,7 +517,7 @@
 
 <p>此处控制LED亮灭的操作是直接向<code>BSRR</code>写入控制指令来实现的，对<code>BSRR</code>低 16 位 写 1 输出高电平，对<code>BSRR</code>高 16 位写 1 输出低电平。同时，对<code>ODR</code>某位进行异或操作可反转位的状态。</p>
 <blockquote>
-<p><code>BSRR</code>和<code>ODR</code>在前文详解GPIO框图的输出模式时候提到过<br><code>BSRR</code>：置位&#x2F;复位寄存器 GPIOx_BSRR，Bit Set&#x2F;Reset Register<br><code>ODR</code>：输出数据寄存器GPIOx_ODR，Output Data Register<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111155258.png" srcset="/img/loading.gif" lazyload></p>
+<p><code>BSRR</code>和<code>ODR</code>在前文详解GPIO框图的输出模式时候提到过<br><code>BSRR</code>：置位&#x2F;复位寄存器 GPIOx_BSRR，Bit Set&#x2F;Reset Register<br><code>ODR</code>：输出数据寄存器GPIOx_ODR，Output Data Register<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111155258.png"></p>
 </blockquote>
 <blockquote>
 <p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。<br>除此之外对<code>置位/复位寄存器 GPIOx_BSRR</code>的值进行修改也可以影响”输出数据寄存器“的值。</p>
@@ -648,7 +648,7 @@
             
   
   
-    <article id="comments" lazyload>
+    <article id="comments">
       
     <div id="giscus" class="giscus"></div>
     <script type="text/javascript">
@@ -855,7 +855,9 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
   
 
 
