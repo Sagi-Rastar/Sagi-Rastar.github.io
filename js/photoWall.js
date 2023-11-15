@@ -1,5 +1,5 @@
 var imgDataPath = "/pic/galleryList.json"; //图片名称高宽信息json文件路径
-var imgPath = 'https://cdn.jsdelivr.net/gh/Sagi-Rastar/cdn_for_blog/pic/img/';  //图片访问路径
+var imgPath = 'https://originfastly.jsdelivr.net/gh/Sagi-Rastar/cdn_for_blog/pic/img/';  //图片访问路径
 // var imgPath = "https://cdn.jsdelivr.net/gh/Cenergy/images/gallery/"; //图片访问路径
 var imgMaxNum = 50; //图片显示数量
 
