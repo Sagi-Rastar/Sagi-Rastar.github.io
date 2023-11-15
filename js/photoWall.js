@@ -1,5 +1,6 @@
 var imgDataPath = "/pic/galleryList.json"; //图片名称高宽信息json文件路径
-var imgPath = 'https://originfastly.jsdelivr.net/gh/Sagi-Rastar/cdn_for_blog/pic/img/';  //图片访问路径
+// var imgPath = 'https://originfastly.jsdelivr.net/gh/Sagi-Rastar/cdn_for_blog/pic/img/';  //图片访问路径
+var imgPath = '/pic/img/';  //图片访问路径
 // var imgPath = "https://cdn.jsdelivr.net/gh/Cenergy/images/gallery/"; //图片访问路径
 var imgMaxNum = 50; //图片显示数量
 
@@ -10,7 +11,7 @@ var windowWidth =
 if (windowWidth < 768) {
   var imageWidth = 145; //图片显示宽度(手机端)
 } else {
-  var imageWidth = 250; //图片显示宽度
+  var imageWidth = 350; //图片显示宽度
 }
 
 const photo = {
@@ -46,7 +47,7 @@ const photo = {
                             lazyload="auto">
                     </a>
                   </div>
-                  <p>${imgName}</p>
+                
                 </div>`;
                 // 如果不希望显示图片名称的话删去<p>${imgName}</p>这一行即可。
     return htmlEle;
