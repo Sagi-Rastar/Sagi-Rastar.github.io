@@ -16,18 +16,18 @@
   <meta name="author" content="SagiRastar">
   <meta name="keywords" content="">
   
-    <meta name="description" content="网络编程还是很有意思的，不过虽然了解了标准IO的方法，到头来还是用python的多（">
+    <meta name="description" content="使用标准IO，Python也好用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【嵌入式linux】网络编程实验报告">
-<meta property="og:url" content="https://sagi-rastar.github.io/2023/11/07/%E3%80%90%E5%B5%8C%E5%85%A5%E5%BC%8Flinux%E3%80%91%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/index.html">
+<meta property="og:title" content="网络编程实验报告">
+<meta property="og:url" content="https://sagi-rastar.github.io/2023/11/07/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/index.html">
 <meta property="og:site_name" content="SagiRastar&#39;s Blog">
-<meta property="og:description" content="网络编程还是很有意思的，不过虽然了解了标准IO的方法，到头来还是用python的多（">
+<meta property="og:description" content="使用标准IO，Python也好用">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029160553.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png">
 <meta property="article:published_time" content="2023-11-07T03:16:01.000Z">
-<meta property="article:modified_time" content="2023-11-15T14:14:27.103Z">
+<meta property="article:modified_time" content="2023-11-16T02:21:49.364Z">
 <meta property="article:author" content="SagiRastar">
 <meta property="article:tag" content="嵌入式">
 <meta property="article:tag" content="linux">
@@ -40,7 +40,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>【嵌入式linux】网络编程实验报告 - SagiRastar&#39;s Blog</title>
+  <title>网络编程实验报告 - SagiRastar&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -75,6 +75,8 @@
 
 
   
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/mac.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/toubudaziji.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap.css">
 
@@ -236,7 +238,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="【嵌入式linux】网络编程实验报告"></span>
+            <span id="subtitle" data-typed-text="网络编程实验报告"></span>
           
         </div>
 
@@ -315,12 +317,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">【嵌入式linux】网络编程实验报告</h1>
+            <h1 id="seo-header">网络编程实验报告</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：14 分钟前
+                    本文最后更新于：1 小时前
                   
                 
               </p>
@@ -339,7 +341,7 @@
 <li>TCP回环测试</li>
 <li>UDP回环测试<br>将分别记录各自过程</li>
 </ul>
-<h2 id="TCP回环实验测试"><a href="#TCP回环实验测试" class="headerlink" title="TCP回环实验测试"></a>TCP回环实验测试</h2><h3 id="实验效果"><a href="#实验效果" class="headerlink" title="实验效果"></a>实验效果</h3><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png"><br>如上图所示，左侧为 <code>tcp_client</code> 端，右侧为 <code>tcp_server</code> 端，对应为各自所运行的终端。</p>
+<h2 id="TCP回环实验测试"><a href="#TCP回环实验测试" class="headerlink" title="TCP回环实验测试"></a>TCP回环实验测试</h2><h3 id="实验效果"><a href="#实验效果" class="headerlink" title="实验效果"></a>实验效果</h3><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png" srcset="/img/loading.gif" lazyload><br>如上图所示，左侧为 <code>tcp_client</code> 端，右侧为 <code>tcp_server</code> 端，对应为各自所运行的终端。</p>
 <ul>
 <li>先运行右侧 <code>server</code> 端，传入参数为 <code>127.0.0.1 55566</code> ，开始阻塞等待 <code>client</code> 端连接</li>
 <li>再运行左侧 <code>client</code> 端，传入参数一致，此时右侧 <code>server</code> 端打印 <code>client</code> 端 <code>ip</code> 与 <code>port</code> ，结果为 <code>127.0.0.1:41292</code> ，可见 <code>client</code> 端程序为其套接字分配了一个随机的未被占用的端口</li>
@@ -355,7 +357,7 @@
 <li><code>struct sockaddr_in serveraddr;</code> - 存储 <code>server</code> 端信息所用结构体<ul>
 <li>存储地址与端口</li>
 <li><code>sockaddr_in</code> 源码注释： <code>/* Structure describing an Internet socket address.  */</code></li>
-<li>后面暂时看不懂，手敲了一下好像有四个成员变量（ #need_to_search<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029160553.png">)</li>
+<li>后面暂时看不懂，手敲了一下好像有四个成员变量（ #need_to_search<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029160553.png" srcset="/img/loading.gif" lazyload>)</li>
 </ul>
 </li>
 <li>地址长度和缓冲区略</li>
@@ -458,7 +460,7 @@
 </li>
 </ul>
 <p> 没了</p>
-<h2 id="UDP回环实验测试"><a href="#UDP回环实验测试" class="headerlink" title="UDP回环实验测试"></a>UDP回环实验测试</h2><h3 id="实验效果-1"><a href="#实验效果-1" class="headerlink" title="实验效果"></a>实验效果</h3><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png"><br>实验效果跟tcp大差不差，只是右侧的 <code>server</code> 端的显示每一次接收到消息都会打印出地址和端口</p>
+<h2 id="UDP回环实验测试"><a href="#UDP回环实验测试" class="headerlink" title="UDP回环实验测试"></a>UDP回环实验测试</h2><h3 id="实验效果-1"><a href="#实验效果-1" class="headerlink" title="实验效果"></a>实验效果</h3><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png" srcset="/img/loading.gif" lazyload><br>实验效果跟tcp大差不差，只是右侧的 <code>server</code> 端的显示每一次接收到消息都会打印出地址和端口</p>
 <h3 id="udp-client端过程"><a href="#udp-client端过程" class="headerlink" title="udp_client端过程"></a>udp_client端过程</h3><p>跟上面tcp的过程也差不多，主要留意几个区别的地方：</p>
 <ul>
 <li>UDP（User Datagram Protocol）套接字，与TCP（Transmission Control Protocol）套接字的创建有一些关键区别：<ul>
@@ -514,8 +516,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>【嵌入式linux】网络编程实验报告</div>
-      <div>https://sagi-rastar.github.io/2023/11/07/【嵌入式linux】网络编程实验报告/</div>
+      <div>网络编程实验报告</div>
+      <div>https://sagi-rastar.github.io/2023/11/07/网络编程实验报告/</div>
     </div>
     <div class="license-meta">
       
@@ -559,9 +561,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/08/%E3%80%90%E9%9F%B3%E4%B9%90%E5%89%A7%E3%80%91%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/" title="【音乐剧】当音乐遇见故事一起走上舞台">
+                      <a href="/2023/11/08/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/" title="当音乐遇见故事一起走上舞台">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【音乐剧】当音乐遇见故事一起走上舞台</span>
+                        <span class="hidden-mobile">当音乐遇见故事一起走上舞台</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -569,8 +571,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/07/%E3%80%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E3%80%91STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/" title="【学习笔记】STM32中通过EXTI配置外部中断事件">
-                        <span class="hidden-mobile">【学习笔记】STM32中通过EXTI配置外部中断事件</span>
+                      <a href="/2023/11/07/STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/" title="STM32中通过EXTI配置外部中断事件">
+                        <span class="hidden-mobile">STM32中通过EXTI配置外部中断事件</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
