@@ -23,16 +23,14 @@
 <meta property="og:site_name" content="SagiRastar&#39;s Blog">
 <meta property="og:description" content="很久之前写的了，基本只是作为初见的学习记录而已。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/rect234.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230105143832.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111151132.png">
+<meta property="og:image" content="https://sagi-rastar.github.io/img/embed.jpg">
 <meta property="article:published_time" content="2023-11-07T03:04:45.000Z">
-<meta property="article:modified_time" content="2023-11-16T02:24:04.114Z">
+<meta property="article:modified_time" content="2023-11-18T09:53:07.017Z">
 <meta property="article:author" content="SagiRastar">
 <meta property="article:tag" content="stm32">
 <meta property="article:tag" content="嵌入式">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/rect234.png">
+<meta name="twitter:image" content="https://sagi-rastar.github.io/img/embed.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -320,7 +318,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：1 天前
+                    本文最后更新于：24 分钟前
                   
                 
               </p>
@@ -328,11 +326,11 @@
             
               <div class="markdown-body">
                 
-                <h1 id="【学习笔记】STM32中通过EXTI中断源配置中断事件"><a href="#【学习笔记】STM32中通过EXTI中断源配置中断事件" class="headerlink" title="【学习笔记】STM32中通过EXTI中断源配置中断事件"></a>【学习笔记】STM32中通过EXTI中断源配置中断事件</h1><h2 id="中断事件"><a href="#中断事件" class="headerlink" title="中断事件"></a>中断事件</h2><p>一个中断事件中一般有很多的触发源，一般将其称作“中断源”。主程序在运行的过程中，一旦出现了中断源，其便会让CPU停止当前正在运行的程序，转而进行中断事件指定的程序，执行完所有的“中断程序”之后，便会返回原本主程序的断点处继续运行。  </p>
+                <h1 id="1-【学习笔记】STM32中通过EXTI中断源配置中断事件"><a href="#1-【学习笔记】STM32中通过EXTI中断源配置中断事件" class="headerlink" title="1 【学习笔记】STM32中通过EXTI中断源配置中断事件"></a>1 【学习笔记】STM32中通过EXTI中断源配置中断事件</h1><h2 id="1-1-中断事件"><a href="#1-1-中断事件" class="headerlink" title="1.1 中断事件"></a>1.1 中断事件</h2><p>一个中断事件中一般有很多的触发源，一般将其称作“中断源”。主程序在运行的过程中，一旦出现了中断源，其便会让CPU停止当前正在运行的程序，转而进行中断事件指定的程序，执行完所有的“中断程序”之后，便会返回原本主程序的断点处继续运行。  </p>
 <p>EXTI (External interrupt&#x2F;event controller) 是众多中断源之中的一个，一般译为“外部中断”。外部中断有很多的输入通道，一般来说有20个，其中GPIO占了16个，其余4个为不常用的PVD（电源电压监测）输出、RTC闹钟、USB唤醒、ETH以太网唤醒。</p>
 <p>由于硬件与地址上的动态性（暂不展开），因此需要NVIC (Nested Vectored Interrupt Controller) 执行管理中断源与分配优先级两个工作，一般译为“嵌套中断向量控制器”。其中，中断源向NVIC输出的通道一般译为“中断通道”，需要注意的是一个中断源可能会占用多个中断通道，事实上中断源一般都占用多个中断通道。</p>
 <p>本文将主要记录外部中断中GPIO的原理与配置过程，作为学习笔记记录。</p>
-<h2 id="EXTI工作原理"><a href="#EXTI工作原理" class="headerlink" title="EXTI工作原理"></a>EXTI工作原理</h2><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/rect234.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="1-2-EXTI工作原理"><a href="#1-2-EXTI工作原理" class="headerlink" title="1.2 EXTI工作原理"></a>1.2 EXTI工作原理</h2><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/rect234.png" srcset="/img/loading.gif" lazyload></p>
 <p>EXTI作为检测外部中断的中断源，对GPIO进行监测是其最主要的功能。EXTI在对GPIO的检测上一般有16个输入通道（注意这里是EXTI的输入通道而不是“中断通道”），但是GPIO每一个port口都有0-15总计16个pin，如果要检测所有的GPIO明显16个输入通道不够用。  </p>
 <p>于是在STM32上需要用到AFIO这个“选择器”。具体的工作原理就是让相同的Pin口对应到同一条输入通道，例如<code>PX0 =&gt; EXTI0</code>,<code>PX1 =&gt;EXTI1</code>……以此类推，换句话说每个输入通道同时只能监测一个port口，这也就是为什么相同的pin口不能同时触发中断的原因。</p>
 <p>解决了监测所有GPIO口的问题之后，所有的输入信号便可以通过EXTI被处理。在EXTI中做的处理通俗来讲就是通过一些寄存器，配置触发方式以及选择响应是“中断”还是“事件”。</p>
@@ -345,7 +343,7 @@
 <p>ST公司为了节省NVIC的中断资源，将EXTI的5-9通道合并为<code>EXTI9_5</code>，将10-15合并为<code>EXTI15_10</code>，因此例程中对于pin&#x3D;13的这个GPIO口中断源选择为<code>EXTI15_10</code>。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY2_INT_EXTI_IRQ                 EXTI15_10_IRQn</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY2_IRQHandler                   EXTI15_10_IRQHandler</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="EXTI具体配置"><a href="#EXTI具体配置" class="headerlink" title="EXTI具体配置"></a>EXTI具体配置</h2><blockquote>
+<h2 id="1-3-EXTI具体配置"><a href="#1-3-EXTI具体配置" class="headerlink" title="1.3 EXTI具体配置"></a>1.3 EXTI具体配置</h2><blockquote>
 <p>本节例程参考野火的&lt;STM32 HAL库开发实战指南——F103系列&gt;。</p>
 </blockquote>
 <p>本次使用的开发板是<code>野火的F103-MINI 开发板</code>，下面是本次例程所涉及的硬件原理图：</p>
@@ -392,7 +390,7 @@
 </blockquote>
 </li>
 </ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>中断事件配置的过程大概就是这样，抓住上面三个要点就差不多。有的地方比较绕还是有一点翻译上的原因，比如EXTI线具体指什么（我的理解就是EXTI这个中断源向NVIC走的中断通道）之类的。</p>
+<h2 id="1-4-总结"><a href="#1-4-总结" class="headerlink" title="1.4 总结"></a>1.4 总结</h2><p>中断事件配置的过程大概就是这样，抓住上面三个要点就差不多。有的地方比较绕还是有一点翻译上的原因，比如EXTI线具体指什么（我的理解就是EXTI这个中断源向NVIC走的中断通道）之类的。</p>
 <p>例程里面没有太过多涉及EXTI相关的一些寄存器的配置，这点还需要注意。</p>
 
                 
@@ -401,6 +399,27 @@
             <hr/>
             <div>
               <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Embed/" class="category-chain-item">Embed</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
   
   
     <div class="post-meta">
