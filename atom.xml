@@ -33,13 +33,13 @@
     <category term="Embed" scheme="https://sagi-rastar.github.io/categories/Embed/"/>
     
     
-    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    <category term="FPGA" scheme="https://sagi-rastar.github.io/tags/FPGA/"/>
     
     <category term="过程记录" scheme="https://sagi-rastar.github.io/tags/%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
     
-    <category term="作业" scheme="https://sagi-rastar.github.io/tags/%E4%BD%9C%E4%B8%9A/"/>
+    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
-    <category term="FPGA" scheme="https://sagi-rastar.github.io/tags/FPGA/"/>
+    <category term="作业" scheme="https://sagi-rastar.github.io/tags/%E4%BD%9C%E4%B8%9A/"/>
     
   </entry>
   
@@ -87,9 +87,9 @@
     <category term="Web" scheme="https://sagi-rastar.github.io/categories/Web/"/>
     
     
-    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
     <category term="过程记录" scheme="https://sagi-rastar.github.io/tags/%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     <category term="个人博客" scheme="https://sagi-rastar.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
@@ -143,11 +143,11 @@
     
     <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
+    <category term="作业" scheme="https://sagi-rastar.github.io/tags/%E4%BD%9C%E4%B8%9A/"/>
+    
     <category term="linux" scheme="https://sagi-rastar.github.io/tags/linux/"/>
     
     <category term="网络编程" scheme="https://sagi-rastar.github.io/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="作业" scheme="https://sagi-rastar.github.io/tags/%E4%BD%9C%E4%B8%9A/"/>
     
   </entry>
   
@@ -168,9 +168,9 @@
     <category term="Embed" scheme="https://sagi-rastar.github.io/categories/Embed/"/>
     
     
-    <category term="stm32" scheme="https://sagi-rastar.github.io/tags/stm32/"/>
-    
     <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="stm32" scheme="https://sagi-rastar.github.io/tags/stm32/"/>
     
   </entry>
   
@@ -191,9 +191,9 @@
     <category term="Embed" scheme="https://sagi-rastar.github.io/categories/Embed/"/>
     
     
-    <category term="stm32" scheme="https://sagi-rastar.github.io/tags/stm32/"/>
-    
     <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="stm32" scheme="https://sagi-rastar.github.io/tags/stm32/"/>
     
   </entry>
   
