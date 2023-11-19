@@ -2136,68 +2136,111 @@ input[type=checkbox] {
 .tagcloud a:hover {
   color: var(--link-hover-color) !important;
 }
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .links .card {
-  box-shadow: none;
+  box-shadow: 3px 5px 3px rgba(0,10,20,0.13);
   min-width: 33%;
-  background-color: transparent;
+  background-color: #fff;
+  border-radius: 1rem;
   border: 0;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  margin: 1rem 1rem;
+}
+.links .card:hover {
+  transform: perspective(1200px) translateY(-5%) rotateX(35deg) translateZ(0);
+  box-shadow: 5px 8px 5px rgba(0,10,20,0.3);
 }
 .links .card-body {
-  margin: 1rem 0;
+  width: 12em;
+  max-height: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  margin: 0 0;
   padding: 1rem;
-  border-radius: 0.3rem;
-  display: block;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
-}
-.links .card-body:hover .link-avatar {
-  transform: scale(1.1);
 }
 .links .card-content {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
-  height: 3.5rem;
+  height: 10.5rem;
 }
 .link-avatar {
-  flex: none;
-  width: 3rem;
-  height: 3rem;
-  margin-right: 0.75rem;
-  object-fit: cover;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
+  margin: 0;
+  height: $flexSize;
+  display: flex;
+  background-color: #fbf2ef;
+  box-shadow: 3px 5px 3px rgba(0,10,20,0.13);
 }
 .link-avatar img {
-  width: 100%;
   height: 100%;
-  border-radius: 50%;
-  background-color: transparent;
+  width: 100%;
+  max-width: 100%;
   object-fit: cover;
+  flex: 1 1 auto;
 }
 .link-text {
+  position: relative;
   flex: 1;
-  display: grid;
-  flex-direction: column;
-  line-height: 1.5;
+  overflow: visible;
+  text-overflow: ellipsis;
+  color: #719abb;
+  margin: 0.5 0.5 0.5em 0.5em;
+  padding: 1em;
+  transform: translateY(0);
+  transition: transform 0.5s ease, font-size 0.5s ease;
+}
+.card:hover .link-text {
+  transition: transform 0.5s ease, font-size 0.5s ease;
+  transform: translateY(0%);
+  font-size: 1.5em;
 }
 .link-title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: var(--text-color);
+  color: #22284d;
   font-weight: bold;
+  transition: transform 0.5s ease;
+}
+.card:hover .link-title {
+  transform: translateY(200%);
+}
+.link-site {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-50) translateY(0);
+  font-size: 1rem;
+  opacity: 0;
+  text-align: right; /* 初始状态左对齐 */
+  transition: opacity 0.5s ease, font-size 0.5s ease, text-align 0.5s ease, right 0.5s ease, left 0.5s ease, top 0.5s ease;
+  font-style: italic;
+  padding-left: 0.5em;
+}
+.card:hover .link-site {
+  right: 0;
+  top: 0;
+  text-align: right; /* 悬停时右对齐 */
+  opacity: 1;
+  font-size: 1rem;
 }
 .link-intro {
-  max-height: 2rem;
-  font-size: 0.85rem;
-  line-height: 1.2;
-  color: var(--sec-text-color);
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--sec-text-color);
+  font-weight: lighter;
+  transition: transform 0.5s ease;
+}
+.card:hover .link-intro {
+  transform: translateY(200%);
 }
 @media (max-width: 767px) {
   .links {
@@ -2207,8 +2250,10 @@ input[type=checkbox] {
     align-items: center;
   }
   .links .card {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    flex: 1 1 auto;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 1px 3px 3px rgba(0,10,20,0.06);
   }
 }
 @media (min-width: 768px) {
