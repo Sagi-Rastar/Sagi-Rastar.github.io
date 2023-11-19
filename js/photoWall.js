@@ -68,7 +68,7 @@ const photo = {
 
     data.forEach((item, index) => {
       const activeClass = index === 0 ? "active" : "";
-      liHtml += `<li class="nav-item" role="presentation">
+      liHtml += `<li class="nav-item custom-nav-item" role="presentation">
           <a class="nav-link ${activeClass} photo-tab" id="home-tab" photo-uuid="${item.name}" data-toggle="tab" href="#${item.name}"  role="tab" aria-controls="${item.name}" aria-selected="true">${item.name}</a>
         </li>`;
     });
