@@ -27,8 +27,8 @@
 <meta property="article:published_time" content="2023-11-07T02:57:34.000Z">
 <meta property="article:modified_time" content="2023-11-18T12:47:56.007Z">
 <meta property="article:author" content="SagiRastar">
-<meta property="article:tag" content="嵌入式">
 <meta property="article:tag" content="stm32">
+<meta property="article:tag" content="嵌入式">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://sagi-rastar.github.io/img/embed.jpg">
   
@@ -432,10 +432,10 @@
             
               <div class="markdown-body">
                 
-                <h1 id="1-学习笔记stm32中的gpio框图解析与软件配置"><a class="markdownIt-Anchor" href="#1-学习笔记stm32中的gpio框图解析与软件配置"></a> 1 【学习笔记】STM32中的GPIO框图解析与软件配置</h1>
-<h2 id="11-gpio简介"><a class="markdownIt-Anchor" href="#11-gpio简介"></a> 1.1 GPIO简介</h2>
-<p>GPIO全称为General-purpose I/O ports，一般译为“通用输入输出端口”，是STM32单片机中最基础的外设之一。<br />
-<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106182513.png" srcset="/img/loading.gif" lazyload alt="" /></p>
+                <h1>1 【学习笔记】STM32中的GPIO框图解析与软件配置</h1>
+<h2 id="1-1-GPIO简介">1.1 GPIO简介</h2>
+<p>GPIO全称为General-purpose I/O ports，一般译为“通用输入输出端口”，是STM32单片机中最基础的外设之一。<br>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106182513.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <blockquote>
 <p>STM32芯片架构简图 参考&lt;STM32库开发实战指南——基于野火MINI开发板&gt;</p>
 </blockquote>
@@ -444,9 +444,9 @@
 <p>GPIOA12，为A组第12号引脚。（关于port和pin的叫法属于个人习惯）</p>
 </blockquote>
 <p><code>输出功能</code>可以实现控制引脚输出高低电平，实现开关控制，也可以接入继电器# 【学习笔记】STM32中的GPIO框图解析与软件配置</p>
-<h2 id="12-gpio简介"><a class="markdownIt-Anchor" href="#12-gpio简介"></a> 1.2 GPIO简介</h2>
-<p>GPIO全称为General-purpose I/O ports，一般译为“通用输入输出端口”，是STM32单片机中最基础的外设之一。<br />
-<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106182513.png" srcset="/img/loading.gif" lazyload alt="" /></p>
+<h2 id="1-2-GPIO简介">1.2 GPIO简介</h2>
+<p>GPIO全称为General-purpose I/O ports，一般译为“通用输入输出端口”，是STM32单片机中最基础的外设之一。<br>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106182513.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <blockquote>
 <p>STM32芯片架构简图 参考&lt;STM32库开发实战指南——基于野火MINI开发板&gt;</p>
 </blockquote>
@@ -460,39 +460,39 @@
 <blockquote>
 <p>过一遍理解就可，有个印象</p>
 </blockquote>
-<h2 id="13-gpio基本框图"><a class="markdownIt-Anchor" href="#13-gpio基本框图"></a> 1.3 GPIO基本框图</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106151230.png" srcset="/img/loading.gif" lazyload alt="GPIO基本框图" /><br />
+<h2 id="1-3-GPIO基本框图">1.3 GPIO基本框图</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106151230.png" srcset="/img/loading.gif" lazyload alt=""><br>
 虽然标注的有点花花绿绿（）但是大致上可以分为三个部分：</p>
 <ul>
 <li>紫色为引脚与外部设备连接的端口。</li>
 <li>以蓝色箭头为主线的一串冷色相关的，为输入模式相关的电路。</li>
 <li>以红色箭头为主线的一串暖色相关的，为输出模式相关的电路。</li>
 </ul>
-<hr />
+<hr>
 <p>首先是紫色的<code>保护二极管与上下拉电阻</code>。</p>
-<p>引脚电压高于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>D</mi><mi>D</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{DD}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，上方二极管导通。<br />
-引脚电压低于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>S</mi><mi>S</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{SS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">S</span><span class="mord mathnormal mtight" style="margin-right:0.05764em;">S</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，下方二极管导通。</p>
+<p>引脚电压高于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>D</mi><mi>D</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{DD}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">DD</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，上方二极管导通。<br>
+引脚电压低于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>S</mi><mi>S</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{SS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">SS</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，下方二极管导通。</p>
 <p>这样就可以防止不正常的电压引入芯片导致芯片烧毁。但要注意，纵使有这样的保护也不能直接外接大功率驱动器件。</p>
-<hr />
+<hr>
 <p>其次是红色的<code>输出模式</code>这一条线，从左往右看。</p>
-<p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。<br />
+<p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。<br>
 除此之外对<code>置位/复位寄存器 GPIOx_BSRR</code>的值进行修改也可以影响”输出数据寄存器“的值。</p>
 <p>由这两个寄存器给出信号之后，通过一个开关接入输出控制。该开关可以控制是由”输出数据寄存器“还是由其他片上外设作为”输出源“。</p>
 <blockquote>
 <p>例如要使用串口的时候，需要一个通讯发送引脚的时候，就可以将某个GPIO引脚配置为串口复用功能。</p>
 </blockquote>
-<p>最关键的是由P-MOS与N-MOS两个管子组成的单元电路。<br />
+<p>最关键的是由P-MOS与N-MOS两个管子组成的单元电路。<br>
 这个单元电路使得GPIO的输出模式有两个模式，分别是<code>推挽输出</code>和<code>开漏输出</code>。</p>
-<p><code>推挽输出</code>中<br />
-输出源给高电平，经过反向，上方的P-MOS导通，下方的N-MOS关闭，对外输出高电平；<br />
+<p><code>推挽输出</code>中<br>
+输出源给高电平，经过反向，上方的P-MOS导通，下方的N-MOS关闭，对外输出高电平；<br>
 输出源给低电平，经过反向，上方N-MOS管关闭，上方P-MOS导通，对外输出低电平；</p>
-<p><code>开漏输出</code>中，上方的P_MOS不工作<br />
-当N-MOS导通的时候对外输出为低电平（接地）；<br />
+<p><code>开漏输出</code>中，上方的P_MOS不工作<br>
+当N-MOS导通的时候对外输出为低电平（接地）；<br>
 当N-MOS关闭的时候对外为高阻态，正常使用的时候需要接上拉电阻；此时等效于开漏电路，具有“线与”特性，一般应用在I2C、SMBUS通讯等需要“线与”功能的总线电路中，或者需要输出电平不匹配的时候。</p>
 <blockquote>
 <p>比如需要输出 5 伏的高电平，就可以在外部接一个上拉电阻，上拉电源为 5 伏， 并且把GPIO设置为开漏模式，当输出高阻态时，由上拉电阻和电源向外输出 5 伏的电平。</p>
 </blockquote>
-<hr />
+<hr>
 <p>最后是蓝色的<code>输入模式</code>这一条线，从右往左看。</p>
 <p>通过引脚采集电压之后，首先通过上/下拉电阻，配置成上/下拉输入，随后接一个TTL肖特基触发器，进行模数转换。</p>
 <p>最后将触发器给出的数字信号存储在“输入数据寄存器GPIOx_IDR”中，通过读取该寄存器就可以了解GPIO引脚的电平状态。</p>
@@ -500,15 +500,15 @@
 <blockquote>
 <p>例如使用串口通讯，需要一个通讯接收引脚的时候，就可以将某个GPIO引脚配置为串口复用功能。此处与输出模式的复用功能输入所举的例子对应。</p>
 </blockquote>
-<p>模拟输入与输出的通道是当引脚需要做ADC/DAC的时候，需要用原始信号时所提供的通道。<br />
-<code>ADC</code>时需要采集原始的模拟信号，因此不经过触发器。<br />
+<p>模拟输入与输出的通道是当引脚需要做ADC/DAC的时候，需要用原始信号时所提供的通道。<br>
+<code>ADC</code>时需要采集原始的模拟信号，因此不经过触发器。<br>
 <code>DAC</code>时需要输出原始的模拟信号，因此不经过双MOS管的结构。</p>
 <blockquote>
 <p>A for analog, D for digital. ADC-模数转换，DAC数模转换。</p>
 </blockquote>
-<hr />
+<hr>
 <p>至此基本将GPIO的原理框图进行了一遍梳理，下面为在HAL库中如何配置GPIO的一些记录。</p>
-<h2 id="14-hal库中gpio的配置"><a class="markdownIt-Anchor" href="#14-hal库中gpio的配置"></a> 1.4 HAL库中GPIO的配置</h2>
+<h2 id="1-4-HAL库中GPIO的配置">1.4 HAL库中GPIO的配置</h2>
 <blockquote>
 <p>本节例程参考野火的&lt;STM32 HAL库开发实战指南——F103系列&gt;使用固件库点亮LED一章</p>
 </blockquote>
@@ -518,7 +518,7 @@
 <p>对bsp的个人理解：不同外设的控制代码。</p>
 </blockquote>
 <p>本次使用的开发板是<code>野火的F103-MINI 开发板</code>，下面是本次例程所涉及的硬件原理图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111150900.png" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111150900.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>如图所示容易看出，若将这两个GPIO引脚设置为低电平即可点亮LED。</p>
 <p>本次例程中关于引脚定义的宏：</p>
 <blockquote>
@@ -528,55 +528,55 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/** 控制LED灯亮灭的宏，</span><br><span class="hljs-comment">	* LED低电平亮，设置ON=0，OFF=1</span><br><span class="hljs-comment">	* 若LED高电平亮，把宏设置成ON=1 ，OFF=0 即可</span><br><span class="hljs-comment">	*/</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> ON  GPIO_PIN_RESET</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> OFF GPIO_PIN_SET</span><br><br><span class="hljs-comment">/* 带参宏，可以像内联函数一样使用 */</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED1(a)	HAL_GPIO_WritePin(LED1_GPIO_PORT,LED1_PIN,a)</span><br><br><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED2(a)	HAL_GPIO_WritePin(LED2_GPIO_PORT,LED2_PIN,a)</span><br><br><br><span class="hljs-comment">/* 直接操作寄存器的方法控制IO */</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span>	digitalHi(p,i)			&#123;p-&gt;BSRR=i;&#125;			              <span class="hljs-comment">//设置为高电平</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> digitalLo(p,i)			&#123;p-&gt;BSRR=(uint32_t)i &lt;&lt; 16;&#125;		 <span class="hljs-comment">//输出低电平</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> digitalToggle(p,i)		&#123;p-&gt;ODR ^=i;&#125;		            	<span class="hljs-comment">//输出反转状态</span></span><br><br><br><span class="hljs-comment">/* 定义控制IO的宏 */</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED1_TOGGLE		digitalToggle(LED1_GPIO_PORT,LED1_PIN)</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED1_OFF		digitalHi(LED1_GPIO_PORT,LED1_PIN)</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED1_ON			digitalLo(LED1_GPIO_PORT,LED1_PIN)</span><br><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED2_TOGGLE		digitalToggle(LED2_GPIO_PORT,LED2_PIN)</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED2_OFF		digitalHi(LED2_GPIO_PORT,LED2_PIN)</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED2_ON			digitalLo(LED2_GPIO_PORT,LED2_PIN)</span><br><br><br>					<br><span class="hljs-comment">//黑(全部关闭)</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED_RGBOFF	\</span><br><span class="hljs-meta">		LED1_OFF;\</span><br><span class="hljs-meta">		LED2_OFF</span><br></code></pre></td></tr></table></figure>
 <p>此处控制LED亮灭的操作是直接向<code>BSRR</code>写入控制指令来实现的，对<code>BSRR</code>低 16 位 写 1 输出高电平，对<code>BSRR</code>高 16 位写 1 输出低电平。同时，对<code>ODR</code>某位进行异或操作可反转位的状态。</p>
 <blockquote>
-<p><code>BSRR</code>和<code>ODR</code>在前文详解GPIO框图的输出模式时候提到过<br />
-<code>BSRR</code>：置位/复位寄存器 GPIOx_BSRR，Bit Set/Reset Register<br />
-<code>ODR</code>：输出数据寄存器GPIOx_ODR，Output Data Register<br />
-<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111155258.png" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p><code>BSRR</code>和<code>ODR</code>在前文详解GPIO框图的输出模式时候提到过<br>
+<code>BSRR</code>：置位/复位寄存器 GPIOx_BSRR，Bit Set/Reset Register<br>
+<code>ODR</code>：输出数据寄存器GPIOx_ODR，Output Data Register<br>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111155258.png" srcset="/img/loading.gif" lazyload alt=""></p>
 </blockquote>
 <blockquote>
-<p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。<br />
+<p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。<br>
 除此之外对<code>置位/复位寄存器 GPIOx_BSRR</code>的值进行修改也可以影响”输出数据寄存器“的值。</p>
 </blockquote>
-<hr />
+<hr>
 <p>下面是本次例程的配置GPIO编程要点：</p>
 <ul>
 <li>
 <p><strong>使能GPIO端口时钟</strong></p>
 <p>要使用这个外设，首先得使能时钟，没什么说的。</p>
-<hr />
+<hr>
 <blockquote>
 <p>bsp_led.c</p>
 </blockquote>
   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/*开启LED相关的GPIO外设时钟*/</span><br><span class="hljs-built_in">LED1_GPIO_CLK_ENABLE</span>();<br><span class="hljs-built_in">LED2_GPIO_CLK_ENABLE</span>();<br></code></pre></td></tr></table></figure>
 <p>这里使能时钟用的函数是宏定义的名字，实际是用<code>__HAL_RCC_GPIOx_CLK_ENABLE()</code>这个函数。</p>
 <blockquote>
-<p>注意<code>GPIOx</code>改成实际的port口。<br />
+<p>注意<code>GPIOx</code>改成实际的port口。<br>
 这里的GPIO时钟宏<code>__HAL_RCC_GPIOx_CLK_ENABLE()</code>是 STM32HAL库定义的GPIO端口时钟相关的宏，它的作用与<code>GPIO_PIN_x</code>这类宏类似，是用于指示寄存器位的，方便库函数使用。</p>
 </blockquote>
 </li>
 <li>
 <p><strong>初始化GPIO目标引脚为推挽输出模式，配置GPIO初始化结构体</strong></p>
 <p>没有什么特殊需求，所以输出模式直接使用推挽输出模式</p>
-<hr />
+<hr>
 <blockquote>
 <p>bsp_led.c</p>
 </blockquote>
   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/*选择要控制的GPIO引脚*/</span>															   <br>GPIO_InitStruct.Pin = LED1_PIN;	<br><br><span class="hljs-comment">/*设置引脚的输出类型为推挽输出*/</span><br>GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;  <br><br><span class="hljs-comment">/*设置引脚为上拉模式*/</span><br>GPIO_InitStruct.Pull = GPIO_PULLUP;<br><br><span class="hljs-comment">/*设置引脚速率为高速 */</span>   <br>GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;<br></code></pre></td></tr></table></figure>
-<p>这里配置了四个东西，分别是：<br />
-<code>GPIO_InitStruct.Pin</code>：pin号<br />
-<code>GPIO_InitStruct.Mode</code>：输出模式<br />
-<code>GPIO_InitStruct.Pull</code>：上下拉模式<br />
+<p>这里配置了四个东西，分别是：<br>
+<code>GPIO_InitStruct.Pin</code>：pin号<br>
+<code>GPIO_InitStruct.Mode</code>：输出模式<br>
+<code>GPIO_InitStruct.Pull</code>：上下拉模式<br>
 <code>GPIO_InitStruct.Speed</code>：引脚速率</p>
-<p>其中HAL库中配置输出模式：<br />
-推挽输出<code>GPIO_MODE_OUTPUT_PP</code>；<br />
-开漏输出<code>GPIO_MODE_OUTPUT_OD</code>；<br />
-复用推挽输出<code>GPIO_MODE_AF_PP</code>；<br />
-复用开漏输出<code>GPIO_MODE_AF_OD</code>；<br />
+<p>其中HAL库中配置输出模式：<br>
+推挽输出<code>GPIO_MODE_OUTPUT_PP</code>；<br>
+开漏输出<code>GPIO_MODE_OUTPUT_OD</code>；<br>
+复用推挽输出<code>GPIO_MODE_AF_PP</code>；<br>
+复用开漏输出<code>GPIO_MODE_AF_OD</code>；<br>
 ……等等</p>
 <blockquote>
-<p>其中的简写全称记录如下：<br />
-PP for push-pull，推挽<br />
-OD for open-drain，开漏<br />
+<p>其中的简写全称记录如下：<br>
+PP for push-pull，推挽<br>
+OD for open-drain，开漏<br>
 AF for alternate function，复用功能</p>
 </blockquote>
 <p>关于HAL库中GPIO初始化结构体成员变量的配置，考虑到本次例程的篇幅，现简单记录如上，后面有时间做一个总结。</p>
@@ -589,7 +589,7 @@ AF for alternate function，复用功能</p>
 <li>
 <p><strong>编写简单测试程序，控制GPIO引脚输出高低电平</strong></p>
 <p>main函数</p>
-<hr />
+<hr>
 <blockquote>
 <p>main.c</p>
 </blockquote>
@@ -601,47 +601,47 @@ AF for alternate function，复用功能</p>
 <p>大概就是这样。</p>
 </li>
 </ul>
-<h2 id="15-总结"><a class="markdownIt-Anchor" href="#15-总结"></a> 1.5 总结</h2>
-<p>关于GPIO的分析和HAL库的配置大概就是这样。<br />
+<h2 id="1-5-总结">1.5 总结</h2>
+<p>关于GPIO的分析和HAL库的配置大概就是这样。<br>
 与三极管，实现控制大功率电路通断。</p>
 <p><code>输入功能</code>可以实现检测外部电平、读取引脚状态、采集模拟信号等功能。</p>
 <p>下面对GPIO基本框图进行分析，了解GPIO主要的工作原理。</p>
 <blockquote>
 <p>过一遍理解就可，有个印象</p>
 </blockquote>
-<h2 id="16-gpio基本框图"><a class="markdownIt-Anchor" href="#16-gpio基本框图"></a> 1.6 GPIO基本框图</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106151230.png" srcset="/img/loading.gif" lazyload alt="GPIO基本框图" /><br />
+<h2 id="1-6-GPIO基本框图">1.6 GPIO基本框图</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106151230.png" srcset="/img/loading.gif" lazyload alt=""><br>
 虽然标注的有点花花绿绿（）但是大致上可以分为三个部分：</p>
 <ul>
 <li>紫色为引脚与外部设备连接的端口。</li>
 <li>以蓝色箭头为主线的一串冷色相关的，为输入模式相关的电路。</li>
 <li>以红色箭头为主线的一串暖色相关的，为输出模式相关的电路。</li>
 </ul>
-<hr />
+<hr>
 <p>首先是紫色的<code>保护二极管与上下拉电阻</code>。</p>
-<p>引脚电压高于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>D</mi><mi>D</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{DD}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，上方二极管导通。<br />
-引脚电压低于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>S</mi><mi>S</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{SS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">S</span><span class="mord mathnormal mtight" style="margin-right:0.05764em;">S</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，下方二极管导通。</p>
+<p>引脚电压高于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>D</mi><mi>D</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{DD}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">DD</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，上方二极管导通。<br>
+引脚电压低于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>S</mi><mi>S</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{SS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">SS</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，下方二极管导通。</p>
 <p>这样就可以防止不正常的电压引入芯片导致芯片烧毁。但要注意，纵使有这样的保护也不能直接外接大功率驱动器件。</p>
-<hr />
+<hr>
 <p>其次是红色的<code>输出模式</code>这一条线，从左往右看。</p>
-<p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。<br />
+<p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。<br>
 除此之外对<code>置位/复位寄存器 GPIOx_BSRR</code>的值进行修改也可以影响”输出数据寄存器“的值。</p>
 <p>由这两个寄存器给出信号之后，通过一个开关接入输出控制。该开关可以控制是由”输出数据寄存器“还是由其他片上外设作为”输出源“。</p>
 <blockquote>
 <p>例如要使用串口的时候，需要一个通讯发送引脚的时候，就可以将某个GPIO引脚配置为串口复用功能。</p>
 </blockquote>
-<p>最关键的是由P-MOS与N-MOS两个管子组成的单元电路。<br />
+<p>最关键的是由P-MOS与N-MOS两个管子组成的单元电路。<br>
 这个单元电路使得GPIO的输出模式有两个模式，分别是<code>推挽输出</code>和<code>开漏输出</code>。</p>
-<p><code>推挽输出</code>中<br />
-输出源给高电平，经过反向，上方的P-MOS导通，下方的N-MOS关闭，对外输出高电平；<br />
+<p><code>推挽输出</code>中<br>
+输出源给高电平，经过反向，上方的P-MOS导通，下方的N-MOS关闭，对外输出高电平；<br>
 输出源给低电平，经过反向，上方N-MOS管关闭，上方P-MOS导通，对外输出低电平；</p>
-<p><code>开漏输出</code>中，上方的P_MOS不工作<br />
-当N-MOS导通的时候对外输出为低电平（接地）；<br />
+<p><code>开漏输出</code>中，上方的P_MOS不工作<br>
+当N-MOS导通的时候对外输出为低电平（接地）；<br>
 当N-MOS关闭的时候对外为高阻态，正常使用的时候需要接上拉电阻；此时等效于开漏电路，具有“线与”特性，一般应用在I2C、SMBUS通讯等需要“线与”功能的总线电路中，或者需要输出电平不匹配的时候。</p>
 <blockquote>
 <p>比如需要输出 5 伏的高电平，就可以在外部接一个上拉电阻，上拉电源为 5 伏， 并且把GPIO设置为开漏模式，当输出高阻态时，由上拉电阻和电源向外输出 5 伏的电平。</p>
 </blockquote>
-<hr />
+<hr>
 <p>最后是蓝色的<code>输入模式</code>这一条线，从右往左看。</p>
 <p>通过引脚采集电压之后，首先通过上/下拉电阻，配置成上/下拉输入，随后接一个TTL肖特基触发器，进行模数转换。</p>
 <p>最后将触发器给出的数字信号存储在“输入数据寄存器GPIOx_IDR”中，通过读取该寄存器就可以了解GPIO引脚的电平状态。</p>
@@ -649,15 +649,15 @@ AF for alternate function，复用功能</p>
 <blockquote>
 <p>例如使用串口通讯，需要一个通讯接收引脚的时候，就可以将某个GPIO引脚配置为串口复用功能。此处与输出模式的复用功能输入所举的例子对应。</p>
 </blockquote>
-<p>模拟输入与输出的通道是当引脚需要做ADC/DAC的时候，需要用原始信号时所提供的通道。<br />
-<code>ADC</code>时需要采集原始的模拟信号，因此不经过触发器。<br />
+<p>模拟输入与输出的通道是当引脚需要做ADC/DAC的时候，需要用原始信号时所提供的通道。<br>
+<code>ADC</code>时需要采集原始的模拟信号，因此不经过触发器。<br>
 <code>DAC</code>时需要输出原始的模拟信号，因此不经过双MOS管的结构。</p>
 <blockquote>
 <p>A for analog, D for digital. ADC-模数转换，DAC数模转换。</p>
 </blockquote>
-<hr />
+<hr>
 <p>至此基本将GPIO的原理框图进行了一遍梳理，下面为在HAL库中如何配置GPIO的一些记录。</p>
-<h2 id="17-hal库中gpio的配置"><a class="markdownIt-Anchor" href="#17-hal库中gpio的配置"></a> 1.7 HAL库中GPIO的配置</h2>
+<h2 id="1-7-HAL库中GPIO的配置">1.7 HAL库中GPIO的配置</h2>
 <blockquote>
 <p>本节例程参考野火的&lt;STM32 HAL库开发实战指南——F103系列&gt;使用固件库点亮LED一章</p>
 </blockquote>
@@ -667,7 +667,7 @@ AF for alternate function，复用功能</p>
 <p>对bsp的个人理解：不同外设的控制代码。</p>
 </blockquote>
 <p>本次使用的开发板是<code>野火的F103-MINI 开发板</code>，下面是本次例程所涉及的硬件原理图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111150900.png" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111150900.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>如图所示容易看出，若将这两个GPIO引脚设置为低电平即可点亮LED。</p>
 <p>本次例程中关于引脚定义的宏：</p>
 <blockquote>
@@ -677,55 +677,55 @@ AF for alternate function，复用功能</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/** 控制LED灯亮灭的宏，</span><br><span class="hljs-comment">	* LED低电平亮，设置ON=0，OFF=1</span><br><span class="hljs-comment">	* 若LED高电平亮，把宏设置成ON=1 ，OFF=0 即可</span><br><span class="hljs-comment">	*/</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> ON  GPIO_PIN_RESET</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> OFF GPIO_PIN_SET</span><br><br><span class="hljs-comment">/* 带参宏，可以像内联函数一样使用 */</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED1(a)	HAL_GPIO_WritePin(LED1_GPIO_PORT,LED1_PIN,a)</span><br><br><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED2(a)	HAL_GPIO_WritePin(LED2_GPIO_PORT,LED2_PIN,a)</span><br><br><br><span class="hljs-comment">/* 直接操作寄存器的方法控制IO */</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span>	digitalHi(p,i)			&#123;p-&gt;BSRR=i;&#125;			              <span class="hljs-comment">//设置为高电平</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> digitalLo(p,i)			&#123;p-&gt;BSRR=(uint32_t)i &lt;&lt; 16;&#125;		 <span class="hljs-comment">//输出低电平</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> digitalToggle(p,i)		&#123;p-&gt;ODR ^=i;&#125;		            	<span class="hljs-comment">//输出反转状态</span></span><br><br><br><span class="hljs-comment">/* 定义控制IO的宏 */</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED1_TOGGLE		digitalToggle(LED1_GPIO_PORT,LED1_PIN)</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED1_OFF		digitalHi(LED1_GPIO_PORT,LED1_PIN)</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED1_ON			digitalLo(LED1_GPIO_PORT,LED1_PIN)</span><br><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED2_TOGGLE		digitalToggle(LED2_GPIO_PORT,LED2_PIN)</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED2_OFF		digitalHi(LED2_GPIO_PORT,LED2_PIN)</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED2_ON			digitalLo(LED2_GPIO_PORT,LED2_PIN)</span><br><br><br>					<br><span class="hljs-comment">//黑(全部关闭)</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> LED_RGBOFF	\</span><br><span class="hljs-meta">		LED1_OFF;\</span><br><span class="hljs-meta">		LED2_OFF</span><br></code></pre></td></tr></table></figure>
 <p>此处控制LED亮灭的操作是直接向<code>BSRR</code>写入控制指令来实现的，对<code>BSRR</code>低 16 位 写 1 输出高电平，对<code>BSRR</code>高 16 位写 1 输出低电平。同时，对<code>ODR</code>某位进行异或操作可反转位的状态。</p>
 <blockquote>
-<p><code>BSRR</code>和<code>ODR</code>在前文详解GPIO框图的输出模式时候提到过<br />
-<code>BSRR</code>：置位/复位寄存器 GPIOx_BSRR，Bit Set/Reset Register<br />
-<code>ODR</code>：输出数据寄存器GPIOx_ODR，Output Data Register<br />
-<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111155258.png" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p><code>BSRR</code>和<code>ODR</code>在前文详解GPIO框图的输出模式时候提到过<br>
+<code>BSRR</code>：置位/复位寄存器 GPIOx_BSRR，Bit Set/Reset Register<br>
+<code>ODR</code>：输出数据寄存器GPIOx_ODR，Output Data Register<br>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111155258.png" srcset="/img/loading.gif" lazyload alt=""></p>
 </blockquote>
 <blockquote>
-<p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。<br />
+<p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。<br>
 除此之外对<code>置位/复位寄存器 GPIOx_BSRR</code>的值进行修改也可以影响”输出数据寄存器“的值。</p>
 </blockquote>
-<hr />
+<hr>
 <p>下面是本次例程的配置GPIO编程要点：</p>
 <ul>
 <li>
 <p><strong>使能GPIO端口时钟</strong></p>
 <p>要使用这个外设，首先得使能时钟，没什么说的。</p>
-<hr />
+<hr>
 <blockquote>
 <p>bsp_led.c</p>
 </blockquote>
   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/*开启LED相关的GPIO外设时钟*/</span><br><span class="hljs-built_in">LED1_GPIO_CLK_ENABLE</span>();<br><span class="hljs-built_in">LED2_GPIO_CLK_ENABLE</span>();<br></code></pre></td></tr></table></figure>
 <p>这里使能时钟用的函数是宏定义的名字，实际是用<code>__HAL_RCC_GPIOx_CLK_ENABLE()</code>这个函数。</p>
 <blockquote>
-<p>注意<code>GPIOx</code>改成实际的port口。<br />
+<p>注意<code>GPIOx</code>改成实际的port口。<br>
 这里的GPIO时钟宏<code>__HAL_RCC_GPIOx_CLK_ENABLE()</code>是 STM32HAL库定义的GPIO端口时钟相关的宏，它的作用与<code>GPIO_PIN_x</code>这类宏类似，是用于指示寄存器位的，方便库函数使用。</p>
 </blockquote>
 </li>
 <li>
 <p><strong>初始化GPIO目标引脚为推挽输出模式，配置GPIO初始化结构体</strong></p>
 <p>没有什么特殊需求，所以输出模式直接使用推挽输出模式</p>
-<hr />
+<hr>
 <blockquote>
 <p>bsp_led.c</p>
 </blockquote>
   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/*选择要控制的GPIO引脚*/</span>															   <br>GPIO_InitStruct.Pin = LED1_PIN;	<br><br><span class="hljs-comment">/*设置引脚的输出类型为推挽输出*/</span><br>GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;  <br><br><span class="hljs-comment">/*设置引脚为上拉模式*/</span><br>GPIO_InitStruct.Pull = GPIO_PULLUP;<br><br><span class="hljs-comment">/*设置引脚速率为高速 */</span>   <br>GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;<br></code></pre></td></tr></table></figure>
-<p>这里配置了四个东西，分别是：<br />
-<code>GPIO_InitStruct.Pin</code>：pin号<br />
-<code>GPIO_InitStruct.Mode</code>：输出模式<br />
-<code>GPIO_InitStruct.Pull</code>：上下拉模式<br />
+<p>这里配置了四个东西，分别是：<br>
+<code>GPIO_InitStruct.Pin</code>：pin号<br>
+<code>GPIO_InitStruct.Mode</code>：输出模式<br>
+<code>GPIO_InitStruct.Pull</code>：上下拉模式<br>
 <code>GPIO_InitStruct.Speed</code>：引脚速率</p>
-<p>其中HAL库中配置输出模式：<br />
-推挽输出<code>GPIO_MODE_OUTPUT_PP</code>；<br />
-开漏输出<code>GPIO_MODE_OUTPUT_OD</code>；<br />
-复用推挽输出<code>GPIO_MODE_AF_PP</code>；<br />
-复用开漏输出<code>GPIO_MODE_AF_OD</code>；<br />
+<p>其中HAL库中配置输出模式：<br>
+推挽输出<code>GPIO_MODE_OUTPUT_PP</code>；<br>
+开漏输出<code>GPIO_MODE_OUTPUT_OD</code>；<br>
+复用推挽输出<code>GPIO_MODE_AF_PP</code>；<br>
+复用开漏输出<code>GPIO_MODE_AF_OD</code>；<br>
 ……等等</p>
 <blockquote>
-<p>其中的简写全称记录如下：<br />
-PP for push-pull，推挽<br />
-OD for open-drain，开漏<br />
+<p>其中的简写全称记录如下：<br>
+PP for push-pull，推挽<br>
+OD for open-drain，开漏<br>
 AF for alternate function，复用功能</p>
 </blockquote>
 <p>关于HAL库中GPIO初始化结构体成员变量的配置，考虑到本次例程的篇幅，现简单记录如上，后面有时间做一个总结。</p>
@@ -738,7 +738,7 @@ AF for alternate function，复用功能</p>
 <li>
 <p><strong>编写简单测试程序，控制GPIO引脚输出高低电平</strong></p>
 <p>main函数</p>
-<hr />
+<hr>
 <blockquote>
 <p>main.c</p>
 </blockquote>
@@ -750,7 +750,7 @@ AF for alternate function，复用功能</p>
 <p>大概就是这样。</p>
 </li>
 </ul>
-<h2 id="18-总结"><a class="markdownIt-Anchor" href="#18-总结"></a> 1.8 总结</h2>
+<h2 id="1-8-总结">1.8 总结</h2>
 <p>关于GPIO的分析和HAL库的配置大概就是这样。</p>
 
                 
@@ -785,9 +785,9 @@ AF for alternate function，复用功能</p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="print-no-link">#嵌入式</a>
-      
         <a href="/tags/stm32/" class="print-no-link">#stm32</a>
+      
+        <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="print-no-link">#嵌入式</a>
       
     </div>
   

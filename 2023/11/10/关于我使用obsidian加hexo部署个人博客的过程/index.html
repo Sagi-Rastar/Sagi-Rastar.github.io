@@ -27,8 +27,8 @@
 <meta property="article:published_time" content="2023-11-10T02:18:47.000Z">
 <meta property="article:modified_time" content="2023-11-18T12:47:31.095Z">
 <meta property="article:author" content="SagiRastar">
-<meta property="article:tag" content="过程记录">
 <meta property="article:tag" content="嵌入式">
+<meta property="article:tag" content="过程记录">
 <meta property="article:tag" content="个人博客">
 <meta property="article:tag" content="网站">
 <meta property="article:tag" content="建站">
@@ -405,12 +405,12 @@
             
               <div class="markdown-body">
                 
-                <h1 id="1-前言"><a class="markdownIt-Anchor" href="#1-前言"></a> 1 前言</h1>
+                <h1>1 前言</h1>
 <p>从很早之前就一直希望搭建一个属于自己的博客。不管是折腾各种有趣项目还是在看完了那些精彩的文学作品，总觉得没有留下一点什么，实在是可惜。发空间或者朋友圈这样的形式，实在不足以记录当时的心情，向有文章区的社交网站投稿文章，又显得不大合适。</p>
 <p>兜兜转转，还是下定决心搭建一个属于自己的个人博客。一来是个人博客的形式更适合自己，在自己的站点碎碎念，不必考虑文章是否合乎投稿社群氛围；二来是近年来，随着输入的增加，愈发感觉到自己语言的贫乏，对于能够流畅行文、顺畅表达出自己想法的人愈发羡慕。因此，希望能够锻炼一点自己表达的能力，也是我搭建个人博客的一个契机。</p>
 <p>本次过程记录，将会尽可能详尽地记录整个搭建过程，对于同样想要搭建一个属于自己的 “赛博小窝“ 的读者，希望这篇拙笔能够帮上你一点忙。</p>
 <p>值得一提的是，本站点搭建方法以及使用的工作流，只是笔者在尝试了各类方法后，觉得最适合自己的方法，每个人最好的工作流，终归是最适合自己的工作流，希望拙笔能够为你寻找最佳工作流的路上提供一点参考</p>
-<h1 id="2-搭建方案"><a class="markdownIt-Anchor" href="#2-搭建方案"></a> 2 搭建方案</h1>
+<h1>2 搭建方案</h1>
 <p>笔者搭建环境：</p>
 <ul>
 <li>本地站点搭建在：<code>Windows 11 专业版 21H2 22000.2538</code></li>
@@ -431,11 +431,11 @@
 <li><a target="_blank" rel="noopener" href="https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B">Obsidian</a></li>
 </ul>
 <p>依附于上述三个部分的若干插件将在后面的叙述中记录。</p>
-<h1 id="3-工作流与写作过程"><a class="markdownIt-Anchor" href="#3-工作流与写作过程"></a> 3 工作流与写作过程</h1>
-<h2 id="31-站点框架"><a class="markdownIt-Anchor" href="#31-站点框架"></a> 3.1 站点框架</h2>
-<h3 id="311-hexo"><a class="markdownIt-Anchor" href="#311-hexo"></a> 3.1.1 Hexo</h3>
+<h1>3 工作流与写作过程</h1>
+<h2 id="3-1-站点框架">3.1 站点框架</h2>
+<h3 id="3-1-1-Hexo">3.1.1 Hexo</h3>
 <p>对于对前端不熟的我来说，像Hexo这样的框架是再适合不过了。使用Hexo的时候不需要关心网站中的各个组件的代码是如何编写的，在搭建好框架之后我只需要撰写markdown文件就可以生成网页了。</p>
-<h4 id="3111-安装依赖"><a class="markdownIt-Anchor" href="#3111-安装依赖"></a> 3.1.1.1 安装依赖</h4>
+<h4 id="3-1-1-1-安装依赖">3.1.1.1 安装依赖</h4>
 <p>Hexo有两个前置依赖：</p>
 <ul>
 <li>Node.js</li>
@@ -447,14 +447,14 @@
 <blockquote>
 <p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p>
 </blockquote>
-<p>对于这两个东西的安装，可以参考Hexo官网的步骤：<br />
-<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Git">Git的安装</a><br />
+<p>对于这两个东西的安装，可以参考Hexo官网的步骤：<br>
+<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Git">Git的安装</a><br>
 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Node-js">Node.js的安装</a></p>
 <blockquote>
-<p><strong>指北：</strong><br />
+<p><strong>指北：</strong><br>
 如果已习惯类似 <code>chocolatey</code> 这样的包管理工具，可以参考Hexo官网 <em>[安装 Node.js]</em> 一节中 <em>[其他的安装方法]</em> 看了一眼，貌似支持 <code>winget</code> 、 <code>chocolatey</code> 等。</p>
 </blockquote>
-<h4 id="3112-安装hexo并本地启动"><a class="markdownIt-Anchor" href="#3112-安装hexo并本地启动"></a> 3.1.1.2 安装Hexo并本地启动</h4>
+<h4 id="3-1-1-2-安装Hexo并本地启动">3.1.1.2 安装Hexo并本地启动</h4>
 <p>安装完git和node之后就可以使用npm安装Hexo了</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli   <span class="hljs-comment"># 全局安装</span><br>  <br>hexo -v   <span class="hljs-comment"># 查看hexo版本</span><br></code></pre></td></tr></table></figure>
 <p>开始创建一个项目 <code>my-blog</code></p>
@@ -465,15 +465,15 @@
 <p>生成网页文件后本地启动</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g     <span class="hljs-comment"># generate 生成界面</span><br>hexo s     <span class="hljs-comment"># server 本地启动网站</span><br></code></pre></td></tr></table></figure>
 <p>浏览器访问命令行中提示的网站<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>可以看到在本机的4000端口Hexo已经生成了一个示例网站了。</p>
-<h4 id="3113-更换主题"><a class="markdownIt-Anchor" href="#3113-更换主题"></a> 3.1.1.3 更换主题</h4>
+<h4 id="3-1-1-3-更换主题">3.1.1.3 更换主题</h4>
 <p>以本站使用的Fluid主题为例：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>
 <p>后面关于Fluid的各种配置请参考 <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/start/#%E6%8C%87%E5%AE%9A%E4%B8%BB%E9%A2%98">Hexo官方文档的这个小节往后</a> 执行。</p>
 <p>当执行完上述操作之后，完成了主题的配置，可以执行下述指令，查看效果</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean  <span class="hljs-comment"># 清除</span><br>hexo g      <span class="hljs-comment"># 生成</span><br>hexo s      <span class="hljs-comment"># 本地启动</span><br></code></pre></td></tr></table></figure>
 <p>再次访问<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>，应该设置已经生效了。</p>
-<h4 id="3114-工作流设置"><a class="markdownIt-Anchor" href="#3114-工作流设置"></a> 3.1.1.4 工作流设置</h4>
-<p>正如前面所说，笔者使用的是 <code>Obsidian</code> 写的博客，而在实践的过程中比较麻烦的是这个图片的插入方法。<br />
+<h4 id="3-1-1-4-工作流设置">3.1.1.4 工作流设置</h4>
+<p>正如前面所说，笔者使用的是 <code>Obsidian</code> 写的博客，而在实践的过程中比较麻烦的是这个图片的插入方法。<br>
 以前写过的两篇博客都是用Github开了一个仓库之后利用Picgo这个小工具实现的图床的，但是在现在这种场景下插入图片并不优雅，因为每次的插入图片我都需要完成以下操作：</p>
 <ul>
 <li>截图，复制到剪切板中</li>
@@ -483,7 +483,7 @@
 </ul>
 <p>太麻烦了！因为之前在obsidian里面插入图片，只需要在图片在剪贴板中的时候直接回到obsidian里面 <code>ctrl</code> + <code>v</code> ，obsidian就会自动将这个文件上传到指定的文件夹下，并且自动在粘贴处插入obsidian支持显示图片的链接。</p>
 <p>因此在实践hexo撰写博客的过程中，我利用了obsidian原生支持的这种工作流程，下面介绍一下具体实现，和使用到的插件：</p>
-<h5 id="31141-obsidian设置"><a class="markdownIt-Anchor" href="#31141-obsidian设置"></a> 3.1.1.4.1 obsidian设置</h5>
+<h5 id="3-1-1-4-1-obsidian设置">3.1.1.4.1 obsidian设置</h5>
 <p>如果您还没有了解过obsidian，请参考这几篇博客，此处碍于篇幅就不展开obsidian的使用：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/428519519">玩转Obsidian，这里介绍了obsidian的基本用法</a></li>
@@ -491,7 +491,7 @@
 <blockquote>
 <p>实际上，可以把他就当成一个编辑器使用就好，需要用到什么功能的时候，可以去查有没有插件已经实现了你的想法</p>
 </blockquote>
-<p>为了能够让obsidian粘贴图片的时候改变上传图片的路径，并且自定义所插入的图片markdown链接，我们需要用到一个插件：Custom Attachment Location<br />
+<p>为了能够让obsidian粘贴图片的时候改变上传图片的路径，并且自定义所插入的图片markdown链接，我们需要用到一个插件：Custom Attachment Location<br>
 此处安装方法可以参考这位的博客：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_52357217/article/details/127562163">如何让Obsidian的图片存储形式设置为 ./${filename}.assets</a></li>
@@ -501,23 +501,23 @@
 </blockquote>
 <p>设置完成之后obsidian的相关设置应该长这样：</p>
 <ul>
-<li>设置 - 第三方插件设置 - Custom Attachment Location<br />
-<img src="image-20231110115126650.png" srcset="/img/loading.gif" lazyload alt="" /></li>
-<li>设置 - 文件与链接<br />
-<img src="image-20231110115305759.png" srcset="/img/loading.gif" lazyload alt="" /></li>
+<li>设置 - 第三方插件设置 - Custom Attachment Location<br>
+<img src="image-20231110115126650.png" srcset="/img/loading.gif" lazyload alt=""></li>
+<li>设置 - 文件与链接<br>
+<img src="image-20231110115305759.png" srcset="/img/loading.gif" lazyload alt=""></li>
 </ul>
-<p>这样设置完了之后，在后面用obsidian编写博客直接粘贴图片到编辑区后，就会在与当前笔记同级的同名子文件夹中保存图片，并且在正文中插入后面Hexo那边也可以识别的markdown图片链接，效果如下：<br />
-<img src="image-20231110115759893.png" srcset="/img/loading.gif" lazyload alt="" /></p>
-<p><img src="image-20231110115742882.png" srcset="/img/loading.gif" lazyload alt="" /></p>
-<h5 id="31142-hexo端设置"><a class="markdownIt-Anchor" href="#31142-hexo端设置"></a> 3.1.1.4.2 Hexo端设置</h5>
+<p>这样设置完了之后，在后面用obsidian编写博客直接粘贴图片到编辑区后，就会在与当前笔记同级的同名子文件夹中保存图片，并且在正文中插入后面Hexo那边也可以识别的markdown图片链接，效果如下：<br>
+<img src="image-20231110115759893.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="image-20231110115742882.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h5 id="3-1-1-4-2-Hexo端设置">3.1.1.4.2 Hexo端设置</h5>
 <p>修改 <code>_config.yml</code> 文件中的这个选项，这样可以生成一个同名的资源目录，用于存放同名文章使用的资产。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">marked:</span> <span class="hljs-comment"># 如果原本有就更改下面的这些选项，如果没有就添加</span><br>  <span class="hljs-attr">prependRoot:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">postAsset:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
-<h5 id="31143-创建文章"><a class="markdownIt-Anchor" href="#31143-创建文章"></a> 3.1.1.4.3 创建文章</h5>
+<h5 id="3-1-1-4-3-创建文章">3.1.1.4.3 创建文章</h5>
 <p>当你要开始写一篇文章的时候，在命令行中输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new post &lt;文章名&gt;<br></code></pre></td></tr></table></figure>
 <p>就会在 <code>./my-blog/source/_posts/</code> 路径下新建 <code>&lt;文章名&gt;.md</code> 文件和同名资产文件夹，然后直接在obsidian中选择打开 <code>./source</code> 文件夹后选择刚刚生成的md文件就可以开始愉快写作了！</p>
-<h2 id="32-发布"><a class="markdownIt-Anchor" href="#32-发布"></a> 3.2 发布！</h2>
-<p>在Github中注册账号，然后创建一个仓库，配置Github Pages：<br />
+<h2 id="3-2-发布！">3.2 发布！</h2>
+<p>在Github中注册账号，然后创建一个仓库，配置Github Pages：<br>
 创建仓库的时候，仓库名请务必填 <code>&lt;你的github名&gt;.github.io</code> ，不然的话Github不会将该仓库认作Github Pages。</p>
 <p>在 <code>&lt;你的github名&gt;.github.io</code> 仓库对应的 GitHub Pages 设置页面 (访问路径为 <code>Settings -&gt; Pages</code> ) 可以找到个人博客的主页访问地址：https://&lt;GitHub 用户名&gt;.github.io。</p>
 <p>回到hexo这边，首先安装 <code>hexo-deployer-git</code> ：</p>
@@ -526,7 +526,7 @@
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">&lt;repository</span> <span class="hljs-string">url&gt;</span> <span class="hljs-comment"># https://github.com/&lt;GitHub用户名&gt;/&lt;GitHub用户名&gt;.github.io.git</span><br>  <span class="hljs-attr">branch:</span> [<span class="hljs-string">branch</span>]<br>  <span class="hljs-attr">token:</span> [<span class="hljs-string">token</span>]<br></code></pre></td></tr></table></figure>
 <p>配置好了之后可以就可以在终端生成站点文件后推送到这个仓库，然后外网用户就可以在你的博客地址中访问你的博客了：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo deploy<br></code></pre></td></tr></table></figure>
-<h2 id="33-配置完之后的工作流"><a class="markdownIt-Anchor" href="#33-配置完之后的工作流"></a> 3.3 配置完之后的工作流</h2>
+<h2 id="3-3-配置完之后的工作流">3.3 配置完之后的工作流</h2>
 <ol>
 <li>使用new指令新建一篇博客：</li>
 </ol>
@@ -540,11 +540,11 @@
 <li>预览没问题之后，发布：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo d<br></code></pre></td></tr></table></figure>
-<h1 id="4-结语"><a class="markdownIt-Anchor" href="#4-结语"></a> 4 结语</h1>
+<h1>4 结语</h1>
 <p>利用obsidian结合hexo来写作自己的博客还有很多优点，除了插入图片比较舒心之外，yml的标签甚至奇妙地兼容了，obsidian里面添加文章首部的tag的时候界面适配也很好看，除此之外，就像typora一样的实时预览也是非常棒的功能。</p>
 <p>本文并未展开关于博客站点的其他装修操作，关于Fluid主题的更加详细的配置，请参考 <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">此处</a> 官方十分详尽的文档。</p>
 <p>感谢阅读！</p>
-<h1 id="5-参考"><a class="markdownIt-Anchor" href="#5-参考"></a> 5 参考</h1>
+<h1>5 参考</h1>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/crg18438610577/article/details/130216997">白嫖 GitHub Pages，轻松搭建个人博客</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_52357217/article/details/127562163">如何让Obsidian的图片存储形式设置为 ./${filename}.assets</a></li>
@@ -586,9 +586,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="print-no-link">#过程记录</a>
-      
         <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="print-no-link">#嵌入式</a>
+      
+        <a href="/tags/%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="print-no-link">#过程记录</a>
       
         <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="print-no-link">#个人博客</a>
       
