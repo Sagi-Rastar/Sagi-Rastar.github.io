@@ -446,7 +446,7 @@
 <p>在STM32中EXTI提供了一个新的响应，“事件”相对于软件上进入NVIC的“中断”而言有所不同，“事件”响应是硬件上的响应，事件响应是输出一个脉冲信号，以便用于与其他外设相互联动，例如触发ADC或DMA之类的。</p>
 <blockquote>
 <p>具体工作框图可以参考：<br>
-<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230105143832.png" srcset="/img/loading.gif" lazyload alt="EXTI系统框图"></p>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230105143832.png" srcset="/img/loading.gif" lazyload alt=""></p>
 </blockquote>
 <p>如上图所示，EXTI的输入通道经过“边沿检测”电路，此电路由两个寄存器控制，用于配置EXTI是<code>上升沿触发</code>还是<code>下降沿触发</code>或是<code>双边沿触发</code>。随后信号经过一个或门，此处或门的作用在于可以通过软件中断寄存器决定是否直接由软件触发中断。当或门的信号输出之后，分成<code>中断响应</code>和<code>事件响应</code>，两种响应都可以通过利用与门和“xx屏蔽寄存器”选择放行与否。</p>
 <p>其中关于ST公司对EXTI中断通道的精简有必要提一嘴（……）</p>
