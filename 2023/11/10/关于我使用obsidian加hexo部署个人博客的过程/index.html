@@ -473,8 +473,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean  <span class="hljs-comment"># 清除</span><br>hexo g      <span class="hljs-comment"># 生成</span><br>hexo s      <span class="hljs-comment"># 本地启动</span><br></code></pre></td></tr></table></figure>
 <p>再次访问<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>，应该设置已经生效了。</p>
 <h4 id="3-1-1-4-工作流设置">3.1.1.4 工作流设置</h4>
-<p>正如前面所说，笔者使用的是 <code>Obsidian</code> 写的博客，而在实践的过程中比较麻烦的是这个图片的插入方法。<br>
-以前写过的两篇博客都是用Github开了一个仓库之后利用Picgo这个小工具实现的图床的，但是在现在这种场景下插入图片并不优雅，因为每次的插入图片我都需要完成以下操作：</p>
+<p>正如前面所说，笔者使用的是 <code>Obsidian</code> 写的博客，而在实践的过程中比较麻烦的是这个图片的插入方法。以前写过的两篇博客都是用Github开了一个仓库之后利用Picgo这个小工具实现的图床的，但是在现在这种场景下插入图片并不优雅，因为每次的插入图片我都需要完成以下操作：</p>
 <ul>
 <li>截图，复制到剪切板中</li>
 <li>打开Picgo，上传文件到github中</li>
@@ -517,8 +516,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new post &lt;文章名&gt;<br></code></pre></td></tr></table></figure>
 <p>就会在 <code>./my-blog/source/_posts/</code> 路径下新建 <code>&lt;文章名&gt;.md</code> 文件和同名资产文件夹，然后直接在obsidian中选择打开 <code>./source</code> 文件夹后选择刚刚生成的md文件就可以开始愉快写作了！</p>
 <h2 id="3-2-发布！">3.2 发布！</h2>
-<p>在Github中注册账号，然后创建一个仓库，配置Github Pages：<br>
-创建仓库的时候，仓库名请务必填 <code>&lt;你的github名&gt;.github.io</code> ，不然的话Github不会将该仓库认作Github Pages。</p>
+<p>在Github中注册账号，然后创建一个仓库，配置Github Pages：创建仓库的时候，仓库名请务必填 <code>&lt;你的github名&gt;.github.io</code> ，不然的话Github不会将该仓库认作Github Pages。</p>
 <p>在 <code>&lt;你的github名&gt;.github.io</code> 仓库对应的 GitHub Pages 设置页面 (访问路径为 <code>Settings -&gt; Pages</code> ) 可以找到个人博客的主页访问地址：https://&lt;GitHub 用户名&gt;.github.io。</p>
 <p>回到hexo这边，首先安装 <code>hexo-deployer-git</code> ：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
