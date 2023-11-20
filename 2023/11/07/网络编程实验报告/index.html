@@ -429,56 +429,77 @@
             
               <div class="markdown-body">
                 
-                <h1 id="1-linux作业-网络编程"><a href="#1-linux作业-网络编程" class="headerlink" title="1 linux作业 | 网络编程"></a>1 linux作业 | 网络编程</h1><h2 id="1-1-作业实验环境"><a href="#1-1-作业实验环境" class="headerlink" title="1.1 作业实验环境"></a>1.1 作业实验环境</h2><ul>
+                <h1>1 linux作业 | 网络编程</h1>
+<h2 id="1-1-作业实验环境">1.1 作业实验环境</h2>
+<ul>
 <li>硬件：<code>树莓派3b+</code></li>
 <li>系统：<code>Raspbian GNU/Linux 11 (bullseye)</code></li>
 <li>编辑器与连接方式：<code>vscode远程ssh</code></li>
 <li>编译器：<code>gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1) </code></li>
 </ul>
-<h2 id="1-2-作业概述"><a href="#1-2-作业概述" class="headerlink" title="1.2 作业概述"></a>1.2 作业概述</h2><p>通过实际运行tcp&#x2F;udp实例代码，了解linux网络编程，熟悉linux网络编程基本过程。<br>本次作业报告分为两个部分：</p>
+<h2 id="1-2-作业概述">1.2 作业概述</h2>
+<p>通过实际运行tcp/udp实例代码，了解linux网络编程，熟悉linux网络编程基本过程。<br>
+本次作业报告分为两个部分：</p>
 <ul>
 <li>TCP回环测试</li>
-<li>UDP回环测试<br>将分别记录各自过程</li>
+<li>UDP回环测试<br>
+将分别记录各自过程</li>
 </ul>
-<h2 id="1-3-TCP回环实验测试"><a href="#1-3-TCP回环实验测试" class="headerlink" title="1.3 TCP回环实验测试"></a>1.3 TCP回环实验测试</h2><h3 id="1-3-1-实验效果"><a href="#1-3-1-实验效果" class="headerlink" title="1.3.1 实验效果"></a>1.3.1 实验效果</h3><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png" srcset="/img/loading.gif" lazyload><br>如上图所示，左侧为 <code>tcp_client</code> 端，右侧为 <code>tcp_server</code> 端，对应为各自所运行的终端。</p>
+<h2 id="1-3-TCP回环实验测试">1.3 TCP回环实验测试</h2>
+<h3 id="1-3-1-实验效果">1.3.1 实验效果</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png" srcset="/img/loading.gif" lazyload alt=""><br>
+如上图所示，左侧为 <code>tcp_client</code> 端，右侧为 <code>tcp_server</code> 端，对应为各自所运行的终端。</p>
 <ul>
 <li>先运行右侧 <code>server</code> 端，传入参数为 <code>127.0.0.1 55566</code> ，开始阻塞等待 <code>client</code> 端连接</li>
 <li>再运行左侧 <code>client</code> 端，传入参数一致，此时右侧 <code>server</code> 端打印 <code>client</code> 端 <code>ip</code> 与 <code>port</code> ，结果为 <code>127.0.0.1:41292</code> ，可见 <code>client</code> 端程序为其套接字分配了一个随机的未被占用的端口</li>
 <li>此时左侧 <code>client</code> 端输入消息，将会在右侧 <code>server</code> 端显示，并且收到 <code>server</code> 端的回传</li>
 <li>左侧 <code>client</code> 输入 <code>quit</code> 后，将会将其发送给 <code>server</code> 后退出程序，同样，<code>server</code> 接收到 <code>quit</code> 后也会将自己关闭</li>
-<li>另外，在 <code>server</code> 端输入的东西将会被存储，程序没有 <code>fget</code> ，因此在退出终端之后，终端将会读取之前输入的命令<br>下面逐步总结各自程序的过程</li>
+<li>另外，在 <code>server</code> 端输入的东西将会被存储，程序没有 <code>fget</code> ，因此在退出终端之后，终端将会读取之前输入的命令<br>
+下面逐步总结各自程序的过程</li>
 </ul>
-<h3 id="1-3-2-tcp-client端过程"><a href="#1-3-2-tcp-client端过程" class="headerlink" title="1.3.2 tcp_client端过程"></a>1.3.2 tcp_client端过程</h3><h4 id="1-3-2-1-定义变量"><a href="#1-3-2-1-定义变量" class="headerlink" title="1.3.2.1 定义变量"></a>1.3.2.1 定义变量</h4><ul>
-<li><code>int sockfd;</code> - socket file descriptor - 套接字描述符<ul>
+<h3 id="1-3-2-tcp-client端过程">1.3.2 tcp_client端过程</h3>
+<h4 id="1-3-2-1-定义变量">1.3.2.1 定义变量</h4>
+<ul>
+<li><code>int sockfd;</code> - socket file descriptor - 套接字描述符
+<ul>
 <li>用于存储后面创建的套接字</li>
 </ul>
 </li>
-<li><code>struct sockaddr_in serveraddr;</code> - 存储 <code>server</code> 端信息所用结构体<ul>
+<li><code>struct sockaddr_in serveraddr;</code> - 存储 <code>server</code> 端信息所用结构体
+<ul>
 <li>存储地址与端口</li>
 <li><code>sockaddr_in</code> 源码注释： <code>/* Structure describing an Internet socket address.  */</code></li>
-<li>后面暂时看不懂，手敲了一下好像有四个成员变量（ #need_to_search<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029160553.png" srcset="/img/loading.gif" lazyload>)</li>
+<li>后面暂时看不懂，手敲了一下好像有四个成员变量（ #need_to_search<br>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029160553.png" srcset="/img/loading.gif" lazyload alt="">)</li>
 </ul>
 </li>
 <li>地址长度和缓冲区略</li>
 </ul>
-<h4 id="1-3-2-2-异常处理"><a href="#1-3-2-2-异常处理" class="headerlink" title="1.3.2.2 异常处理"></a>1.3.2.2 异常处理</h4><ul>
+<h4 id="1-3-2-2-异常处理">1.3.2.2 异常处理</h4>
+<ul>
 <li>传入参数合法与否</li>
-<li>调用 <code>socket</code> 函数，创建套接字<ul>
+<li>调用 <code>socket</code> 函数，创建套接字
+<ul>
 <li><code>AF_INET</code> - Address Family_Internet - IPv4地址族</li>
 <li><code>SOCK_STREAM</code> - 面向流的TCP套接字（？这里的stream和NanoPB的stream是不是一个东西 #need_to_search</li>
 <li><code>0</code> - 表示自动选择协议，一般为TCP</li>
 <li>若创建失败返回 <code>-1</code>，并设置全局变量 <code>errno</code> 来指示发生了什么错误。通常情况下，如果连接失败，可以通过调用 <code>perror(&quot;socket error&quot;);</code> 来输出与连接失败相关的错误消息。</li>
 </ul>
 </li>
-<li>向 <code>serveraddr</code> 结构体中存储成员变量<ul>
+<li>向 <code>serveraddr</code> 结构体中存储成员变量
+<ul>
 <li><code>sin_family</code> - 用于指定地址族</li>
-<li><code>sin_port</code> 与 <code>sin_addr</code> - 端口和地址<ul>
-<li>？为啥 <code>sin_addr</code> 还要 <code>.s_addr</code><blockquote>
+<li><code>sin_port</code> 与 <code>sin_addr</code> - 端口和地址
+<ul>
+<li>？为啥 <code>sin_addr</code> 还要 <code>.s_addr</code></li>
+</ul>
+<blockquote>
 <p><strong>拓展搜索</strong>：<code>sin_addr.s_addr</code> 表示了 <code>struct sockaddr_in</code> 结构体中的 IP 地址字段。这样的结构设计是为了与网络编程中的网络字节序（大端Big-endian）相一致，同时也考虑了C语言的底层数据表示。</p>
 </blockquote>
-</li>
+<ul>
 <li><code>inet_addr</code> - 点分十进制地址转换为32位整数</li>
-<li><code>atoi</code> 和 <code>htons</code> - ASCII to Integer 和 Host to Network Short<ul>
+<li><code>atoi</code> 和 <code>htons</code> - ASCII to Integer 和 Host to Network Short
+<ul>
 <li>一个是把阿斯克码转整形</li>
 <li>一个是把16位整数转网络字节序 （不是，那为啥port为啥不像addr一样分一个s_port啊</li>
 </ul>
@@ -487,11 +508,15 @@
 </li>
 </ul>
 </li>
-<li>调用 <code>connect</code> 函数，根据 <code>套接字</code> + <code>地址信息</code> 向 <code>server</code> 端发送连接请求<ul>
+<li>调用 <code>connect</code> 函数，根据 <code>套接字</code> + <code>地址信息</code> 向 <code>server</code> 端发送连接请求
+<ul>
 <li><code>sockfd</code> - 存储的套接字</li>
-<li><code>(struct sockaddr *)&amp;serveraddr</code> - 一个指向服务器地址信息的指针<ul>
-<li>强制类型转换：<code>serveraddr</code> 是前面定义的 <code>struct sockaddr_in</code> 结构体，该函数需要的结构体类型为 <code>sockaddr</code> <ul>
-<li>拓展搜索：<code>serveraddr</code> | <code>serveraddr_in</code> | <code>serveraddr_in6</code> 之间的关系<ul>
+<li><code>(struct sockaddr *)&amp;serveraddr</code> - 一个指向服务器地址信息的指针
+<ul>
+<li>强制类型转换：<code>serveraddr</code> 是前面定义的 <code>struct sockaddr_in</code> 结构体，该函数需要的结构体类型为 <code>sockaddr</code>
+<ul>
+<li>拓展搜索：<code>serveraddr</code> | <code>serveraddr_in</code> | <code>serveraddr_in6</code> 之间的关系
+<ul>
 <li>不管是<code>serveraddr_in</code> | <code>serveraddr_in6</code> ，都是<code>serveraddr</code> 的一个特殊形式，其中 <code>_in</code> 给IPv4用， <code>_in6</code> 给IPv6用</li>
 <li>这里的 <code>in</code> 不是输入的意思，而是 <code>Internet</code> 的意思</li>
 <li><code>sockaddr_in</code> 表示 “Socket Address Internet”，用于表示IPv4地址。</li>
@@ -507,11 +532,14 @@
 </ul>
 </li>
 </ul>
-<h4 id="1-3-2-3-主循环"><a href="#1-3-2-3-主循环" class="headerlink" title="1.3.2.3 主循环"></a>1.3.2.3 主循环</h4><ul>
-<li><code>fget</code> - 获取用户输入，丢到 <code>buf</code> 里面，删掉最后的换行符 <code>&#39;\0&#39;</code></li>
-<li>调用 <code>send</code> 函数，传入套接字 + 内容 + 内容大小 + 可选标志<ul>
-<li>前面三个参数没啥说的，主要是可选标志：<ol>
-<li>0（默认）：通常情况下，将最后一个参数设置为0表示不使用特殊标志，即使用默认的发送行为。  </li>
+<h4 id="1-3-2-3-主循环">1.3.2.3 主循环</h4>
+<ul>
+<li><code>fget</code> - 获取用户输入，丢到 <code>buf</code> 里面，删掉最后的换行符 <code>'\0'</code></li>
+<li>调用 <code>send</code> 函数，传入套接字 + 内容 + 内容大小 + 可选标志
+<ul>
+<li>前面三个参数没啥说的，主要是可选标志：
+<ol>
+<li>0（默认）：通常情况下，将最后一个参数设置为0表示不使用特殊标志，即使用默认的发送行为。</li>
 <li><code>MSG_DONTWAIT</code>：如果将参数设置为 <code>MSG_DONTWAIT</code>，则 <code>send</code> 函数将以非阻塞方式发送数据。这意味着即使套接字的发送缓冲区已满，<code>send</code> 也会尽力发送尽可能多的数据，并立即返回，不会阻塞程序的执行。</li>
 <li><code>MSG_NOSIGNAL</code>：这个标志通常在Linux系统上使用，它告诉操作系统不要发送 <code>SIGPIPE</code> 信号，即使套接字的远程端关闭了连接，也不会中断程序。这在某些情况下可以防止程序因为连接断开而崩溃。</li>
 <li>其他特定标志：<code>send</code> 函数还可以接受其他特定于操作系统和套接字类型的标志参数，这些参数可以根据需要进行设置。这些标志通常用于高级用例，例如对套接字选项的设置或特殊的网络处理需求。</li>
@@ -525,14 +553,19 @@
 <li><code>printf</code> 在终端打印server回环的消息</li>
 </ul>
 <p>没了</p>
-<h3 id="1-3-3-tcp-server端过程"><a href="#1-3-3-tcp-server端过程" class="headerlink" title="1.3.3 tcp_server端过程"></a>1.3.3 tcp_server端过程</h3><h4 id="1-3-3-1-定义变量"><a href="#1-3-3-1-定义变量" class="headerlink" title="1.3.3.1 定义变量"></a>1.3.3.1 定义变量</h4><p>这部分和 <code>client</code> 端差不多，套接字描述符多了一个 <code>acceptfd</code> ，用于接受客户端用的，sockaddr_in 结构体也多了一个 <code>clientaddr</code> ，用于存储客户端的地址信息<br><code>bzero</code> 函数将服务端和客户端的地址信息结构体初始化为零</p>
-<h4 id="1-3-3-2-异常处理"><a href="#1-3-3-2-异常处理" class="headerlink" title="1.3.3.2 异常处理"></a>1.3.3.2 异常处理</h4><ul>
+<h3 id="1-3-3-tcp-server端过程">1.3.3 tcp_server端过程</h3>
+<h4 id="1-3-3-1-定义变量">1.3.3.1 定义变量</h4>
+<p>这部分和 <code>client</code> 端差不多，套接字描述符多了一个 <code>acceptfd</code> ，用于接受客户端用的，sockaddr_in 结构体也多了一个 <code>clientaddr</code> ，用于存储客户端的地址信息<br>
+<code>bzero</code> 函数将服务端和客户端的地址信息结构体初始化为零</p>
+<h4 id="1-3-3-2-异常处理">1.3.3.2 异常处理</h4>
+<ul>
 <li>传入参数合法与否</li>
 <li>创建套接字，同上</li>
 <li>向 <code>serveraddr</code> 结构体中存储成员变量，同上</li>
 <li>调用 <code>bind</code> 函数，将套接字和 <code>serveraddr</code> 绑定，以便监听客户端的连接请求</li>
 <li>调用 <code>listen</code> 函数，将套接字设置为监听模式，等待客户端的连接请求，<code>5</code> 表示等待连接队列的最大长度</li>
-<li>调用 <code>accept</code> 函数，当有新的 <code>client</code> 连接请求后，该函数将会为这个特指的 <code>client</code> 返回一个新的套接字（？这里我的表述是不是有点问题）<ul>
+<li>调用 <code>accept</code> 函数，当有新的 <code>client</code> 连接请求后，该函数将会为这个特指的 <code>client</code> 返回一个新的套接字（？这里我的表述是不是有点问题）
+<ul>
 <li><code>(struct sockaddr *)&amp;clientaddr</code>：这是一个指向 <code>clientaddr</code> 结构体的指针，用于存储客户端的地址信息。当 <code>accept</code> 函数接受连接时，它会将客户端的地址信息填充到这个结构体中，以便后续使用。</li>
 <li><code>&amp;addrlen</code> 是一个指向 <code>addrlen</code> 变量的指针，它用于指定 <code>clientaddr</code> 结构体的大小，以便 <code>accept</code> 函数知道要填充多少字节的地址信息。<code>addrlen</code> 在之前的代码中已经设置为 <code>sizeof(serveraddr)</code>，表示这个结构体的大小。</li>
 <li>这两个参数可以设置为 <code>NULL</code> 表示不关心 <code>client</code> 的信息</li>
@@ -549,42 +582,56 @@
 <ul>
 <li>没啥问题，上面的都跑完了就打出客户端的 <code>IP</code> 和 <code>port</code></li>
 </ul>
-<h4 id="1-3-3-3-主循环"><a href="#1-3-3-3-主循环" class="headerlink" title="1.3.3.3 主循环"></a>1.3.3.3 主循环</h4><p>跟 <code>client</code> 端稍稍有点区别</p>
+<h4 id="1-3-3-3-主循环">1.3.3.3 主循环</h4>
+<p>跟 <code>client</code> 端稍稍有点区别</p>
 <ul>
-<li>接收消息还是调用 <code>recv</code> 函数，不过注意这里使用的套接字是 <code>acceptfd</code> ，原因上面有记录<ul>
-<li>没东西就 <code>perror(&quot;no data&quot;);</code> </li>
+<li>接收消息还是调用 <code>recv</code> 函数，不过注意这里使用的套接字是 <code>acceptfd</code> ，原因上面有记录
+<ul>
+<li>没东西就 <code>perror(&quot;no data&quot;);</code></li>
 <li>客户端叫 <code>quit</code> 就退出，<code>goto</code> 操作，关闭两个套接字。</li>
 <li>上面俩特例都没有，就正常打印客户端消息，并且 <code>strcat</code> 之后传回去给 <code>client</code> 一个响应</li>
 </ul>
 </li>
 </ul>
-<p> 没了</p>
-<h2 id="1-4-UDP回环实验测试"><a href="#1-4-UDP回环实验测试" class="headerlink" title="1.4 UDP回环实验测试"></a>1.4 UDP回环实验测试</h2><h3 id="1-4-1-实验效果"><a href="#1-4-1-实验效果" class="headerlink" title="1.4.1 实验效果"></a>1.4.1 实验效果</h3><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png" srcset="/img/loading.gif" lazyload><br>实验效果跟tcp大差不差，只是右侧的 <code>server</code> 端的显示每一次接收到消息都会打印出地址和端口</p>
-<h3 id="1-4-2-udp-client端过程"><a href="#1-4-2-udp-client端过程" class="headerlink" title="1.4.2 udp_client端过程"></a>1.4.2 udp_client端过程</h3><p>跟上面tcp的过程也差不多，主要留意几个区别的地方：</p>
+<p>没了</p>
+<h2 id="1-4-UDP回环实验测试">1.4 UDP回环实验测试</h2>
+<h3 id="1-4-1-实验效果">1.4.1 实验效果</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png" srcset="/img/loading.gif" lazyload alt=""><br>
+实验效果跟tcp大差不差，只是右侧的 <code>server</code> 端的显示每一次接收到消息都会打印出地址和端口</p>
+<h3 id="1-4-2-udp-client端过程">1.4.2 udp_client端过程</h3>
+<p>跟上面tcp的过程也差不多，主要留意几个区别的地方：</p>
 <ul>
-<li>UDP（User Datagram Protocol）套接字，与TCP（Transmission Control Protocol）套接字的创建有一些关键区别：<ul>
-<li>套接字类型：<ul>
+<li>UDP（User Datagram Protocol）套接字，与TCP（Transmission Control Protocol）套接字的创建有一些关键区别：
+<ul>
+<li>套接字类型：
+<ul>
 <li>TCP套接字：在TCP通信中，使用 <code>SOCK_STREAM</code> 类型的套接字，它是一种<strong>面向连接的、可靠的、基于流</strong>的传输协议。TCP提供了数据的有序传输、错误检测和重传机制，适用于可靠性要求较高的应用。</li>
 <li>UDP套接字：在UDP通信中，使用 <code>SOCK_DGRAM</code> 类型的套接字，它是一种<strong>面向数据包的、不可靠的</strong>传输协议。UDP不保证数据的可靠性、有序性或重传，适用于需要低延迟和较少开销的应用。</li>
 </ul>
 </li>
-<li>连接性：<ul>
+<li>连接性：
+<ul>
 <li>TCP套接字：TCP是面向连接的协议，它要求在通信前建立连接，有客户端和服务器之间的明确连接。使用 <code>socket</code>、<code>bind</code>、<code>listen</code>、<code>accept</code> 等函数来建立连接。</li>
 <li>UDP套接字：UDP是非连接性的协议，通信不需要事先建立连接，可以直接发送数据包。UDP通信中的套接字不需要监听和接受连接请求。</li>
 </ul>
 </li>
-<li>可靠性：<ul>
+<li>可靠性：
+<ul>
 <li>udp没啥可靠的（），主要就是快，怎么快怎么来，数据包可能会丢失，但是适用于实时要求高的应用</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h3 id="1-4-3-udp-server端过程"><a href="#1-4-3-udp-server端过程" class="headerlink" title="1.4.3 udp_server端过程"></a>1.4.3 udp_server端过程</h3><p>跟tcp差不多，主要有这个区别：</p>
+<h3 id="1-4-3-udp-server端过程">1.4.3 udp_server端过程</h3>
+<p>跟tcp差不多，主要有这个区别：</p>
 <ul>
-<li>只开了 <code>sockfd</code> 一个套接字<br>其他的略过</li>
+<li>只开了 <code>sockfd</code> 一个套接字<br>
+其他的略过</li>
 </ul>
-<h2 id="1-5-总结"><a href="#1-5-总结" class="headerlink" title="1.5 总结"></a>1.5 总结</h2><p>在本次udp和tcp回环实验的过程中，发现之前学习的网络编程中有一个误解：<br>之前认为一个套接字绑定的是一个进程，以前一直以为这个“进程”指的是一个.c文件或者这个.c文件编译出的可执行文件，但是通过tcp的实验发现，貌似并不是这样。</p>
+<h2 id="1-5-总结">1.5 总结</h2>
+<p>在本次udp和tcp回环实验的过程中，发现之前学习的网络编程中有一个误解：<br>
+之前认为一个套接字绑定的是一个进程，以前一直以为这个“进程”指的是一个.c文件或者这个.c文件编译出的可执行文件，但是通过tcp的实验发现，貌似并不是这样。</p>
 
                 
               </div>
