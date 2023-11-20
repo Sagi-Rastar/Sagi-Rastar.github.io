@@ -50,8 +50,6 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
-
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -98,11 +96,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
 </head>
 
 
@@ -410,7 +404,8 @@
 <p>通过查阅和参考其他大佬们的博客，发现hexo5有的一个功能 <code>注入代码</code> 是一个不错的方案。本次初步实现图集瀑布流的功能主要参考了<a target="_blank" rel="noopener" href="https://4dtree.github.io/2022/06/21/Hexo-Fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">@四维树大佬的这篇博客</a> 受益匪浅，感谢！</p>
 <p>其中，对于 <code>scripts</code> 文件夹，如果之前没有使用过hexo注入代码功能的朋友，可能会感到疑惑，可以先去<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/advance/#hexo-%E6%B3%A8%E5%85%A5%E4%BB%A3%E7%A0%81">官方文档</a> 了解一下注入代码的功能：</p>
 <blockquote>
-<p>Hexo 注入代码的方法：<em>编写注入代码，需要在博客的根目录下创建  <code>scripts</code> 文件夹，然后在里面任意命名创建一个 js 文件即可。</em></p>
+<p>Hexo 注入代码的方法：<br>
+<em>编写注入代码，需要在博客的根目录下创建  <code>scripts</code> 文件夹，然后在里面任意命名创建一个 js 文件即可。</em></p>
 </blockquote>
 <p>主要的过程在这位大佬的博客里面叙述的非常详细，此处就不重造轮子，重点记录一下后面添加图片以及站点显示的一些文本如何对应源代码设置：<br>
 <img src="image-20231111164045874.png" srcset="/img/loading.gif" lazyload alt=""></p>
@@ -426,10 +421,12 @@
 <p><img src="image-20231111165046333.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <ol start="3">
 <li>图集分类</li>
-<li>图片名称都是本地路径下的文件夹与文件名</li>
+<li>图片名称<br>
+都是本地路径下的文件夹与文件名</li>
 </ol>
 <h1>3 结语</h1>
-<p>感谢大佬们的博客，此次实现图片瀑布流的过程十分迅速。后期对于显示效果上的优化以及图片的丰富，可以之后再次参考一下大佬们的源代码：</p>
+<p>感谢大佬们的博客，此次实现图片瀑布流的过程十分迅速。<br>
+后期对于显示效果上的优化以及图片的丰富，可以之后再次参考一下大佬们的源代码：</p>
 <ul>
 <li><code>scripts/createPhotoList.js</code> ：获取图片信息</li>
 <li><code>source/pic/index.md</code> ：设置容器样式</li>
@@ -644,11 +641,6 @@
 
 
   
-
-
-  
-  
-
 
 
 

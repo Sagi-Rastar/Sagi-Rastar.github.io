@@ -50,8 +50,6 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
-
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -98,11 +96,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
 </head>
 
 
@@ -435,7 +429,8 @@
               <div class="markdown-body">
                 
                 <h1>1 前言</h1>
-<p>本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：<br>
+<p>本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。<br>
+其中我负责写第三题，以下是基础部分题目要求：<br>
 <img src="image-20231116153820589.png" srcset="/img/loading.gif" lazyload alt=""><br>
 <strong>主要就是三个功能：</strong></p>
 <ul>
@@ -503,7 +498,8 @@
 <h3 id="2-2-2-计数器模块">2.2.2 计数器模块</h3>
 <p>用于实现正常时钟的计数器，本质为24/60进制计数器。</p>
 <h4 id="2-2-2-1-代码实现">2.2.2.1 代码实现</h4>
-<p>由所需实现的功能可知，本次需要编写的计数器为异步清零和同步使能的加法计数器。正常情况下，秒计数器的时钟源由正常计数时钟（1Hz）提供，分钟和小时计数器的时钟源由上一位的进位信号提供。</p>
+<p>由所需实现的功能可知，本次需要编写的计数器为异步清零和同步使能的加法计数器。<br>
+正常情况下，秒计数器的时钟源由正常计数时钟（1Hz）提供，分钟和小时计数器的时钟源由上一位的进位信号提供。</p>
 <p>代码实现摘录如下，以秒计时器为例：</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">entity</span> count_60_sec <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">port</span><br>  (<br>    clk, rst, en : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>;<br>    q0, q1       : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">3</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>);<br>    cout         : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span><br>  );<br><span class="hljs-keyword">end</span> count_60_sec;<br></code></pre></td></tr></table></figure>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构体定义 -------------------------------------------------------------------------------</span><br><span class="hljs-keyword">architecture</span> a <span class="hljs-keyword">of</span> count_60_sec <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">signal</span> m_clk      : <span class="hljs-built_in">std_logic</span>;<br>  <span class="hljs-keyword">signal</span> num0, num1 : <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">3</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>); <span class="hljs-comment">-- num0：个位数，num1：十位数</span><br><span class="hljs-keyword">begin</span><br><br>  cout &lt;= <span class="hljs-string">&#x27;1&#x27;</span> <span class="hljs-keyword">when</span> (num0 = <span class="hljs-string">&quot;1001&quot;</span> <span class="hljs-keyword">and</span> num1 = <span class="hljs-string">&quot;0101&quot;</span> <span class="hljs-keyword">and</span> en = <span class="hljs-string">&#x27;1&#x27;</span>) <span class="hljs-keyword">else</span><br>    <span class="hljs-string">&#x27;0&#x27;</span>; <span class="hljs-comment">-- 59时输出进位信号</span><br><br>  <span class="hljs-keyword">process</span> (rst, clk)<br>  <span class="hljs-keyword">begin</span><br><br>    m_clk &lt;= clk; <span class="hljs-comment">-- 用于计数的时钟信号</span><br><br>    <span class="hljs-keyword">if</span> (rst = <span class="hljs-string">&#x27;0&#x27;</span>) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 低电平复位</span><br>      num0 &lt;= <span class="hljs-string">&quot;0000&quot;</span>;<br>      num1 &lt;= <span class="hljs-string">&quot;0000&quot;</span>;<br><br>    <span class="hljs-keyword">elsif</span> (m_clk<span class="hljs-symbol">&#x27;event</span> <span class="hljs-keyword">and</span> m_clk = <span class="hljs-string">&#x27;0&#x27;</span>) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 若下降沿，则计数</span><br><br>      <span class="hljs-keyword">if</span> (en = <span class="hljs-string">&#x27;1&#x27;</span>) <span class="hljs-keyword">then</span><br><br>        <span class="hljs-keyword">if</span> (num0 = <span class="hljs-string">&quot;1001&quot;</span>) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 个位数计数到9，个位数归零</span><br>          num0 &lt;= <span class="hljs-string">&quot;0000&quot;</span>;<br><br>          <span class="hljs-keyword">if</span> (num1 = <span class="hljs-string">&quot;0101&quot;</span>) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 个位数计数到9 &amp; 十位数计数到5，十位数归零</span><br>            num1 &lt;= <span class="hljs-string">&quot;0000&quot;</span>;<br><br>          <span class="hljs-keyword">else</span><br>            num1 &lt;= num1 + <span class="hljs-number">1</span>;<br>          <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br><br>        <span class="hljs-keyword">else</span><br>          num0 &lt;= num0 + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>      <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>    <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br>  q0 &lt;= num0; <span class="hljs-comment">-- 输出个位数</span><br>  q1 &lt;= num1; <span class="hljs-comment">-- 输出十位数</span><br><span class="hljs-keyword">end</span> a;<br></code></pre></td></tr></table></figure>
@@ -511,7 +507,8 @@
 <p><img src="image-20231117171919293.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>根据实际测量波形可知，以秒计时器为例，从图中可以看出模块输出为60进制加法器，成功验证代码。</p>
 <h3 id="2-2-3-校时模块">2.2.3 校时模块</h3>
-<p>由题目可知，需要分配两个按键出来为分钟和小时位提供校时功能，也就是当按下按键之后，对应的计数器时钟源切换为频率较快的（10Hz）频率源，从而快速调整对应位的计数。因此可以编写二选一选择器以实现这个功能，由位选信号，也就是按键信号，来选择提供给计数器的时钟源。</p>
+<p>由题目可知，需要分配两个按键出来为分钟和小时位提供校时功能，也就是当按下按键之后，对应的计数器时钟源切换为频率较快的（10Hz）频率源，从而快速调整对应位的计数。<br>
+因此可以编写二选一选择器以实现这个功能，由位选信号，也就是按键信号，来选择提供给计数器的时钟源。</p>
 <h4 id="2-2-3-1-代码实现">2.2.3.1 代码实现</h4>
 <p>二选一选择器代码实现摘录如下：</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">entity</span> mux21a <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">port</span><br>  (<br>    a, b, s : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>;<br>    y       : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span><br>  );<br><span class="hljs-keyword">end</span> mux21a;<br></code></pre></td></tr></table></figure>
@@ -776,11 +773,6 @@
 
 
   
-
-
-  
-  
-
 
 
 
