@@ -2174,7 +2174,6 @@ input[type=checkbox] {
 }
 .link-avatar {
   margin: 0;
-  width: $flexSize;
   background-color: #fbf2ef;
   box-shadow: 3px 5px 3px rgba(0,10,20,0.13);
   position: relative;
