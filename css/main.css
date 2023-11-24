@@ -2149,7 +2149,7 @@ input[type=checkbox] {
   border-radius: 1rem;
   border: 0;
   transition: transform 0.5s ease, box-shadow 0.3s ease;
-  margin: 1.5rem 1.5rem;
+  margin: 3rem 3rem;
 }
 .links .card:hover {
   transform: perspective(1200px) translateY(-5%) rotateX(35deg) translateZ(0);
