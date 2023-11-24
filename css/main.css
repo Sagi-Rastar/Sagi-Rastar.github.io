@@ -2144,7 +2144,7 @@ input[type=checkbox] {
 .links .card {
   position: relative;
   box-shadow: 3px 5px 3px rgba(0,10,20,0.13);
-  max-width: 60%; /* 设置最大宽度为50% */
+  max-width: 85%; /* 设置最大宽度为85% */
   background-color: #fff;
   border-radius: 1rem;
   border: 0;
