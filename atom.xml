@@ -6,7 +6,7 @@
   <link href="https://sagi-rastar.github.io/atom.xml" rel="self"/>
   
   <link href="https://sagi-rastar.github.io/"/>
-  <updated>2023-12-04T09:24:04.067Z</updated>
+  <updated>2023-12-04T13:42:46.637Z</updated>
   <id>https://sagi-rastar.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2023-12-04-随笔</title>
+    <link href="https://sagi-rastar.github.io/2023/12/04/2023-12-04-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2023/12/04/2023-12-04-%E9%9A%8F%E7%AC%94/</id>
+    <published>2023-12-04T13:34:10.000Z</published>
+    <updated>2023-12-04T13:42:46.637Z</updated>
+    
+    
+    <summary type="html">坐在实验室里面写随笔博客，总觉得不自在</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="随笔" scheme="https://sagi-rastar.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="感想" scheme="https://sagi-rastar.github.io/tags/%E6%84%9F%E6%83%B3/"/>
+    
+  </entry>
   
   <entry>
     <title>通信原理实验随笔</title>
