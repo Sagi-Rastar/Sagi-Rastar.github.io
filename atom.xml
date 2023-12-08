@@ -6,7 +6,7 @@
   <link href="https://sagi-rastar.github.io/atom.xml" rel="self"/>
   
   <link href="https://sagi-rastar.github.io/"/>
-  <updated>2023-12-04T13:42:46.637Z</updated>
+  <updated>2023-12-08T03:58:16.842Z</updated>
   <id>https://sagi-rastar.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>传感器复习随笔</title>
+    <link href="https://sagi-rastar.github.io/2023/12/08/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2023/12/08/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/</id>
+    <published>2023-12-08T01:41:57.000Z</published>
+    <updated>2023-12-08T03:58:16.842Z</updated>
+    
+    
+    <summary type="html">内容分支很多，考试会比较简单，主要看ppt</summary>
+    
+    
+    
+    <category term="embed" scheme="https://sagi-rastar.github.io/categories/embed/"/>
+    
+    
+    <category term="复习" scheme="https://sagi-rastar.github.io/tags/%E5%A4%8D%E4%B9%A0/"/>
+    
+    <category term="传感器" scheme="https://sagi-rastar.github.io/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>2023-12-04-随笔</title>
@@ -107,7 +128,7 @@
     <link href="https://sagi-rastar.github.io/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/</id>
     <published>2023-11-20T02:20:31.000Z</published>
-    <updated>2023-12-05T13:09:12.771Z</updated>
+    <updated>2023-12-06T01:07:56.311Z</updated>
     
     
     <summary type="html">起因是今天早上来实验室忘记带笔了（……</summary>
