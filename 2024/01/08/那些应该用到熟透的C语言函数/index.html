@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sagi-rastar.github.io/img/embed.jpg">
 <meta property="article:published_time" content="2024-01-08T13:18:26.000Z">
-<meta property="article:modified_time" content="2024-01-08T13:23:11.195Z">
+<meta property="article:modified_time" content="2024-01-13T12:37:03.841Z">
 <meta property="article:author" content="SagiRastar">
 <meta property="article:tag" content="嵌入式">
 <meta name="twitter:card" content="summary_large_image">
@@ -258,7 +258,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          1.9k 字
         
       </span>
     
@@ -269,7 +269,7 @@
         
         
         
-          14 分钟
+          16 分钟
         
       </span>
     
@@ -449,7 +449,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：22 分钟前
+                    本文最后更新于：1 个月前
                   
                 
               </p>
@@ -460,7 +460,9 @@
             
               <div class="markdown-body">
                 
-                <p>Sagi-Rastar: 详细解释一下 strstr</p>
+                <h1>1 字符串对比与类型长度</h1>
+<h2 id="1-1-字符串对比">1.1 字符串对比</h2>
+<p>Sagi-Rastar: 详细解释一下 strstr</p>
 <p>GitHub Copilot: <code>strstr</code> 是 C 语言中的一个函数，用于在一个字符串中查找另一个字符串的首次出现位置。</p>
 <p>函数原型为：<code>char *strstr(const char *haystack, const char *needle);</code></p>
 <p>这个函数接受两个参数：</p>
@@ -481,6 +483,7 @@
 <p>例如：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> result = <span class="hljs-built_in">strcmp</span>(<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>);<br><span class="hljs-comment">// result 现在是一个负数，因为 &quot;apple&quot; 在字典顺序上小于 &quot;banana&quot;</span><br></code></pre></td></tr></table></figure>
 <p>总的来说，<code>strstr</code> 用于查找字符串，而 <code>strcmp</code> 用于比较字符串。</p>
+<h2 id="1-2-类型长度">1.2 类型长度</h2>
 <p>Sagi-Rastar: strlen 和 sizeof 的区别</p>
 <p>GitHub Copilot: <code>strlen</code> 和 <code>sizeof</code> 是 C 语言中的两个函数，它们都用于获取某种类型的“长度”，但是它们的用途和行为是不同的。</p>
 <p><code>strlen</code> 是一个函数，用于获取 C 字符串（以 ‘\0’ 结尾的字符数组）的长度。<code>strlen</code> 返回的是字符串中的字符数量，不包括结束的空字符 ‘\0’。</p>
@@ -491,6 +494,10 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> str[] = <span class="hljs-string">&quot;Hello&quot;</span>;<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%zu\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(str));  <span class="hljs-comment">// 输出：6</span><br></code></pre></td></tr></table></figure>
 <p>在这个例子中，<code>sizeof(str)</code> 返回的是 6，因为 “Hello” 这个字符串包含 5 个字符，加上结束的空字符 ‘\0’，总共占用 6 个字节的内存。</p>
 <p>总的来说，<code>strlen</code> 用于获取字符串的长度，而 <code>sizeof</code> 用于获取类型或对象在内存中的大小。</p>
+<h1>2 结束与换行符</h1>
+<p>0x0D 和 0x0A 是 ASCII 码的十六进制表示，它们分别对应于十进制的 13 和 10。在 ASCII 表中，0x0D 对应的字符是 CR（Carriage Return，回车，\r），0x0A 对应的字符是 LF（Line Feed，换行，\n）。</p>
+<p>所以，0x0D 0x0A 组合在一起，通常用于表示文本中的新行。这种表示方法在 Windows 系统中常见。在 Unix 或 Linux 系统中，通常只使用 0x0A（LF）来表示新行。</p>
+<p>而字符串的结束符是 ‘\0’，在 ASCII 中对应的十六进制是 0x00。</p>
 
                 
               </div>
@@ -580,6 +587,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2024/02/11/2024-2-11-%E9%9A%8F%E7%AC%94/" title="2024-2-11-随笔">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2024-2-11-随笔</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
