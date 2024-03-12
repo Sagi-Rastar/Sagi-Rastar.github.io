@@ -1,4 +1,4 @@
-/*INFO 段落行间距设置*/
+/* INFO 段落行间距设置 */
 .post-content p {
     letter-spacing: 0.5px;
     /*文字间距为*/
@@ -12,12 +12,15 @@
     /*文本对齐方式*/
 }
 
+/* 副标题效果设置 */
 #subtitle {
-    background: linear-gradient(-45deg, #ee7752, #ce3e75, #23a6d5, #23d5ab);
+    font-size: 1.05em;
+    position: relative;
+    background: linear-gradient(164deg, #00ffe9, #a062ff, #30b6e2, #2e30e7);
     background-size: 400% 400%;
     -webkit-animation: Gradient 10s ease infinite;
     -moz-animation: Gradient 10s ease infinite;
-    animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite, backlight 5s linear 1 forwards;
     -o-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -29,6 +32,78 @@
     border-top-right-radius: 10px;
 }
 
+@keyframes backlight {
+    0% {
+        text-shadow:
+            0 0 20px rgba(255, 0, 0, 0),
+            0 0 30px rgba(255, 165, 0, 0),
+            0 0 50px rgba(255, 255, 0, 0);
+    }
+
+    100% {
+        text-shadow:
+            0 0 10px rgb(200 203 255 / 74%), 
+            0 0 40px rgb(6 46 255 / 36%), 
+            0 0 60px rgb(78 179 255 / 82%);
+    }
+}
+
 #subtitle:before {
     background-color: rgba(0, 0, 0, 0);
+}
+
+/* banner背景颜色渐变遮罩，下端融入背景色 */
+.banner .mask {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 21%), rgb(16 17 25));
+}
+
+/* 更改原本格格不入的nav-tabs样式 */
+.nav-tabs {
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.nav-tabs .nav-link {
+    border-radius: 0.5rem;
+    transition: all 1s ease;
+}
+
+.custom-nav-item {
+    margin: 0.25rem;
+}
+
+.ImageInCard img {
+    background-color: #21273b00;
+}
+
+.navbar .navbar-brand {
+    background: linear-gradient(150deg, #e0fffc, #7ea3e4, #be4fff, #ff57f8);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite, backlight2 1s linear 1 forwards;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@keyframes backlight2 {
+    0% {
+        text-shadow:
+            0 0 20px rgba(255, 0, 0, 0),
+            0 0 30px rgba(255, 165, 0, 0),
+            0 0 50px rgba(255, 255, 0, 0);
+    }
+
+    100% {
+        text-shadow:
+            0 0 10px rgb(200 203 255 / 30%), 
+            0 0 40px rgb(6 46 255 / 20%), 
+            0 0 60px rgb(78 179 255 / 50%);
+    }
 }

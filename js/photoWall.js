@@ -140,7 +140,7 @@ const photo = {
     var grid = new Minigrid({
       container: ".ImageGrid",
       item: ".card",
-      gutter: 12,
+      gutter: 8,
     });
     grid.mount();
     $(window).resize(function () {
