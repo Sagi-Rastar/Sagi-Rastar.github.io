@@ -6,7 +6,7 @@
   <link href="https://sagi-rastar.github.io/atom.xml" rel="self"/>
   
   <link href="https://sagi-rastar.github.io/"/>
-  <updated>2024-03-08T16:11:54.211Z</updated>
+  <updated>2024-03-22T03:15:02.639Z</updated>
   <id>https://sagi-rastar.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2024-03-22-随笔</title>
+    <link href="https://sagi-rastar.github.io/2024/03/22/2024-03-22-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/03/22/2024-03-22-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-03-22T03:01:41.000Z</published>
+    <updated>2024-03-22T03:15:02.639Z</updated>
+    
+    
+    <summary type="html">“赋予这些东西灵魂”</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="感想" scheme="https://sagi-rastar.github.io/tags/%E6%84%9F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>速查：CH340记录</title>
+    <link href="https://sagi-rastar.github.io/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/"/>
+    <id>https://sagi-rastar.github.io/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/</id>
+    <published>2024-03-20T01:21:07.000Z</published>
+    <updated>2024-03-20T03:55:59.482Z</updated>
+    
+    
+    <summary type="html">用的很多，但是一直没熟读过datasheet</summary>
+    
+    
+    
+    <category term="embed" scheme="https://sagi-rastar.github.io/categories/embed/"/>
+    
+    
+    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="原理" scheme="https://sagi-rastar.github.io/tags/%E5%8E%9F%E7%90%86/"/>
+    
+    <category term="常用芯片" scheme="https://sagi-rastar.github.io/tags/%E5%B8%B8%E7%94%A8%E8%8A%AF%E7%89%87/"/>
+    
+  </entry>
   
   <entry>
     <title>2024-03-09-随笔</title>
