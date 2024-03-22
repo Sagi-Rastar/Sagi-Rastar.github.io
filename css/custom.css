@@ -1,15 +1,15 @@
 /* INFO 段落行间距设置 */
 .post-content p {
-    letter-spacing: 0.5px;
     /*文字间距为*/
+    letter-spacing: 0.5px;
+    /*行间距为字体大小的倍数*/
     line-height: 1.5;
-    /*行间距为字体大小的2.5倍*/
-    margin-top: 10px;
     /*段前距离*/
-    margin-bottom: 10px;
+    margin-top: 25px;
     /*段后距离*/
-    text-align: justify;
+    margin-bottom: 25px;
     /*文本对齐方式*/
+    text-align: justify;
 }
 
 /* 副标题效果设置 */
@@ -112,4 +112,8 @@
     transform: perspective(1200px) translateY(-5%) rotateX(35deg) translateZ(0);
     transition: transform 1s cubic-bezier(0.64, -0.01, 0, 1), box-shadow 1s cubic-bezier(1, -0.07, 0.34, 1.01);
     box-shadow: 5px 8px 5px rgba(0, 10, 20, 0.3);
+}
+
+.note {
+    margin-bottom: 25px;
 }
