@@ -1,0 +1,1129 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/star.png">
+  <link rel="icon" href="/img/star.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="SagiRastar">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="嵌入式linux作业，使用标准IO，（Python也好用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络编程实验报告">
+<meta property="og:url" content="https://sagi-rastar.github.io/2023/11/07/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">
+<meta property="og:site_name" content="SagiRastar&#39;s Blog">
+<meta property="og:description" content="嵌入式linux作业，使用标准IO，（Python也好用">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sagi-rastar.github.io/img/embed.jpg">
+<meta property="article:published_time" content="2023-11-07T03:16:01.000Z">
+<meta property="article:modified_time" content="2023-11-18T12:46:53.780Z">
+<meta property="article:author" content="SagiRastar">
+<meta property="article:tag" content="嵌入式">
+<meta property="article:tag" content="作业">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="网络编程">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sagi-rastar.github.io/img/embed.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>网络编程实验报告 - SagiRastar&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/mac.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"sagi-rastar.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Sagi&#39;s stack </strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/pic/">
+                <i class="iconfont icon-images"></i>
+                <span>图集</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="网络编程实验报告"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-07 11:16" pubdate>
+          2023年11月7日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          37 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+              
+
+                  <div class="category-list">
+                    
+  
+    
+      
+        
+          <div class="category row nomargin-x">
+
+            <div class="col-12 m-auto index-img">
+              
+                <img src="/img/embed.jpg" alt="Category Image" />
+            </div>
+
+            <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="embed"
+              id="heading-269605d45c104f12cbcdc8fb71434acc" role="tab" data-toggle="collapse" href="#collapse-269605d45c104f12cbcdc8fb71434acc"
+              aria-expanded="true">
+              embed
+                <span class="list-group-count">
+                  (9)
+                </span>
+                <i class="iconfont icon-arrowright"></i>
+            </a>
+            
+                <div class="category-collapse collapse show"
+                  id="collapse-269605d45c104f12cbcdc8fb71434acc" role="tabpanel" aria-labelledby="heading-269605d45c104f12cbcdc8fb71434acc">
+                  
+                    
+                              
+                <div class="category-post-list">
+                  
+                    
+                      
+                        
+                              <a href="/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/" title="FPGA电子钟课设设计过程" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  FPGA电子钟课设设计过程
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/11/07/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/" title="STM32中的GPIO框图解析与软件配置" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  STM32中的GPIO框图解析与软件配置
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/11/07/STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/" title="STM32中通过EXTI配置外部中断事件" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  STM32中通过EXTI配置外部中断事件
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/12/08/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/" title="传感器复习随笔" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  传感器复习随笔
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/11/07/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" title="网络编程实验报告" class="list-group-item list-group-item-action
+           active">
+                                <span class="category-post">
+                                  网络编程实验报告
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/11/30/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/" title="通信原理实验随笔" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  通信原理实验随笔
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/" title="速查：CH340记录" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  速查：CH340记录
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2024/01/08/%E9%82%A3%E4%BA%9B%E5%BA%94%E8%AF%A5%E7%94%A8%E5%88%B0%E7%86%9F%E9%80%8F%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/" title="那些应该用到熟透的C语言函数" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  那些应该用到熟透的C语言函数
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/" title="高频电子复习随笔" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  高频电子复习随笔
+                                </span>
+                              </a>
+                              
+                                
+                </div>
+                
+                                
+                </div>
+          </div>
+          
+                  </div>
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">网络编程实验报告</h1>
+            
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：7 个月前
+                  
+                
+              </p>
+            <p>
+              
+            </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="1-linux作业-网络编程">1 linux作业 | 网络编程</h1>
+<h2 id="1-1-作业实验环境">1.1 作业实验环境</h2>
+<ul>
+<li>硬件：<code>树莓派3b+</code></li>
+<li>系统：<code>Raspbian GNU/Linux 11 (bullseye)</code></li>
+<li>编辑器与连接方式：<code>vscode远程ssh</code></li>
+<li>编译器：<code>gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1) </code></li>
+</ul>
+<h2 id="1-2-作业概述">1.2 作业概述</h2>
+<p>通过实际运行tcp/udp实例代码，了解linux网络编程，熟悉linux网络编程基本过程。本次作业报告分为两个部分：</p>
+<ul>
+<li>TCP回环测试</li>
+<li>UDP回环测试将分别记录各自过程</li>
+</ul>
+<h2 id="1-3-TCP回环实验测试">1.3 TCP回环实验测试</h2>
+<h3 id="1-3-1-实验效果">1.3.1 实验效果</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png" srcset="/img/loading.gif" lazyload alt=""><br>
+如上图所示，左侧为 <code>tcp_client</code> 端，右侧为 <code>tcp_server</code> 端，对应为各自所运行的终端。</p>
+<ul>
+<li>先运行右侧 <code>server</code> 端，传入参数为 <code>127.0.0.1 55566</code> ，开始阻塞等待 <code>client</code> 端连接</li>
+<li>再运行左侧 <code>client</code> 端，传入参数一致，此时右侧 <code>server</code> 端打印 <code>client</code> 端 <code>ip</code> 与 <code>port</code> ，结果为 <code>127.0.0.1:41292</code> ，可见 <code>client</code> 端程序为其套接字分配了一个随机的未被占用的端口</li>
+<li>此时左侧 <code>client</code> 端输入消息，将会在右侧 <code>server</code> 端显示，并且收到 <code>server</code> 端的回传</li>
+<li>左侧 <code>client</code> 输入 <code>quit</code> 后，将会将其发送给 <code>server</code> 后退出程序，同样，<code>server</code> 接收到 <code>quit</code> 后也会将自己关闭</li>
+<li>另外，在 <code>server</code> 端输入的东西将会被存储，程序没有 <code>fget</code> ，因此在退出终端之后，终端将会读取之前输入的命令下面逐步总结各自程序的过程</li>
+</ul>
+<h3 id="1-3-2-tcp-client端过程">1.3.2 tcp_client端过程</h3>
+<h4 id="1-3-2-1-定义变量">1.3.2.1 定义变量</h4>
+<ul>
+<li><code>int sockfd;</code> - socket file descriptor - 套接字描述符
+<ul>
+<li>用于存储后面创建的套接字</li>
+</ul>
+</li>
+<li><code>struct sockaddr_in serveraddr;</code> - 存储 <code>server</code> 端信息所用结构体
+<ul>
+<li>存储地址与端口</li>
+<li><code>sockaddr_in</code> 源码注释： <code>/* Structure describing an Internet socket address.  */</code></li>
+<li>后面暂时看不懂，手敲了一下好像有四个成员变量（ #need_to_search<br>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029160553.png" srcset="/img/loading.gif" lazyload alt="">)</li>
+</ul>
+</li>
+<li>地址长度和缓冲区略</li>
+</ul>
+<h4 id="1-3-2-2-异常处理">1.3.2.2 异常处理</h4>
+<ul>
+<li>传入参数合法与否</li>
+<li>调用 <code>socket</code> 函数，创建套接字
+<ul>
+<li><code>AF_INET</code> - Address Family_Internet - IPv4地址族</li>
+<li><code>SOCK_STREAM</code> - 面向流的TCP套接字（？这里的stream和NanoPB的stream是不是一个东西 #need_to_search</li>
+<li><code>0</code> - 表示自动选择协议，一般为TCP</li>
+<li>若创建失败返回 <code>-1</code>，并设置全局变量 <code>errno</code> 来指示发生了什么错误。通常情况下，如果连接失败，可以通过调用 <code>perror(&quot;socket error&quot;);</code> 来输出与连接失败相关的错误消息。</li>
+</ul>
+</li>
+<li>向 <code>serveraddr</code> 结构体中存储成员变量
+<ul>
+<li><code>sin_family</code> - 用于指定地址族</li>
+<li><code>sin_port</code> 与 <code>sin_addr</code> - 端口和地址
+<ul>
+<li>？为啥 <code>sin_addr</code> 还要 <code>.s_addr</code></li>
+</ul>
+<blockquote>
+<p><strong>拓展搜索</strong>：<code>sin_addr.s_addr</code> 表示了 <code>struct sockaddr_in</code> 结构体中的 IP 地址字段。这样的结构设计是为了与网络编程中的网络字节序（大端Big-endian）相一致，同时也考虑了C语言的底层数据表示。</p>
+</blockquote>
+<ul>
+<li><code>inet_addr</code> - 点分十进制地址转换为32位整数</li>
+<li><code>atoi</code> 和 <code>htons</code> - ASCII to Integer 和 Host to Network Short
+<ul>
+<li>一个是把阿斯克码转整形</li>
+<li>一个是把16位整数转网络字节序 （不是，那为啥port为啥不像addr一样分一个s_port啊</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>调用 <code>connect</code> 函数，根据 <code>套接字</code> + <code>地址信息</code> 向 <code>server</code> 端发送连接请求
+<ul>
+<li><code>sockfd</code> - 存储的套接字</li>
+<li><code>(struct sockaddr *)&amp;serveraddr</code> - 一个指向服务器地址信息的指针
+<ul>
+<li>强制类型转换：<code>serveraddr</code> 是前面定义的 <code>struct sockaddr_in</code> 结构体，该函数需要的结构体类型为 <code>sockaddr</code>
+<ul>
+<li>拓展搜索：<code>serveraddr</code> | <code>serveraddr_in</code> | <code>serveraddr_in6</code> 之间的关系
+<ul>
+<li>不管是<code>serveraddr_in</code> | <code>serveraddr_in6</code> ，都是<code>serveraddr</code> 的一个特殊形式，其中 <code>_in</code> 给IPv4用， <code>_in6</code> 给IPv6用</li>
+<li>这里的 <code>in</code> 不是输入的意思，而是 <code>Internet</code> 的意思</li>
+<li><code>sockaddr_in</code> 表示 “Socket Address Internet”，用于表示IPv4地址。</li>
+<li><code>sockaddr_in6</code> 表示 “Socket Address Internet version 6”，用于表示IPv6地址。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>addrlen</code> - 长度</li>
+<li>若连接失败返回 <code>-1</code>，并设置全局变量 <code>errno</code> 来指示发生了什么错误。通常情况下，如果连接失败，可以通过调用 <code>perror(&quot;connect error&quot;);</code> 来输出与连接失败相关的错误消息。</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-3-2-3-主循环">1.3.2.3 主循环</h4>
+<ul>
+<li><code>fget</code> - 获取用户输入，丢到 <code>buf</code> 里面，删掉最后的换行符 <code>'\0'</code></li>
+<li>调用 <code>send</code> 函数，传入套接字 + 内容 + 内容大小 + 可选标志
+<ul>
+<li>前面三个参数没啥说的，主要是可选标志：
+<ol>
+<li>0（默认）：通常情况下，将最后一个参数设置为0表示不使用特殊标志，即使用默认的发送行为。</li>
+<li><code>MSG_DONTWAIT</code>：如果将参数设置为 <code>MSG_DONTWAIT</code>，则 <code>send</code> 函数将以非阻塞方式发送数据。这意味着即使套接字的发送缓冲区已满，<code>send</code> 也会尽力发送尽可能多的数据，并立即返回，不会阻塞程序的执行。</li>
+<li><code>MSG_NOSIGNAL</code>：这个标志通常在Linux系统上使用，它告诉操作系统不要发送 <code>SIGPIPE</code> 信号，即使套接字的远程端关闭了连接，也不会中断程序。这在某些情况下可以防止程序因为连接断开而崩溃。</li>
+<li>其他特定标志：<code>send</code> 函数还可以接受其他特定于操作系统和套接字类型的标志参数，这些参数可以根据需要进行设置。这些标志通常用于高级用例，例如对套接字选项的设置或特殊的网络处理需求。</li>
+</ol>
+</li>
+<li>若发送失败返回 <code>-1</code>，并设置全局变量 <code>errno</code> 来指示发生了什么错误。通常情况下，如果连接失败，可以通过调用 <code>perror(&quot;send error&quot;);</code> 来输出与连接失败相关的错误消息。</li>
+</ul>
+</li>
+<li><code>strncmp</code> 判断是否输入了 <code>quit</code> ，是则退出</li>
+<li>调用 <code>recv</code> 函数，与 <code>send</code> 类似，略</li>
+<li><code>printf</code> 在终端打印server回环的消息</li>
+</ul>
+<p>没了</p>
+<h3 id="1-3-3-tcp-server端过程">1.3.3 tcp_server端过程</h3>
+<h4 id="1-3-3-1-定义变量">1.3.3.1 定义变量</h4>
+<p>这部分和 <code>client</code> 端差不多，套接字描述符多了一个 <code>acceptfd</code> ，用于接受客户端用的，sockaddr_in 结构体也多了一个 <code>clientaddr</code> ，用于存储客户端的地址信息<br>
+<code>bzero</code> 函数将服务端和客户端的地址信息结构体初始化为零</p>
+<h4 id="1-3-3-2-异常处理">1.3.3.2 异常处理</h4>
+<ul>
+<li>传入参数合法与否</li>
+<li>创建套接字，同上</li>
+<li>向 <code>serveraddr</code> 结构体中存储成员变量，同上</li>
+<li>调用 <code>bind</code> 函数，将套接字和 <code>serveraddr</code> 绑定，以便监听客户端的连接请求</li>
+<li>调用 <code>listen</code> 函数，将套接字设置为监听模式，等待客户端的连接请求，<code>5</code> 表示等待连接队列的最大长度</li>
+<li>调用 <code>accept</code> 函数，当有新的 <code>client</code> 连接请求后，该函数将会为这个特指的 <code>client</code> 返回一个新的套接字（？这里我的表述是不是有点问题）
+<ul>
+<li><code>(struct sockaddr *)&amp;clientaddr</code>：这是一个指向 <code>clientaddr</code> 结构体的指针，用于存储客户端的地址信息。当 <code>accept</code> 函数接受连接时，它会将客户端的地址信息填充到这个结构体中，以便后续使用。</li>
+<li><code>&amp;addrlen</code> 是一个指向 <code>addrlen</code> 变量的指针，它用于指定 <code>clientaddr</code> 结构体的大小，以便 <code>accept</code> 函数知道要填充多少字节的地址信息。<code>addrlen</code> 在之前的代码中已经设置为 <code>sizeof(serveraddr)</code>，表示这个结构体的大小。</li>
+<li>这两个参数可以设置为 <code>NULL</code> 表示不关心 <code>client</code> 的信息</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>拓展搜索</strong>：这个 <code>accept</code> 套接字和<code>sockfd</code> 有什么区别，为什么要设置两个套接字？</p>
+<ul>
+<li>首先明确，网络通信中一般服务器往往会处理很多个客户端的通信，因此需要将用于监听连接请求的套接字和用于数据传输的套接字分开，也就是说<code>accept</code> 套接字和 <code>sockfd</code> 具有不同的角色和用途，这是为了支持服务器端的并发连接处理。</li>
+<li>所以，<code>sockfd</code> 负责监听并接受多个客户端的连接请求，而 <code>acceptfd</code> 用于与单个客户端进行数据通信。这种分离允许服务器并发处理多个客户端的连接和通信，提高了服务器的性能和效率。当一个客户端连接时，服务器会为其创建一个独立的 <code>acceptfd</code>，这种模型被称为并发服务器模型，它允许多个客户端同时与服务器通信，而不会相互干扰。</li>
+</ul>
+</blockquote>
+<ul>
+<li>没啥问题，上面的都跑完了就打出客户端的 <code>IP</code> 和 <code>port</code></li>
+</ul>
+<h4 id="1-3-3-3-主循环">1.3.3.3 主循环</h4>
+<p>跟 <code>client</code> 端稍稍有点区别</p>
+<ul>
+<li>接收消息还是调用 <code>recv</code> 函数，不过注意这里使用的套接字是 <code>acceptfd</code> ，原因上面有记录
+<ul>
+<li>没东西就 <code>perror(&quot;no data&quot;);</code></li>
+<li>客户端叫 <code>quit</code> 就退出，<code>goto</code> 操作，关闭两个套接字。</li>
+<li>上面俩特例都没有，就正常打印客户端消息，并且 <code>strcat</code> 之后传回去给 <code>client</code> 一个响应</li>
+</ul>
+</li>
+</ul>
+<p>没了</p>
+<h2 id="1-4-UDP回环实验测试">1.4 UDP回环实验测试</h2>
+<h3 id="1-4-1-实验效果">1.4.1 实验效果</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png" srcset="/img/loading.gif" lazyload alt=""><br>
+实验效果跟tcp大差不差，只是右侧的 <code>server</code> 端的显示每一次接收到消息都会打印出地址和端口</p>
+<h3 id="1-4-2-udp-client端过程">1.4.2 udp_client端过程</h3>
+<p>跟上面tcp的过程也差不多，主要留意几个区别的地方：</p>
+<ul>
+<li>UDP（User Datagram Protocol）套接字，与TCP（Transmission Control Protocol）套接字的创建有一些关键区别：
+<ul>
+<li>套接字类型：
+<ul>
+<li>TCP套接字：在TCP通信中，使用 <code>SOCK_STREAM</code> 类型的套接字，它是一种<strong>面向连接的、可靠的、基于流</strong>的传输协议。TCP提供了数据的有序传输、错误检测和重传机制，适用于可靠性要求较高的应用。</li>
+<li>UDP套接字：在UDP通信中，使用 <code>SOCK_DGRAM</code> 类型的套接字，它是一种<strong>面向数据包的、不可靠的</strong>传输协议。UDP不保证数据的可靠性、有序性或重传，适用于需要低延迟和较少开销的应用。</li>
+</ul>
+</li>
+<li>连接性：
+<ul>
+<li>TCP套接字：TCP是面向连接的协议，它要求在通信前建立连接，有客户端和服务器之间的明确连接。使用 <code>socket</code>、<code>bind</code>、<code>listen</code>、<code>accept</code> 等函数来建立连接。</li>
+<li>UDP套接字：UDP是非连接性的协议，通信不需要事先建立连接，可以直接发送数据包。UDP通信中的套接字不需要监听和接受连接请求。</li>
+</ul>
+</li>
+<li>可靠性：
+<ul>
+<li>udp没啥可靠的（），主要就是快，怎么快怎么来，数据包可能会丢失，但是适用于实时要求高的应用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-4-3-udp-server端过程">1.4.3 udp_server端过程</h3>
+<p>跟tcp差不多，主要有这个区别：</p>
+<ul>
+<li>只开了 <code>sockfd</code> 一个套接字其他的略过</li>
+</ul>
+<h2 id="1-5-总结">1.5 总结</h2>
+<p>在本次udp和tcp回环实验的过程中，发现之前学习的网络编程中有一个误解：之前认为一个套接字绑定的是一个进程，以前一直以为这个“进程”指的是一个.c文件或者这个.c文件编译出的可执行文件，但是通过tcp的实验发现，貌似并不是这样。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/embed/" class="category-chain-item">embed</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="print-no-link">#嵌入式</a>
+      
+        <a href="/tags/%E4%BD%9C%E4%B8%9A/" class="print-no-link">#作业</a>
+      
+        <a href="/tags/linux/" class="print-no-link">#linux</a>
+      
+        <a href="/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="print-no-link">#网络编程</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>网络编程实验报告</div>
+      <div>https://sagi-rastar.github.io/2023/11/07/网络编程实验报告/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>SagiRastar</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月7日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/11/08/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/" title="当音乐遇见故事一起走上舞台">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">当音乐遇见故事一起走上舞台</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/11/07/STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/" title="STM32中通过EXTI配置外部中断事件">
+                        <span class="hidden-mobile">STM32中通过EXTI配置外部中断事件</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments">
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"Sagi-Rastar/Sagi-Rastar.github.io","repo-id":"R_kgDOJOGzsw","category":"Announcements","category-id":"DIC_kwDOJOGzs84CaurY","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/duration.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

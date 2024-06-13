@@ -1,0 +1,1010 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/star.png">
+  <link rel="icon" href="/img/star.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="SagiRastar">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="也许是最适合自己的博客写作流程了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于我使用obsidian加hexo部署个人博客的过程">
+<meta property="og:url" content="https://sagi-rastar.github.io/2023/11/10/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/">
+<meta property="og:site_name" content="SagiRastar&#39;s Blog">
+<meta property="og:description" content="也许是最适合自己的博客写作流程了">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sagi-rastar.github.io/img/web.jpg">
+<meta property="article:published_time" content="2023-11-10T02:18:47.000Z">
+<meta property="article:modified_time" content="2023-11-20T11:01:37.658Z">
+<meta property="article:author" content="SagiRastar">
+<meta property="article:tag" content="嵌入式">
+<meta property="article:tag" content="过程记录">
+<meta property="article:tag" content="个人博客">
+<meta property="article:tag" content="网站">
+<meta property="article:tag" content="建站">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sagi-rastar.github.io/img/web.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>关于我使用obsidian加hexo部署个人博客的过程 - SagiRastar&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/mac.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"sagi-rastar.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Sagi&#39;s stack </strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/pic/">
+                <i class="iconfont icon-images"></i>
+                <span>图集</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="关于我使用obsidian加hexo部署个人博客的过程"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-10 10:18" pubdate>
+          2023年11月10日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          34 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+              
+
+                  <div class="category-list">
+                    
+  
+    
+      
+        
+          <div class="category row nomargin-x">
+
+            <div class="col-12 m-auto index-img">
+              
+                <img src="/img/web.jpg" alt="Category Image" />
+            </div>
+
+            <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="web"
+              id="heading-2567a5ec9705eb7ac2c984033e06189d" role="tab" data-toggle="collapse" href="#collapse-2567a5ec9705eb7ac2c984033e06189d"
+              aria-expanded="true">
+              web
+                <span class="list-group-count">
+                  (2)
+                </span>
+                <i class="iconfont icon-arrowright"></i>
+            </a>
+            
+                <div class="category-collapse collapse show"
+                  id="collapse-2567a5ec9705eb7ac2c984033e06189d" role="tabpanel" aria-labelledby="heading-2567a5ec9705eb7ac2c984033e06189d">
+                  
+                    
+                              
+                <div class="category-post-list">
+                  
+                    
+                      
+                        
+                              <a href="/2023/11/11/hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/" title="hexo-fluid主题添加图集瀑布流功能" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  hexo-fluid主题添加图集瀑布流功能
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/11/10/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/" title="关于我使用obsidian加hexo部署个人博客的过程" class="list-group-item list-group-item-action
+           active">
+                                <span class="category-post">
+                                  关于我使用obsidian加hexo部署个人博客的过程
+                                </span>
+                              </a>
+                              
+                                
+                </div>
+                
+                                
+                </div>
+          </div>
+          
+                  </div>
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">关于我使用obsidian加hexo部署个人博客的过程</h1>
+            
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：7 个月前
+                  
+                
+              </p>
+            <p>
+              
+            </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="1-前言">1 前言</h1>
+<p>从很早之前就一直希望搭建一个属于自己的博客。不管是折腾各种有趣项目还是在看完了那些精彩的文学作品，总觉得没有留下一点什么，实在是可惜。发空间或者朋友圈这样的形式，实在不足以记录当时的心情，向有文章区的社交网站投稿文章，又显得不大合适。</p>
+<p>兜兜转转，还是下定决心搭建一个属于自己的个人博客。一来是个人博客的形式更适合自己，在自己的站点碎碎念，不必考虑文章是否合乎投稿社群氛围；二来是近年来，随着输入的增加，愈发感觉到自己语言的贫乏，对于能够流畅行文、顺畅表达出自己想法的人愈发羡慕。因此，希望能够锻炼一点自己表达的能力，也是我搭建个人博客的一个契机。</p>
+<p>本次过程记录，将会尽可能详尽地记录整个搭建过程，对于同样想要搭建一个属于自己的 “赛博小窝“ 的读者，希望这篇拙笔能够帮上你一点忙。</p>
+<p>值得一提的是，本站点搭建方法以及使用的工作流，只是笔者在尝试了各类方法后，觉得最适合自己的方法，每个人最好的工作流，终归是最适合自己的工作流，希望拙笔能够为你寻找最佳工作流的路上提供一点参考</p>
+<h1 id="2-搭建方案">2 搭建方案</h1>
+<p>笔者搭建环境：</p>
+<ul>
+<li>本地站点搭建在：<code>Windows 11 专业版 21H2 22000.2538</code></li>
+<li>终端工具：<code>Powershell</code></li>
+<li>各种.yml文件或.ejs文件编辑器：<code>VS Code</code></li>
+</ul>
+<p>博客站点框架使用 <code>Hexo</code> 搭建，主题使用 <code>Fluid</code> ，以下是 <code>Hexo</code> 与 <code>Fluid</code> 的官方文档：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/start/">Fluid</a></li>
+</ul>
+<p>静态网站托管服务使用 <code>Github Pages</code> ，github的这个服务是免费的，因此很多个人博客都会使用这个服务，并且免去了各种意义上的麻烦，<s>包括穷的麻烦。</s> 以下是 <code>Github Pages</code> 的官方文档：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/zh/pages/getting-started-with-github-pages">Github Pages</a></li>
+</ul>
+<p>写作工具使用 <code>Obsidian</code>，因为在之前就有使用Obsidian进行做笔记的习惯，比较顺手且好用，由于插件的支持以及其强大的拓展性，所以对于后面搭建的工作流有较好的适配性。<s>更好的是，这个软件除了发布和云盘等内容，都是免费的。</s> 以下是 <code>Obsidian</code> 的官方文档：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B">Obsidian</a></li>
+</ul>
+<p>依附于上述三个部分的若干插件将在后面的叙述中记录。</p>
+<h1 id="3-工作流与写作过程">3 工作流与写作过程</h1>
+<h2 id="3-1-站点框架">3.1 站点框架</h2>
+<h3 id="3-1-1-Hexo">3.1.1 Hexo</h3>
+<p>对于对前端不熟的我来说，像Hexo这样的框架是再适合不过了。使用Hexo的时候不需要关心网站中的各个组件的代码是如何编写的，在搭建好框架之后我只需要撰写markdown文件就可以生成网页了。</p>
+<h4 id="3-1-1-1-安装依赖">3.1.1.1 安装依赖</h4>
+<p>Hexo有两个前置依赖：</p>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+</ul>
+<blockquote>
+<p>Node.js 是一个可以执行 JavaScript 代码的软件程序。更准确地说，Node.js 是一个 JavaScript 运行环境。它是一个开发环境，可以将 JavaScript 代码用于服务器端脚本。</p>
+</blockquote>
+<blockquote>
+<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p>
+</blockquote>
+<p>对于这两个东西的安装，可以参考Hexo官网的步骤：<br>
+<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Git">Git的安装</a><br>
+<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Node-js">Node.js的安装</a></p>
+<blockquote>
+<p><strong>指北：</strong><br>
+如果已习惯类似 <code>chocolatey</code> 这样的包管理工具，可以参考Hexo官网 <em>[安装 Node.js]</em> 一节中 <em>[其他的安装方法]</em> 看了一眼，貌似支持 <code>winget</code> 、 <code>chocolatey</code> 等。</p>
+</blockquote>
+<h4 id="3-1-1-2-安装Hexo并本地启动">3.1.1.2 安装Hexo并本地启动</h4>
+<p>安装完git和node之后就可以使用npm安装Hexo了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli   <span class="hljs-comment"># 全局安装</span><br>  <br>hexo -v   <span class="hljs-comment"># 查看hexo版本</span><br></code></pre></td></tr></table></figure>
+<p>开始创建一个项目 <code>my-blog</code></p>
+<div class="note note-warning">
+            <p>请注意！下面这个命令行的指令中使用了 <code>cd my-blog</code> 这意味着往后的终端指令都在./my-blog路径下执行，并且在以后想要发布网页的时候也需要在该文件夹下执行指令。</p>
+          </div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init my-blog<br><br><span class="hljs-built_in">cd</span> my-blog<br><br>npm install<br> <br></code></pre></td></tr></table></figure>
+<p>生成网页文件后本地启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g     <span class="hljs-comment"># generate 生成界面</span><br>hexo s     <span class="hljs-comment"># server 本地启动网站</span><br></code></pre></td></tr></table></figure>
+<p>浏览器访问命令行中提示的网站<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>可以看到在本机的4000端口Hexo已经生成了一个示例网站了。</p>
+<h4 id="3-1-1-3-更换主题">3.1.1.3 更换主题</h4>
+<p>以本站使用的Fluid主题为例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>
+<p>后面关于Fluid的各种配置请参考 <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/start/#%E6%8C%87%E5%AE%9A%E4%B8%BB%E9%A2%98">Hexo官方文档的这个小节往后</a> 执行。</p>
+<p>当执行完上述操作之后，完成了主题的配置，可以执行下述指令，查看效果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean  <span class="hljs-comment"># 清除</span><br>hexo g      <span class="hljs-comment"># 生成</span><br>hexo s      <span class="hljs-comment"># 本地启动</span><br></code></pre></td></tr></table></figure>
+<p>再次访问<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>，应该设置已经生效了。</p>
+<h4 id="3-1-1-4-工作流设置">3.1.1.4 工作流设置</h4>
+<p>正如前面所说，笔者使用的是 <code>Obsidian</code> 写的博客，而在实践的过程中比较麻烦的是这个图片的插入方法。以前写过的两篇博客都是用Github开了一个仓库之后利用Picgo这个小工具实现的图床的，但是在现在这种场景下插入图片并不优雅，因为每次的插入图片我都需要完成以下操作：</p>
+<ul>
+<li>截图，复制到剪切板中</li>
+<li>打开Picgo，上传文件到github中</li>
+<li>复制md格式的图片链接</li>
+<li>回到obsidian中粘贴这个链接</li>
+</ul>
+<p>太麻烦了！因为之前在obsidian里面插入图片，只需要在图片在剪贴板中的时候直接回到obsidian里面 <code>ctrl</code> + <code>v</code> ，obsidian就会自动将这个文件上传到指定的文件夹下，并且自动在粘贴处插入obsidian支持显示图片的链接。</p>
+<p>因此在实践hexo撰写博客的过程中，我利用了obsidian原生支持的这种工作流程，下面介绍一下具体实现，和使用到的插件：</p>
+<h5 id="3-1-1-4-1-obsidian设置">3.1.1.4.1 obsidian设置</h5>
+<p>如果您还没有了解过obsidian，请参考这几篇博客，此处碍于篇幅就不展开obsidian的使用：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/428519519">玩转Obsidian，这里介绍了obsidian的基本用法</a></li>
+</ul>
+<blockquote>
+<p>实际上，可以把他就当成一个编辑器使用就好，需要用到什么功能的时候，可以去查有没有插件已经实现了你的想法</p>
+</blockquote>
+<p>为了能够让obsidian粘贴图片的时候改变上传图片的路径，并且自定义所插入的图片markdown链接，我们需要用到一个插件：Custom Attachment Location<br>
+此处安装方法可以参考这位的博客：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_52357217/article/details/127562163">如何让Obsidian的图片存储形式设置为 ./${filename}.assets</a></li>
+</ul>
+<blockquote>
+<p>笔者自己的设置格式为 <code>./$&#123;filename&#125;</code> 为的是和后面hexo那边的设置相匹配，以完成hexo和obsidian的连续自动化</p>
+</blockquote>
+<p>设置完成之后obsidian的相关设置应该长这样：</p>
+<ul>
+<li>设置 - 第三方插件设置 - Custom Attachment Location<br>
+<img src="image-20231110115126650.png" srcset="/img/loading.gif" lazyload alt=""></li>
+<li>设置 - 文件与链接<br>
+<img src="image-20231110115305759.png" srcset="/img/loading.gif" lazyload alt=""></li>
+</ul>
+<p>这样设置完了之后，在后面用obsidian编写博客直接粘贴图片到编辑区后，就会在与当前笔记同级的同名子文件夹中保存图片，并且在正文中插入后面Hexo那边也可以识别的markdown图片链接，效果如下：<br>
+<img src="image-20231110115759893.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="image-20231110115742882.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h5 id="3-1-1-4-2-Hexo端设置">3.1.1.4.2 Hexo端设置</h5>
+<p>修改 <code>_config.yml</code> 文件中的这个选项，这样可以生成一个同名的资源目录，用于存放同名文章使用的资产。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">marked:</span> <span class="hljs-comment"># 如果原本有就更改下面的这些选项，如果没有就添加</span><br>  <span class="hljs-attr">prependRoot:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">postAsset:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<h5 id="3-1-1-4-3-创建文章">3.1.1.4.3 创建文章</h5>
+<p>当你要开始写一篇文章的时候，在命令行中输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new post &lt;文章名&gt;<br></code></pre></td></tr></table></figure>
+<p>就会在 <code>./my-blog/source/_posts/</code> 路径下新建 <code>&lt;文章名&gt;.md</code> 文件和同名资产文件夹，然后直接在obsidian中选择打开 <code>./source</code> 文件夹后选择刚刚生成的md文件就可以开始愉快写作了！</p>
+<h2 id="3-2-发布！">3.2 发布！</h2>
+<p>在Github中注册账号，然后创建一个仓库，配置Github Pages：创建仓库的时候，仓库名请务必填 <code>&lt;你的github名&gt;.github.io</code> ，不然的话Github不会将该仓库认作Github Pages。</p>
+<p>在 <code>&lt;你的github名&gt;.github.io</code> 仓库对应的 GitHub Pages 设置页面 (访问路径为 <code>Settings -&gt; Pages</code> ) 可以找到个人博客的主页访问地址：https://&lt;GitHub 用户名&gt;.github.io。</p>
+<p>回到hexo这边，首先安装 <code>hexo-deployer-git</code> ：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
+<p>修改 <code>_config.yml</code> 文件：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">&lt;repository</span> <span class="hljs-string">url&gt;</span> <span class="hljs-comment"># https://github.com/&lt;GitHub用户名&gt;/&lt;GitHub用户名&gt;.github.io.git</span><br>  <span class="hljs-attr">branch:</span> [<span class="hljs-string">branch</span>]<br>  <span class="hljs-attr">token:</span> [<span class="hljs-string">token</span>]<br></code></pre></td></tr></table></figure>
+<p>配置好了之后可以就可以在终端生成站点文件后推送到这个仓库，然后外网用户就可以在你的博客地址中访问你的博客了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo deploy<br></code></pre></td></tr></table></figure>
+<h2 id="3-3-配置完之后的工作流">3.3 配置完之后的工作流</h2>
+<ol>
+<li>使用new指令新建一篇博客：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new &lt;文章名&gt;<br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>打开obsidian开始写作，此时粘贴图片可以直接插入</li>
+<li>写作完了之后，终端本地预览：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g<br>hexo s<br></code></pre></td></tr></table></figure>
+<ol start="4">
+<li>预览没问题之后，发布：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo d<br></code></pre></td></tr></table></figure>
+<h1 id="4-结语">4 结语</h1>
+<p>利用obsidian结合hexo来写作自己的博客还有很多优点，除了插入图片比较舒心之外，yml的标签甚至奇妙地兼容了，obsidian里面添加文章首部的tag的时候界面适配也很好看，除此之外，就像typora一样的实时预览也是非常棒的功能。</p>
+<p>本文并未展开关于博客站点的其他装修操作，关于Fluid主题的更加详细的配置，请参考 <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">此处</a> 官方十分详尽的文档。</p>
+<p>感谢阅读！</p>
+<h1 id="5-参考">5 参考</h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/crg18438610577/article/details/130216997">白嫖 GitHub Pages，轻松搭建个人博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_52357217/article/details/127562163">如何让Obsidian的图片存储形式设置为 ./${filename}.assets</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/start/">Fluid</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/zh/pages/getting-started-with-github-pages">Github Pages</a></li>
+<li><a target="_blank" rel="noopener" href="https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B">Obsidian</a></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/web/" class="category-chain-item">web</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="print-no-link">#嵌入式</a>
+      
+        <a href="/tags/%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="print-no-link">#过程记录</a>
+      
+        <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="print-no-link">#个人博客</a>
+      
+        <a href="/tags/%E7%BD%91%E7%AB%99/" class="print-no-link">#网站</a>
+      
+        <a href="/tags/%E5%BB%BA%E7%AB%99/" class="print-no-link">#建站</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>关于我使用obsidian加hexo部署个人博客的过程</div>
+      <div>https://sagi-rastar.github.io/2023/11/10/关于我使用obsidian加hexo部署个人博客的过程/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>SagiRastar</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月10日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/11/11/hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/" title="hexo-fluid主题添加图集瀑布流功能">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">hexo-fluid主题添加图集瀑布流功能</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/11/08/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/" title="当音乐遇见故事一起走上舞台">
+                        <span class="hidden-mobile">当音乐遇见故事一起走上舞台</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments">
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"Sagi-Rastar/Sagi-Rastar.github.io","repo-id":"R_kgDOJOGzsw","category":"Announcements","category-id":"DIC_kwDOJOGzs84CaurY","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/duration.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
