@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SagiRastar&#39;s Blog</title>
+  <icon>https://sagi-rastar.github.io/img/star.png</icon>
+  
+  <link href="https://sagi-rastar.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://sagi-rastar.github.io/"/>
+  <updated>2024-12-04T09:09:06.015Z</updated>
+  <id>https://sagi-rastar.github.io/</id>
+  
+  <author>
+    <name>SagiRastar</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2024-11-24-随笔</title>
+    <link href="https://sagi-rastar.github.io/2024/11/24/2024-11-24-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/11/24/2024-11-24-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-11-24T17:09:34.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">碎片时间搜集的一些vue教程向的信息</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/tags/chip/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024-11-22-随笔</title>
+    <link href="https://sagi-rastar.github.io/2024/11/22/2024-11-22-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/11/22/2024-11-22-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-11-22T11:14:40.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">听电台的一些随笔</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="随笔" scheme="https://sagi-rastar.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="电台" scheme="https://sagi-rastar.github.io/tags/%E7%94%B5%E5%8F%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024-11-18-随笔</title>
+    <link href="https://sagi-rastar.github.io/2024/11/18/2024-11-18-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/11/18/2024-11-18-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-11-18T15:48:11.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">蓝牙外设的一些参考</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/tags/chip/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024-11-11-随笔</title>
+    <link href="https://sagi-rastar.github.io/2024/11/11/2024-11-11-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/11/11/2024-11-11-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-11-11T17:08:00.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">测试一下移动端更新博客</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="test" scheme="https://sagi-rastar.github.io/tags/test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024-11-01-随笔</title>
+    <link href="https://sagi-rastar.github.io/2024/11/01/2024-11-01-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/11/01/2024-11-01-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-11-01T15:44:22.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">“测试一下github action自动部署”</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="随笔" scheme="https://sagi-rastar.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024-05-01-随笔</title>
+    <link href="https://sagi-rastar.github.io/2024/05/01/2024-05-01-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/05/01/2024-05-01-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-05-01T00:55:26.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">“找点借口”</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="随笔" scheme="https://sagi-rastar.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024-03-22-随笔</title>
+    <link href="https://sagi-rastar.github.io/2024/03/22/2024-03-22-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/03/22/2024-03-22-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-03-22T11:01:41.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">“赋予这些东西灵魂”</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="感想" scheme="https://sagi-rastar.github.io/tags/%E6%84%9F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>速查：CH340记录</title>
+    <link href="https://sagi-rastar.github.io/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/"/>
+    <id>https://sagi-rastar.github.io/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/</id>
+    <published>2024-03-20T09:21:07.000Z</published>
+    <updated>2024-12-04T09:09:06.107Z</updated>
+    
+    
+    <summary type="html">用的很多，但是一直没熟读过datasheet</summary>
+    
+    
+    
+    <category term="embed" scheme="https://sagi-rastar.github.io/categories/embed/"/>
+    
+    
+    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="原理" scheme="https://sagi-rastar.github.io/tags/%E5%8E%9F%E7%90%86/"/>
+    
+    <category term="常用芯片" scheme="https://sagi-rastar.github.io/tags/%E5%B8%B8%E7%94%A8%E8%8A%AF%E7%89%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024-03-09-随笔</title>
+    <link href="https://sagi-rastar.github.io/2024/03/09/2024-03-09-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/03/09/2024-03-09-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-03-09T00:06:32.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">喝着酒，听着歌，喜迎双休周</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="随笔" scheme="https://sagi-rastar.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024-02-11-随笔</title>
+    <link href="https://sagi-rastar.github.io/2024/02/11/2024-02-11-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/02/11/2024-02-11-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-02-11T21:11:48.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">小市民真美味</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="感想" scheme="https://sagi-rastar.github.io/tags/%E6%84%9F%E6%83%B3/"/>
+    
+    <category term="读后感" scheme="https://sagi-rastar.github.io/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>那些应该用到熟透的C语言函数</title>
+    <link href="https://sagi-rastar.github.io/2024/01/08/%E9%82%A3%E4%BA%9B%E5%BA%94%E8%AF%A5%E7%94%A8%E5%88%B0%E7%86%9F%E9%80%8F%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/"/>
+    <id>https://sagi-rastar.github.io/2024/01/08/%E9%82%A3%E4%BA%9B%E5%BA%94%E8%AF%A5%E7%94%A8%E5%88%B0%E7%86%9F%E9%80%8F%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/</id>
+    <published>2024-01-08T21:18:26.000Z</published>
+    <updated>2024-12-04T09:09:06.111Z</updated>
+    
+    
+    <summary type="html">熟透了吗，快了</summary>
+    
+    
+    
+    <category term="embed" scheme="https://sagi-rastar.github.io/categories/embed/"/>
+    
+    
+    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>传感器复习随笔</title>
+    <link href="https://sagi-rastar.github.io/2023/12/08/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2023/12/08/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/</id>
+    <published>2023-12-08T09:41:57.000Z</published>
+    <updated>2024-12-04T09:09:06.031Z</updated>
+    
+    
+    <summary type="html">内容分支很多，考试会比较简单，主要看ppt</summary>
+    
+    
+    
+    <category term="embed" scheme="https://sagi-rastar.github.io/categories/embed/"/>
+    
+    
+    <category term="复习" scheme="https://sagi-rastar.github.io/tags/%E5%A4%8D%E4%B9%A0/"/>
+    
+    <category term="传感器" scheme="https://sagi-rastar.github.io/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023-12-04-随笔</title>
+    <link href="https://sagi-rastar.github.io/2023/12/04/2023-12-04-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2023/12/04/2023-12-04-%E9%9A%8F%E7%AC%94/</id>
+    <published>2023-12-04T21:34:10.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">坐在实验室里面写随笔博客，总觉得不自在</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="随笔" scheme="https://sagi-rastar.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="感想" scheme="https://sagi-rastar.github.io/tags/%E6%84%9F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通信原理实验随笔</title>
+    <link href="https://sagi-rastar.github.io/2023/11/30/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2023/11/30/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/</id>
+    <published>2023-11-30T16:04:45.000Z</published>
+    <updated>2024-12-04T09:09:06.063Z</updated>
+    
+    
+    <summary type="html">我通信原理都学了什么啊！</summary>
+    
+    
+    
+    <category term="embed" scheme="https://sagi-rastar.github.io/categories/embed/"/>
+    
+    
+    <category term="过程记录" scheme="https://sagi-rastar.github.io/tags/%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="复习" scheme="https://sagi-rastar.github.io/tags/%E5%A4%8D%E4%B9%A0/"/>
+    
+    <category term="通信原理" scheme="https://sagi-rastar.github.io/tags/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023-11-25-随笔</title>
+    <link href="https://sagi-rastar.github.io/2023/11/25/2023-11-25-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2023/11/25/2023-11-25-%E9%9A%8F%E7%AC%94/</id>
+    <published>2023-11-25T17:37:51.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">一些自己也还不确定的东西</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="随笔" scheme="https://sagi-rastar.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="感想" scheme="https://sagi-rastar.github.io/tags/%E6%84%9F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023-11-20-随笔</title>
+    <link href="https://sagi-rastar.github.io/2023/11/21/2023-11-20-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2023/11/21/2023-11-20-%E9%9A%8F%E7%AC%94/</id>
+    <published>2023-11-21T10:28:52.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">chip，原来是想取碎片这层意思的，但是薯条和薯片也很好吃</summary>
+    
+    
+    
+    <category term="chip" scheme="https://sagi-rastar.github.io/categories/chip/"/>
+    
+    
+    <category term="随笔" scheme="https://sagi-rastar.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="感想" scheme="https://sagi-rastar.github.io/tags/%E6%84%9F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高频电子复习随笔</title>
+    <link href="https://sagi-rastar.github.io/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/</id>
+    <published>2023-11-20T10:20:31.000Z</published>
+    <updated>2024-12-04T09:09:06.111Z</updated>
+    
+    
+    <summary type="html">起因是今天早上来实验室忘记带笔了（……</summary>
+    
+    
+    
+    <category term="embed" scheme="https://sagi-rastar.github.io/categories/embed/"/>
+    
+    
+    <category term="复习" scheme="https://sagi-rastar.github.io/tags/%E5%A4%8D%E4%B9%A0/"/>
+    
+    <category term="高频" scheme="https://sagi-rastar.github.io/tags/%E9%AB%98%E9%A2%91/"/>
+    
+    <category term="专业课" scheme="https://sagi-rastar.github.io/tags/%E4%B8%93%E4%B8%9A%E8%AF%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FPGA电子钟课设设计过程</title>
+    <link href="https://sagi-rastar.github.io/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/"/>
+    <id>https://sagi-rastar.github.io/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/</id>
+    <published>2023-11-16T15:33:56.000Z</published>
+    <updated>2024-12-04T09:09:06.015Z</updated>
+    
+    
+    <summary type="html">同时也记录了熟悉VHDL编写的过程</summary>
+    
+    
+    
+    <category term="embed" scheme="https://sagi-rastar.github.io/categories/embed/"/>
+    
+    
+    <category term="FPGA" scheme="https://sagi-rastar.github.io/tags/FPGA/"/>
+    
+    <category term="过程记录" scheme="https://sagi-rastar.github.io/tags/%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="作业" scheme="https://sagi-rastar.github.io/tags/%E4%BD%9C%E4%B8%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-fluid主题添加图集瀑布流功能</title>
+    <link href="https://sagi-rastar.github.io/2023/11/11/hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/"/>
+    <id>https://sagi-rastar.github.io/2023/11/11/hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/</id>
+    <published>2023-11-11T16:30:59.000Z</published>
+    <updated>2024-12-04T09:09:06.027Z</updated>
+    
+    
+    <summary type="html">前端真有意思</summary>
+    
+    
+    
+    <category term="web" scheme="https://sagi-rastar.github.io/categories/web/"/>
+    
+    
+    <category term="过程记录" scheme="https://sagi-rastar.github.io/tags/%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="个人博客" scheme="https://sagi-rastar.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="网站" scheme="https://sagi-rastar.github.io/tags/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="建站" scheme="https://sagi-rastar.github.io/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于我使用obsidian加hexo部署个人博客的过程</title>
+    <link href="https://sagi-rastar.github.io/2023/11/10/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/"/>
+    <id>https://sagi-rastar.github.io/2023/11/10/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/</id>
+    <published>2023-11-10T10:18:47.000Z</published>
+    <updated>2024-12-04T09:09:06.059Z</updated>
+    
+    
+    <summary type="html">也许是最适合自己的博客写作流程了</summary>
+    
+    
+    
+    <category term="web" scheme="https://sagi-rastar.github.io/categories/web/"/>
+    
+    
+    <category term="过程记录" scheme="https://sagi-rastar.github.io/tags/%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="个人博客" scheme="https://sagi-rastar.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="网站" scheme="https://sagi-rastar.github.io/tags/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="建站" scheme="https://sagi-rastar.github.io/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+  </entry>
+  
+</feed>
