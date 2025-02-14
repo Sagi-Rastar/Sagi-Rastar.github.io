@@ -1,0 +1,1067 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/me.png">
+  <link rel="icon" href="/img/me.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="SagiRastar">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="很久之前写的了，基本只是作为初见的学习记录而已。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="STM32中通过EXTI配置外部中断事件">
+<meta property="og:url" content="https://sagi-rastar.github.io/2023/11/07/STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/">
+<meta property="og:site_name" content="SagiRastar&#39;s Blog">
+<meta property="og:description" content="很久之前写的了，基本只是作为初见的学习记录而已。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sagi-rastar.github.io/img/embed.jpg">
+<meta property="article:published_time" content="2023-11-07T11:04:45.000Z">
+<meta property="article:modified_time" content="2025-02-14T18:17:20.281Z">
+<meta property="article:author" content="SagiRastar">
+<meta property="article:tag" content="嵌入式">
+<meta property="article:tag" content="stm32">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sagi-rastar.github.io/img/embed.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>STM32中通过EXTI配置外部中断事件 - SagiRastar&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/mac.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"sagi-rastar.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Sagi&#39;s stack </strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/pic/">
+                <i class="iconfont icon-images"></i>
+                <span>图集</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center"
+         style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          <span id="subtitle" data-subtitles='["2023"]'></span><span class="cursor"> _</span>
+        </div>
+
+        
+        
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-07 11:04" pubdate>
+          2023年11月7日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          37 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+<style>
+.cursor {
+  display: inline-block;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var subtitleElement = document.getElementById('subtitle');
+      var subtitles = JSON.parse(subtitleElement.getAttribute('data-subtitles'));
+      var currentSubtitleIndex = 0;
+      var currentCharIndex = 0;
+      var usedIndices = new Set();
+      
+      function getRandomIndex() {
+        let availableIndices = [...Array(subtitles.length).keys()]
+          .filter(i => !usedIndices.has(i));
+        
+        if (availableIndices.length === 0) {
+          usedIndices.clear(); // 重置已使用索引
+          availableIndices = [...Array(subtitles.length).keys()];
+        }
+        
+        const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
+        usedIndices.add(randomIndex);
+        return randomIndex;
+      }
+    
+      function typeSubtitle() {
+        if (!subtitles || subtitles.length === 0) return;
+        
+        if (currentCharIndex < subtitles[currentSubtitleIndex].length) {
+          subtitleElement.innerText += subtitles[currentSubtitleIndex].charAt(currentCharIndex);
+          currentCharIndex++;
+          setTimeout(typeSubtitle, 100);
+        } else {
+          setTimeout(eraseSubtitle, 2000);
+        }
+      }
+    
+      function eraseSubtitle() {
+        if (currentCharIndex > 0) {
+          subtitleElement.innerText = subtitleElement.innerText.slice(0, -1);
+          currentCharIndex--;
+          setTimeout(eraseSubtitle, 50);
+        } else {
+          currentSubtitleIndex = getRandomIndex();
+          setTimeout(typeSubtitle, 500);
+        }
+      }
+    
+      // 开始第一轮打字动画
+      currentSubtitleIndex = getRandomIndex();
+      typeSubtitle();
+    });
+    </script>
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+              
+
+                  <div class="category-list">
+                    
+  
+    
+      
+        
+          <div class="category row nomargin-x">
+
+            <div class="col-12 m-auto index-img">
+              
+                <img src="/img/embed.jpg" alt="Category Image" />
+            </div>
+
+            <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="embed"
+              id="heading-269605d45c104f12cbcdc8fb71434acc" role="tab" data-toggle="collapse" href="#collapse-269605d45c104f12cbcdc8fb71434acc"
+              aria-expanded="true">
+              embed
+                <span class="list-group-count">
+                  (9)
+                </span>
+                <i class="iconfont icon-arrowright"></i>
+            </a>
+            
+                <div class="category-collapse collapse show"
+                  id="collapse-269605d45c104f12cbcdc8fb71434acc" role="tabpanel" aria-labelledby="heading-269605d45c104f12cbcdc8fb71434acc">
+                  
+                    
+                              
+                <div class="category-post-list">
+                  
+                    
+                      
+                        
+                              <a href="/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/" title="FPGA电子钟课设设计过程" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  FPGA电子钟课设设计过程
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/11/07/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/" title="STM32中的GPIO框图解析与软件配置" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  STM32中的GPIO框图解析与软件配置
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/11/07/STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/" title="STM32中通过EXTI配置外部中断事件" class="list-group-item list-group-item-action
+           active">
+                                <span class="category-post">
+                                  STM32中通过EXTI配置外部中断事件
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/12/08/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/" title="传感器复习随笔" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  传感器复习随笔
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/11/07/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" title="网络编程实验报告" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  网络编程实验报告
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/11/30/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/" title="通信原理实验随笔" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  通信原理实验随笔
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/" title="速查：CH340记录" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  速查：CH340记录
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2024/01/08/%E9%82%A3%E4%BA%9B%E5%BA%94%E8%AF%A5%E7%94%A8%E5%88%B0%E7%86%9F%E9%80%8F%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/" title="那些应该用到熟透的C语言函数" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  那些应该用到熟透的C语言函数
+                                </span>
+                              </a>
+                              
+                                
+                      
+                        
+                              <a href="/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/" title="高频电子复习随笔" class="list-group-item list-group-item-action
+           ">
+                                <span class="category-post">
+                                  高频电子复习随笔
+                                </span>
+                              </a>
+                              
+                                
+                </div>
+                
+                                
+                </div>
+          </div>
+          
+                  </div>
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">STM32中通过EXTI配置外部中断事件</h1>
+            
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：几秒前
+                  
+                
+              </p>
+            <p>
+              
+            </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="1-【学习笔记】STM32中通过EXTI中断源配置中断事件">1 【学习笔记】STM32中通过EXTI中断源配置中断事件</h1>
+<h2 id="1-1-中断事件">1.1 中断事件</h2>
+<p>一个中断事件中一般有很多的触发源，一般将其称作“中断源”。主程序在运行的过程中，一旦出现了中断源，其便会让CPU停止当前正在运行的程序，转而进行中断事件指定的程序，执行完所有的“中断程序”之后，便会返回原本主程序的断点处继续运行。</p>
+<p>EXTI (External interrupt/event controller) 是众多中断源之中的一个，一般译为“外部中断”。外部中断有很多的输入通道，一般来说有20个，其中GPIO占了16个，其余4个为不常用的PVD（电源电压监测）输出、RTC闹钟、USB唤醒、ETH以太网唤醒。</p>
+<p>由于硬件与地址上的动态性（暂不展开），因此需要NVIC (Nested Vectored Interrupt Controller) 执行管理中断源与分配优先级两个工作，一般译为“嵌套中断向量控制器”。其中，中断源向NVIC输出的通道一般译为“中断通道”，需要注意的是一个中断源可能会占用多个中断通道，事实上中断源一般都占用多个中断通道。</p>
+<p>本文将主要记录外部中断中GPIO的原理与配置过程，作为学习笔记记录。</p>
+<h2 id="1-2-EXTI工作原理">1.2 EXTI工作原理</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/rect234.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>EXTI作为检测外部中断的中断源，对GPIO进行监测是其最主要的功能。EXTI在对GPIO的检测上一般有16个输入通道（注意这里是EXTI的输入通道而不是“中断通道”），但是GPIO每一个port口都有0-15总计16个pin，如果要检测所有的GPIO明显16个输入通道不够用。</p>
+<p>于是在STM32上需要用到AFIO这个“选择器”。具体的工作原理就是让相同的Pin口对应到同一条输入通道，例如<code>PX0 =&gt; EXTI0</code>,<code>PX1 =&gt;EXTI1</code>……以此类推，换句话说每个输入通道同时只能监测一个port口，这也就是为什么相同的pin口不能同时触发中断的原因。</p>
+<p>解决了监测所有GPIO口的问题之后，所有的输入信号便可以通过EXTI被处理。在EXTI中做的处理通俗来讲就是通过一些寄存器，配置触发方式以及选择响应是“中断”还是“事件”。</p>
+<p>在STM32中EXTI提供了一个新的响应，“事件”相对于软件上进入NVIC的“中断”而言有所不同，“事件”响应是硬件上的响应，事件响应是输出一个脉冲信号，以便用于与其他外设相互联动，例如触发ADC或DMA之类的。</p>
+<blockquote>
+<p>具体工作框图可以参考：<br>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230105143832.png" srcset="/img/loading.gif" lazyload alt="EXTI系统框图"></p>
+</blockquote>
+<p>如上图所示，EXTI的输入通道经过“边沿检测”电路，此电路由两个寄存器控制，用于配置EXTI是<code>上升沿触发</code>还是<code>下降沿触发</code>或是<code>双边沿触发</code>。随后信号经过一个或门，此处或门的作用在于可以通过软件中断寄存器决定是否直接由软件触发中断。当或门的信号输出之后，分成<code>中断响应</code>和<code>事件响应</code>，两种响应都可以通过利用与门和“xx屏蔽寄存器”选择放行与否。</p>
+<p>其中关于ST公司对EXTI中断通道的精简有必要提一嘴（……）</p>
+<p>ST公司为了节省NVIC的中断资源，将EXTI的5-9通道合并为<code>EXTI9_5</code>，将10-15合并为<code>EXTI15_10</code>，因此例程中对于pin=13的这个GPIO口中断源选择为<code>EXTI15_10</code>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY2_INT_EXTI_IRQ                 EXTI15_10_IRQn</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY2_IRQHandler                   EXTI15_10_IRQHandler</span><br></code></pre></td></tr></table></figure>
+<h2 id="1-3-EXTI具体配置">1.3 EXTI具体配置</h2>
+<blockquote>
+<p>本节例程参考野火的&lt;STM32 HAL库开发实战指南——F103系列&gt;。</p>
+</blockquote>
+<p>本次使用的开发板是<code>野火的F103-MINI 开发板</code>，下面是本次例程所涉及的硬件原理图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111151132.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<hr>
+<p>下面是中断编程要点：</p>
+<ul>
+<li>
+<p><strong>使能外设某个中断，由每个外设的相关中断使能位控制。例如串口发送完成与接收完成中断，这两个中断都由串口控制寄存器的相关中断使能位控制。</strong></p>
+<hr>
+<p>按照自己目前的理解，这一步应该是说<code>​HAL_NVIC_EnableIRQ(IRQn)</code>这一个函数。具体做的事情就是使能中断源呗。</p>
+<blockquote>
+<p>？这个部分还不是太懂，GPIO的寄存器里有专门的“相关中断使能位”吗</p>
+</blockquote>
+</li>
+<li>
+<p><strong>配置EXTI中断源、配置中断优先级。</strong></p>
+  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">HAL_NVIC_SetPriority(IRQn, PreemptPriority, SubPriority)<br></code></pre></td></tr></table></figure>
+<p><strong>IRQn：</strong> 设置中断源。不同中断的中断源不可写错，写错了程序也不会报错，只会不响应。具体成员配置参考<code>stm32f103xe.h</code>里面的<code>IRQn_Type</code>结构体定义。</p>
+<p><strong>PreemptionPriority：</strong> 抢占优先级。具体的值自己定。</p>
+<p><strong>SubPriority：</strong> 子优先级。具体的值自己定。</p>
+<hr>
+<p>例程：</p>
+<blockquote>
+<p>bsp_exit.h</p>
+</blockquote>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//GPIO口定义</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY1_INT_GPIO_PORT                GPIOA</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY1_INT_GPIO_CLK_ENABLE()        __HAL_RCC_GPIOA_CLK_ENABLE();</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY1_INT_GPIO_PIN                 GPIO_PIN_0</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY1_INT_EXTI_IRQ                 EXTI0_IRQn</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY1_IRQHandler                   EXTI0_IRQHandler</span><br><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY2_INT_GPIO_PORT                GPIOC</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY2_INT_GPIO_CLK_ENABLE()        __HAL_RCC_GPIOC_CLK_ENABLE();</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY2_INT_GPIO_PIN                 GPIO_PIN_13</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY2_INT_EXTI_IRQ                 EXTI15_10_IRQn</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> KEY2_IRQHandler                   EXTI15_10_IRQHandler    </span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>bsp_exit.c</p>
+</blockquote>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">EXTI_Key_Config</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br>    GPIO_InitTypeDef GPIO_InitStructure; <br><br>    <span class="hljs-comment">/*开启按键GPIO口的时钟*/</span><br>    <span class="hljs-built_in">KEY1_INT_GPIO_CLK_ENABLE</span>();<br>    <span class="hljs-built_in">KEY2_INT_GPIO_CLK_ENABLE</span>();<br><br>    <span class="hljs-comment">/* 选择按键1的引脚 */</span> <br>    GPIO_InitStructure.Pin = KEY1_INT_GPIO_PIN;<br>    <span class="hljs-comment">/* 设置引脚为输入模式 */</span> <br>    GPIO_InitStructure.Mode = GPIO_MODE_IT_RISING;	    		<br>    <span class="hljs-comment">/* 设置引脚不上拉也不下拉 */</span><br>    GPIO_InitStructure.Pull = GPIO_NOPULL;<br>    <span class="hljs-comment">/* 使用上面的结构体初始化按键 */</span><br>    <span class="hljs-built_in">HAL_GPIO_Init</span>(KEY1_INT_GPIO_PORT, &amp;GPIO_InitStructure); <br>    <span class="hljs-comment">/* 配置 EXTI 中断源 到key1 引脚、配置中断优先级*/</span><br>    <span class="hljs-built_in">HAL_NVIC_SetPriority</span>(KEY1_INT_EXTI_IRQ, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br>    <span class="hljs-comment">/* 使能中断 */</span><br>    <span class="hljs-built_in">HAL_NVIC_EnableIRQ</span>(KEY1_INT_EXTI_IRQ);<br><br>    <span class="hljs-comment">/* 选择按键2的引脚 */</span> <br>    GPIO_InitStructure.Pin = KEY2_INT_GPIO_PIN;  <br>    <span class="hljs-comment">/* 其他配置与上面相同 */</span><br>    <span class="hljs-built_in">HAL_GPIO_Init</span>(KEY2_INT_GPIO_PORT, &amp;GPIO_InitStructure);      <br>    <span class="hljs-comment">/* 配置 EXTI 中断源 到key2 引脚、配置中断优先级*/</span><br>    <span class="hljs-built_in">HAL_NVIC_SetPriority</span>(KEY2_INT_EXTI_IRQ, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br>    <span class="hljs-comment">/* 使能中断 */</span><br>    <span class="hljs-built_in">HAL_NVIC_EnableIRQ</span>(KEY2_INT_EXTI_IRQ);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>GPIO的配置见其他博客。<br>
+这里主要是调用<code>HAL_NVIC_SetPriority(IRQn, PreemptPriority, SubPriority)</code>和<code>​HAL_NVIC_EnableIRQ(IRQn)</code>这两个函数，第一个设置中断优先级，第二个使能该中断。</p>
+</li>
+<li>
+<p><strong>编写中断服务函数。</strong></p>
+<p>所有的中断服务函数都写在<code>stm32f1xx_it.c</code>里面，并且函数名要注意不要写错。</p>
+<hr>
+<p>例程：</p>
+<blockquote>
+<p>stm32f1xx_it.c</p>
+</blockquote>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">KEY1_IRQHandler</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br><span class="hljs-comment">//确保是否产生了EXTI Line中断</span><br>    <span class="hljs-keyword">if</span>(__HAL_GPIO_EXTI_GET_IT(KEY1_INT_GPIO_PIN) != RESET) <br>    &#123;<br>        <span class="hljs-comment">// LED1 取反		</span><br>        LED1_TOGGLE;<br>    <span class="hljs-comment">//清除中断标志位</span><br>        __HAL_GPIO_EXTI_CLEAR_IT(KEY1_INT_GPIO_PIN);     <br>    &#125;  <br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">KEY2_IRQHandler</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br><span class="hljs-comment">//确保是否产生了EXTI Line中断</span><br>    <span class="hljs-keyword">if</span>(__HAL_GPIO_EXTI_GET_IT(KEY2_INT_GPIO_PIN) != RESET) <br>    &#123;<br>        <span class="hljs-comment">// LED2 取反		</span><br>        LED2_TOGGLE;<br>    <span class="hljs-comment">//清除中断标志位</span><br>        __HAL_GPIO_EXTI_CLEAR_IT(KEY2_INT_GPIO_PIN);     <br>    &#125;  <br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>main.c</p>
+</blockquote>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">/* 系统时钟初始化成72 MHz */</span><br>    <span class="hljs-built_in">SystemClock_Config</span>();<br><br>    <span class="hljs-comment">/* LED 端口初始化 */</span><br>    <span class="hljs-built_in">LED_GPIO_Config</span>();<br><br>    <span class="hljs-comment">/* </span><br><span class="hljs-comment">    初始化EXTI中断，按下按键会触发中断，</span><br><span class="hljs-comment">    触发中断会进入stm32f4xx_it.c文件中的函数</span><br><span class="hljs-comment">    KEY1_IRQHandler和KEY2_IRQHandler，处理中断，反转LED灯。</span><br><span class="hljs-comment">    */</span><br>    <span class="hljs-built_in">EXTI_Key_Config</span>(); <br><br>    <span class="hljs-comment">/* 等待中断，由于使用中断方式，CPU不用轮询按键 */</span><br>    <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)l&#123;&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>这里的中断服务函数里面用到了两个函数：<br>
+<code>__HAL_GPIO_EXTI_GET_IT</code>：用来检查指定的EXTI线是否有产生中断（Checks whether the specified EXTI line is asserted or not.）<br>
+<code>__HAL_GPIO_EXTI_CLEAR_IT</code>：清除指定EXTI线的中断标志位（Clears the EXTI’s line pending bits.）</p>
+<blockquote>
+<p>留一个疑问，查HAL库的时候不太理解FLAG和IT这两个东西的具体区别。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="1-4-总结">1.4 总结</h2>
+<p>中断事件配置的过程大概就是这样，抓住上面三个要点就差不多。有的地方比较绕还是有一点翻译上的原因，比如EXTI线具体指什么（我的理解就是EXTI这个中断源向NVIC走的中断通道）之类的。</p>
+<p>例程里面没有太过多涉及EXTI相关的一些寄存器的配置，这点还需要注意。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/embed/" class="category-chain-item">embed</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="print-no-link">#嵌入式</a>
+      
+        <a href="/tags/stm32/" class="print-no-link">#stm32</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>STM32中通过EXTI配置外部中断事件</div>
+      <div>https://sagi-rastar.github.io/2023/11/07/STM32中通过EXTI配置外部中断事件/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>SagiRastar</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月7日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/11/07/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" title="网络编程实验报告">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">网络编程实验报告</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/11/07/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/" title="STM32中的GPIO框图解析与软件配置">
+                        <span class="hidden-mobile">STM32中的GPIO框图解析与软件配置</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments">
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"Sagi-Rastar/Sagi-Rastar.github.io","repo-id":"R_kgDOJOGzsw","category":"Announcements","category-id":"DIC_kwDOJOGzs84CaurY","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/duration.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

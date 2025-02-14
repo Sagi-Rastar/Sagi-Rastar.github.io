@@ -1,0 +1,272 @@
+/* INFO 段落行间距�?�置 */
+.post-content p {
+    /*文字间距�?*/
+    letter-spacing: 0.5px;
+    /*行间距为字体大小的倍数*/
+    line-height: 1.5;
+    /*段前距�??*/
+    margin-top: 25px;
+    /*段后距�??*/
+    margin-bottom: 25px;
+    /*文本对齐方式*/
+    text-align: justify;
+}
+
+.about-avatar img {
+    box-shadow:
+        0 0 20px rgba(69, 72, 222, 0.5),
+        0 0 20px rgba(156, 226, 234, 0.7),
+        0 0 50px rgba(176, 143, 251, 0.9);
+    animation: shadow-move 5s cubic-bezier(0.67, -0.25, 0.11, 1.02) infinite, rotate 3s ease-in-out infinite;
+}
+
+@keyframes shadow-move {
+
+    0%,
+    100% {
+        box-shadow:
+            -20px 20px 0px rgba(69, 72, 222, 0.3),
+            20px 20px 0px rgba(156, 226, 234, 0.3),
+            0 -20px 0px rgba(231, 44, 197, 0.3);
+    }
+
+    50%,
+    75% {
+        box-shadow:
+            10px -10px 20px rgb(69, 72, 222, 0.3),
+            -10px -10px 20px rgba(156, 226, 234, 0.3),
+            0 10px 20px rgba(255, 89, 225, 0.3);
+    }
+}
+
+@keyframes rotate {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.card-group>.card {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: text-shadow 0.3s ease-in-out;
+    background-color: transparent;
+    border-color: transparent;
+
+    /* 添加渐变色字体�?�色 */
+    background: linear-gradient(164deg, #00ffe9, #a062ff, #30b6e2, #2e30e7);
+    filter: saturate(60%) grayscale(50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-group>.card:hover {
+    text-shadow:
+        0 0 0 rgba(255, 52, 177, 0.544);
+    /* 11px 0px 2px rgb(79, 113, 227),
+        0 12px 2px rgb(136, 210, 158); */
+}
+
+.card-group>.card {
+    position: relative;
+}
+
+.card-group>.card::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: red;
+    /* 添加这一�? */
+    text-decoration: line-through;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-group>.card:hover::after {
+    opacity: 1;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 424px) {
+
+    .post-content,
+    post-custom {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.note {
+    padding: 0.75rem;
+    border-left: 0.35rem solid;
+    border-radius: 0.25rem;
+    margin: 1.5rem 0;
+    color: #c4c6c996;
+    transition: color 0.2s ease-in-out;
+    font-size: 0.9rem;
+    /* ����б�� */
+    font-style: italic;
+}
+
+.note-info {
+    background-color: rgb(66 169 255 / 5%);
+    border-color: #5ba5e4;
+}
+
+.banner-text.text-center.fade-in-up {
+    padding-top: 4rem;
+}
+
+.card-group {
+    animation-name: fadeIn;
+    animation-duration: 3.5s;
+    padding-top: 3rem;
+    font-size: 0.7em;
+}
+
+.category>.col-12.m-auto.index-img img {
+    height: 7rem;
+    border-radius: 2.25rem;
+}
+
+.category>.col-12.m-auto.index-img {
+    height: 7.5rem;
+}
+
+.category-item.list-group-item.category-item-action.col-10.col-md-11.col-xm-11 {
+    padding-left: 1rem;
+}
+
+.category .category-collapse {
+    padding-left: 2rem;
+}
+
+.sidebar {
+    padding: 4rem 0;
+}
+
+/* �?标�?�效果�?�置 */
+#subtitle {
+    font-size: 1.05em;
+    position: relative;
+    background: linear-gradient(164deg, #00ffe9, #a062ff, #30b6e2, #2e30e7);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite, backlight 1s linear 1 forwards;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@keyframes backlight {
+    0% {
+        text-shadow:
+            0 0 20px rgba(255, 0, 0, 0),
+            0 0 30px rgba(255, 165, 0, 0),
+            0 0 50px rgba(255, 255, 0, 0);
+    }
+
+    100% {
+        text-shadow:
+            0 0 10px rgb(200 203 255 / 74%),
+            0 0 40px rgb(6 46 255 / 36%),
+            0 0 60px rgb(78 179 255 / 82%);
+    }
+}
+
+#subtitle:before {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* banner背景颜色渐变�?罩，下�??融入背景�? */
+.banner .mask {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 21%), rgb(16 17 25));
+}
+
+/* 更改原本格格不入的nav-tabs样式 */
+.nav-tabs {
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.nav-tabs .nav-link {
+    border-radius: 0.5rem;
+    transition: all 1s ease;
+}
+
+.custom-nav-item {
+    margin: 0.25rem;
+}
+
+.ImageInCard img {
+    background-color: #21273b00;
+}
+
+.navbar .navbar-brand {
+    background: linear-gradient(150deg, #e0fffc, #7ea3e4, #be4fff, #ff57f8);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite, backlight2 1s linear 1 forwards;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@keyframes backlight2 {
+    0% {
+        text-shadow:
+            0 0 20px rgba(255, 0, 0, 0),
+            0 0 30px rgba(255, 165, 0, 0),
+            0 0 50px rgba(255, 255, 0, 0);
+    }
+
+    100% {
+        text-shadow:
+            0 0 10px rgb(200 203 255 / 30%),
+            0 0 40px rgb(6 46 255 / 20%),
+            0 0 60px rgb(78 179 255 / 50%);
+    }
+}
+
+.links .card:hover {
+    transform: perspective(1200px) translateY(-5%) rotateX(35deg) translateZ(0);
+    transition: transform 1s cubic-bezier(0.64, -0.01, 0, 1), box-shadow 1s cubic-bezier(1, -0.07, 0.34, 1.01);
+    box-shadow: 5px 8px 5px rgba(0, 10, 20, 0.3);
+}
+
+.note {
+    margin-bottom: 25px;
+}
