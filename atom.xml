@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>SagiRastar&#39;s Blog</title>
-  <icon>https://sagi-rastar.github.io/img/star.png</icon>
+  
   
   <link href="https://sagi-rastar.github.io/atom.xml" rel="self"/>
   
   <link href="https://sagi-rastar.github.io/"/>
-  <updated>2025-02-14T18:17:20.269Z</updated>
+  <updated>2025-02-14T18:17:20.000Z</updated>
   <id>https://sagi-rastar.github.io/</id>
   
   <author>
@@ -16,19 +16,21 @@
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2024-11-24-随笔</title>
     <link href="https://sagi-rastar.github.io/2024/11/24/2024-11-24-%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2024/11/24/2024-11-24-%E9%9A%8F%E7%AC%94/</id>
-    <published>2024-11-24T17:09:34.000Z</published>
-    <updated>2025-02-14T18:17:20.269Z</updated>
+    <published>2024-11-24T09:09:34.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vue教程向案例项目"><a href="#vue教程向案例项目" class="headerlink" title="vue教程向案例项目"></a>vue教程向案例项目</h1><ol><li><a href="https://github.com/SD-Gaming/Vue2.0_to_do_list-addName-">https://github.com/SD-Gaming/Vue2.0_to_do_list-addName-</a> </li><li><a href="https://github.com/SD-Gaming/Vue2.0-ShoppingCart-MOOC">https://github.com/SD-Gaming/Vue2.0-ShoppingCart-MOOC</a> </li><li><a href="https://github.com/SD-Gaming/Vue2.0_CNode.bbs">https://github.com/SD-Gaming/Vue2.0_CNode.bbs</a> </li><li><a href="https://github.com/IFmiss/vue-website">https://github.com/IFmiss/vue-website</a> </li><li><a href="https://github.com/Sioxas/vue-music/">https://github.com/Sioxas/vue-music/</a> </li><li><a href="https://github.com/uncleLian/vue2-echo">https://github.com/uncleLian/vue2-echo</a></li></ol><h1 id="vue理论向知识"><a href="#vue理论向知识" class="headerlink" title="vue理论向知识"></a>vue理论向知识</h1><ol><li><a href="https://www.runoob.com/vue2/vue-tutorial.html">https://www.runoob.com/vue2/vue-tutorial.html</a> </li><li><a href="https://www.w3cschool.cn/vuejs3/">https://www.w3cschool.cn/vuejs3/</a> </li><li><a href="https://vueschool.io/">https://vueschool.io/</a> </li><li><a href="https://www.vuemastery.com/">https://www.vuemastery.com/</a> </li><li><a href="https://github.com/chengpeiquan/learning-vue3">https://github.com/chengpeiquan/learning-vue3</a></li></ol>]]></content>
     
     
-    <summary type="html">碎片时间搜集的一些vue教程向的信息</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;vue教程向案例项目&quot;&gt;&lt;a href=&quot;#vue教程向案例项目&quot; class=&quot;headerlink&quot; title=&quot;vue教程向案例项目&quot;&gt;&lt;/a&gt;vue教程向案例项目&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/SD-G</summary>
+      
     
     
     
@@ -39,19 +41,21 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2024-11-22-随笔</title>
     <link href="https://sagi-rastar.github.io/2024/11/22/2024-11-22-%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2024/11/22/2024-11-22-%E9%9A%8F%E7%AC%94/</id>
-    <published>2024-11-22T11:14:40.000Z</published>
-    <updated>2025-02-14T18:17:20.269Z</updated>
+    <published>2024-11-22T03:14:40.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-阿加莎"><a href="#1-阿加莎" class="headerlink" title="1 阿加莎"></a>1 阿加莎</h1><p>又是一位早闻大名但是一直没有读的作者，这两天正好核市奇谭出了特别节目，传记译者来电台聊的是真好呀。</p><p>顺着阿加莎的生平听下来也正好是一个契机，直接下单了五本阿加莎的经典作品，准备爽看。</p>]]></content>
     
     
-    <summary type="html">听电台的一些随笔</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-阿加莎&quot;&gt;&lt;a href=&quot;#1-阿加莎&quot; class=&quot;headerlink&quot; title=&quot;1 阿加莎&quot;&gt;&lt;/a&gt;1 阿加莎&lt;/h1&gt;&lt;p&gt;又是一位早闻大名但是一直没有读的作者，这两天正好核市奇谭出了特别节目，传记译者来电台聊的是真好呀。&lt;/p&gt;
+&lt;p&gt;顺</summary>
+      
     
     
     
@@ -64,19 +68,20 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2024-11-18-随笔</title>
     <link href="https://sagi-rastar.github.io/2024/11/18/2024-11-18-%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2024/11/18/2024-11-18-%E9%9A%8F%E7%AC%94/</id>
-    <published>2024-11-18T15:48:11.000Z</published>
-    <updated>2025-02-14T18:17:20.269Z</updated>
+    <published>2024-11-18T07:48:11.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-参考"><a href="#1-参考" class="headerlink" title="1 参考"></a>1 参考</h1><h2 id="1-1-esp32蓝牙接受xbox手柄数据"><a href="#1-1-esp32蓝牙接受xbox手柄数据" class="headerlink" title="1.1 esp32蓝牙接受xbox手柄数据"></a>1.1 esp32蓝牙接受xbox手柄数据</h2><p>项目地址：</p><ul><li>ESP32_connect_XboxController</li></ul><p>依赖：</p><ul><li>arduino-XboxControllerNotificationParser</li></ul><p>细节：</p><ul><li></li><li></li></ul>]]></content>
     
     
-    <summary type="html">蓝牙外设的一些参考</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-参考&quot;&gt;&lt;a href=&quot;#1-参考&quot; class=&quot;headerlink&quot; title=&quot;1 参考&quot;&gt;&lt;/a&gt;1 参考&lt;/h1&gt;&lt;h2 id=&quot;1-1-esp32蓝牙接受xbox手柄数据&quot;&gt;&lt;a href=&quot;#1-1-esp32蓝牙接受xbox手柄数据&quot; c</summary>
+      
     
     
     
@@ -87,19 +92,23 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2024-11-11-随笔</title>
     <link href="https://sagi-rastar.github.io/2024/11/11/2024-11-11-%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2024/11/11/2024-11-11-%E9%9A%8F%E7%AC%94/</id>
-    <published>2024-11-11T17:08:00.000Z</published>
-    <updated>2025-02-14T18:17:20.269Z</updated>
+    <published>2024-11-11T09:08:00.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>利用taio的模版测试之后移动端的博客更新工作流算是打通了</p><p>tags和excerpt好像不能留空？不清楚是tag还是excerpt是不是必须的</p><p>插入图片再来测试一下：</p><p><img src="/assets/IMG_1.jpg" alt="图片"></p><p>Taio默认似乎是这样创建一个assets文件夹来放附件，在ci流程中好像自动部署并不能将assets文件deploy到.io的那个仓库中</p><p>尝试一下利用taio的js动作来插入图片吧</p>]]></content>
     
     
-    <summary type="html">测试一下移动端更新博客</summary>
+      
+      
+    <summary type="html">&lt;p&gt;利用taio的模版测试之后移动端的博客更新工作流算是打通了&lt;/p&gt;
+&lt;p&gt;tags和excerpt好像不能留空？不清楚是tag还是excerpt是不是必须的&lt;/p&gt;
+&lt;p&gt;插入图片再来测试一下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/IMG_1.jpg&quot; alt</summary>
+      
     
     
     
@@ -110,19 +119,23 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2024-11-01-随笔</title>
     <link href="https://sagi-rastar.github.io/2024/11/01/2024-11-01-%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2024/11/01/2024-11-01-%E9%9A%8F%E7%AC%94/</id>
-    <published>2024-11-01T15:44:22.000Z</published>
-    <updated>2025-02-14T18:17:20.268Z</updated>
+    <published>2024-11-01T07:44:22.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-心心念念的自动化部署"><a href="#1-心心念念的自动化部署" class="headerlink" title="1 心心念念的自动化部署"></a>1 心心念念的自动化部署</h1><ul><li></li><li></li><li>_config </li><li></li></ul><p>可以，总算是可以用了。</p><p>先不说移动端了吧，现在 pc 端以后换环境应该直接拉 hexo 源代码的这个仓库下来就可以开写了。</p><p>参考了一下<a href="https://cloud.tencent.com/developer/article/2369467">这篇博客</a> 去重新把写随笔这边用的博客框架弄了一下，现在应该可以提交 md 文件之后用 github action 自动编译以及部署了。</p><p>想弄自动部署的起因其实也蛮简单——想在移动端设备上随手就可以写博客。</p><p>之前了解到 github action、CI&#x2F;CD 的时候想尝鲜就在拿 mkdocs 搭的技术笔记那边浅尝了一下 github 的羊毛，发现还蛮好用，移动端只要能推送 md 文件到仓库上之后就可以发布博客，自动化程度还是蛮高的，编译静态网站文件之类的操作也不用太耗时，直接薅 github 羊毛还挺合适。</p><p>不过日常随笔这边有一个比较尴尬的点就是 hexo 新建一篇博客的时候还是得用 <code>hexo new 博客名称 </code> （靠）。</p><p>其实好像通过 <code>hexo new</code> 这条指令新建的 md 文件也没有添加啥东西，就是自动生成的日期 meta 元素而已。后面可以考虑用 obsidian 的模板插件搞一个跨平台的写作环境。</p><p><img src="/image-20241101164054129.png"></p><blockquote><p>这篇博客的 meta 信息</p></blockquote>]]></content>
     
     
-    <summary type="html">“测试一下github action自动部署”</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-心心念念的自动化部署&quot;&gt;&lt;a href=&quot;#1-心心念念的自动化部署&quot; class=&quot;headerlink&quot; title=&quot;1 心心念念的自动化部署&quot;&gt;&lt;/a&gt;1 心心念念的自动化部署&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;_con</summary>
+      
     
     
     
@@ -133,19 +146,23 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2024-05-01-随笔</title>
-    <link href="https://sagi-rastar.github.io/2024/05/01/2024-05-01-%E9%9A%8F%E7%AC%94/"/>
-    <id>https://sagi-rastar.github.io/2024/05/01/2024-05-01-%E9%9A%8F%E7%AC%94/</id>
-    <published>2024-05-01T00:55:26.000Z</published>
-    <updated>2025-02-14T18:17:20.268Z</updated>
+    <link href="https://sagi-rastar.github.io/2024/04/30/2024-05-01-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/04/30/2024-05-01-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-04-30T16:55:26.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近能写的还挺多，特别是，</p><p>呃，如果你在看的话，</p><p>Anyway，从上次提到的米泽穗信老师的小市民系列追完之后到现在，冰菓的小说加上动画也一路追完了——先看的小说，后看的动画。</p><p>真是一路幸福的经历，不管是原作的阅读体验还是动画制作的出色改编，能大聊特聊的地方还真是多。</p><p>但是真的要让我现在回忆当时的激动与感动，成本实在是太高，也显得太做作。最理想、记录成本最低的方法还是在当下立刻跟朋友 repo，那个时候的记录真的毫无压力。</p><p>“减少记录心情的成本”这个问题可能是我在写博客的时候最需要考虑的问题。</p><p>对于现在我的表达能力来说，写的东西能够忠实地反映当下的情绪已是难能可贵。</p><p>至于能不能在一段时间后回忆起对某部作品的感动，写出自己所想说的东西——若在提笔的当下都不能流畅地写出内心情绪——忠实地回忆又从何说起。</p><p>能沉下心来回忆某一部作品，并将想法付诸文字，真的是一件成本真的很高的事情。</p><p>不愿随便地写一两段文字用于草率记录——这件事本身可能就是这部作品在我心中评价的表现了。</p><p>当然啦，也可以是自己懒惰的借口罢了。</p>]]></content>
     
     
-    <summary type="html">“找点借口”</summary>
+      
+      
+    <summary type="html">&lt;p&gt;最近能写的还挺多，特别是，&lt;/p&gt;
+&lt;p&gt;呃，如果你在看的话，&lt;/p&gt;
+&lt;p&gt;Anyway，从上次提到的米泽穗信老师的小市民系列追完之后到现在，冰菓的小说加上动画也一路追完了——先看的小说，后看的动画。&lt;/p&gt;
+&lt;p&gt;真是一路幸福的经历，不管是原作的阅读体验还是动画制作的出</summary>
+      
     
     
     
@@ -156,19 +173,21 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2024-03-22-随笔</title>
     <link href="https://sagi-rastar.github.io/2024/03/22/2024-03-22-%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2024/03/22/2024-03-22-%E9%9A%8F%E7%AC%94/</id>
-    <published>2024-03-22T11:01:41.000Z</published>
-    <updated>2025-02-14T18:17:20.268Z</updated>
+    <published>2024-03-22T03:01:41.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>小学的时候玩的最多的估计除了当时的各类 FPS，就是 mc 和另一个叫 besiege 的游戏了</p><p>现在回想起来，可能这两个游戏算我的工科启蒙。</p><p>虽然这么说，但第一次打开 mc 并不是奔着红石电路和命令方块去的，反而是普通的生存模式：</p><p>啊。那个档玩了真的很久，我出生在一个海岛上，第一天的早上只知道撸木头，旁边开着某论坛的攻略，以出生点为圆心，一点一点小心翼翼地推进。现在想起来，有可能是那篇攻略节奏的缓慢，又或是我操作的太慢，总之直到游戏时间到了傍晚，攻略进度仍没有提到敌对生物的存在。</p><p>以至于我到现在都没有忘记，那张在亮度设置为“昏暗”的海岛森林里，迷雾中若隐若现的像素僵尸脸。</p><p>当然了，现在想起来，当时真的被吓到的我还是挺好笑的。</p><p>后来连滚带爬跑回了出生点的火柴盒。反正木头石头也多，索性就在家里开始向下开矿，歪打正着找到了天然矿道，于是开始了模仿矮人矿工的游玩路线。</p><p>这样玩了一段时间之后，某个机会开始接触到红石电路。我当时自然没有什么数电的概念，只是照猫画虎地搭建各种装置：红石 tnt 大炮、活塞门、活塞电梯、高频红石（现在想想这就可能是我最早接触到的晶振）等等。</p><p>到了后来，开始好奇这些东西的原理，于是打开了超平坦的创造模式，在一望无际的平原上开始了一次又一次的测试。</p><p>再后来的话就是命令方块了。虽然玩的不是很深入，不过对当时加的一个 mcbbs 命令方块小组的 qq 群印象很深。</p><p>回想起来还是很多黑历史就是了…</p><p>当时大概是六年级到初一左右吧（同时也有了我的第一块数位板，我记得是友基的），在那个群里我基本是最小的。说得好听点，我在群里有过很多“童言无忌”的发言。</p><p>说的难听点的话那就是 ky 发言吧（。</p><p>不过还好应该是没有闹出什么太大的笑话。只记得当时群里面的大佬聊得都是一些很厉害的东西，单单是在群里面看着他们讨论，我心里都有一种莫名的兴奋。</p><blockquote><p>一个小支线的回忆，我记得当时龙猫老师，也就是现在 mc 启动器 pcl2 的作者，龙腾猫跃老师也在那个群里，当时他好像是刚开始做，所以在群里面宣传 pcl，后来拉了个群做 pcl 的讨论和测试，我当时也去凑了个热闹。</p></blockquote><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>大概是差不多同期，我也碰到了 besiege（简称 bsg），也就是围攻这个游戏，当时流传比较广的应该是能支持 mod 的 0.45b 还是什么别的版本吧。</p><p>那个时期 bsg 的百度贴吧真的非常丰富，可以算是这个游戏国内最活跃的社区了。各种技能树的分类在贴吧里都有大佬发布对应的教程贴或是科普贴。从固定翼以及多轴飞行器，到各类车辆悬挂，或是各种黑科技应有尽有。</p><p>像是固定翼的各个航向、舵机，直升机的倾斜盘，汽车的双叉臂、扭杆、板簧、桥式、麦弗逊悬挂，车辆调试的轮胎倾角等等豆知识，都是那个时候刷贴吧知道的。</p><p>那段时间在沙盘模式下搭机械，一下可能就是一个下午，虽然没有什么剧情之类的目标，但是看着自己用到了刚学到的小知识做出各种能够自己操控的器械，并且一点一点改进性能，改进外观，真的很有意思。</p><p>后来在 steam 上补了票，统计的游玩时间有几百多个小时了，至于在小学中午机房里、家里的电脑里玩过多久那就不得而知了。</p><blockquote><p>至于为什么是小学中午的机房这个地方，以后再写一点东西聊聊吧。</p></blockquote><h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>现在回想起这两个游戏，虽然能够想到的片段都不太具体，但是感情却是非常确定的：</p><p>兴奋和好奇。</p><p>在小时候能够碰到这两个游戏真的挺幸运，当然不是因为很多现在看起来不是那么专业的小知识，而是在那时十几岁我的心底点燃了一粒小小的火苗，并一直燃烧至今。</p><p>在真正学习之前，甚至是学习之后，都不一定能够深刻感受什么所谓的【学科乐趣】。因此我很庆幸现在的自己能够喜欢这个专业，以及从专业出发的相关爱好。</p><p>对我来说，能够将软件和硬件结合，解决或改进我自己甚至他人的生活或某一件具体的事情，可能就是在这个专业里能我让兴奋的一件事。更进一步说，在意识到自己拥有，或着正在遂步拥有能够改变某个事物的能力时，我总是抑制不住内心的激动。</p><p>在上个学期的高频电子线路的课上，老师在他戏称“思想教育五分钟”的时段里，谈起了当时做各种项目的时候的经历。他说当他看到自己写的代码跑在了这些电机或其他装置上的时候，他真的很开心。</p><p>他说了类似“赋予这些东西灵魂”的话。</p><p>老师应该教了有几十年的课了吧，我记得那堂课上他眼睛里有光。</p><p>我希望我的眼睛里也能留住同样的光。</p><h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><p>最近在看《冰菓》。文中千反田总在事件开始时的说的那四个字，总是能唤起我心底莫名的共情：</p><p><em>“我很好奇。”</em></p>]]></content>
     
     
-    <summary type="html">“赋予这些东西灵魂”</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot; title=&quot;1&quot;&gt;&lt;/a&gt;1&lt;/h1&gt;&lt;p&gt;小学的时候玩的最多的估计除了当时的各类 FPS，就是 mc 和另一个叫 besiege 的游戏了&lt;/p&gt;
+&lt;p&gt;现在回想起来，可能这两个游戏算我的工</summary>
+      
     
     
     
@@ -179,19 +198,21 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>速查：CH340记录</title>
     <link href="https://sagi-rastar.github.io/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/"/>
     <id>https://sagi-rastar.github.io/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/</id>
-    <published>2024-03-20T09:21:07.000Z</published>
-    <updated>2025-02-14T18:17:20.353Z</updated>
+    <published>2024-03-20T01:21:07.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h1><p>首先是数据手册：</p><p>然后是各类封装：<br> <img src="/image-20240320092657061.png"></p><p>CH340 用的很多，简单来说就是一个能够将 USB 总线转换为各类串口的转换芯片。</p><p>之前使用的比较多的型号是 CH340C ，能够支持 USB3.0 规范，不过占用体积有点大。公司里用 CH340E 比较多，占用体积比较小，而且能够支持 USB3.1 规范。</p><h1 id="2-引脚"><a href="#2-引脚" class="headerlink" title="2 引脚"></a>2 引脚</h1><p>CH340E 封装为 MSOP-10 ，引脚定义见上图。</p><p><strong>电源部分</strong></p><ul><li></li><li></li><li><p>3.3V 时直接连接 VCC</p><p>5.0V 时外接 0.1uF 退耦电容</p></li></ul><p><strong>USB 信号部分</strong></p><ul><li></li><li></li></ul><p><strong>MODEM 信号部分</strong></p><ul><li></li><li></li><li></li></ul><p><strong>指示信号</strong></p><ul><li></li></ul>]]></content>
     
     
-    <summary type="html">用的很多，但是一直没熟读过datasheet</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot; title=&quot;1 概述&quot;&gt;&lt;/a&gt;1 概述&lt;/h1&gt;&lt;p&gt;首先是数据手册：&lt;/p&gt;
+&lt;p&gt;然后是各类封装：&lt;br&gt; &lt;img src=&quot;/image-2024032009265706</summary>
+      
     
     
     
@@ -206,19 +227,23 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2024-03-09-随笔</title>
-    <link href="https://sagi-rastar.github.io/2024/03/09/2024-03-09-%E9%9A%8F%E7%AC%94/"/>
-    <id>https://sagi-rastar.github.io/2024/03/09/2024-03-09-%E9%9A%8F%E7%AC%94/</id>
-    <published>2024-03-09T00:06:32.000Z</published>
-    <updated>2025-02-14T18:17:20.268Z</updated>
+    <link href="https://sagi-rastar.github.io/2024/03/08/2024-03-09-%E9%9A%8F%E7%AC%94/"/>
+    <id>https://sagi-rastar.github.io/2024/03/08/2024-03-09-%E9%9A%8F%E7%AC%94/</id>
+    <published>2024-03-08T16:06:32.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><blockquote><p>“难得的双休，在下周忙起来之前，今天还是再开一罐啤酒吧。”</p></blockquote><p>这就是我现在正在喝酒的理由，虽然能不能被叫做“理由”还有待商榷，至少我现在是这么想的。</p><p>已经很久都没有写写博客记录随便一点什么东西了。有几次的心痒痒，至于有没有付诸行动，网站的历史记录上已经写着了答案。</p><p>把想要打开软件记录一点什么感想，当作一件太过于正式的事情，实在是不好，这几个星期的实践也说明了这一点。如果养成了这种习惯，到头来真的就一点东西都懒得写了。</p><p>做一个不太恰当的比喻，这种感觉就像前段时间感冒了一样——鼻头痒痒的，想要爽快地打一个喷嚏，到最后往往只是剩下眼睛里被挤出的几滴泪而已。</p><p>OK，第一杯以及这一小袋花生也快见底了，捡一点之前想要说的东西写写吧。</p><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><blockquote><p>“不管对‘1+1&#x3D;2’这个式子有怎样的主观印象，觉得他太简单了也好，还是太不起眼了也好，可是‘1+1’就确实等于‘2’。”</p></blockquote><p>客观的事实不会随着主观去变，这句话如果放在我当时高考思修课的哲学部分复习题里，我应该连 1 秒都不用就可以过掉这道题。但是真的到了生活中之后，亲身体会到、意识到、理解这句话的时间，却是花了多少倍都不知道。</p><p>遇到优秀的人，他们身上的闪光点总是让我不自觉地去学习，忍不住去憧憬怎样才能成为这样的人。Y 师兄就是其中一个。</p><p>有很多优秀的人，常常是某一方面的专业能力非常突出。但是如果一个人能在这样的基础上给人安心，稳重的感觉，那可是太难得了。</p><p>Y 师兄就是这样的一个人。</p><p>师兄的做事风格以及 code 的风格，就给我一种他是真正吃透了“1+1&#x3D;2”这样简单道理的人。无论是给我讲解某个系统的组成还是讲解哪些协议。或者是在设计整个项目的时候需要考虑到的方方面面。他总是能将我一开始面对那块石头手足无措的心情逐渐平复，带我化繁为简，沉下心来一步一步走。</p><p>以前也有另外一个只有几面之缘的师兄也跟我说过类似这样的话：</p><p>“只要沉下心花时间来学，学懂了，就没有什么事情是难的嘛。”</p><p>虽然只见过一两面，但是当时师兄笑着的样子和这句话真的给我留下了很深的印象。</p>]]></content>
     
     
-    <summary type="html">喝着酒，听着歌，喜迎双休周</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot; title=&quot;1&quot;&gt;&lt;/a&gt;1&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;“难得的双休，在下周忙起来之前，今天还是再开一罐啤酒吧。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这就是我现在正在喝酒</summary>
+      
     
     
     
@@ -229,19 +254,21 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2024-02-11-随笔</title>
     <link href="https://sagi-rastar.github.io/2024/02/11/2024-02-11-%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2024/02/11/2024-02-11-%E9%9A%8F%E7%AC%94/</id>
-    <published>2024-02-11T21:11:48.000Z</published>
-    <updated>2025-02-14T18:17:20.268Z</updated>
+    <published>2024-02-11T13:11:48.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>知道【小市民系列】大概还是因为最近的动画化消息，至于作者在查过之后才得知原来就是大名鼎鼎的【冰菓】的作者米泽穗信。</p><p>不过说实话【冰菓】我也还没看过，得找机会补一补。</p><p>说回来小市民吧。总的来说，日常推理、【小市民】以及两个人的情感线，是我在阅读过程中觉得的最为美味的三道主菜。</p><p>日常推理就像载体，是作品的骨架。相比于将【xx 角色的性格】和【xx 角色做的事情】作为【推理题材】的一种包装，在阅读的过程中我还是更喜欢将前者放在【原因】上，也就是首先考虑这样的角色【做出了】这样的事情，尔后才由这样的剧情得知这是一部所谓的【推理小说】。</p><p>但在像现在这样，跳出了作品带来的沉浸后，开始回顾的时候，就还是姑且将其放在【结果】上吧。</p><p>推理生活中的琐事，也就是日常推理这一个题材，真的非常妙。像诸如符合设定（高中生活）从而提高代入感这样的事情就不用多说，我觉得更加令人愉快的地方在于阅读体验的轻松，在前期，日常推理的事件等级并不高，这种程度的事件对于读者来说便不必从一开始就绷紧神经，随着主角一起进入当时的情景。</p><p>自己说出来还是有点奇怪，但事实就是我读的推理小说，甚至是书都不多。不过事件升级这应该是推理小说或者甚至小说的普遍特点，而对于日常推理来说，不知道是不是前期的这种“日常感”所致，更能衬托出后面高潮的精彩。</p><p>至于小市民啊，看的过程中一遍又一遍地读到这个词。对于小鸠和小佐内来说，这是他们的目标。不过要我说，说的更加准确一点的话，这应该是梦想，而不是理想。梦想强调的更像一种向往，叙述的对象就像存在于梦中，就像在秋下篇小鸠心中最后的那段精彩的独白：</p><blockquote><p>“不是这样的。我真正需要的并不是披上‘小市民’的羊皮。”</p></blockquote><p>一遍一遍地向【小市民】迈进，又一遍一遍的向本性低头。想要成为小市民的心情从一开始往后逐步变化，这过程更像是角色对自己的剖析，某种程度上，应该也算是青春成长题材。</p><p>顺道提一嘴，小鸠人称的心理描写也确实精彩。</p><p>两人的感情线，作为青春题材的作品，自然是精髓所在。</p><p>就像之前跟朋友唠嗑时安利的那样，我大可以将这次男女主角的关系看作恋爱，什么“互惠互利”，就都是包装！</p><p>但是到了秋季篇之后，那真正精彩的情节过去之后，就像小佐内说的那样：</p><blockquote><p>“甜滋滋的外衣又加上外衣，一层一层地穿上去。在这个过程中，栗子本身也会渐渐变得像糖果一样甜。栗子其实没有那么甜，甜的只有外面的糖衣，但是外在和本质却调换了。不知不觉中，手段变成了目的……我很喜欢糖渍栗子，因为这样感觉很可爱。”</p></blockquote><blockquote><p>「其实重点不是裹在外面的糖衣，那只不过是砂糖。重点是，在裹上糖衣的过程中……」我们两人四目交会。「栗子也会变得越来越甜。」<br> ……喔？我也放下了茶杯。「栗子不甜不行吗？」「也不是不行，但是这样涩味太重了。说不定还是有人喜欢吧。」「所以才要加糖，让所有人都会喜欢吃。」</p></blockquote><p>唉，在写 repo 的时候还是习惯性地考虑到防剧透，但这样的弊端就是会引用出这样谜语人的选段。</p>]]></content>
     
     
-    <summary type="html">小市民真美味</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot; title=&quot;1&quot;&gt;&lt;/a&gt;1&lt;/h1&gt;&lt;p&gt;知道【小市民系列】大概还是因为最近的动画化消息，至于作者在查过之后才得知原来就是大名鼎鼎的【冰菓】的作者米泽穗信。&lt;/p&gt;
+&lt;p&gt;不过说实话【冰菓】</summary>
+      
     
     
     
@@ -254,19 +281,20 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>那些应该用到熟透的C语言函数</title>
     <link href="https://sagi-rastar.github.io/2024/01/08/%E9%82%A3%E4%BA%9B%E5%BA%94%E8%AF%A5%E7%94%A8%E5%88%B0%E7%86%9F%E9%80%8F%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/"/>
     <id>https://sagi-rastar.github.io/2024/01/08/%E9%82%A3%E4%BA%9B%E5%BA%94%E8%AF%A5%E7%94%A8%E5%88%B0%E7%86%9F%E9%80%8F%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/</id>
-    <published>2024-01-08T21:18:26.000Z</published>
-    <updated>2025-02-14T18:17:20.355Z</updated>
+    <published>2024-01-08T13:18:26.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-字符串相关"><a href="#1-字符串相关" class="headerlink" title="1 字符串相关"></a>1 字符串相关</h1><h2 id="1-1-字符串对比"><a href="#1-1-字符串对比" class="headerlink" title="1.1 字符串对比"></a>1.1 字符串对比</h2><p><code>strstr</code> 用于在一个字符串中查找另一个字符串的首次出现位置。</p><p>函数原型为：<code>char *strstr(const char *haystack, const char *needle);</code></p><p>这个函数接受两个参数：</p><ol><li>haystack </li><li>needlehaystack</li></ol><p>如果 <code>needle</code> 在 <code>haystack</code> 中找到，那么 <code>strstr</code> 会返回一个指向 <code>haystack</code> 中 <code>needle</code> 首次出现位置的指针。如果 <code>needle</code> 没有在 <code>haystack</code> 中找到，那么 <code>strstr</code> 会返回 <code>NULL</code>。</p><p>例如，在代码中：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">temp_ptr0 = <span class="hljs-built_in">strstr</span>((<span class="hljs-type">char</span> <span class="hljs-type">const</span> *)temp_buffer_ptr, <span class="hljs-string">&quot;MC+WAN+WIFI=&quot;</span>);<br></code></pre></td></tr></table></figure><p>这行代码试图在 <code>temp_buffer_ptr</code> 指向的字符串中查找 “MC+WAN+WIFI&#x3D;”。如果找到，<code>temp_ptr0</code> 将指向 “MC+WAN+WIFI&#x3D;” 在 <code>temp_buffer_ptr</code> 中首次出现的位置。如果没有找到，<code>temp_ptr0</code> 将被设置为 <code>NULL</code>。</p><p><strong>跟 strcmp 的区别：</strong></p><p><code>strstr</code> 和 <code>strcmp</code> 都是 C 语言中的字符串处理函数，但它们的功能和用途是不同的。</p><p><code>strstr</code> 函数用于在一个字符串（haystack）中查找另一个字符串（needle）的首次出现位置。如果找到，<code>strstr</code> 返回一个指向 <code>haystack</code> 中 <code>needle</code> 首次出现位置的指针。如果没有找到，<code>strstr</code> 返回 <code>NULL</code>。</p><p>例如：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> *s = <span class="hljs-string">&quot;Hello, world!&quot;</span>;<span class="hljs-type">char</span> *p = <span class="hljs-built_in">strstr</span>(s, <span class="hljs-string">&quot;world&quot;</span>);<span class="hljs-comment">// p 现在指向 &quot;world!&quot;，这是 &quot;world&quot; 在 s 中首次出现的位置</span><br></code></pre></td></tr></table></figure><p>而 <code>strcmp</code> 函数用于比较两个字符串。如果两个字符串相等，<code>strcmp</code> 返回 0。如果第一个字符串在字典顺序上小于第二个字符串，<code>strcmp</code> 返回一个负数。如果第一个字符串在字典顺序上大于第二个字符串，<code>strcmp</code> 返回一个正数。</p><p>例如：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> result = <span class="hljs-built_in">strcmp</span>(<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>);<span class="hljs-comment">// result 现在是一个负数，因为 &quot;apple&quot; 在字典顺序上小于 &quot;banana&quot;</span><br></code></pre></td></tr></table></figure><p>总的来说，<code>strstr</code> 用于查找字符串，而 <code>strcmp</code> 用于比较字符串。</p><h2 id="1-2-类型长度"><a href="#1-2-类型长度" class="headerlink" title="1.2 类型长度"></a>1.2 类型长度</h2><p>strlen 和 sizeof 的区别</p><p><code>strlen</code> 和 <code>sizeof</code> 是 C 语言中的两个函数，它们都用于获取某种类型的“长度”，但是它们的用途和行为是不同的。</p><p><code>strlen</code> 是一个函数，用于获取 C 字符串（以 ‘\0’ 结尾的字符数组）的长度。<code>strlen</code> 返回的是字符串中的字符数量，不包括结束的空字符 ‘\0’。</p><p>例如：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> str[] = <span class="hljs-string">&quot;Hello&quot;</span>;<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%zu\n&quot;</span>, <span class="hljs-built_in">strlen</span>(str));  <span class="hljs-comment">// 输出：5</span><br></code></pre></td></tr></table></figure><p><code>sizeof</code> 是一个运算符，用于获取某种类型或对象在内存中占用的字节数。对于数组，<code>sizeof</code> 返回的是整个数组在内存中占用的字节数，而不是数组中的元素数量。</p><p>例如：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> str[] = <span class="hljs-string">&quot;Hello&quot;</span>;<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%zu\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(str));  <span class="hljs-comment">// 输出：6</span><br></code></pre></td></tr></table></figure><p>在这个例子中，<code>sizeof(str)</code> 返回的是 6，因为 “Hello” 这个字符串包含 5 个字符，加上结束的空字符 ‘\0’，总共占用 6 个字节的内存。</p><p>总的来说，<code>strlen</code> 用于获取字符串的长度，而 <code>sizeof</code> 用于获取类型或对象在内存中的大小。</p><h2 id="1-3-格式化字符串输入"><a href="#1-3-格式化字符串输入" class="headerlink" title="1.3 格式化字符串输入"></a>1.3 格式化字符串输入</h2><p>对于一长串的 <code>strcpy</code> <code>strcat</code> 可以使用 <code>snprintf</code> 替代。</p><p>可以减少代码的复杂性，并且更加安全，因为该函数会检查输出的长度，防止缓冲区溢出。</p><p><code>snprintf</code> 中的 s for string ，n for number ，该函数将会按照指定的格式生成一个字符串，并最多生成指定数量的字符，原型如下：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">snprintf</span><span class="hljs-params">(<span class="hljs-type">char</span> *str, <span class="hljs-type">size_t</span> size, <span class="hljs-type">const</span> <span class="hljs-type">char</span> *format, ...)</span>;<br></code></pre></td></tr></table></figure><ul><li>strsnprintf </li><li>sizestrsnprintfsize - 1\0 </li><li>formatstr%snprintf </li><li>…snprintfstrformat</li></ul><blockquote><p><em>补充：</em><br> <code>size_t</code> 是一种无符号整数类型，在 c 语言中主要用来表示对象的大小、数组的长度，并且以字节为单位。使用这种类型定义有如下好处：</p><ul><li></li><li></li><li></li></ul></blockquote><h1 id="2-结束与换行符"><a href="#2-结束与换行符" class="headerlink" title="2 结束与换行符"></a>2 结束与换行符</h1><p>0x0D 和 0x0A 是 ASCII 码的十六进制表示，它们分别对应于十进制的 13 和 10。在 ASCII 表中，0x0D 对应的字符是 CR（Carriage Return，回车，\r），0x0A 对应的字符是 LF（Line Feed，换行，\n）。</p><p>所以，0x0D 0x0A 组合在一起，通常用于表示文本中的新行。这种表示方法在 Windows 系统中常见。在 Unix 或 Linux 系统中，通常只使用 0x0A（LF）来表示新行。</p><p>而字符串的结束符是 ‘\0’，在 ASCII 中对应的十六进制是 0x00。</p>]]></content>
     
     
-    <summary type="html">熟透了吗，快了</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-字符串相关&quot;&gt;&lt;a href=&quot;#1-字符串相关&quot; class=&quot;headerlink&quot; title=&quot;1 字符串相关&quot;&gt;&lt;/a&gt;1 字符串相关&lt;/h1&gt;&lt;h2 id=&quot;1-1-字符串对比&quot;&gt;&lt;a href=&quot;#1-1-字符串对比&quot; class=&quot;header</summary>
+      
     
     
     
@@ -277,19 +305,27 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>传感器复习随笔</title>
     <link href="https://sagi-rastar.github.io/2023/12/08/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2023/12/08/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/</id>
-    <published>2023-12-08T09:41:57.000Z</published>
-    <updated>2025-02-14T18:17:20.282Z</updated>
+    <published>2023-12-08T01:41:57.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h1><ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul><p>考试题型：选填 + 客观题，客观题为给出一个场景，利用所学传感器给出测量方案。</p><h1 id="2-【第一章】概述部分"><a href="#2-【第一章】概述部分" class="headerlink" title="2 【第一章】概述部分"></a>2 【第一章】概述部分</h1><p><img src="/image-20231208101940636.png"></p><p>这张图会贯穿后面所有具体的传感器章节，举例如下【第四章】：</p><p><img src="/image-20231208102126356.png"></p><h2 id="2-1-传感器的定义"><a href="#2-1-传感器的定义" class="headerlink" title="2.1 传感器的定义"></a>2.1 传感器的定义</h2><blockquote><p>能感受被测量并按照一定的规律转换成可用输出信号的器件或装置，通常由敏感元件和转换元件组成。</p></blockquote><p><strong>敏感元件（Sensing Element）</strong> 指的是能够直接感受或响应被测量的部分；<br> <strong>转换元件（Transducing Element）</strong> 指能将敏感元件的输出转换为适于传输或测量的电信号部分；</p><h1 id="3-【第二章】传感器通用概念"><a href="#3-【第二章】传感器通用概念" class="headerlink" title="3 【第二章】传感器通用概念"></a>3 【第二章】传感器通用概念</h1><h2 id="3-1-静态特性"><a href="#3-1-静态特性" class="headerlink" title="3.1 静态特性"></a>3.1 静态特性</h2><p>主要就是若干概念：</p><p><strong>静态信号与静态特性</strong> 不随时间变化；静态信号作用下的输入输出关系；<br> <strong>量程</strong> 最小到最大输入量的范围；<br> <strong>分辨率（Resplution）</strong> 能感知到的最小输入信号的增量；（灵敏度越高，分辨率越好，也就是越小）<br> <strong>线性度 ( Linearity )</strong> 输入输出间的线性关系程度，理想情况为纯线性关系，指标为非线性误差 γL\mathcal{\gamma}_{\mathrm{L}}γL​ ，计算公式为：</p><p>γL&#x3D;ΔLmaxYFS×100%\gamma_\mathrm{L}&#x3D;\frac{\Delta\mathrm{L}_\mathrm{max}}{Y_\mathrm{FS}}\times100% γL​&#x3D;YFS​ΔLmax​​×100%</p><p>其中：ΔLmax{\Delta\mathrm{L}_\mathrm{max}}ΔLmax​ 为最大偏差，YFS{Y_\mathrm{FS}}YFS​ 为输出的满量程值（Full Scale）</p><p><img src="/image-20231208104449219.png"></p><p><strong>灵敏度（Sensitivity）</strong> 稳态情况下输出变化量比上输入变化量（某点斜率），平均灵敏度为拟合直线的斜率<br> <strong>迟滞（Hysteresis）</strong> 又叫回程误差，就是正反行程中曲线不一致，其指标与线性度指标类似，不做赘述<br> <strong>重复性（Repeatability）</strong> 多次测试中曲线的一致程度，指标也类似，不做赘述<br> <strong>漂移（Drift）</strong> 输入不变，输出随时间变化，有零飘（结构老化）和温飘（环境变化）两种</p><h2 id="3-2-动态特性"><a href="#3-2-动态特性" class="headerlink" title="3.2 动态特性"></a>3.2 动态特性</h2><p><strong>定义：</strong> 指传感器对动态激励的响应特性</p><h3 id="3-2-1-基本数学模型：LTI"><a href="#3-2-1-基本数学模型：LTI" class="headerlink" title="3.2.1 基本数学模型：LTI"></a>3.2.1 基本数学模型：LTI</h3><p>线性时不变系统，LTI（Linear Time-Invariant），常用来描述动态特性。</p><p>andnγ(t)dtn+an−1dn−1γ(t)dtn−1+⋯+a1dγ(t)dt+a0y(t)&#x3D;bmdmx(t)dtm+bm−1dm−1x(t)dtm−1+⋯+b1dx(t)dt+b0x(t)a_n\frac{d^n\gamma(t)}{dt^n}+a_{n-1}\frac{d^{n-1}\gamma(t)}{dt^{n-1}}+\cdots+a_1\frac{d\gamma(t)}{dt}+a_0y(t)&#x3D;b_m\frac{d^mx(t)}{dt^m}+b_{m-1}\frac{d^{m-1}x(t)}{dt^{m-1}}+\cdots+b_1\frac{dx(t)}{dt}+b_0x(t) an​dtndnγ(t)​+an−1​dtn−1dn−1γ(t)​+⋯+a1​dtdγ(t)​+a0​y(t)&#x3D;bm​dtmdmx(t)​+bm−1​dtm−1dm−1x(t)​+⋯+b1​dtdx(t)​+b0​x(t)</p><p>其中，单项式的系数用于描述传感器的动态特性，由工作原理、结构、参数等等因素确定。课程中只需要了解零阶到二阶即可。</p><h4 id="3-2-1-1-零阶："><a href="#3-2-1-1-零阶：" class="headerlink" title="3.2.1.1 零阶："></a>3.2.1.1 零阶：</h4><p>y&#x3D;b0a0xy&#x3D;\frac{b_0}{a_0}x y&#x3D;a0​b0​​x</p><p><img src="/image-20231208110802500.png"></p><h4 id="3-2-1-2-一阶"><a href="#3-2-1-2-一阶" class="headerlink" title="3.2.1.2 一阶"></a>3.2.1.2 一阶</h4><p>a1a0dy(t)dt+y(t)&#x3D;b0a0x(t)\frac{a_1}{a_0}\frac{dy(t)}{dt}+y(t)&#x3D;\frac{b_0}{a_0}x(t) a0​a1​​dtdy(t)​+y(t)&#x3D;a0​b0​​x(t)</p><p><img src="/image-20231208110729842.png"><br> <img src="/image-20231208110833864.png"><br> <img src="/image-20231208110940384.png"></p><h4 id="3-2-1-3-二阶"><a href="#3-2-1-3-二阶" class="headerlink" title="3.2.1.3 二阶"></a>3.2.1.3 二阶</h4><p>a2a0d2y(t)dt2+a1a0dy(t)dt+y(t)&#x3D;b0a0x(t)\frac{a_2}{a_0}\frac{d^2y(t)}{dt^2}+\frac{a_1}{a_0}\frac{dy(t)}{dt}+y(t)&#x3D;\frac{b_0}{a_0}x(t) a0​a2​​dt2d2y(t)​+a0​a1​​dtdy(t)​+y(t)&#x3D;a0​b0​​x(t)</p><p><img src="/image-20231208111045175.png"><br> <img src="/image-20231208111049836.png"><br> <img src="/image-20231208111139273.png"><br> <img src="/image-20231208111150694.png"></p><h4 id="3-2-1-4-动态参数的选择"><a href="#3-2-1-4-动态参数的选择" class="headerlink" title="3.2.1.4 动态参数的选择"></a>3.2.1.4 动态参数的选择</h4><p><img src="/image-20231208111601692.png"></p><h2 id="3-3-作业"><a href="#3-3-作业" class="headerlink" title="3.3 作业"></a>3.3 作业</h2><p>一阶系统的一般表达式为：</p><p>τdy(t)dt+y(t)&#x3D;Snx(t)\tau\frac{\mathrm{d}y(t)}{\mathrm{d}t}+y(t)&#x3D;S_{\mathrm{n}}x(t) τdtdy(t)​+y(t)&#x3D;Sn​x(t)</p><p>将题目式子向这个方向化容易读出时间常数和静态灵敏度。一阶系统的计算式：</p><p>y(t)&#x3D;Sn(1−e−t&#x2F;τ)+Cy(t)&#x3D;S_n(1-e^{-t&#x2F;{\tau}})+C y(t)&#x3D;Sn​(1−e−t&#x2F;τ)+C</p><p>若题目给出若干情况的取值，代进去这个式子算，可以得出解出时间常数和静态灵敏度</p><p>二阶的常用参数：</p><p>σ&#x3D;e−πζ1−ζ2tP&#x3D;πωd&#x3D;πωn1−ζ2\boxed{\begin{aligned}&amp;\sigma&#x3D;\mathrm{e}^{\frac{-\pi\zeta}{\sqrt{1-\zeta^2}}}\&amp;t_\mathrm{P}&#x3D;\frac{\pi}{\omega_\mathrm{d}}\&amp;&#x3D;\frac{\pi}{\omega_\mathrm{n}\sqrt{1-\zeta^2}}\end{aligned}} ​σ&#x3D;e1−ζ2​−πζ​tP​&#x3D;ωd​π​&#x3D;ωn​1−ζ2​π​​​</p><p><del>（虽然我觉得传感器的期末小测程度应该不会要算二阶）</del></p><h1 id="4-【第三章】电阻式传感器"><a href="#4-【第三章】电阻式传感器" class="headerlink" title="4 【第三章】电阻式传感器"></a>4 【第三章】电阻式传感器</h1><h2 id="4-1-工作原理"><a href="#4-1-工作原理" class="headerlink" title="4.1 工作原理"></a>4.1 工作原理</h2><p>❗<br> <img src="/image-20231208153027303.png"></p><h3 id="4-1-1-应变与应力"><a href="#4-1-1-应变与应力" class="headerlink" title="4.1.1 应变与应力"></a>4.1.1 应变与应力</h3><p><strong>（轴向）应变 ε\varepsilonε</strong> 指的是轴向形变比上原先长度轴向应变和径向应变的关系如下：</p><p>Δrr&#x3D;−μΔLL&#x3D;−με\frac{\Delta r}r{&#x3D;}-\mu\frac{\Delta L}L&#x3D;-\mu\varepsilon rΔr​&#x3D;−μLΔL​&#x3D;−με</p><p>其中：μ\muμ 为电阻丝材料的泊松比，通常为 0.3 左右</p><p><strong>应力 σ\sigmaσ</strong> 指的是单位面积的力</p><h3 id="4-1-2-电阻"><a href="#4-1-2-电阻" class="headerlink" title="4.1.2 电阻"></a>4.1.2 电阻</h3><p>❗定义式：</p><p>R&#x3D;ρ⋅l&#x2F;A{R&#x3D;\rho\cdot l&#x2F;A} R&#x3D;ρ⋅l&#x2F;A</p><p>其中：ρ\rhoρ 为电阻率</p><p>应变效应与压阻效应：<br> <img src="/image-20231208115632989.png"><br> <img src="/image-20231208115814816.png"></p><blockquote><p>压阻效应：半导体电阻应变片的工作原理，单晶半导体材料沿某一轴向受到外力作用时，其电阻率发生变化的现象</p></blockquote><h2 id="4-2-测量电路"><a href="#4-2-测量电路" class="headerlink" title="4.2 测量电路"></a>4.2 测量电路</h2><h3 id="4-2-1-直流电桥"><a href="#4-2-1-直流电桥" class="headerlink" title="4.2.1 直流电桥"></a>4.2.1 直流电桥</h3><p><img src="/image-20231208152124643.png"></p><p>相邻两电阻的比值相等，RLR_LRL​ 视作开路，则输出电压 UoU_oUo​ 为 0；若相邻电阻的比值设作 nnn ，则有：</p><p>Uo&#x3D;En(1+n)2⋅ΔR1R1U_{o}&#x3D;E\frac{n}{\left(1+n\right)^{2}}\cdot\frac{\Delta R_{1}}{R_{1}} Uo​&#x3D;E(1+n)2n​⋅R1​ΔR1​​</p><p>❗则灵敏度定义为</p><p>KU&#x3D;En(1+n)2K_U &#x3D; E\frac{n}{\left (1+n\right)^{2}} KU​&#x3D;E(1+n)2n​</p><p>❗若为单桥臂时, 若要使得 KUK_UKU​ 最大, 则 n&#x3D;1n&#x3D;1n&#x3D;1 此时灵敏度为</p><p>KU&#x3D;E4(单桥臂最大灵敏度)K_U &#x3D; \frac{E}{4} \tag{单桥臂最大灵敏度} KU​&#x3D;4E​(单桥臂最大灵敏度)</p><p>而在实际情况中有非线性误差：<br> ❗计算方法：</p><p>γL&#x3D;Uo−Uo′Uo&#x3D;ΔR1&#x2F;R11+n+ΔR1&#x2F;R1\gamma_{L}&#x3D;\frac{U_{o}-U_{o}^{\prime}}{U_{o}}&#x3D;\frac{\Delta R_{1}&#x2F;R_{1}}{1+n+\Delta R_{1}&#x2F;R_{1}} γL​&#x3D;Uo​Uo​−Uo′​​&#x3D;1+n+ΔR1​&#x2F;R1​ΔR1​&#x2F;R1​​</p><p>❗同样的, 单桥臂的:</p><p>γL&#x3D;ΔR1&#x2F;R12+ΔR1&#x2F;R1\gamma_{L} &#x3D; \frac{\Delta R_{1}&#x2F;R_{1}}{2+\Delta R_{1}&#x2F;R_{1}} γL​&#x3D;2+ΔR1​&#x2F;R1​ΔR1​&#x2F;R1​​</p><p>非线性误差改进方法有二：</p><p><strong>半桥差动：</strong> 将 R1R_1R1​ 和 R2R_2R2​ 都作为可变电阻：<br> <img src="/image-20231208152912024.png"><br> ❗灵敏度为单臂的两倍：</p><p>KU&#x3D;E2(半桥差动灵敏度)K_{\mathrm{U}}&#x3D;\frac{E}{2} \tag{半桥差动灵敏度} KU​&#x3D;2E​(半桥差动灵敏度)</p><p>❗没有非线性误差</p><p><strong>全桥差动：</strong> 四个电阻都作为可变电阻：<br> <img src="/image-20231208152957762.png"><br> ❗灵敏度为单臂的四倍：</p><p>KU&#x3D;E(全桥差动灵敏度)K_{\mathrm{U}}&#x3D;{E}\tag{全桥差动灵敏度} KU​&#x3D;E(全桥差动灵敏度)</p><p>❗没有非线性误差</p><h2 id="4-3-典型应用"><a href="#4-3-典型应用" class="headerlink" title="4.3 典型应用"></a>4.3 典型应用</h2><p>电阻式差压传感器；称重传感器；</p><h1 id="5-【第四章】电感式传感器"><a href="#5-【第四章】电感式传感器" class="headerlink" title="5 【第四章】电感式传感器"></a>5 【第四章】电感式传感器</h1><blockquote><p>电磁感应定律：当穿过线圈回路的磁通量发生变化时，线圈回路中的感生电动势ε的大小和穿过回路的磁通量Φ变化率成正比。</p><p>ε&#x3D;Kdϕdtϕ&#x3D;NIRm\varepsilon&#x3D;K\frac{d\phi}{dt}\quad\phi&#x3D;\frac{NI}{R_m} ε&#x3D;Kdtdϕ​ϕ&#x3D;Rm​NI​</p></blockquote><h2 id="5-1-变磁阻电感式传感器"><a href="#5-1-变磁阻电感式传感器" class="headerlink" title="5.1 变磁阻电感式传感器"></a>5.1 变磁阻电感式传感器</h2><p><img src="/image-20231208162410963.png"></p><p><img src="/image-20231208162438686.png"></p><h3 id="5-1-1-磁阻"><a href="#5-1-1-磁阻" class="headerlink" title="5.1.1 磁阻"></a>5.1.1 磁阻</h3><p>❗仿照电阻的定义，磁阻有以下定义式：</p><p>Rm&#x3D;lμ0AR_m&#x3D;\frac l{\mu_0A} Rm​&#x3D;μ0​Al​</p><p>其中: μ0\mu_0μ0​ 为磁导率, lll 为长度</p><p>❗由磁阻出发，一段线圈的电感量定义为：</p><p>L&#x3D;ψi&#x3D;Nϕi&#x3D;N2RmL&#x3D;\frac\psi i&#x3D;\frac{N\phi}i&#x3D;\frac{N^2}{R_m} L&#x3D;iψ​&#x3D;iNϕ​&#x3D;Rm​N2​</p><h3 id="5-1-2-工作原理"><a href="#5-1-2-工作原理" class="headerlink" title="5.1.2 工作原理"></a>5.1.2 工作原理</h3><p>❗<strong>变气隙厚度式自感传感器：</strong></p><p><img src="/image-20231208160831054.png"></p><p>当衔铁上下移动的时候，灵敏度有以下关系：</p><p><img src="/image-20231208161225187.png"></p><p>非线性误差有:<br> <img src="/image-20231208161253085.png"></p><p>改进方法：<br> <img src="/image-20231208162002612.png"></p><p><strong>螺线管式自感传感器：</strong></p><p><img src="/image-20231208163540193.png"></p><h3 id="5-1-3-测量电路"><a href="#5-1-3-测量电路" class="headerlink" title="5.1.3 测量电路"></a>5.1.3 测量电路</h3><h4 id="5-1-3-1-交流电桥"><a href="#5-1-3-1-交流电桥" class="headerlink" title="5.1.3.1 交流电桥"></a>5.1.3.1 交流电桥</h4><p><strong>差动自感式交流电桥：</strong></p><p><img src="/image-20231208162231040.png"></p><p><strong>变压器式交流电桥：</strong></p><p><img src="/image-20231208162330985.png"></p><p>输出电压的计算公式都是一样的。</p><h2 id="5-2-差动变压器电感式传感器"><a href="#5-2-差动变压器电感式传感器" class="headerlink" title="5.2 差动变压器电感式传感器"></a>5.2 差动变压器电感式传感器</h2><p><img src="/image-20231208163337878.png"></p><h3 id="5-2-1-工作原理"><a href="#5-2-1-工作原理" class="headerlink" title="5.2.1 工作原理"></a>5.2.1 工作原理</h3><p>❗两个二次绕组反向串接，以差动方式输出</p><p><img src="/image-20231208163211122.png"></p><blockquote><p>与上一节的对比：<img src="/image-20231208163727453.png"></p></blockquote><h3 id="5-2-2-测量电路"><a href="#5-2-2-测量电路" class="headerlink" title="5.2.2 测量电路"></a>5.2.2 测量电路</h3><p>输出为电压，直接测就完了，无非就加一个放大器</p><h2 id="5-3-电涡流电感式传感器"><a href="#5-3-电涡流电感式传感器" class="headerlink" title="5.3 电涡流电感式传感器"></a>5.3 电涡流电感式传感器</h2><p><img src="/image-20231208164013282.png"></p><h3 id="5-3-1-工作原理"><a href="#5-3-1-工作原理" class="headerlink" title="5.3.1 工作原理"></a>5.3.1 工作原理</h3><p><strong>电涡流效应：</strong> 感生电流的磁通总是力图阻碍引起感生电流的磁通变化，此磁场会反作用于原磁场，电涡流的产生导致励磁线圈的电感、品质因数、阻抗等参数发生变化。<br> <img src="/image-20231208164143126.png"></p><h3 id="5-3-2-测量电路"><a href="#5-3-2-测量电路" class="headerlink" title="5.3.2 测量电路"></a>5.3.2 测量电路</h3><p>输出的是阻抗，直接用前述的交流电桥即可</p><h1 id="6-【第五章】电容式传感器"><a href="#6-【第五章】电容式传感器" class="headerlink" title="6 【第五章】电容式传感器"></a>6 【第五章】电容式传感器</h1><p><img src="/image-20231208170214201.png"><br> <img src="/image-20231208171604592.png"></p><h2 id="6-1-工作原理"><a href="#6-1-工作原理" class="headerlink" title="6.1 工作原理"></a>6.1 工作原理</h2><p><strong>电容定义：</strong></p><p>C&#x3D;QUC0&#x3D;ε0εAδ0C&#x3D;\frac QU\quad\quad{C_0&#x3D;\frac{\varepsilon_0\varepsilon A}{\delta_0}} C&#x3D;UQ​C0​&#x3D;δ0​ε0​εA​</p><p><strong>变极距型电容式传感器:</strong><br> 基础被测量为电容, 单极板的灵敏度为:</p><p>K&#x3D;ΔCC0Δδ≈−1δ0{K&#x3D;\frac{\frac{\Delta C}{C_0}}{\Delta\delta}\approx{-\frac1{\delta_0}}} K&#x3D;ΔδC0​ΔC​​≈−δ0​1​</p><p>差动式的灵敏度为:</p><p>K&#x3D;ΔCC0Δδ≈2δ0{K}&#x3D;\frac{\frac{\Delta C}{C_0}}{\Delta\delta}\approx{\frac2{\delta_0}} K&#x3D;ΔδC0​ΔC​​≈δ0​2​</p><h2 id="6-2-额外的两种测量电路"><a href="#6-2-额外的两种测量电路" class="headerlink" title="6.2 额外的两种测量电路"></a>6.2 额外的两种测量电路</h2><p><img src="/image-20231208171540172.png"></p><p><img src="/image-20231208171545595.png"></p><h1 id="7-【第六章】压电式传感器"><a href="#7-【第六章】压电式传感器" class="headerlink" title="7 【第六章】压电式传感器"></a>7 【第六章】压电式传感器</h1><p><img src="/image-20231212155504641.png"></p><h2 id="7-1-工作原理"><a href="#7-1-工作原理" class="headerlink" title="7.1 工作原理"></a>7.1 工作原理</h2><p>基于正逆压电效应：</p><ul><li>正压电效应 </li><li>逆压电效应</li></ul><p>压电材料：</p><ul><li></li><li></li><li></li></ul><p><img src="/image-20231212155411008.png"><br> <img src="/image-20231212155556154.png"></p><p><img src="/image-20231212155450614.png"></p><h2 id="7-2-测量电路"><a href="#7-2-测量电路" class="headerlink" title="7.2 测量电路"></a>7.2 测量电路</h2><p><img src="/image-20231212155539576.png"></p><h2 id="7-3-典型应用"><a href="#7-3-典型应用" class="headerlink" title="7.3 典型应用"></a>7.3 典型应用</h2><p>超声波：发送：使用了逆压电效应（外加电场产生振动发出超声波）接收：使用了正压电效应（接收机械振动波，进行电气输出）<br> <img src="/image-20231212160021281.png"></p><h1 id="8-【第七章】磁敏式传感器"><a href="#8-【第七章】磁敏式传感器" class="headerlink" title="8 【第七章】磁敏式传感器"></a>8 【第七章】磁敏式传感器</h1><h2 id="8-1-磁电感应式传感器"><a href="#8-1-磁电感应式传感器" class="headerlink" title="8.1 磁电感应式传感器"></a>8.1 磁电感应式传感器</h2><p><img src="/image-20231212160254352.png"></p><p><img src="/image-20231212160409096.png"></p><h2 id="8-2-霍尔式传感器"><a href="#8-2-霍尔式传感器" class="headerlink" title="8.2 霍尔式传感器"></a>8.2 霍尔式传感器</h2><blockquote><p>霍尔效应：半导体或金属薄片置于磁场中，当有电流流过时，在垂直于磁场和电流的方向上会产生电动势。</p></blockquote><h1 id="9-热电式传感器"><a href="#9-热电式传感器" class="headerlink" title="9 热电式传感器"></a>9 热电式传感器</h1><h2 id="9-1-热电偶"><a href="#9-1-热电偶" class="headerlink" title="9.1 热电偶"></a>9.1 热电偶</h2><blockquote><p>热电效应：两种不同材质的导体 A&amp;B 首尾焊接，两个焊接点有温差时，便产生热电流测量端：焊接一起的两个导体显示端：冷端</p></blockquote><p><img src="/image-20231212161053810.png"></p><p>EAB(T,T0)&#x3D;EAB(T)−EAB(T0)+EB(T,T0)−EA(T,T0)E_{AB}(T,T_{0})&#x3D;{E_{AB}(T)-E_{AB}(T_{0})+E_{B}(T,T_{0})-E_{A}(T,T_{0})} EAB​(T,T0​)&#x3D;EAB​(T)−EAB​(T0​)+EB​(T,T0​)−EA​(T,T0​)</p><p><img src="/image-20231212161147661.png"></p><p>EAB(T,T0)≈EAB(T)−EAB(T0)E_{AB}(T,T_0)\approx{E_{AB}(T)-E_{AB}(T_0)} EAB​(T,T0​)≈EAB​(T)−EAB​(T0​)</p><p>分度表：<br> <img src="/image-20231212161328808.png"></p><blockquote><p>中间导体定律在热电偶测温回路内接入中间导体（第三种导体），只要第三种导体的两端温度相同，对回路的总热电势没有影响。</p></blockquote><blockquote><p>中间温度定律热电偶回路的两接点（温度为 T、T 0）间的热电势，等于热电偶在 T、Tn 时的热电势与在 Tn、T 0 时的热电势的代数和。<br> <img src="/image-20231212161457745.png"></p></blockquote><p><img src="/image-20231212161511228.png"></p><h2 id="9-2-热电阻"><a href="#9-2-热电阻" class="headerlink" title="9.2 热电阻"></a>9.2 热电阻</h2><p>测量电路：二线制：短距离测量，低精度<br> <img src="/image-20231212161551902.png"></p><p>三线制，远距离工业测量，一般精度<br> <img src="/image-20231212161618921.png"></p><p>四线制，实验室测量，高精度<br> <img src="/image-20231212161636934.png"></p><h2 id="9-3-热敏电阻"><a href="#9-3-热敏电阻" class="headerlink" title="9.3 热敏电阻"></a>9.3 热敏电阻</h2><p>电阻值随温度显著变化，灵敏度高出热电阻 1~2 个数量级。</p><h2 id="9-4-热释电"><a href="#9-4-热释电" class="headerlink" title="9.4 热释电"></a>9.4 热释电</h2><blockquote><p>热释电效应由于温度变化而产生极化电荷的现象</p></blockquote><p>热释电型传感器：</p><p>当红外辐射照射到已经极化的铁电体薄片表面上时引起薄片温度升高，使其极化强度降低，表面电荷减少，这相当于释放一部分电荷，所以叫做热释电型传感器。</p><p>如果将负载电阻与铁电体薄片相连，则负载电阻上便产生一个电信号输出。输出信号的强弱取决于薄片温度变化的快慢，从而反映出入射的红外辐射的强弱，热释电型红外传感器的电压响应率正比于入射光辐射率变化的速率。当铁电体薄片的温度达到平衡值时，表面电荷达到平衡浓度，不再释放电荷，将无输出信号。因此，热释电型传感器用于测量动态信号。<br> <img src="/image-20231212162131083.png"></p><h1 id="10-作业"><a href="#10-作业" class="headerlink" title="10 作业"></a>10 作业</h1>]]></content>
     
     
-    <summary type="html">内容分支很多，考试会比较简单，主要看ppt</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1 前言&quot;&gt;&lt;/a&gt;1 前言&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+</summary>
+      
     
     
     
@@ -302,19 +338,20 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2023-12-04-随笔</title>
     <link href="https://sagi-rastar.github.io/2023/12/04/2023-12-04-%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2023/12/04/2023-12-04-%E9%9A%8F%E7%AC%94/</id>
-    <published>2023-12-04T21:34:10.000Z</published>
-    <updated>2025-02-14T18:17:20.268Z</updated>
+    <published>2023-12-04T13:34:10.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>掰掰指头算算，最近看的还是蛮多的番。有前期看的很有趣，最后展开出乎意料的“听我的电波吧”；也有看的时候舒心至极，角色有血有肉的“跃动青春”；还有最近看完了前一部分的，着眼于动画制作的老番“白箱”。</p><p>真的想找个时间好好聊一下这几部啊，先开一个坑在这个界面吧。</p><p>做复习计划好累人，通信原理和高频就按照今天理出来的结构顺着补吧。</p><p>回宿舍回宿舍。</p>]]></content>
     
     
-    <summary type="html">坐在实验室里面写随笔博客，总觉得不自在</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot; title=&quot;1&quot;&gt;&lt;/a&gt;1&lt;/h1&gt;&lt;p&gt;掰掰指头算算，最近看的还是蛮多的番。有前期看的很有趣，最后展开出乎意料的“听我的电波吧”；也有看的时候舒心至极，角色有血有肉的“跃动青春”；还有最近</summary>
+      
     
     
     
@@ -327,19 +364,22 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>通信原理实验随笔</title>
     <link href="https://sagi-rastar.github.io/2023/11/30/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2023/11/30/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/</id>
-    <published>2023-11-30T16:04:45.000Z</published>
-    <updated>2025-02-14T18:17:20.313Z</updated>
+    <published>2023-11-30T08:04:45.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h1><p><del>水一篇博客</del></p><p>记录一下通信原理实验过程中的东西，后面复习方便查一些概念。</p><h1 id="2-【第四章】信道-√"><a href="#2-【第四章】信道-√" class="headerlink" title="2 【第四章】信道 √"></a>2 【第四章】信道 √</h1><p><img src="/image-20231204150329617.png"></p><h2 id="2-1-信道分类"><a href="#2-1-信道分类" class="headerlink" title="2.1 信道分类"></a>2.1 信道分类</h2><p>信道的定义：一种物理媒质，用来将来自发送设备的信号传送到接收端信道的分类：</p><ul><li></li><li></li><li></li></ul><h3 id="2-1-1-无线信道"><a href="#2-1-1-无线信道" class="headerlink" title="2.1.1 无线信道"></a>2.1.1 无线信道</h3><p>电磁波在自由空间所经历的传播路径</p><p><img src="/image-20231204154416510.png"><br> <img src="/image-20231204154423646.png"><br> <img src="/image-20231204154457383.png"><br> <img src="/image-20231204154442872.png"><br> <img src="/image-20231204154522479.png"></p><h3 id="2-1-2-有线信道"><a href="#2-1-2-有线信道" class="headerlink" title="2.1.2 有线信道"></a>2.1.2 有线信道</h3><p><img src="/image-20231204154610417.png"></p><h3 id="2-1-3-调制信道"><a href="#2-1-3-调制信道" class="headerlink" title="2.1.3 调制信道"></a>2.1.3 调制信道</h3><p><img src="/image-20231204152704453.png"><br> 若按照调制信道出发，信道可分为恒参信道、随参信道</p><p>eo(t)&#x3D;k(t)ei(t)+n(t)e_{<em>o}(t)&#x3D;k(t)e</em>{_i}(t)+n(t) eo​​(t)&#x3D;k(t)ei​​(t)+n(t)</p><p>上式为调制信道的一般数学模型，一般来说 k(t)k(t)k(t) 可以看作是对信号的一种干扰，并且很多的失真都可能随着时间变化，所以 k(t)k(t)k(t) 只能用随机过程表述，因此这种特性随机变化的信道称为随机参量信道，也就是随参信道。若特性基本不随时间变化，或变化极小，则称为恒参信道。</p><h3 id="2-1-4-编码信道"><a href="#2-1-4-编码信道" class="headerlink" title="2.1.4 编码信道"></a>2.1.4 编码信道</h3><p>编码信道的输入输出为数字序列，若关注于输入输出，则可以用转移概率来描述编码信道的特性。则误码率为</p><p>Pe&#x3D;P(0)P(1&#x2F;0)+P(1)P(0&#x2F;1)P_{e}&#x3D;{P(0)P(1&#x2F;0)+}{P(1)P(0&#x2F;1)} Pe​&#x3D;P(0)P(1&#x2F;0)+P(1)P(0&#x2F;1)</p><h2 id="2-2-噪声"><a href="#2-2-噪声" class="headerlink" title="2.2 噪声"></a>2.2 噪声</h2><p><img src="/image-20231204154107137.png"></p><h2 id="2-3-信道容量（计算题）"><a href="#2-3-信道容量（计算题）" class="headerlink" title="2.3 信道容量（计算题）"></a>2.3 信道容量（计算题）</h2><p>信道容量的定义：无差错传输时的最大平均信息速率</p><p>香农公式：<br> <img src="/image-20231204150426553.png"></p><p>C&#x3D;Blog⁡2(1+SN)C&#x3D;B\log_{2}\left(1+\frac{S}{N}\right) C&#x3D;Blog2​(1+NS​)</p><p>例题：<br> <img src="/image-20231204154825211.png"></p><h2 id="2-4-作业"><a href="#2-4-作业" class="headerlink" title="2.4 作业"></a>2.4 作业</h2><p>作业题：<br> <img src="/image-20231204160057286.png"></p><h2 id="2-5-理解"><a href="#2-5-理解" class="headerlink" title="2.5 理解"></a>2.5 理解</h2><h1 id="3-【第六章】数字基带传播系统"><a href="#3-【第六章】数字基带传播系统" class="headerlink" title="3 【第六章】数字基带传播系统"></a>3 【第六章】数字基带传播系统</h1><h2 id="3-1-（实验部分）基带传输的常用码型"><a href="#3-1-（实验部分）基带传输的常用码型" class="headerlink" title="3.1 （实验部分）基带传输的常用码型"></a>3.1 （实验部分）基带传输的常用码型</h2><h3 id="3-1-1-基本码型图像"><a href="#3-1-1-基本码型图像" class="headerlink" title="3.1.1 基本码型图像"></a>3.1.1 基本码型图像</h3><p>根据单极性 &#x2F; 双极性 | 归零 &#x2F; 不归零排列组合可以组出四种基本码型，示例如下：</p><p>对于给定的二进制信息：</p><p><code>x = [1 1 1 1 1 0 0 1 1 0 1 0 0 1 0 0 0 0 1 0 1 0 1 1 1 0 1 1 0 0 0];</code></p><p>四种基本码型图像如下：</p><p><img src="/source/_posts/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/image-20231130203426708.png"></p><p>四种码型各自的一些特点：</p><ul><li></li><li></li><li></li><li></li></ul><h3 id="3-1-2-基本码型功率谱密度"><a href="#3-1-2-基本码型功率谱密度" class="headerlink" title="3.1.2 基本码型功率谱密度"></a>3.1.2 基本码型功率谱密度</h3><p><strong>Q: 功率谱密度有什么用？</strong></p><p>A: 功率谱密度可以用来描述信号功率在频率上是如何分布的，能够表示一个信号在不同频率上的功率强度。</p><p><strong>Q: 单位是什么？</strong></p><p>A: <code>功率 / Hz</code> 或者 <code>dB / Hz</code> ，表示频率单位上的平均功率。</p><p><strong>Q: 怎么看功率谱密度图像？</strong></p><p>A：</p><ol><li></li><li></li><li></li></ol><h2 id="3-2-数字基带信号的特性"><a href="#3-2-数字基带信号的特性" class="headerlink" title="3.2 数字基带信号的特性"></a>3.2 数字基带信号的特性</h2><p>常用传输码型：</p><ul><li>AMIAMIAMI </li><li>HDB3HDB_3HDB3​</li></ul><h2 id="3-3-消除码间串扰"><a href="#3-3-消除码间串扰" class="headerlink" title="3.3 消除码间串扰"></a>3.3 消除码间串扰</h2><h2 id="3-4-提高抗噪性能"><a href="#3-4-提高抗噪性能" class="headerlink" title="3.4 提高抗噪性能"></a>3.4 提高抗噪性能</h2><h2 id="3-5-眼图"><a href="#3-5-眼图" class="headerlink" title="3.5 眼图"></a>3.5 眼图</h2><h2 id="3-6-改善系统性能"><a href="#3-6-改善系统性能" class="headerlink" title="3.6 改善系统性能"></a>3.6 改善系统性能</h2><h2 id="3-7-作业"><a href="#3-7-作业" class="headerlink" title="3.7 作业"></a>3.7 作业</h2><p><img src="/image-20231204162139170.png"></p><hr><p><img src="/image-20231204162155779.png"><br> 稳态波和交变波的功率谱叠加后的总公式：</p><p>Ps(f)&#x3D;Pν(f)+Pu(f)P_s(f)&#x3D;P_{\nu}(f) + P_{u}\left(f\right) Ps​(f)&#x3D;Pν​(f)+Pu​(f)</p><p>&#x3D;&#x3D; &#x3D;</p><p>∑m&#x3D;−∞∞∣fB[PG1(mfB)+(1−P)G2(mfB)]∣2δ(f−mfB)(稳态波部分)\sum_{m&#x3D;-\infty}^{\infty}\left|f_{B}[PG_{1}(mf_{B})+(1-P)G_{2}(mf_{B})]\right|^{2}\delta(f-mf_{B})\tag{稳态波部分} m&#x3D;−∞∑∞​∣fB​[PG1​(mfB​)+(1−P)G2​(mfB​)]∣2δ(f−mfB​)(稳态波部分)</p><ul><li><ul><li><ul><li></li></ul></li></ul></li></ul><p>fBP(1−P)∣G1(f)−G2(f)∣2(交变波部分)f_BP(1-P)\Big|G_1(f)-G_2(f)\Big|^2 \tag{交变波部分} fB​P(1−P)​G1​(f)−G2​(f)​2(交变波部分)</p><p>等概所以：</p><p>P&#x3D;1&#x2F;2P &#x3D; 1&#x2F;2 P&#x3D;1&#x2F;2</p><p>三角脉冲所以：<br> <img src="/image-20231204163454922.png"><br> G2G_2G2​ 零码直接为 0 所以带入公式后有：</p><p>Ps(f)&#x3D;fBP(1−P)∣G(f)∣2+∑−∞∞∣fB(1−P)G(mfB)∣2δ(f−mfB)&#x3D;fB4∣A2TB24Sa4(πfTB2)∣+∑−∞∞∣fB2G(mfB)∣2δ(f−mfB)&#x3D;A2TB16Sa4(πfTB2)+A216∑−∞∞Sa4(mπ2)δ(f−mfB)\begin{aligned} P_{s}(f)&amp; &#x3D;f_{\mathrm{B}}P(1-P)\big|G(f)\big|^{2}+\sum_{-\infty}^{\infty}\big|f_{\mathrm{B}}(1-P)G(mf_{\mathrm{B}})\big|^{2}\delta(f-mf_{\mathrm{B}}) \ &amp;&#x3D;\frac{f_{\mathrm{B}}}{4}\left|\frac{A^{2}T_{\mathrm{B}}^{2}}{4}\mathrm{S}a^{4}\left(\frac{\pi fT_{\mathrm{B}}}{2}\right)\right|+\sum_{-\infty}^{\infty}\left|\frac{f_{\mathrm{B}}}{2}G(mf_{\mathrm{B}})\right|^{2}\delta(f-mf_{\mathrm{B}}) \ &amp;&#x3D;\frac{A^{2}T_{\mathrm{B}}}{16}Sa^{4}\left(\frac{\pi fT_{\mathrm{B}}}{2}\right)+\frac{A^{2}}{16}\sum_{-\infty}^{\infty}Sa^{4}\left(\frac{m\pi}{2}\right)\delta(f-mf_{\mathrm{B}}) \end{aligned}Ps​(f)​&#x3D;fB​P(1−P)​G(f)​2+−∞∑∞​​fB​(1−P)G(mfB​)​2δ(f−mfB​)&#x3D;4fB​​​4A2TB2​​Sa4(2πfTB​​)​+−∞∑∞​​2fB​​G(mfB​)​2δ(f−mfB​)&#x3D;16A2TB​​Sa4(2πfTB​​)+16A2​−∞∑∞​Sa4(2mπ​)δ(f−mfB​)​</p><hr><p><img src="/image-20231204164424521.png"></p><hr><p><img src="/image-20231204164439484.png"></p><hr><p><img src="/image-20231204164507266.png"></p><hr><p><img src="/image-20231204164529054.png"></p><h1 id="4-【第七章】数字调制"><a href="#4-【第七章】数字调制" class="headerlink" title="4 【第七章】数字调制"></a>4 【第七章】数字调制</h1><h2 id="4-1-2ASK2ASK2ASK"><a href="#4-1-2ASK2ASK2ASK" class="headerlink" title="4.1 2ASK2ASK2ASK"></a>4.1 2ASK2ASK2ASK</h2><h2 id="4-2-2FSK2FSK2FSK"><a href="#4-2-2FSK2FSK2FSK" class="headerlink" title="4.2 2FSK2FSK2FSK"></a>4.2 2FSK2FSK2FSK</h2><h2 id="4-3-2PSK-2DPSK2PSK-2DPSK2PSK-2DPSK"><a href="#4-3-2PSK-2DPSK2PSK-2DPSK2PSK-2DPSK" class="headerlink" title="4.3 2PSK&#x2F;2DPSK2PSK&#x2F;2DPSK2PSK&#x2F;2DPSK"></a>4.3 2PSK&#x2F;2DPSK2PSK&#x2F;2DPSK2PSK&#x2F;2DPSK</h2><h2 id="4-4-抗噪性能，误码率"><a href="#4-4-抗噪性能，误码率" class="headerlink" title="4.4 抗噪性能，误码率"></a>4.4 抗噪性能，误码率</h2><h2 id="4-5-作业"><a href="#4-5-作业" class="headerlink" title="4.5 作业"></a>4.5 作业</h2><p><img src="/image-20231204170918484.png"></p><hr><p><img src="/image-20231204170946101.png"></p><hr><p><img src="/image-20231204171108879.png"></p><hr><h1 id="5-【第十章】信源编码"><a href="#5-【第十章】信源编码" class="headerlink" title="5 【第十章】信源编码"></a>5 【第十章】信源编码</h1><h2 id="5-1-抽样过程"><a href="#5-1-抽样过程" class="headerlink" title="5.1 抽样过程"></a>5.1 抽样过程</h2><h2 id="5-2-量化过程"><a href="#5-2-量化过程" class="headerlink" title="5.2 量化过程"></a>5.2 量化过程</h2><h2 id="5-3-PCM编译码过程"><a href="#5-3-PCM编译码过程" class="headerlink" title="5.3 PCM编译码过程"></a>5.3 PCM编译码过程</h2><h2 id="5-4-TDM-原理和-E1-帧结构"><a href="#5-4-TDM-原理和-E1-帧结构" class="headerlink" title="5.4 TDM 原理和 E1 帧结构"></a>5.4 TDM 原理和 E1 帧结构</h2><h2 id="5-5-作业"><a href="#5-5-作业" class="headerlink" title="5.5 作业"></a>5.5 作业</h2><p><img src="/image-20231204171154313.png"></p><hr><p><img src="/image-20231204171204659.png"></p><hr><p><img src="/image-20231204171215334.png"></p><hr><p><img src="/image-20231204171228666.png"></p><h1 id="6-【第十三章】同步"><a href="#6-【第十三章】同步" class="headerlink" title="6 【第十三章】同步"></a>6 【第十三章】同步</h1><h2 id="6-1-载波同步"><a href="#6-1-载波同步" class="headerlink" title="6.1 载波同步"></a>6.1 载波同步</h2><h2 id="6-2-位同步"><a href="#6-2-位同步" class="headerlink" title="6.2 位同步"></a>6.2 位同步</h2><h2 id="6-3-群同步"><a href="#6-3-群同步" class="headerlink" title="6.3 群同步"></a>6.3 群同步</h2><h2 id="6-4-作业"><a href="#6-4-作业" class="headerlink" title="6.4 作业"></a>6.4 作业</h2>]]></content>
     
     
-    <summary type="html">我通信原理都学了什么啊！</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1 前言&quot;&gt;&lt;/a&gt;1 前言&lt;/h1&gt;&lt;p&gt;&lt;del&gt;水一篇博客&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;记录一下通信原理实验过程中的东西，后面复习方便查一些概念。&lt;/p&gt;
+&lt;h1 </summary>
+      
     
     
     
@@ -354,19 +394,21 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2023-11-25-随笔</title>
     <link href="https://sagi-rastar.github.io/2023/11/25/2023-11-25-%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2023/11/25/2023-11-25-%E9%9A%8F%E7%AC%94/</id>
-    <published>2023-11-25T17:37:51.000Z</published>
-    <updated>2025-02-14T18:17:20.268Z</updated>
+    <published>2023-11-25T09:37:51.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-套路"><a href="#1-套路" class="headerlink" title="1 套路"></a>1 套路</h1><p>很多时候说实话，在讨论作品的剧情也好，人物也罢，我在发现话题划向作者的安排合理与否的时候，总会觉得没劲。</p><p>这跟跑团的时候所谓“场外”的感觉有点像。原本讨论人物性格的话题风向一旦转向了类似讨论这里“是不是在洗白”之类的讨论时，那也太没劲了。</p><p>举个例子，就拿 mygo 来说吧，就像そよ在演奏春日影之后（不是），插入了そよ升学之前的回忆，然后后面再演出对同伴们的冷漠，然后评论回忆是洗地之类的感觉。再比如说祥子，mygo 的十三集最后一段诚然对于一部原创番的安排上来说，距离下一季还遥遥无期的情况下，这样确实非常难受，但对于真正带入人物之后，不把角色看作作者笔下的傀儡，而看作一个活生生的人的话，这样的表现被观众概括为“洗地 ”着实替角色感到有点难受。</p><p>在讨论人物的时候，不带入一下作品内，而始终从“壁外”来评价，总觉得怪怪的。对于角色来说，这不是回忆，而是她的亲身经历，性格与经历互相影响，经历塑造了性格，性格而又促使角色在当时的情景下作出了这样那样的行动，而我们作为观众，通过欣赏角色们做出的行动而组成的名为“剧情”的东西，去感受一个一个有血有肉的角色，我觉得才是令人兴奋的地方。</p><p>不过也话说回来了，也有可能是作者的写作或创作方式并没有感染到观众，才让观众们产生一种相对角色的“疏离感”，这种情况下，再说观众们没有带入的话，对于观众想象力的要求就显得太傲慢了（）</p><p>虽然说，我觉得剧情安排或多或少都会影响一点人物塑造，但我其实想说的是，观众们在感受作者笔下角色的魅力时，如果太过于在意所谓套路，换句话说，只要是因为这种安排是别人用过的，或者用的比较多的话，就会变得错失感受一个生动角色的机会，我感觉这样是挺可惜的。</p><p>其实之前忘记看哪本书了，里面有做过一个类似这样的假设：</p><p>说在很久以后，笑话发展到了一种很高的程度，人们把所有的笑话套路都做了编号，（因为人类语言符号是有限的，所以理论上这是可行的（？））所以当人们聚集在一起的时候开关于笑话的派对的时候，大家都不直接说笑话本身，而是直接喊编号了。就类似于“anh1928！”大家知道是什么笑话，哈哈一下，“nhi8290！”大家又简单哈哈一下。但是有意思的是作者给这个故事结的尾：这时有一个人走上了讲台，说：“各位注意，我现在想讲一个笑话，这个笑话是 smxi2821号！”于是全场爆笑，因为编号里没有这个笑话，虽然在这种假设下这种笑话应该也是被编号了的，但是这并不妨碍人们亲自再听一遍这个笑话。</p><p>可能讲出来之后有点没当时那本书里作者想表达的那意思，我又忘记是哪本书了（）</p><p>总之就是，用烂所谓套路的情况固然存在，但是在真正观看一部作品的时候，与作品本身剧情安排并无关系的这样一种参数，即“套路”的使用次数，却会使观众对于沉浸或带入作品内部的过程产生影响，对作品内角色产生“疏离感”，更严重时降低对整部作品的评价，我觉得这对作者也好，作者笔下的角色也好，可能都是一种可惜吧（？）</p><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>发现近年来看番的时候被触动的时候眼睛湿润和鼻头一抽的频率越来越高了，可能是件好事</p><p>从小听到大的话叫“男子汉大丈夫不许流泪”、“男儿有泪不轻弹”，但是后来的教育又告诉我说“哭出来”也是释放压力和表达的非常好的方法，没有必要压抑这种反应，可惜这后来的教育来的有点晚，而那些话又教我的有点早。</p><p>值得高兴的是，最近这些话造成的习惯看来在多次敲打下变得松动了</p><p>然后这次眼眶湿其实是因为刚看完葬送的芙莉莲最新一话 tv（明明漫画剧情都已经看过了</p>]]></content>
     
     
-    <summary type="html">一些自己也还不确定的东西</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-套路&quot;&gt;&lt;a href=&quot;#1-套路&quot; class=&quot;headerlink&quot; title=&quot;1 套路&quot;&gt;&lt;/a&gt;1 套路&lt;/h1&gt;&lt;p&gt;很多时候说实话，在讨论作品的剧情也好，人物也罢，我在发现话题划向作者的安排合理与否的时候，总会觉得没劲。&lt;/p&gt;
+&lt;p&gt;这跟</summary>
+      
     
     
     
@@ -379,19 +421,22 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>2023-11-20-随笔</title>
     <link href="https://sagi-rastar.github.io/2023/11/21/2023-11-20-%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2023/11/21/2023-11-20-%E9%9A%8F%E7%AC%94/</id>
-    <published>2023-11-21T10:28:52.000Z</published>
-    <updated>2025-02-14T18:17:20.268Z</updated>
+    <published>2023-11-21T02:28:52.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-博客是拿来记的"><a href="#1-博客是拿来记的" class="headerlink" title="1 博客是拿来记的"></a>1 博客是拿来记的</h1><p>眼睛好干（</p><p>博客也写了有一阵子了，个站也逐渐有个样子了。</p><p>这几天都想着装修，这里的样式该怎么修改，那里的动画效果能不能做的更好，写出来了想要实现的效果之后，换个设备和浏览器又发现有不适配的地方。文字出框了，图片长宽比不对了，总之 css 和 js 真的是深坑啊——</p><p>但是回想起来想要写博客的初衷，还是以记录和积累为主，过多去纠结样式和呈现效果，花这么多时间放在测试代码上面，反而跟一开始的目的背道而驰了。就比如今天下午五点开始，本来打算更新一篇复习用的博客，就收工吃饭，晚上再把作业写了的，然后上传之后发现 Latex 语法没有做渲染适配。</p><p>那就适配一下吧，反正才五点。</p><p>配置完了，Latex 语法正常渲染了，再翻翻博客，卧槽，我段落之间的段间隔呢，怎么跟行间隔一样。于是又开始了 debug。</p><p>是 hexo 的 md 渲染器的问题？好像是，可是 breaks: true 我写在 config 里了呀。</p><p>去插件仓库的 issue 里看看？好像有人跟我一样的问题，但是作者在回答中并没有成功复现，给 close 了。</p><p>换回我原来的渲染器试试？卧槽。还是没有段间隔。</p><p>再换第三个渲染器？卧槽。你怎么也没有。</p><p>是 latex 渲染插件的问题？关掉，卧槽。还是没有。</p><p>看表，卧槽，外卖到宿舍半个小时了。</p><p>再根据 hexo 生成出来的 html 反推，找 hexo 生成文章内容的 ejs，卧槽，看不懂。</p><p>万念俱灰了，抬手看表，快八点了。算了再找十分钟的吧，试试直接改 css。</p><p>然后我打开了 custom. Css：</p><p>嗯？怎么我这里面写过东西的，写了啥？看了一眼注释：</p><p>&#x2F;&#x2F; 段前间距<br> &#x2F;&#x2F; 段后间距<br> “0 px”</p><p>啧。</p><p>于是这就是我今天三个小时想要找的东西，三个字符让我试了三个 md 渲染器，两个 latex 引擎，以及翻了一堆 ejs。好在找到了之前改的东西，但是想到八点回到宿舍吃完饭之后，又没有那个心情去实验室自习了，就越想越觉得不划算。</p><p>以后还是多把时间放在写博客上面吧。</p><h1 id="2-真的不看看芙莉莲吗"><a href="#2-真的不看看芙莉莲吗" class="headerlink" title="2 真的不看看芙莉莲吗"></a>2 真的不看看芙莉莲吗</h1><p>收敛、克制、平静、宁静、震撼。</p><p>关于芙莉莲的评价里被提到了很多次的词，像这样的还有好多。说实话，要是要我来说也肯定会用上这些词。</p><p>但是就像芙莉莲这部作品一样，用其中某一次的无聊的小事去描述的话，很难写出这么棒的故事。同样的，不管是芙莉莲动画还是漫画，用某一个准确的词去准确概括他带给我的感受，也太困难了。</p><p>我是先看的动画，一口气看了九话之后，精美的制作、恰到好处的音效和配乐、平静但节奏精准地给予观众震撼的剧情，这些都一起给我带来了前所未有的体验。</p><p>在旅途中，偶尔克制的剧情流露出的情绪，总能让我鼻头一酸；在战斗的部分，神乎其技的画面和配乐，一起完美的调动着我观看过程中的情绪；在日常欢乐的部分，又总在他该出现的地方给到观众放松；在留白的那些表现上，又将整部作品的基调放到了收敛的基调上，就好像在为下一次的情绪流露做准备。</p><p>呃啊，想要表达出来当时的观影体验真的很难，总之大伙都记得看！动画和漫画都推荐！</p>]]></content>
     
     
-    <summary type="html">chip，原来是想取碎片这层意思的，但是薯条和薯片也很好吃</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-博客是拿来记的&quot;&gt;&lt;a href=&quot;#1-博客是拿来记的&quot; class=&quot;headerlink&quot; title=&quot;1 博客是拿来记的&quot;&gt;&lt;/a&gt;1 博客是拿来记的&lt;/h1&gt;&lt;p&gt;眼睛好干（&lt;/p&gt;
+&lt;p&gt;博客也写了有一阵子了，个站也逐渐有个样子了。&lt;/p&gt;
+&lt;p</summary>
+      
     
     
     
@@ -404,19 +449,21 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>高频电子复习随笔</title>
     <link href="https://sagi-rastar.github.io/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/"/>
     <id>https://sagi-rastar.github.io/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/</id>
-    <published>2023-11-20T10:20:31.000Z</published>
-    <updated>2025-02-14T18:17:20.355Z</updated>
+    <published>2023-11-20T02:20:31.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h1><p>也快学期末了，是时候复习一下专业课了。</p><p>今天简单复习一下高频第五章的课，过这么久也就别指望能深入到太原理层面复习了，还是更注重作业题吧。</p><p><strong>电路别忘完了啊：</strong></p><p>【阻抗Z】&#x3D;【电阻R】+j【电抗X】【阻抗 Z】 &#x3D; 【电阻 R】 + j 【电抗X】 【阻抗Z】&#x3D;【电阻R】+j【电抗X】</p><p>【导纳Y】&#x3D;【电导G】+j【电纳B】【导纳Y】&#x3D; 【电导G】+j【电纳B】 【导纳Y】&#x3D;【电导G】+j【电纳B】</p><h1 id="2-【第二章】选频网络-√"><a href="#2-【第二章】选频网络-√" class="headerlink" title="2 【第二章】选频网络 √"></a>2 【第二章】选频网络 √</h1><h2 id="2-1-基本概念"><a href="#2-1-基本概念" class="headerlink" title="2.1 基本概念"></a>2.1 基本概念</h2><p>（填空题）选频网络的作用：选频、负载、信号传输（耦合&#x2F;阻抗变换）</p><blockquote><p>教材：选频网络能够选出我们需要的频率分量和滤除不需要的频率分量</p></blockquote><h2 id="2-2-串联谐振回路"><a href="#2-2-串联谐振回路" class="headerlink" title="2.2 串联谐振回路"></a>2.2 串联谐振回路</h2><h3 id="2-2-1-重要参数"><a href="#2-2-1-重要参数" class="headerlink" title="2.2.1 重要参数"></a>2.2.1 重要参数</h3><p><img src="/image-20231205153417583.png"></p><p>定义 -&gt; 电路 -&gt; ZZZ -&gt; XXX -&gt; ω0\omega_0ω0​ -&gt; ρ\rhoρ -&gt; QQQ -&gt; ξ\xiξ -&gt; N(f)N(f)N(f) -&gt; BBB -&gt; φ−ω\varphi - \omegaφ−ω</p><p>串联谐振回路有如下重要参数：</p><ul><li>谐振频率 ω0\omega_0ω0​</li></ul><p>ω0&#x3D;1LC\omega_{0}&#x3D;\frac{1}{\sqrt{\mathrm{LC}}} ω0​&#x3D;LC​1​</p><ul><li>特性阻抗 ρ\rhoρ</li></ul><p>XL0&#x3D;XC0&#x3D;ω0L&#x3D;1ω0C&#x3D;L&#x2F;C&#x3D;ρ\mathrm{X}_{\mathrm{L}<em>0}&#x3D;\mathrm{X}</em>{\mathrm{C}_0}&#x3D;\mathrm{\omega}_0\mathrm{L}&#x3D;\frac1{\mathrm{\omega}_0\mathrm{C}}&#x3D;\sqrt{\mathrm{L}&#x2F;{\mathrm{C}}}&#x3D;\mathrm{\rho} XL0​​&#x3D;XC0​​&#x3D;ω0​L&#x3D;ω0​C1​&#x3D;L&#x2F;C​&#x3D;ρ</p><ul><li>品质因数 QQQ</li></ul><p>Q&#x3D;ω0LR&#x3D;1ωocR&#x3D;ρR&#x3D;1R∙LCQ&#x3D;\frac{\omega_0L}R&#x3D;\frac1{\omega_\text{o}cR}&#x3D;\frac\rho R&#x3D;\frac1R\bullet\sqrt{\frac LC} Q&#x3D;Rω0​L​&#x3D;ωo​cR1​&#x3D;Rρ​&#x3D;R1​∙CL​​</p><blockquote><p>扩展：谐振时，电感和电容上的电压达到最大值，且为输入电压的 QQQ 倍，需要注意耐压问题</p><p>∣ν˙Lo∣&#x3D;∣ν˙Co∣&#x3D;Ioρ&#x3D;VsR∙ρ&#x3D;Vs∙ρr&#x3D;Vs∙Q\left|\dot{\nu}<em>{\mathrm{Lo}}\right|&#x3D;\left|\dot{\nu}</em>{\mathrm{Co}}\right|&#x3D;I_{\mathrm{o}}\rho&#x3D;\frac{V_{\mathrm{s}}}{R}\bullet\rho&#x3D;V_{\mathrm{s}}\bullet\frac{\rho}{r}&#x3D;V_{\mathrm{s}}\bullet Q ∣ν˙Lo​∣&#x3D;∣ν˙Co​∣&#x3D;Io​ρ&#x3D;RVs​​∙ρ&#x3D;Vs​∙rρ​&#x3D;Vs​∙Q</p></blockquote><ul><li>广义失谐系数 ξ\xiξ</li></ul><p>ξ&#x3D;((失谐时的电抗)X)R&#x3D;ωL−1ωCR&#x3D;ω0LR(ωω0−ω0ω)&#x3D;Q0(ωωo−ωoω)\xi&#x3D;\frac{((\text{失谐时的电抗})X)}R&#x3D;\frac{\omega L-\frac1{\omega C}}R&#x3D;\frac{\omega_0 L}R\Bigg(\frac{\omega}{\omega_0}-\frac{\omega_0}\omega\Bigg)&#x3D;Q_0\Bigg(\frac{\omega}{\omega_\mathrm{o}}-\frac{\omega_\mathrm{o}}{\omega}\Bigg) ξ&#x3D;R((失谐时的电抗)X)​&#x3D;RωL−ωC1​​&#x3D;Rω0​L​(ω0​ω​−ωω0​​)&#x3D;Q0​(ωo​ω​−ωωo​​)</p><p>失谐不大的时候：</p><p>ξ≈Q0⋅2Δωω0&#x3D;Q0⋅2Δff0\xi\approx\mathrm{Q}<em>{0}\cdot\frac{2\Delta\omega}{\omega</em>{0}}&#x3D;\mathrm{Q}<em>{0}\cdot\frac{2\Delta\mathrm{f}}{\mathrm{f}</em>{0}} ξ≈Q0​⋅ω0​2Δω​&#x3D;Q0​⋅f0​2Δf​</p><ul><li>谐振曲线 N(f)N(f)N(f)QQQQQQRRR</li></ul><p>N(f)&#x3D;当前回路电流回路谐振电流&#x3D;∣11+jξ∣N(f) &#x3D; \frac{当前回路电流}{回路谐振电流}&#x3D; \left|\frac1{1+j\xi}\right| N(f)&#x3D;回路谐振电流当前回路电流​&#x3D;​1+jξ1​​</p><ul><li>通频带 BBB12\frac{1}{\sqrt{2}}2​1​∣I˙I˙o∣&#x3D;11+ξ2&#x3D;12\left|\frac{\dot{I}}{\dot{I}_{\mathrm{o}}}\right|&#x3D;\frac{1}{\sqrt{1+\xi^{2}}}&#x3D;\frac{1}{\sqrt{2}}​I˙o​I˙​​&#x3D;1+ξ2​1​&#x3D;2​1​±1\pm 1±1</li></ul><p>B&#x3D;2Δω0⋅7&#x3D;ω0QB&#x3D;2\Delta\omega_{0\cdot7}&#x3D;\frac{\omega_0}{Q} B&#x3D;2Δω0⋅7​&#x3D;Qω0​​</p><ul><li>相频特性曲线 φ−ω\varphi - \omegaφ−ω</li></ul><h3 id="2-2-2-能量关系"><a href="#2-2-2-能量关系" class="headerlink" title="2.2.2 能量关系"></a>2.2.2 能量关系</h3><p>谐振时，无疑是输出功率最大的（回路电流最大）。电感和电容上存储的瞬时能量最大值相等。整个回路中的能量保持不变，在线圈和电容器之间相互转换。</p><h2 id="2-3-并联谐振回路"><a href="#2-3-并联谐振回路" class="headerlink" title="2.3 并联谐振回路"></a>2.3 并联谐振回路</h2><p>定义为电感、电容和外加信号源相互并联的电路。但由于电感线圈是有一定的内阻的，为了计算方便，可以将电感内阻转化为电导，如下图所示：<br> <img src="/image-20231205163126930.png"></p><h3 id="2-3-1-重要参数"><a href="#2-3-1-重要参数" class="headerlink" title="2.3.1 重要参数"></a>2.3.1 重要参数</h3><ul><li>谐振频率 ω0\omega_0ω0​ωL&gt;&gt;R\omega L &gt;&gt; RωL&gt;&gt;R</li></ul><p>ω0&#x3D;1LC\omega_{0}&#x3D;\frac{1}{\sqrt{\mathrm{LC}}} ω0​&#x3D;LC​1​</p><ul><li>特性阻抗 ρ\rhoρ</li></ul><p>XL0&#x3D;XC0&#x3D;ω0L&#x3D;1ω0C&#x3D;L&#x2F;C&#x3D;ρ\mathrm{X}_{\mathrm{L}<em>0}&#x3D;\mathrm{X}</em>{\mathrm{C}_0}&#x3D;\mathrm{\omega}_0\mathrm{L}&#x3D;\frac1{\mathrm{\omega}_0\mathrm{C}}&#x3D;\sqrt{\mathrm{L}&#x2F;{\mathrm{C}}}&#x3D;\mathrm{\rho} XL0​​&#x3D;XC0​​&#x3D;ω0​L&#x3D;ω0​C1​&#x3D;L&#x2F;C​&#x3D;ρ</p><ul><li>谐振电阻 RpR_pRp​</li></ul><p>Rp&#x3D;1Gp&#x3D;1CRL&#x3D;LCRR_{p}&#x3D;\frac{1}{G_{p}}&#x3D;\frac{1}{\frac{CR}{L}}&#x3D;\frac{L}{CR} Rp​&#x3D;Gp​1​&#x3D;LCR​1​&#x3D;CRL​</p><p>考虑与特性阻抗的关系，有以下关系：</p><p>RP&#x3D;ρ2&#x2F;RR_{P}&#x3D;\rho^{2}&#x2F;R RP​&#x3D;ρ2&#x2F;R</p><ul><li>品质因数 QpQ_pQp​</li></ul><p>Qp&#x3D;ρRQ_{p}&#x3D;\frac{\rho}{R} Qp​&#x3D;Rρ​</p><p>考虑与谐振电阻以及特性阻抗的关系，有以下关系：</p><p>RP&#x3D;Qp⋅ρ&#x3D;Qp2⋅RR_{P}&#x3D;Q_p\cdot\rho&#x3D;Q_p^{2}\cdot R RP​&#x3D;Qp​⋅ρ&#x3D;Qp2​⋅R</p><p>由 RP&#x3D;Q⋅ρR_{P}&#x3D;Q\cdot\rhoRP​&#x3D;Q⋅ρ 可以看出，谐振电阻为特性阻抗（感抗&#x2F;容抗）的 QpQ_pQp​ 倍，若 QpQ_pQp​ 很大时，谐振电阻将会非常大。<br> QpQ_pQp​ 一般为几十到几百，信号源的电流不大，而支路上的电流却为信号源的 QpQ_pQp​ 倍，因此并联谐振又被叫做电流谐振。</p><ul><li>广义失谐系数 ξ\xiξ</li></ul><p>ξ&#x3D;((失谐时的电抗)X)R≈Q0⋅2Δωω0&#x3D;Q0⋅2Δff0\xi&#x3D; \frac{((\text{失谐时的电抗})X)}R\approx\mathrm{Q}<em>{0}\cdot\frac{2\Delta\omega}{\omega</em>{0}}&#x3D;\mathrm{Q}<em>{0}\cdot\frac{2\Delta\mathrm{f}}{\mathrm{f}</em>{0}} ξ&#x3D;R((失谐时的电抗)X)​≈Q0​⋅ω0​2Δω​&#x3D;Q0​⋅f0​2Δf​</p><ul><li>谐振曲线 N(f)N(f)N(f)</li></ul><p>N(f)&#x3D;当前回路端电压回路谐振电压&#x3D;∣11+jξ∣N (f) &#x3D; \frac{当前回路端电压}{回路谐振电压}&#x3D; \left|\frac 1{1+j\xi}\right| N(f)&#x3D;回路谐振电压当前回路端电压​&#x3D;​1+jξ1​​</p><p>电路性质：<br> <img src="/image-20231205204509726.png"></p><ul><li>通频带 BBB</li></ul><p>B&#x3D;2Δω0⋅7&#x3D;ω0QB &#x3D; 2\Delta\omega_{0\cdot7}&#x3D;\frac{\omega_0}{Q} B&#x3D;2Δω0⋅7​&#x3D;Qω0​​</p><ul><li>相频特性曲线 φ−ω\varphi - \omegaφ−ω</li></ul><p><strong>负载和内阻对于回路的影响</strong></p><p>并联谐振回路的 QLQ_LQL​ 与 RsR_sRs​ 和 RLR_LRL​ 同相变化，因此在 RsR_sRs​ 和 RLR_LRL​ 较大的情况，可以使用并联谐振回路，而获得较好的选择性（QQQ 变大）</p><h2 id="2-4-等效互换，阻抗变换"><a href="#2-4-等效互换，阻抗变换" class="headerlink" title="2.4 等效互换，阻抗变换"></a>2.4 等效互换，阻抗变换</h2><h3 id="2-4-1-电感抽头"><a href="#2-4-1-电感抽头" class="headerlink" title="2.4.1 电感抽头"></a>2.4.1 电感抽头</h3><p><img src="/image-20231205210019269.png"><br> 接入系数 PPP：抽头点电压与端电压的比</p><p>P&#x3D;VabVdb\mathrm{P}&#x3D; \frac{V_{ab}}{V_{db}} P&#x3D;Vdb​Vab​​</p><p>同时也等于：</p><p>P&#x3D;L1L1+L2&#x3D;L1L\mathrm{P}&#x3D;\frac{\mathrm{L}_1}{\mathrm{L}_1+\mathrm{L}_2}&#x3D;\frac{\mathrm{L}_1}{\mathrm{L}} P&#x3D;L1​+L2​L1​​&#x3D;LL1​​</p><p>由接入系数出发，由于能量上的等效，所以：</p><p>Rs′&#x3D;1P2RsR_{s}^{\prime}&#x3D;\frac{1}{P^{2}}R_{s} Rs′​&#x3D;P21​Rs​</p><p>Is′&#x3D;Is⋅PI_{s}^{\prime}&#x3D;I_{s}\cdot P Is′​&#x3D;Is​⋅P</p><h3 id="2-4-2-电容抽头"><a href="#2-4-2-电容抽头" class="headerlink" title="2.4.2 电容抽头"></a>2.4.2 电容抽头</h3><p><img src="/image-20231205210746731.png"></p><p>P&#x3D;1n&#x3D;C2C1&#x3D;C2C1+C2其中C&#x3D;C1C2C1+C2\text{P}&#x3D;\dfrac{1}{\text{n}}&#x3D;\dfrac{\text{C}_2}{\text{C}_1}&#x3D;\dfrac{\text{C}_2}{\text{C}_1+\text{C}_2}\quad\text{其中}\text{C}&#x3D;\dfrac{\text{C}_1\text{C}_2}{\text{C}_1+\text{C}_2} P&#x3D;n1​&#x3D;C1​C2​​&#x3D;C1​+C2​C2​​其中C&#x3D;C1​+C2​C1​C2​​</p><p><img src="/image-20231218114739134.png"><br> <img src="/image-20231218114805292.png"></p><h1 id="3-【第三章】高频小信号放大器"><a href="#3-【第三章】高频小信号放大器" class="headerlink" title="3 【第三章】高频小信号放大器"></a>3 【第三章】高频小信号放大器</h1><h2 id="3-1-Y-参数与等效电路"><a href="#3-1-Y-参数与等效电路" class="headerlink" title="3.1 Y 参数与等效电路"></a>3.1 Y 参数与等效电路</h2><h2 id="3-2-电压增益的计算"><a href="#3-2-电压增益的计算" class="headerlink" title="3.2 电压增益的计算"></a>3.2 电压增益的计算</h2><h1 id="4-【第四章】非线性电路、时变参量电路、变频器"><a href="#4-【第四章】非线性电路、时变参量电路、变频器" class="headerlink" title="4 【第四章】非线性电路、时变参量电路、变频器"></a>4 【第四章】非线性电路、时变参量电路、变频器</h1><p>45678 章都属于非线性电子线路，本站开始对后面的章节做了一点铺垫。</p><h2 id="4-1-非线性电路"><a href="#4-1-非线性电路" class="headerlink" title="4.1 非线性电路"></a>4.1 非线性电路</h2><h3 id="4-1-1-非线性元件的频率变换作用"><a href="#4-1-1-非线性元件的频率变换作用" class="headerlink" title="4.1.1 非线性元件的频率变换作用"></a>4.1.1 非线性元件的频率变换作用</h3><h2 id="4-2-变频器"><a href="#4-2-变频器" class="headerlink" title="4.2 变频器"></a>4.2 变频器</h2><h2 id="4-3-混频器"><a href="#4-3-混频器" class="headerlink" title="4.3 混频器"></a>4.3 混频器</h2><h1 id="5-【第五章】高频功率放大器-√"><a href="#5-【第五章】高频功率放大器-√" class="headerlink" title="5 【第五章】高频功率放大器 √"></a>5 【第五章】高频功率放大器 √</h1><h2 id="5-1-概述"><a href="#5-1-概述" class="headerlink" title="5.1 概述"></a>5.1 概述</h2><p>第五章题目是高频功率放大器，作用和其出现的理由如下：</p><ul><li></li><li></li></ul><p>简单来说，这种放大器有如下特点：</p><ul><li></li><li></li><li></li><li></li></ul><blockquote><p>关于放大器的甲&#x2F;乙&#x2F;丙等类工作状态，<a href="">找个时间再复习一遍吧</a>目前暂时理解为跟通角 θc\theta_cθc​ 有关吧。<img src="/image-20231120104057754.png"></p></blockquote><p>感性上来理解，功率放大器简单说可以看作“能量转换器”，将供给的直流能量转换为交流能量，从而放大信号。</p><p><strong>接下来会随手记录一点本章重点、题目以及个人理解：</strong></p><ul><li></li><li></li><li></li><li></li></ul><h2 id="5-2-谐振功率放大器"><a href="#5-2-谐振功率放大器" class="headerlink" title="5.2 谐振功率放大器"></a>5.2 谐振功率放大器</h2><h3 id="5-2-1-原理"><a href="#5-2-1-原理" class="headerlink" title="5.2.1 原理"></a>5.2.1 原理</h3><p>牢记老师叮嘱，先上图。</p><p><strong>谐振功率放大器的原理电路：</strong><img src="/image-20231120105429448.png">可分为四个部分：</p><ul><li></li><li></li><li></li><li></li></ul><p><strong>晶体管的特性曲线：</strong><img src="/image-20231120105850991.png"><br> 左图为输入特性曲线，右图为输出特性曲线很明显是非线性的，所以用理想折线进行近似，此处 VBZV_{BZ}VBZ​ 就是截止偏压。由于这玩意工作在丙类状态，要求通角 θc\theta_cθc​ 不是要 ＜90°＜ 90°＜90° 嘛，所以后面通过 VBBV_{BB}VBB​ 和 VBZV_{BZ}VBZ​ 的配合便可以控制通角的范围。具体见下图。</p><p><strong>工作在谐振功率放大器中的晶体管特性曲线：</strong><br> <img src="/image-20231120111404241.png"><br> 中间就是晶体管的特性曲线，跟上面一样。下方是输入端的曲线，可以看到通过 VBBV_{BB}VBB​ 的反向偏置，使得通角被限制在了一定的范围，可以假象一下若没有 VBBV_{BB}VBB​ 的反向偏置，通角便会增大。右侧是输出端电流曲线，可以看出输出的集电极电流为尖顶余弦脉冲。尖顶余弦脉冲输入到谐振回路中，经过滤波作用，便可以输出正弦信号了。</p><p><strong>晶体管各部分 V-I 关系曲线</strong><br> <img src="/image-20231120113846139.png"></p><h3 id="5-2-2-功率与效率"><a href="#5-2-2-功率与效率" class="headerlink" title="5.2.2 功率与效率"></a>5.2.2 功率与效率</h3><p>谐振功率放大器的功率可以分成三个部分：</p><ul><li>P&#x3D;&#x3D;VCC∗IC0P_&#x3D; &#x3D; V_{CC} * I_{C0}P&#x3D;​&#x3D;VCC​∗IC0​ </li><li>POP_OPO​ </li><li>PCP_CPC​</li></ul><p>这三个功率之间的关系为：</p><p>P&#x3D;&#x3D;PO+PCP_{&#x3D;} &#x3D; P_O + P_C P&#x3D;​&#x3D;PO​+PC​</p><p>衡量谐振功率放大器的效率，集电极效率：</p><p>ηC&#x3D;POP&#x3D;&#x3D;POPO+PC\eta_C &#x3D; \frac {P_O} {P_&#x3D;} &#x3D; \frac {P_O} {P_O + P_C} ηC​&#x3D;P&#x3D;​PO​​&#x3D;PO​+PC​PO​​</p><h3 id="5-2-3-折线法分析"><a href="#5-2-3-折线法分析" class="headerlink" title="5.2.3 折线法分析"></a>5.2.3 折线法分析</h3><p>先上图：<br> <img src="/image-20231120154723717.png"><br> <img src="/image-20231120105850991.png"></p><p>折线法分析其实主要是上面第一张图，不过出于个人因素，先记录一下之前模电就没有完全理解的第二张图。</p><p>这里的输出特性曲线，实际上每一次只能挑其中一条看，之前很多时候都误解了这一点。临界线，实际上可以理解为：在很多次不同的 ebe_beb​ 给定的情况下，随着 RpR_pRp​ 增长， ici_cic​ 转折的点所拟合出的一条直线。另外在欠压区的这段线，其值约等于 vBmax&#x3D;−VBB+Vbmv_{Bmax} &#x3D; -V_{BB} + V_{bm}vBmax​&#x3D;−VBB​+Vbm​，也就是包括了基极偏置电压和输入电压的最大值。</p><p>再说一下这第一张图，首先右上角的原型就是输出特性曲线，也就是刚刚说的给定一次 ebe_beb​ 的情况，左侧为输出电流和输入信号的关系，下方为 ece_cec​ 和输入信号的关系。</p><p>输出特性曲线这里，随着负载的增大，ece_cec​ 和 ici_cic​ 都在变化，以 B 点为分界，A 点这边是欠压，C 点这边是过压，顺带一提，这里的“欠”和“过”描述的是指【交流输出电压】。</p><h3 id="5-2-4-各部分电压变化引起的状态变化"><a href="#5-2-4-各部分电压变化引起的状态变化" class="headerlink" title="5.2.4 各部分电压变化引起的状态变化"></a>5.2.4 各部分电压变化引起的状态变化</h3><p>下面分三部分讨论一下，改变直流供给电压和输入信号的振幅会引起【工作状态】怎么样的变化。</p><p>为讨论方便，再贴一下图：<br> <img src="/image-20231121114539528.png"><br> <img src="/image-20231120111404241.png"></p><h4 id="5-2-4-1-改变-VCCV-CC-VCC​-试试"><a href="#5-2-4-1-改变-VCCV-CC-VCC​-试试" class="headerlink" title="5.2.4.1 改变 VCCV_{CC}VCC​ 试试"></a>5.2.4.1 改变 VCCV_{CC}VCC​ 试试</h4><p>由于只改变 VCCV_{CC}VCC​ 其他不变，所以：</p><ul><li></li><li></li><li></li></ul><h4 id="5-2-4-2-改变-VBB-VbmV-BB-V-bm-VBB​-Vbm​-试试"><a href="#5-2-4-2-改变-VBB-VbmV-BB-V-bm-VBB​-Vbm​-试试" class="headerlink" title="5.2.4.2 改变 VBB&#x2F;VbmV_{BB}&#x2F;V_{bm}VBB​&#x2F;Vbm​ 试试"></a>5.2.4.2 改变 VBB&#x2F;VbmV_{BB}&#x2F;V_{bm}VBB​&#x2F;Vbm​ 试试</h4><p>从图上可知，若增大 VBBV_{BB}VBB​ ，则会使得通角变小，并且由于 vBmax&#x3D;−VBB+Vbmv_{Bmax} &#x3D; -V_{BB} + V_{bm}vBmax​&#x3D;−VBB​+Vbm​ ，因此增大的话会使得欠压区的这段线逐步下移，也就是若原本工作在临界的话，这时将会工作在欠压状态。同时改变 VbmV_{bm}Vbm​ 也同理。</p><h4 id="5-2-4-3-波形总结"><a href="#5-2-4-3-波形总结" class="headerlink" title="5.2.4.3 波形总结"></a>5.2.4.3 波形总结</h4><p>欠压区记住这条就好：</p><p>vBmax&#x3D;−VBB+Vbmv_{Bmax} &#x3D; -V_{BB} + V_{bm} vBmax​&#x3D;−VBB​+Vbm​</p><p>过压区的临界线记住这条就好：</p><p>iC&#x3D;gcrvCi_C &#x3D; g_{cr}v_{C} iC​&#x3D;gcr​vC​</p><p>斜率就是饱和临界线跨导，注意跟输入特性曲线那边的跨导稍微有点区别。</p><h3 id="5-2-5-应用电路（复合输出回路）"><a href="#5-2-5-应用电路（复合输出回路）" class="headerlink" title="5.2.5 应用电路（复合输出回路）"></a>5.2.5 应用电路（复合输出回路）</h3><p><img src="/image-20231121112346858.png"></p><p>原理电路中的谐振回路在复合输出回路中被叫做【中介回路】，RAR_ARA​ 和 CAC_ACA​ 一起看，是【辐射电阻】和【等效电容】，LnL_nLn​ 和 CnC_nCn​ 在回路中用作调谐，使得天线回路处于谐振状态，以获取最大的功率。</p><p>从能量的角度来说，复合输出回路有两个地方有耗散功率，首先第一个就是上面讨论过的晶体管【集电极耗散功率】，其次就是中介回路中的【中介回路耗散功率】，因此实际做有用功的只是 Po−PkP_o - P_kPo​−Pk​ 这部分了。</p><p><strong>这里有几个做题里常见的参量，做一下记录：</strong></p><p>r′r’ r′</p><blockquote><p>天线回路谐振时，反应到【中介回路】的等效电阻，也可以算是一种输出电阻吧</p></blockquote><p>Rp′&#x3D;L1C1(r1+r′)R’_p &#x3D; \frac {L_1}{C_1(r_1+r’)} Rp′​&#x3D;C1​(r1​+r′)L1​​</p><blockquote><p>将 r′r’r′ 考虑进来之后的【中介回路等效 RpR_pRp​ 】，可以看到和上面的 r′r’r′ 成反比</p></blockquote><h3 id="5-2-6-做题能用上的变量关系总结"><a href="#5-2-6-做题能用上的变量关系总结" class="headerlink" title="5.2.6 做题能用上的变量关系总结"></a>5.2.6 做题能用上的变量关系总结</h3><p><strong>系数：</strong></p><p>Icm1&#x3D;IC0∗g1(θc)I_{cm1} &#x3D; I_{C0} * g_{1}(\theta_c) Icm1​&#x3D;IC0​∗g1​(θc​)</p><blockquote><p>【波形系数】通常会给出通角，波形系数根据通角查表可得</p></blockquote><p>Icmn&#x3D;icmaxαn(θc)I_{cmn} &#x3D; i_{cmax} \alpha_{n}(\theta_c) Icmn​&#x3D;icmax​αn​(θc​)</p><blockquote><p>【分解系数】跟上面有点微妙的区别，此处是由傅里叶级数求系数法所得的，大概意思就是用一个【由通角决定的系数】去分最大值吧（）</p></blockquote><p><strong>输出功率、效率：</strong></p><p>PO&#x3D;12VCMICM1&#x3D;12Icm12Rp&#x3D;12VCM2RpP_O &#x3D; \frac 1 2 V_{CM} I_{CM1} &#x3D; \frac 1 2 I^2_{cm1} R_p &#x3D; \frac 1 2 \frac {V^2_{CM}} {R_p} PO​&#x3D;21​VCM​ICM1​&#x3D;21​Icm12​Rp​&#x3D;21​Rp​VCM2​​</p><blockquote><p>第一个等号后面是定义，另外由于【欠压】的时候【输出电流】几乎不变，【过压】的时候【输出电压】几乎不变，因此这两种情况【输出功率】大致与【谐振阻抗】成比例增减</p></blockquote><p>ηc&#x3D;PoP&#x3D;&#x3D;PoPo+Pc\eta_c &#x3D; \frac {P_o}{P_&#x3D;} &#x3D; \frac {P_o}{P_o + P_c} ηc​&#x3D;P&#x3D;​Po​​&#x3D;Po​+Pc​Po​​</p><blockquote><p>这个还是好理解的，效率为【输出功率】比上【直流功率】其中，从能量守恒的角度出发，【直流功率】&#x3D;【输出功率】+【集电极耗散功率】</p></blockquote><p><strong>谐振阻抗：</strong></p><p>Rp&#x3D;VCMICM1R_p &#x3D; \frac {V_{CM}} {I_{CM1}} Rp​&#x3D;ICM1​VCM​​</p><blockquote><p>谐振啊，谐振</p></blockquote><p><strong>若关注于输出：</strong></p><p>vCmin&#x3D;iCmaxgcrv_{Cmin} &#x3D; \frac {i_{Cmax}} {g_{cr}} vCmin​&#x3D;gcr​iCmax​​</p><blockquote><p>也就是说当输出电压最小时，输出电流最大</p></blockquote><p>VCC&#x3D;VCmax+VCminV_{CC} &#x3D; V_{Cmax} + V_{Cmin} VCC​&#x3D;VCmax​+VCmin​</p><blockquote><p>输出这边的电压关系</p></blockquote><h1 id="6-【第六章】正弦波振荡器"><a href="#6-【第六章】正弦波振荡器" class="headerlink" title="6 【第六章】正弦波振荡器"></a>6 【第六章】正弦波振荡器</h1><h2 id="6-1-振荡器的分类"><a href="#6-1-振荡器的分类" class="headerlink" title="6.1 振荡器的分类"></a>6.1 振荡器的分类</h2><h2 id="6-2-反馈型-LC-正弦波振荡器"><a href="#6-2-反馈型-LC-正弦波振荡器" class="headerlink" title="6.2 反馈型 LC 正弦波振荡器"></a>6.2 反馈型 LC 正弦波振荡器</h2><h1 id="7-【第七章】振幅的调制与解调"><a href="#7-【第七章】振幅的调制与解调" class="headerlink" title="7 【第七章】振幅的调制与解调"></a>7 【第七章】振幅的调制与解调</h1><h2 id="7-1-原理"><a href="#7-1-原理" class="headerlink" title="7.1 原理"></a>7.1 原理</h2><h2 id="7-2-电路"><a href="#7-2-电路" class="headerlink" title="7.2 电路"></a>7.2 电路</h2><h2 id="7-3-检波原理"><a href="#7-3-检波原理" class="headerlink" title="7.3 检波原理"></a>7.3 检波原理</h2><h2 id="7-4-检波电路"><a href="#7-4-检波电路" class="headerlink" title="7.4 检波电路"></a>7.4 检波电路</h2><h1 id="8-【第八章】-角度调制与解调"><a href="#8-【第八章】-角度调制与解调" class="headerlink" title="8 【第八章】 角度调制与解调"></a>8 【第八章】 角度调制与解调</h1><h2 id="8-1-原理"><a href="#8-1-原理" class="headerlink" title="8.1 原理"></a>8.1 原理</h2><h2 id="8-2-电路"><a href="#8-2-电路" class="headerlink" title="8.2 电路"></a>8.2 电路</h2><h2 id="8-3-鉴频原理"><a href="#8-3-鉴频原理" class="headerlink" title="8.3 鉴频原理"></a>8.3 鉴频原理</h2><h2 id="8-4-鉴频电路"><a href="#8-4-鉴频电路" class="headerlink" title="8.4 鉴频电路"></a>8.4 鉴频电路</h2><h1 id="9-作业"><a href="#9-作业" class="headerlink" title="9 作业"></a>9 作业</h1><h2 id="9-1-第二章-5"><a href="#9-1-第二章-5" class="headerlink" title="9.1 第二章 5"></a>9.1 第二章 5</h2><p><img src="/image-20231204204216164.png"></p><hr><p><img src="/image-20231204204232192.png"></p><hr><p><img src="/image-20231204204243769.png"></p><hr><p><img src="/image-20231204204255664.png"></p><hr><p><img src="/image-20231204204319356.png"></p><hr><h2 id="9-2-第三章-2"><a href="#9-2-第三章-2" class="headerlink" title="9.2 第三章 2"></a>9.2 第三章 2</h2><p><img src="/image-20231204204429856.png"><br> <img src="/image-20231204204515826.png"></p><hr><p><img src="/image-20231204204529547.png"></p><hr><h2 id="9-3-第五章-6"><a href="#9-3-第五章-6" class="headerlink" title="9.3 第五章 6"></a>9.3 第五章 6</h2><p><img src="/image-20231204205509118.png"></p><hr><p><img src="/image-20231204205449785.png"></p><hr><p><img src="/image-20231204205535366.png"></p><hr><p><img src="/image-20231204205556239.png"></p><hr><p><img src="/image-20231204205618475.png"></p><hr><p><img src="/image-20231204205634194.png"><br> <img src="/image-20231204205646770.png"></p><hr><h2 id="9-4-第六章-2"><a href="#9-4-第六章-2" class="headerlink" title="9.4 第六章 2"></a>9.4 第六章 2</h2><p><img src="/image-20231204205742098.png"><br> <img src="/image-20231204211655617.png"></p><hr><p><img src="/image-20231204205820997.png"><br> <img src="/image-20231204205837587.png"></p><hr><h2 id="9-5-第七章-6"><a href="#9-5-第七章-6" class="headerlink" title="9.5 第七章 6"></a>9.5 第七章 6</h2><p><img src="/image-20231204210035406.png"></p><hr><p><img src="/image-20231204210049015.png"></p><hr><p><img src="/image-20231204210057901.png"></p><hr><p><img src="/image-20231204210106640.png"></p><hr><p><img src="/image-20231204210123520.png"></p><hr><p><img src="/image-20231204210133548.png"></p><hr><h2 id="9-6-第八章-3"><a href="#9-6-第八章-3" class="headerlink" title="9.6 第八章 3"></a>9.6 第八章 3</h2><p><img src="/image-20231204210208353.png"></p><hr><p><img src="/image-20231204210230642.png"></p><hr><p><img src="/image-20231204210249348.png"></p>]]></content>
     
     
-    <summary type="html">起因是今天早上来实验室忘记带笔了（……</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1 前言&quot;&gt;&lt;/a&gt;1 前言&lt;/h1&gt;&lt;p&gt;也快学期末了，是时候复习一下专业课了。&lt;/p&gt;
+&lt;p&gt;今天简单复习一下高频第五章的课，过这么久也就别指望能深入到太原理层面复</summary>
+      
     
     
     
@@ -431,19 +478,20 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>FPGA电子钟课设设计过程</title>
     <link href="https://sagi-rastar.github.io/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/"/>
     <id>https://sagi-rastar.github.io/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/</id>
-    <published>2023-11-16T15:33:56.000Z</published>
-    <updated>2025-02-14T18:17:20.269Z</updated>
+    <published>2023-11-16T07:33:56.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h1><p>本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：<br> <img src="/image-20231116153820589.png"><br> <strong>主要就是三个功能：</strong></p><ul><li></li><li></li><li></li></ul><p>另外虽然课设没有要求，不过课上教的是VHDL，期末考也多半是，所以用的是VHDL语言。</p><p><strong>主要设计思路如下：</strong></p><ul><li></li><li></li><li></li><li></li><li></li></ul><p><strong>扩展部分预计实现功能：</strong></p><ul><li></li><li></li><li></li><li></li></ul><p>下面将开始逐步介绍设计过程，由于扩展部分的加入，因此完整的顶层文件设计过程将在扩展部分中进行记录。</p><h1 id="2-设计过程"><a href="#2-设计过程" class="headerlink" title="2 设计过程"></a>2 设计过程</h1><h2 id="2-1-开发环境与硬件资源"><a href="#2-1-开发环境与硬件资源" class="headerlink" title="2.1 开发环境与硬件资源"></a>2.1 开发环境与硬件资源</h2><p><strong>本次课设开发环境与硬件平台介绍如下：</strong></p><ul><li></li><li></li><li>主控：ALTERA 公司 Cyclone IV 系列的 EP4CE6F17C8 </li><li></li><li></li><li></li></ul><p><strong>下面是本次课设将会使用到的硬件外设记录：</strong></p><ul><li></li><li></li><li></li><li></li></ul><h2 id="2-2-基础部分模块设计过程"><a href="#2-2-基础部分模块设计过程" class="headerlink" title="2.2 基础部分模块设计过程"></a>2.2 基础部分模块设计过程</h2><h3 id="2-2-1-分频器："><a href="#2-2-1-分频器：" class="headerlink" title="2.2.1 分频器："></a>2.2.1 分频器：</h3><p>分频器负责将原始频率分为整个系统所需要的所有时钟频率。</p><p><strong>根据设想，整个系统所需要的频率有：</strong></p><ul><li></li><li></li><li></li><li></li></ul><h4 id="2-2-1-1-代码实现"><a href="#2-2-1-1-代码实现" class="headerlink" title="2.2.1.1 代码实现"></a>2.2.1.1 代码实现</h4><p>原理为提前定义好各个频率所需常数，每隔N个原始时钟周期后，将输出的时钟信号翻转一次，从而得到各个系统所需的时钟频率。</p><p>代码实现摘录如下：</p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity diver is  port  (    clk    : in std_logic; -- 输入时钟，原始的时钟频率    clk_ot : out std_logic; -- 点报时蜂鸣器频率，1kHz    clk_os : out std_logic; -- 秒报时蜂鸣器频率，500Hz    clk1   : out std_logic; -- 输出时钟，设置界面分频，闹钟和校时功能,10Hz    clk0   : out std_logic -- 输出时钟，正常计时分频，1Hz  );end diver;</span><br></code></pre></td></tr></table></figure><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构体定义 ------------------------------------------------------------------------------architecture bhv of diver is  signal m_clk0     : std_logic; -- 正常计时频率为1Hz   signal m_clk1     : std_logic; -- 校时频率为10Hz   signal m_clk_os   : std_logic; -- 秒报时蜂鸣器频率为500Hz  signal m_clk_ot   : std_logic; -- 点报时蜂鸣器频率为1kHz  constant c_cnt_0  : integer := 25000000; -- 50MHz时钟，分频为50M/25000000 * 1/2 = 1Hz  constant c_cnt_1  : integer := 2500000; -- 50MHz时钟，分频为50M/2500000 * 1/2 = 10Hz  constant c_cnt_os : integer := 50000; -- 50MHz时钟，分频为50M/50000 * 1/2 = 500Hz  constant c_cnt_ot : integer := 25000; -- 50MHz时钟，分频为50M/25000 * 1/2 = 1kHzbegin  process (clk)    variable cnt_0  : integer range 0 to c_cnt_0;    variable cnt_1  : integer range 0 to c_cnt_1;    variable cnt_os : integer range 0 to c_cnt_os;    variable cnt_ot : integer range 0 to c_cnt_ot;  begin    if (clk&#x27;event and clk = &#x27;1&#x27;) then -- 若上升沿，则计数      cnt_0  := cnt_0 + 1;      cnt_1  := cnt_1 + 1;      cnt_os := cnt_os + 1;      cnt_ot := cnt_ot + 1;      if (cnt_0 = c_cnt_0) then -- 计数到c_cnt_0，输出正常计时时钟信号        cnt_0 := 0;        m_clk0 &lt;= not m_clk0;  -- 反转时钟信号      end if;      if (cnt_1 = c_cnt_1) then -- 计数到c_cnt_1，输出设置界面时钟信号        cnt_1 := 0;        m_clk1 &lt;= not m_clk1;      end if;      if (cnt_os = c_cnt_os) then -- 计数到c_cnt_os，输出秒报时蜂鸣器时钟信号        cnt_os := 0;        m_clk_os &lt;= not m_clk_os;      end if;      if (cnt_ot = c_cnt_ot) then -- 计数到c_cnt_ot，输出点报时蜂鸣器时钟信号        cnt_ot := 0;        m_clk_ot &lt;= not m_clk_ot;      end if;    end if;  end process;  clk0   &lt;= m_clk0;  clk1   &lt;= m_clk1;  clk_os &lt;= m_clk_os;  clk_ot &lt;= m_clk_ot;end bhv;</span><br></code></pre></td></tr></table></figure><h4 id="2-2-1-2-实际测试波形"><a href="#2-2-1-2-实际测试波形" class="headerlink" title="2.2.1.2 实际测试波形"></a>2.2.1.2 实际测试波形</h4><p><img src="/image-20231117162109699.png"></p><p>根据实际测量波形可知，原始时钟经过分频产生了四种预期中的频率信号，成功验证代码。</p><h3 id="2-2-2-计数器模块"><a href="#2-2-2-计数器模块" class="headerlink" title="2.2.2 计数器模块"></a>2.2.2 计数器模块</h3><p>用于实现正常时钟的计数器，本质为24&#x2F;60进制计数器。</p><h4 id="2-2-2-1-代码实现"><a href="#2-2-2-1-代码实现" class="headerlink" title="2.2.2.1 代码实现"></a>2.2.2.1 代码实现</h4><p>由所需实现的功能可知，本次需要编写的计数器为异步清零和同步使能的加法计数器。正常情况下，秒计数器的时钟源由正常计数时钟（1Hz）提供，分钟和小时计数器的时钟源由上一位的进位信号提供。</p><p>代码实现摘录如下，以秒计时器为例：</p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity count_60_sec is  port  (    clk, rst, en : in std_logic;    q0, q1       : out std_logic_vector(3 downto 0);    cout         : out std_logic  );end count_60_sec;</span><br></code></pre></td></tr></table></figure><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构体定义 -------------------------------------------------------------------------------architecture a of count_60_sec is  signal m_clk      : std_logic;  signal num0, num1 : std_logic_vector(3 downto 0); -- num0：个位数，num1：十位数begin  cout &lt;= &#x27;1&#x27; when (num0 = &quot;1001&quot; and num1 = &quot;0101&quot; and en = &#x27;1&#x27;) else    &#x27;0&#x27;; -- 59时输出进位信号  process (rst, clk)  begin    m_clk &lt;= clk; -- 用于计数的时钟信号    if (rst = &#x27;0&#x27;) then -- 低电平复位      num0 &lt;= &quot;0000&quot;;      num1 &lt;= &quot;0000&quot;;    elsif (m_clk&#x27;event and m_clk = &#x27;0&#x27;) then -- 若下降沿，则计数      if (en = &#x27;1&#x27;) then        if (num0 = &quot;1001&quot;) then -- 个位数计数到9，个位数归零          num0 &lt;= &quot;0000&quot;;          if (num1 = &quot;0101&quot;) then -- 个位数计数到9 &amp; 十位数计数到5，十位数归零            num1 &lt;= &quot;0000&quot;;          else            num1 &lt;= num1 + 1;          end if;        else          num0 &lt;= num0 + 1;        end if;      end if;    end if;  end process;  q0 &lt;= num0; -- 输出个位数  q1 &lt;= num1; -- 输出十位数end a;</span><br></code></pre></td></tr></table></figure><h4 id="2-2-2-2-实际测试波形"><a href="#2-2-2-2-实际测试波形" class="headerlink" title="2.2.2.2 实际测试波形"></a>2.2.2.2 实际测试波形</h4><p><img src="/image-20231117171919293.png"></p><p>根据实际测量波形可知，以秒计时器为例，从图中可以看出模块输出为60进制加法器，成功验证代码。</p><h3 id="2-2-3-校时模块"><a href="#2-2-3-校时模块" class="headerlink" title="2.2.3 校时模块"></a>2.2.3 校时模块</h3><p>由题目可知，需要分配两个按键出来为分钟和小时位提供校时功能，也就是当按下按键之后，对应的计数器时钟源切换为频率较快的（10Hz）频率源，从而快速调整对应位的计数。因此可以编写二选一选择器以实现这个功能，由位选信号，也就是按键信号，来选择提供给计数器的时钟源。</p><h4 id="2-2-3-1-代码实现"><a href="#2-2-3-1-代码实现" class="headerlink" title="2.2.3.1 代码实现"></a>2.2.3.1 代码实现</h4><p>二选一选择器代码实现摘录如下：</p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity mux21a is  port  (    a, b, s : in std_logic;    y       : out std_logic  );end mux21a;</span><br></code></pre></td></tr></table></figure><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 --------------------------------------------------------------------------------architecture behav of mux21a isbegin  process (a, b, s)  begin    if s = &#x27;0&#x27; then -- 按下按键，低电平      y &lt;= b;    else      y &lt;= a;    end if;  end process;end behav;</span><br></code></pre></td></tr></table></figure><h4 id="2-2-3-2-实际测试波形"><a href="#2-2-3-2-实际测试波形" class="headerlink" title="2.2.3.2 实际测试波形"></a>2.2.3.2 实际测试波形</h4><p><img src="/image-20231117173417345.png"></p><p>根据实际测量波形可知，以分计数器为例，正常情况下，时钟信号为来自秒计数器的进位信号，当按下按键的时候，时钟信号切换为10Hz，成功验证代码。</p><h3 id="2-2-4-整点报时模块"><a href="#2-2-4-整点报时模块" class="headerlink" title="2.2.4 整点报时模块"></a>2.2.4 整点报时模块</h3><p>检测到分达到59时，秒达到50、54、56、58时，向蜂鸣器输出500Hz的信号，检测分和秒都达到59的时候，向蜂鸣器输出1kHz的信号。</p><h4 id="2-2-4-1-代码实现"><a href="#2-2-4-1-代码实现" class="headerlink" title="2.2.4.1 代码实现"></a>2.2.4.1 代码实现</h4><p>代码实现摘录如下：</p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity alarm is  port  (    min0, min1, sec0, sec1 : in std_logic_vector(3 downto 0); -- 分计时器和秒计时器输入    h_buz                  : in std_logic; -- hour报时 接diver给的频率    s_buz                  : in std_logic; -- sec报时 接diver给的频率    speak                  : out std_logic -- 蜂鸣器输入端口  );end alarm;</span><br></code></pre></td></tr></table></figure><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 --------------------------------------------------------------------------------architecture behav of alarm isbegin  process (min1, min0, sec1, sec0)  begin    if (min1 = &quot;0101&quot; and min0 = &quot;1001&quot; and sec1 = &quot;0101&quot; and sec0 = &quot;1001&quot;) then      speak &lt;= h_buz;    elsif (min1 = &quot;0101&quot; and min0 = &quot;1001&quot; and sec1 = &quot;0101&quot;) and (sec0 = &quot;0000&quot; or sec0 = &quot;0010&quot; or sec0 = &quot;0100&quot; or sec0 = &quot;0110&quot; or sec0 = &quot;1000&quot;) then      speak &lt;= s_buz;    else      speak &lt;= &#x27;1&#x27;;    end if;  end process;end behav;</span><br></code></pre></td></tr></table></figure><h4 id="2-2-4-2-实际测试波形"><a href="#2-2-4-2-实际测试波形" class="headerlink" title="2.2.4.2 实际测试波形"></a>2.2.4.2 实际测试波形</h4><p><img src="/image-20231117174839213.png"><br> <em>整秒500Hz报时</em></p><p><img src="/image-20231117174931426.png"><br> <em>整点1kHz报时</em></p><p>根据实际测量波形可知，当分和秒计数器达到指定位置时，开始按照要求向蜂鸣器输出指定频率的信号，成功验证代码。</p><h3 id="2-2-5-数码管显示模块"><a href="#2-2-5-数码管显示模块" class="headerlink" title="2.2.5 数码管显示模块"></a>2.2.5 数码管显示模块</h3><p>该模块 <code>seg_show.vhd</code> 包含有一个子模块 <code>seg_dsp.vhd</code> 其中 <code>seg_show.vhd</code> 负责进行扫描操作与输出电平信号给数码管的部分， <code>seg_dsp.vhd</code> 负责描述数据和实际数码管的对应关系，与告知 <code>seg_show.vhd</code> 当前时刻数码管的数据与位号的部分。</p><h4 id="2-2-5-1-代码实现"><a href="#2-2-5-1-代码实现" class="headerlink" title="2.2.5.1 代码实现"></a>2.2.5.1 代码实现</h4><p><code>seg_dsp.vhd</code> 代码实现摘录如下：</p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity seg_dsp is  port  (    -- 小数点    dot : in std_logic;    -- 数码管数字    dat_num : in integer range 0 to 9;    -- 选择数码管    sel_num : in integer range 0 to 6;    -- 输出引脚    seg_sel  : out std_logic_vector(5 downto 0);    seg_data : out std_logic_vector(7 downto 0)  );end seg_dsp;</span><br></code></pre></td></tr></table></figure><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 ------------------------------------------------------------------------------architecture bhv of seg_dsp is  signal dat : std_logic_vector(6 downto 0) := (others =&gt; &#x27;1&#x27;);  signal sel : std_logic_vector(5 downto 0) := (others =&gt; &#x27;1&#x27;);begin  process (dat_num)  begin    -- 根据数码管点亮表进行赋值    case(dat_num) is      when 0      =&gt; dat      &lt;= &quot;1000000&quot;;      when 1      =&gt; dat      &lt;= &quot;1111001&quot;;      when 2      =&gt; dat      &lt;= &quot;0100100&quot;;      when 3      =&gt; dat      &lt;= &quot;0110000&quot;;      when 4      =&gt; dat      &lt;= &quot;0011001&quot;;      when 5      =&gt; dat      &lt;= &quot;0010010&quot;;      when 6      =&gt; dat      &lt;= &quot;0000010&quot;;      when 7      =&gt; dat      &lt;= &quot;1111000&quot;;      when 8      =&gt; dat      &lt;= &quot;0000000&quot;;      when 9      =&gt; dat      &lt;= &quot;0010000&quot;;      when others =&gt; dat &lt;= &quot;1111111&quot;;    end case;  end process;  process (sel_num)  begin    -- 选择数码管    case(sel_num) is      when 0      =&gt; sel      &lt;= &quot;111110&quot;;      when 1      =&gt; sel      &lt;= &quot;111101&quot;;      when 2      =&gt; sel      &lt;= &quot;111011&quot;;      when 3      =&gt; sel      &lt;= &quot;110111&quot;;      when 4      =&gt; sel      &lt;= &quot;101111&quot;;      when 5      =&gt; sel      &lt;= &quot;011111&quot;;      when 6      =&gt; sel      &lt;= &quot;111111&quot;;      when others =&gt; sel &lt;= &quot;111111&quot;;    end case;  end process;  seg_data &lt;= dot &amp; dat;  seg_sel &lt;= sel;end bhv;</span><br></code></pre></td></tr></table></figure><p><code>seg_show.vhd</code> 代码实现摘录如下：</p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity seg_show is  port  (    clk : in std_logic; -- 扫描时钟    -- 数码管数据，每个数码管4个字节    data : in std_logic_vector(23 downto 0);    -- 输出引脚    seg_sel  : out std_logic_vector(5 downto 0);    seg_data : out std_logic_vector(7 downto 0)  );end seg_show;</span><br></code></pre></td></tr></table></figure><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构体定义 ------------------------------------------------------------------------------architecture bhv of seg_show is  -- 中间信号  signal n1, n2, n3, n4, n5, n6 : integer range 0 to 9;  signal st                     : integer range 0 to 6;  signal nownum : integer range 0 to 9;  signal nowsel : integer range 0 to 5;  signal nowdot : std_logic;  -- 数码管显示模块，数据与显示的映射关系  component seg_dsp    port    (      dot      : in std_logic;      dat_num  : in integer range 0 to 9;      sel_num  : in integer range 0 to 5;      seg_sel  : out std_logic_vector(5 downto 0);      seg_data : out std_logic_vector(7 downto 0)    );  end component;begin  -- 顺序扫描   process (clk)  begin    if (clk&#x27;event and clk = &#x27;1&#x27;) then -- 上升沿触发      if (st &lt; 6) then -- st为扫描的位数，循环扫描        st &lt;= st + 1;      else        st &lt;= 0;      end if;    end if;  end process;  -- 赋值扫描数据 st变化时触发  process (st)  begin    -- 将六个数字分开来，低位在前    n1 &lt;= to_integer(unsigned(data(3 downto 0)));    n2 &lt;= to_integer(unsigned(data(7 downto 4)));    n3 &lt;= to_integer(unsigned(data(11 downto 8)));    n4 &lt;= to_integer(unsigned(data(15 downto 12)));    n5 &lt;= to_integer(unsigned(data(19 downto 16)));    n6 &lt;= to_integer(unsigned(data(23 downto 20)));    case(st) is      when 0 =&gt; nownum &lt;= n1;      nowsel           &lt;= 0;      nowdot           &lt;= &#x27;1&#x27;;      when 1 =&gt; nownum &lt;= n2;      nowsel           &lt;= 1;      nowdot           &lt;= &#x27;1&#x27;;      when 2 =&gt; nownum &lt;= n3;      nowsel           &lt;= 2;      nowdot           &lt;= &#x27;0&#x27;;      when 3 =&gt; nownum &lt;= n4;      nowsel           &lt;= 3;      nowdot           &lt;= &#x27;1&#x27;;      when 4 =&gt; nownum &lt;= n5;      nowsel           &lt;= 4;      nowdot           &lt;= &#x27;0&#x27;;      when 5 =&gt; nownum &lt;= n6;      nowsel           &lt;= 5;      nowdot           &lt;= &#x27;1&#x27;;      when others =&gt; null;    end case;  end process;  --例化数码管显示模块  u1 : seg_dsp port map  (    dot      =&gt; nowdot,    dat_num  =&gt; nownum,    sel_num  =&gt; nowsel,    seg_sel  =&gt; seg_sel,    seg_data =&gt; seg_data  );end bhv;</span><br></code></pre></td></tr></table></figure><h4 id="2-2-5-2-实际现象"><a href="#2-2-5-2-实际现象" class="headerlink" title="2.2.5.2 实际现象"></a>2.2.5.2 实际现象</h4><p><img src="/image-20231117180301795.jpeg"></p><p>根据实际现象成功验证代码。</p><h2 id="2-3-基础部分顶层设计"><a href="#2-3-基础部分顶层设计" class="headerlink" title="2.3 基础部分顶层设计"></a>2.3 基础部分顶层设计</h2><p>经过各个模块的编写与实际验证，在顶层文件部分便可以将模块例化，再按照事先设计的方式将各个模块连接起来，以下为顶层文件各个部分的具体设计记录。</p><h3 id="2-3-1-顶层端口定义"><a href="#2-3-1-顶层端口定义" class="headerlink" title="2.3.1 顶层端口定义"></a>2.3.1 顶层端口定义</h3><p>以下为顶层文件的端口定义代码摘录：</p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity mainDesign is  port  (    clk                        : in std_logic; -- 50MHz    key_shift                  : in std_logic; -- 切换功能按键 原始按键信号    key_sec, key_min, key_hour : in std_logic; -- 校时按键    seg_sel                    : buffer std_logic_vector(5 downto 0); -- 数码管位选    seg_data                   : buffer std_logic_vector(7 downto 0); -- 数码管数据    test1 : out std_logic_vector(7 downto 0); -- 测试信号    speak : buffer std_logic -- 整点报时、闹钟  );end mainDesign;</span><br></code></pre></td></tr></table></figure><p><strong>各个端口的解释如下：</strong></p><ul><li>clk </li><li>key_shift </li><li>key_sec, key_min, key_hour </li><li>seg_selseg_data </li><li>test1 </li><li>speak</li></ul><h3 id="2-3-2-顶层结构体定义"><a href="#2-3-2-顶层结构体定义" class="headerlink" title="2.3.2 顶层结构体定义"></a>2.3.2 顶层结构体定义</h3><h4 id="2-3-2-1-引入元件"><a href="#2-3-2-1-引入元件" class="headerlink" title="2.3.2.1 引入元件"></a>2.3.2.1 引入元件</h4><p>基础部分所用到的元件有如下部分：</p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 --------------------------------------------------------------------------------architecture behav of mainDesign is-- 组件实例化 --   component diver is -- 分频器     port    (      clk    : in std_logic; -- 输入时钟，原始的时钟频率      clk_ot : out std_logic; -- 点报时蜂鸣器频率，1kHz      clk_os : out std_logic; -- 秒报时蜂鸣器频率，500Hz      clk1   : out std_logic; -- 输出时钟，设置界面分频，闹钟和校时功能,10Hz      clk0   : out std_logic -- 输出时钟，正常计时分频，1Hz    );  end component diver;  component count_24_hour is -- 24进制计数器，时计数    port    (      clk, rst, en : in std_logic; -- 输入时钟，复位信号，使能信号      q0, q1       : out std_logic_vector(3 downto 0); -- 0：个位，1：十位      cout         : out std_logic -- 进位输出    );  end component count_24_hour;  component count_60_min is -- 60进制计数器，分计数    port    (      clk, rst, en : in std_logic;      q0, q1       : out std_logic_vector(3 downto 0); -- 0：个位，1：十位      cout         : out std_logic -- 进位输出    );  end component count_60_min;  component count_60_sec is -- 60进制计数器，秒计数    port    (      clk, rst, en : in std_logic;      q0, q1       : out std_logic_vector(3 downto 0); -- 0：个位，1：十位      cout         : out std_logic -- 进位输出    );  end component count_60_sec;  component seg_show is    port    (      clk : in std_logic; --复位及扫描时钟      --数码管数据，每个数码管4个字节      data : in std_logic_vector(23 downto 0);      --输出引脚      seg_sel  : out std_logic_vector(5 downto 0);      seg_data : out std_logic_vector(7 downto 0)    );  end component seg_show;  component mux21a is -- 二选一实现校时，选择快慢信号，低电平选择快信号b    port    (      a, b, s : in std_logic; -- a：正常进位时钟，b：快信号，s：按键电平      y       : out std_logic -- 输出信号    );  end component mux21a;  component alarm is -- 整点或指定秒数报时    port    (      min0, min1, sec0, sec1 : in std_logic_vector(3 downto 0); -- 分计时器和秒计时器输入      h_buz                  : in std_logic; -- hour报时 接diver给的频率      s_buz                  : in std_logic; -- sec报时 接diver给的频率      speak                  : out std_logic -- 蜂鸣器输入端口    );  end component alarm;</span><br></code></pre></td></tr></table></figure><p>由于正常计时器输出的都是各自的个位与十位数据，数码管显示模块的输入需要 24 位的数据，因此在顶层文件中需要将各个计时器的输出组合起来，合并输入到数码管显示模块中：</p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-keyword">process</span> (clk_os)<span class="hljs-keyword">begin</span>  seg_show_data &lt;= n6 &amp; n5 &amp; n4 &amp; n3 &amp; n2 &amp; n1;<span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br></code></pre></td></tr></table></figure><p>至此，基础部分已基本完成。由于扩展部分的加入，元件引入和例化部分代码有所变更，因此完整的顶层文件代码将在扩展部分逐步论述。</p><blockquote><p>以上为基础部分的课设过程记录，拓展部分待更新。</p></blockquote><h2 id="2-4-扩展部分顶层设计"><a href="#2-4-扩展部分顶层设计" class="headerlink" title="2.4 扩展部分顶层设计"></a>2.4 扩展部分顶层设计</h2>]]></content>
     
     
-    <summary type="html">同时也记录了熟悉VHDL编写的过程</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1 前言&quot;&gt;&lt;/a&gt;1 前言&lt;/h1&gt;&lt;p&gt;本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：&lt;br&gt; </summary>
+      
     
     
     
@@ -460,19 +508,20 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>hexo-fluid主题添加图集瀑布流功能</title>
     <link href="https://sagi-rastar.github.io/2023/11/11/hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/"/>
     <id>https://sagi-rastar.github.io/2023/11/11/hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/</id>
-    <published>2023-11-11T16:30:59.000Z</published>
-    <updated>2025-02-14T18:17:20.282Z</updated>
+    <published>2023-11-11T08:30:59.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h1><p>根据上一篇博客<a href="https://sagi-rastar.github.io/2023/11/10/%E3%80%90%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%E3%80%91%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/">【建站过程】关于我使用obsidian加hexo部署个人博客的过程</a> ，目前我的个人站点已经有了一个比较舒服的以文字为主的工作流，接下来就是分享图片的工作流了。</p><h1 id="2-搭建方案"><a href="#2-搭建方案" class="headerlink" title="2 搭建方案"></a>2 搭建方案</h1><p>通过查阅和参考其他大佬们的博客，发现hexo5有的一个功能 <code>注入代码</code> 是一个不错的方案。本次初步实现图集瀑布流的功能主要参考了<a href="https://4dtree.github.io/2022/06/21/Hexo-Fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">@四维树大佬的这篇博客</a> 受益匪浅，感谢！</p><p>其中，对于 <code>scripts</code> 文件夹，如果之前没有使用过hexo注入代码功能的朋友，可能会感到疑惑，可以先去<a href="https://hexo.fluid-dev.com/docs/advance/#hexo-%E6%B3%A8%E5%85%A5%E4%BB%A3%E7%A0%81">官方文档</a> 了解一下注入代码的功能：</p><blockquote><p>Hexo 注入代码的方法：<em>编写注入代码，需要在博客的根目录下创建 <code>scripts</code> 文件夹，然后在里面任意命名创建一个 js 文件即可。</em></p></blockquote><p>主要的过程在这位大佬的博客里面叙述的非常详细，此处就不重造轮子，重点记录一下后面添加图片以及站点显示的一些文本如何对应源代码设置：<br> <img src="/image-20231111164045874.png"></p><ol><li></li></ol><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># file: &quot;/_config.fluid.yml&quot;menu:    - &#123; key: &quot;home&quot;, link: &quot;/&quot;, icon: &quot;iconfont icon-home-fill&quot; &#125;    - &#123; key: &quot;archive&quot;, link: &quot;/archives/&quot;, icon: &quot;iconfont icon-archive-fill&quot; &#125;    - &#123; key: &quot;category&quot;, link: &quot;/categories/&quot;, icon: &quot;iconfont icon-category-fill&quot; &#125;    - &#123; key: &quot;tag&quot;, link: &quot;/tags/&quot;, icon: &quot;iconfont icon-tags-fill&quot; &#125;    - &#123; key: &quot;about&quot;, link: &quot;/about/&quot;, icon: &quot;iconfont icon-user-fill&quot; &#125;    - &#123; key: &quot;links&quot;, link: &quot;/links/&quot;, icon: &quot;iconfont icon-link-fill&quot; &#125;    - &#123; key: &quot;pic&quot;, link: &quot;/pic/&quot;, icon: &quot;iconfont icon-images&quot; &#125; # 此处</span><br></code></pre></td></tr></table></figure><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># file: &quot;/node_modules/hexo-theme-fluid/languages/zh-CN.yml&quot;pic:  menu: &#x27;图集&#x27;  title: &#x27;图集&#x27;  subtitle: &#x27;图集&#x27;</span><br></code></pre></td></tr></table></figure><ol><li></li></ol><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># file: &quot;source/pic/index.md&quot;---title: 图集 # 此处date: 2023-11-11 15:59:01layout: pic---</span><br></code></pre></td></tr></table></figure><p><img src="/image-20231111165046333.png"></p><ol><li></li><li></li></ol><h1 id="3-结语"><a href="#3-结语" class="headerlink" title="3 结语"></a>3 结语</h1><p>感谢大佬们的博客，此次实现图片瀑布流的过程十分迅速。后期对于显示效果上的优化以及图片的丰富，可以之后再次参考一下大佬们的源代码：</p><ul><li>scripts&#x2F;createPhotoList.js </li><li>source&#x2F;pic&#x2F;index.md </li><li>source&#x2F;js&#x2F;photoWall.js </li><li>scripts&#x2F;injector.js</li></ul>]]></content>
     
     
-    <summary type="html">前端真有意思</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1 前言&quot;&gt;&lt;/a&gt;1 前言&lt;/h1&gt;&lt;p&gt;根据上一篇博客&lt;a href=&quot;https://sagi-rastar.github.io/2023/11/10/%E3%8</summary>
+      
     
     
     
@@ -489,19 +538,20 @@
     
   </entry>
   
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
   <entry>
     <title>关于我使用obsidian加hexo部署个人博客的过程</title>
     <link href="https://sagi-rastar.github.io/2023/11/10/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/"/>
     <id>https://sagi-rastar.github.io/2023/11/10/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/</id>
-    <published>2023-11-10T10:18:47.000Z</published>
-    <updated>2025-02-14T18:17:20.308Z</updated>
+    <published>2023-11-10T02:18:47.000Z</published>
+    <updated>2025-02-14T18:17:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h1><p>从很早之前就一直希望搭建一个属于自己的博客。不管是折腾各种有趣项目还是在看完了那些精彩的文学作品，总觉得没有留下一点什么，实在是可惜。发空间或者朋友圈这样的形式，实在不足以记录当时的心情，向有文章区的社交网站投稿文章，又显得不大合适。</p><p>兜兜转转，还是下定决心搭建一个属于自己的个人博客。一来是个人博客的形式更适合自己，在自己的站点碎碎念，不必考虑文章是否合乎投稿社群氛围；二来是近年来，随着输入的增加，愈发感觉到自己语言的贫乏，对于能够流畅行文、顺畅表达出自己想法的人愈发羡慕。因此，希望能够锻炼一点自己表达的能力，也是我搭建个人博客的一个契机。</p><p>本次过程记录，将会尽可能详尽地记录整个搭建过程，对于同样想要搭建一个属于自己的 “赛博小窝“ 的读者，希望这篇拙笔能够帮上你一点忙。</p><p>值得一提的是，本站点搭建方法以及使用的工作流，只是笔者在尝试了各类方法后，觉得最适合自己的方法，每个人最好的工作流，终归是最适合自己的工作流，希望拙笔能够为你寻找最佳工作流的路上提供一点参考</p><h1 id="2-搭建方案"><a href="#2-搭建方案" class="headerlink" title="2 搭建方案"></a>2 搭建方案</h1><p>笔者搭建环境：</p><ul><li>Windows 11 专业版 21H2 22000.2538 </li><li>Powershell </li><li>VS Code</li></ul><p>博客站点框架使用 <code>Hexo</code> 搭建，主题使用 <code>Fluid</code> ，以下是 <code>Hexo</code> 与 <code>Fluid</code> 的官方文档：</p><ul><li>Hexo </li><li>Fluid</li></ul><p>静态网站托管服务使用 <code>Github Pages</code> ，github的这个服务是免费的，因此很多个人博客都会使用这个服务，并且免去了各种意义上的麻烦，<del>包括穷的麻烦。</del> 以下是 <code>Github Pages</code> 的官方文档：</p><ul><li>Github Pages</li></ul><p>写作工具使用 <code>Obsidian</code>，因为在之前就有使用Obsidian进行做笔记的习惯，比较顺手且好用，由于插件的支持以及其强大的拓展性，所以对于后面搭建的工作流有较好的适配性。<del>更好的是，这个软件除了发布和云盘等内容，都是免费的。</del> 以下是 <code>Obsidian</code> 的官方文档：</p><ul><li>Obsidian</li></ul><p>依附于上述三个部分的若干插件将在后面的叙述中记录。</p><h1 id="3-工作流与写作过程"><a href="#3-工作流与写作过程" class="headerlink" title="3 工作流与写作过程"></a>3 工作流与写作过程</h1><h2 id="3-1-站点框架"><a href="#3-1-站点框架" class="headerlink" title="3.1 站点框架"></a>3.1 站点框架</h2><h3 id="3-1-1-Hexo"><a href="#3-1-1-Hexo" class="headerlink" title="3.1.1 Hexo"></a>3.1.1 Hexo</h3><p>对于对前端不熟的我来说，像Hexo这样的框架是再适合不过了。使用Hexo的时候不需要关心网站中的各个组件的代码是如何编写的，在搭建好框架之后我只需要撰写markdown文件就可以生成网页了。</p><h4 id="3-1-1-1-安装依赖"><a href="#3-1-1-1-安装依赖" class="headerlink" title="3.1.1.1 安装依赖"></a>3.1.1.1 安装依赖</h4><p>Hexo有两个前置依赖：</p><ul><li></li><li></li></ul><blockquote><p>Node.js 是一个可以执行 JavaScript 代码的软件程序。更准确地说，Node.js 是一个 JavaScript 运行环境。它是一个开发环境，可以将 JavaScript 代码用于服务器端脚本。</p></blockquote><blockquote><p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p></blockquote><p>对于这两个东西的安装，可以参考Hexo官网的步骤：<br> <a href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Git">Git的安装</a><br> <a href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Node-js">Node.js的安装</a></p><blockquote><p><strong>指北：</strong><br> 如果已习惯类似 <code>chocolatey</code> 这样的包管理工具，可以参考Hexo官网 <em>[安装 Node.js]</em> 一节中 <em>[其他的安装方法]</em> 看了一眼，貌似支持 <code>winget</code> 、 <code>chocolatey</code> 等。</p></blockquote><h4 id="3-1-1-2-安装Hexo并本地启动"><a href="#3-1-1-2-安装Hexo并本地启动" class="headerlink" title="3.1.1.2 安装Hexo并本地启动"></a>3.1.1.2 安装Hexo并本地启动</h4><p>安装完git和node之后就可以使用npm安装Hexo了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli   <span class="hljs-comment"># 全局安装  hexo -v   # 查看hexo版本</span><br></code></pre></td></tr></table></figure><p>开始创建一个项目 <code>my-blog</code></p><div class="note note-warning">            <p>请注意！下面这个命令行的指令中使用了 <code>cd my-blog</code> 这意味着往后的终端指令都在./my-blog路径下执行，并且在以后想要发布网页的时候也需要在该文件夹下执行指令。</p>          </div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init my-blogcd my-blognpm install <br></code></pre></td></tr></table></figure><p>生成网页文件后本地启动</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g     <span class="hljs-comment"># generate 生成界面hexo s     # server 本地启动网站</span><br></code></pre></td></tr></table></figure><p>浏览器访问命令行中提示的网站<a href="http://localhost:4000/">http://localhost:4000/</a>可以看到在本机的4000端口Hexo已经生成了一个示例网站了。</p><h4 id="3-1-1-3-更换主题"><a href="#3-1-1-3-更换主题" class="headerlink" title="3.1.1.3 更换主题"></a>3.1.1.3 更换主题</h4><p>以本站使用的Fluid主题为例：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure><p>后面关于Fluid的各种配置请参考 <a href="https://hexo.fluid-dev.com/docs/start/#%E6%8C%87%E5%AE%9A%E4%B8%BB%E9%A2%98">Hexo官方文档的这个小节往后</a> 执行。</p><p>当执行完上述操作之后，完成了主题的配置，可以执行下述指令，查看效果</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean  <span class="hljs-comment"># 清除hexo g      # 生成hexo s      # 本地启动</span><br></code></pre></td></tr></table></figure><p>再次访问<a href="http://localhost:4000/">http://localhost:4000/</a>，应该设置已经生效了。</p><h4 id="3-1-1-4-工作流设置"><a href="#3-1-1-4-工作流设置" class="headerlink" title="3.1.1.4 工作流设置"></a>3.1.1.4 工作流设置</h4><p>正如前面所说，笔者使用的是 <code>Obsidian</code> 写的博客，而在实践的过程中比较麻烦的是这个图片的插入方法。以前写过的两篇博客都是用Github开了一个仓库之后利用Picgo这个小工具实现的图床的，但是在现在这种场景下插入图片并不优雅，因为每次的插入图片我都需要完成以下操作：</p><ul><li></li><li></li><li></li><li></li></ul><p>太麻烦了！因为之前在obsidian里面插入图片，只需要在图片在剪贴板中的时候直接回到obsidian里面 <code>ctrl</code> + <code>v</code> ，obsidian就会自动将这个文件上传到指定的文件夹下，并且自动在粘贴处插入obsidian支持显示图片的链接。</p><p>因此在实践hexo撰写博客的过程中，我利用了obsidian原生支持的这种工作流程，下面介绍一下具体实现，和使用到的插件：</p><h5 id="3-1-1-4-1-obsidian设置"><a href="#3-1-1-4-1-obsidian设置" class="headerlink" title="3.1.1.4.1 obsidian设置"></a>3.1.1.4.1 obsidian设置</h5><p>如果您还没有了解过obsidian，请参考这几篇博客，此处碍于篇幅就不展开obsidian的使用：</p><ul><li>玩转Obsidian，这里介绍了obsidian的基本用法</li></ul><blockquote><p>实际上，可以把他就当成一个编辑器使用就好，需要用到什么功能的时候，可以去查有没有插件已经实现了你的想法</p></blockquote><p>为了能够让obsidian粘贴图片的时候改变上传图片的路径，并且自定义所插入的图片markdown链接，我们需要用到一个插件：Custom Attachment Location<br> 此处安装方法可以参考这位的博客：</p><ul><li>如何让Obsidian的图片存储形式设置为 .&#x2F;${filename}.assets</li></ul><blockquote><p>笔者自己的设置格式为 <code>./$&#123;filename&#125;</code> 为的是和后面hexo那边的设置相匹配，以完成hexo和obsidian的连续自动化</p></blockquote><p>设置完成之后obsidian的相关设置应该长这样：</p><ul><li></li><li></li></ul><p>这样设置完了之后，在后面用obsidian编写博客直接粘贴图片到编辑区后，就会在与当前笔记同级的同名子文件夹中保存图片，并且在正文中插入后面Hexo那边也可以识别的markdown图片链接，效果如下：<br> <img src="/image-20231110115759893.png"></p><p><img src="/image-20231110115742882.png"></p><h5 id="3-1-1-4-2-Hexo端设置"><a href="#3-1-1-4-2-Hexo端设置" class="headerlink" title="3.1.1.4.2 Hexo端设置"></a>3.1.1.4.2 Hexo端设置</h5><p>修改 <code>_config.yml</code> 文件中的这个选项，这样可以生成一个同名的资源目录，用于存放同名文章使用的资产。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">post_asset_folder: truemarked:</span> <span class="hljs-comment"># 如果原本有就更改下面的这些选项，如果没有就添加  prependRoot: true  postAsset: true</span><br></code></pre></td></tr></table></figure><h5 id="3-1-1-4-3-创建文章"><a href="#3-1-1-4-3-创建文章" class="headerlink" title="3.1.1.4.3 创建文章"></a>3.1.1.4.3 创建文章</h5><p>当你要开始写一篇文章的时候，在命令行中输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new post &lt;文章名&gt;<br></code></pre></td></tr></table></figure><p>就会在 <code>./my-blog/source/_posts/</code> 路径下新建 <code>&lt;文章名&gt;.md</code> 文件和同名资产文件夹，然后直接在obsidian中选择打开 <code>./source</code> 文件夹后选择刚刚生成的md文件就可以开始愉快写作了！</p><h2 id="3-2-发布！"><a href="#3-2-发布！" class="headerlink" title="3.2 发布！"></a>3.2 发布！</h2><p>在Github中注册账号，然后创建一个仓库，配置Github Pages：创建仓库的时候，仓库名请务必填 <code>&lt;你的github名&gt;.github.io</code> ，不然的话Github不会将该仓库认作Github Pages。</p><p>在 <code>&lt;你的github名&gt;.github.io</code> 仓库对应的 GitHub Pages 设置页面 (访问路径为 <code>Settings -&gt; Pages</code> ) 可以找到个人博客的主页访问地址：https:&#x2F;&#x2F;&lt;GitHub 用户名&gt;.github.io。</p><p>回到hexo这边，首先安装 <code>hexo-deployer-git</code> ：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure><p>修改 <code>_config.yml</code> 文件：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">deploy:  type: git  repo:</span> <span class="hljs-string">&lt;repository</span> <span class="hljs-string">url&gt;</span> <span class="hljs-comment"># https://github.com/&lt;GitHub用户名&gt;/&lt;GitHub用户名&gt;.github.io.git  branch: [branch]  token: [token]</span><br></code></pre></td></tr></table></figure><p>配置好了之后可以就可以在终端生成站点文件后推送到这个仓库，然后外网用户就可以在你的博客地址中访问你的博客了：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo cleanhexo deploy<br></code></pre></td></tr></table></figure><h2 id="3-3-配置完之后的工作流"><a href="#3-3-配置完之后的工作流" class="headerlink" title="3.3 配置完之后的工作流"></a>3.3 配置完之后的工作流</h2><ol><li></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new &lt;文章名&gt;<br></code></pre></td></tr></table></figure><ol><li></li><li></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo ghexo s<br></code></pre></td></tr></table></figure><ol><li></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo d<br></code></pre></td></tr></table></figure><h1 id="4-结语"><a href="#4-结语" class="headerlink" title="4 结语"></a>4 结语</h1><p>利用obsidian结合hexo来写作自己的博客还有很多优点，除了插入图片比较舒心之外，yml的标签甚至奇妙地兼容了，obsidian里面添加文章首部的tag的时候界面适配也很好看，除此之外，就像typora一样的实时预览也是非常棒的功能。</p><p>本文并未展开关于博客站点的其他装修操作，关于Fluid主题的更加详细的配置，请参考 <a href="https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">此处</a> 官方十分详尽的文档。</p><p>感谢阅读！</p><h1 id="5-参考"><a href="#5-参考" class="headerlink" title="5 参考"></a>5 参考</h1><ul><li>白嫖 GitHub Pages，轻松搭建个人博客 </li><li>如何让Obsidian的图片存储形式设置为 .&#x2F;${filename}.assets </li><li>Hexo </li><li>Fluid </li><li>Github Pages </li><li>Obsidian</li></ul>]]></content>
     
     
-    <summary type="html">也许是最适合自己的博客写作流程了</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1 前言&quot;&gt;&lt;/a&gt;1 前言&lt;/h1&gt;&lt;p&gt;从很早之前就一直希望搭建一个属于自己的博客。不管是折腾各种有趣项目还是在看完了那些精彩的文学作品，总觉得没有留下一点什么，实</summary>
+      
     
     
     
@@ -517,112 +567,6 @@
     <category term="网站" scheme="https://sagi-rastar.github.io/tags/%E7%BD%91%E7%AB%99/"/>
     
     <category term="建站" scheme="https://sagi-rastar.github.io/tags/%E5%BB%BA%E7%AB%99/"/>
-    
-  </entry>
-  
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
-  <entry>
-    <title>当音乐遇见故事一起走上舞台</title>
-    <link href="https://sagi-rastar.github.io/2023/11/08/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/"/>
-    <id>https://sagi-rastar.github.io/2023/11/08/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/</id>
-    <published>2023-11-08T10:32:21.000Z</published>
-    <updated>2025-02-14T18:17:20.311Z</updated>
-    
-    
-    <summary type="html">朋友， 吃安利吗！音乐剧，可香了！</summary>
-    
-    
-    
-    <category term="luv" scheme="https://sagi-rastar.github.io/categories/luv/"/>
-    
-    
-    <category term="感想" scheme="https://sagi-rastar.github.io/tags/%E6%84%9F%E6%83%B3/"/>
-    
-    <category term="音乐剧" scheme="https://sagi-rastar.github.io/tags/%E9%9F%B3%E4%B9%90%E5%89%A7/"/>
-    
-    <category term="安利" scheme="https://sagi-rastar.github.io/tags/%E5%AE%89%E5%88%A9/"/>
-    
-  </entry>
-  
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
-  <entry>
-    <title>网络编程实验报告</title>
-    <link href="https://sagi-rastar.github.io/2023/11/07/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
-    <id>https://sagi-rastar.github.io/2023/11/07/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</id>
-    <published>2023-11-07T11:16:01.000Z</published>
-    <updated>2025-02-14T18:17:20.312Z</updated>
-    
-    
-    <summary type="html">嵌入式linux作业，使用标准IO，（Python也好用</summary>
-    
-    
-    
-    <category term="embed" scheme="https://sagi-rastar.github.io/categories/embed/"/>
-    
-    
-    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    <category term="作业" scheme="https://sagi-rastar.github.io/tags/%E4%BD%9C%E4%B8%9A/"/>
-    
-    <category term="linux" scheme="https://sagi-rastar.github.io/tags/linux/"/>
-    
-    <category term="网络编程" scheme="https://sagi-rastar.github.io/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
-  <entry>
-    <title>STM32中通过EXTI配置外部中断事件</title>
-    <link href="https://sagi-rastar.github.io/2023/11/07/STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/"/>
-    <id>https://sagi-rastar.github.io/2023/11/07/STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/</id>
-    <published>2023-11-07T11:04:45.000Z</published>
-    <updated>2025-02-14T18:17:20.281Z</updated>
-    
-    
-    <summary type="html">很久之前写的了，基本只是作为初见的学习记录而已。</summary>
-    
-    
-    
-    <category term="embed" scheme="https://sagi-rastar.github.io/categories/embed/"/>
-    
-    
-    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    <category term="stm32" scheme="https://sagi-rastar.github.io/tags/stm32/"/>
-    
-  </entry>
-  
-  <follow_challenge>
-    <feedId>113283100068148224</feedId>
-    <userId>112510724249292800</userId>
-  </follow_challenge>
-  <entry>
-    <title>STM32中的GPIO框图解析与软件配置</title>
-    <link href="https://sagi-rastar.github.io/2023/11/07/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/"/>
-    <id>https://sagi-rastar.github.io/2023/11/07/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/</id>
-    <published>2023-11-07T10:57:34.000Z</published>
-    <updated>2025-02-14T18:17:20.281Z</updated>
-    
-    
-    <summary type="html">嗯，也是很久之前写的了（</summary>
-    
-    
-    
-    <category term="embed" scheme="https://sagi-rastar.github.io/categories/embed/"/>
-    
-    
-    <category term="嵌入式" scheme="https://sagi-rastar.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    <category term="stm32" scheme="https://sagi-rastar.github.io/tags/stm32/"/>
     
   </entry>
   

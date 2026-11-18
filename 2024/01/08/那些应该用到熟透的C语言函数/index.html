@@ -1,14 +1,17 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=dark>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/me.png">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
   <link rel="icon" href="/img/me.png">
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -16,23 +19,19 @@
   <meta name="author" content="SagiRastar">
   <meta name="keywords" content="">
   
-    <meta name="description" content="熟透了吗，快了">
+    <meta name="description" content="1 字符串相关1.1 字符串对比strstr 用于在一个字符串中查找另一个字符串的首次出现位置。 函数原型为：char *strstr(const char *haystack, const char *needle); 这个函数接受两个参数：  haystack  needlehaystack  如果 needle 在 haystack 中找到，那么 strstr 会返回一个指向 haystac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="那些应该用到熟透的C语言函数">
-<meta property="og:url" content="https://sagi-rastar.github.io/2024/01/08/%E9%82%A3%E4%BA%9B%E5%BA%94%E8%AF%A5%E7%94%A8%E5%88%B0%E7%86%9F%E9%80%8F%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/">
+<meta property="og:url" content="https://sagi-rastar.github.io/2024/01/08/%E9%82%A3%E4%BA%9B%E5%BA%94%E8%AF%A5%E7%94%A8%E5%88%B0%E7%86%9F%E9%80%8F%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="SagiRastar&#39;s Blog">
-<meta property="og:description" content="熟透了吗，快了">
+<meta property="og:description" content="1 字符串相关1.1 字符串对比strstr 用于在一个字符串中查找另一个字符串的首次出现位置。 函数原型为：char *strstr(const char *haystack, const char *needle); 这个函数接受两个参数：  haystack  needlehaystack  如果 needle 在 haystack 中找到，那么 strstr 会返回一个指向 haystac">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/embed.jpg">
-<meta property="article:published_time" content="2024-01-08T21:18:26.000Z">
-<meta property="article:modified_time" content="2025-02-14T18:17:20.355Z">
+<meta property="article:published_time" content="2024-01-08T13:18:26.000Z">
+<meta property="article:modified_time" content="2025-02-14T18:17:20.000Z">
 <meta property="article:author" content="SagiRastar">
 <meta property="article:tag" content="嵌入式">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://sagi-rastar.github.io/img/embed.jpg">
   
-  
-    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>那些应该用到熟透的C语言函数 - SagiRastar&#39;s Blog</title>
@@ -47,18 +46,16 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
-
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -72,16 +69,15 @@
 
 
   
-<link rel="stylesheet" href="/css/custom.css">
-<link rel="stylesheet" href="/css/mac.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap.css">
+<link rel="stylesheet" href="/css/custom.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"sagi-rastar.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"sagi-rastar.github.io","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -94,7 +90,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
 </head>
 
 
@@ -108,7 +104,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Sagi&#39;s stack </strong>
+      <strong>Fluid</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -117,7 +113,7 @@
       <div class="animated-icon"><span></span><span></span><span></span></div>
     </button>
 
-    <!-- Collapsible content -->
+    <!-- Collapsible content (desktop) -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto text-center">
         
@@ -126,7 +122,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -138,7 +134,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/pic/">
+              <a class="nav-link" href="/pic/" target="_self">
                 <i class="iconfont icon-images"></i>
                 <span>图集</span>
               </a>
@@ -150,7 +146,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -162,7 +158,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -174,7 +170,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -186,7 +182,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -198,7 +194,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
                 <span>友链</span>
               </a>
@@ -225,20 +221,152 @@
   </div>
 </nav>
 
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>首页</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/pic/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-images"></i>
+                  <span>图集</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/categories/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>分类</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/tags/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-tags-fill"></i>
+                  <span>标签</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>归档</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>关于</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/links/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-link-fill"></i>
+                  <span>友链</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>搜索</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="开灯"
+               data-label-dark="关灯">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">关灯</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
   
 
 <div id="banner" class="banner" parallax=true
      style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
-    <div class="mask flex-center"
-         style="background-color: rgba(0, 0, 0, 0.3)">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
-          <span id="subtitle" data-subtitles='["2024"]'></span><span class="cursor"> _</span>
+          
+            <span id="subtitle" data-typed-text="那些应该用到熟透的C语言函数"></span>
+          
         </div>
 
         
-        
+          
   <div class="mt-3">
     
     
@@ -256,7 +384,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.4k 字
+          2.1k 字
         
       </span>
     
@@ -267,20 +395,12 @@
         
         
         
-          20 分钟
+          18 分钟
         
       </span>
     
 
     
-    
-      
-        <span id="busuanzi_container_page_pv" style="display: none">
-          <i class="iconfont icon-eye" aria-hidden="true"></i>
-          <span id="busuanzi_value_page_pv"></span> 次
-        </span>
-        
-      
     
   </div>
 
@@ -293,69 +413,8 @@
   </div>
 </div>
 
-<style>
-.cursor {
-  display: inline-block;
-  animation: blink 1s infinite;
-  margin-left: 2px;
-}
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}
-</style>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var subtitleElement = document.getElementById('subtitle');
-      var subtitles = JSON.parse(subtitleElement.getAttribute('data-subtitles'));
-      var currentSubtitleIndex = 0;
-      var currentCharIndex = 0;
-      var usedIndices = new Set();
-      
-      function getRandomIndex() {
-        let availableIndices = [...Array(subtitles.length).keys()]
-          .filter(i => !usedIndices.has(i));
-        
-        if (availableIndices.length === 0) {
-          usedIndices.clear(); // 重置已使用索引
-          availableIndices = [...Array(subtitles.length).keys()];
-        }
-        
-        const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
-        usedIndices.add(randomIndex);
-        return randomIndex;
-      }
-    
-      function typeSubtitle() {
-        if (!subtitles || subtitles.length === 0) return;
-        
-        if (currentCharIndex < subtitles[currentSubtitleIndex].length) {
-          subtitleElement.innerText += subtitles[currentSubtitleIndex].charAt(currentCharIndex);
-          currentCharIndex++;
-          setTimeout(typeSubtitle, 100);
-        } else {
-          setTimeout(eraseSubtitle, 2000);
-        }
-      }
-    
-      function eraseSubtitle() {
-        if (currentCharIndex > 0) {
-          subtitleElement.innerText = subtitleElement.innerText.slice(0, -1);
-          currentCharIndex--;
-          setTimeout(eraseSubtitle, 50);
-        } else {
-          currentSubtitleIndex = getRandomIndex();
-          setTimeout(typeSubtitle, 500);
-        }
-      }
-    
-      // 开始第一轮打字动画
-      currentSubtitleIndex = getRandomIndex();
-      typeSubtitle();
-    });
-    </script>
+
 </div>
 
   </header>
@@ -368,145 +427,6 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar category-bar" style="margin-right: -1rem">
-    
-
-
-
-              
-
-                  <div class="category-list">
-                    
-  
-    
-      
-        
-          <div class="category row nomargin-x">
-
-            <div class="col-12 m-auto index-img">
-              
-                <img src="/img/embed.jpg" alt="Category Image" />
-            </div>
-
-            <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="embed"
-              id="heading-269605d45c104f12cbcdc8fb71434acc" role="tab" data-toggle="collapse" href="#collapse-269605d45c104f12cbcdc8fb71434acc"
-              aria-expanded="true">
-              embed
-                <span class="list-group-count">
-                  (9)
-                </span>
-                <i class="iconfont icon-arrowright"></i>
-            </a>
-            
-                <div class="category-collapse collapse show"
-                  id="collapse-269605d45c104f12cbcdc8fb71434acc" role="tabpanel" aria-labelledby="heading-269605d45c104f12cbcdc8fb71434acc">
-                  
-                    
-                              
-                <div class="category-post-list">
-                  
-                    
-                      
-                        
-                              <a href="/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/" title="FPGA电子钟课设设计过程" class="list-group-item list-group-item-action
-           ">
-                                <span class="category-post">
-                                  FPGA电子钟课设设计过程
-                                </span>
-                              </a>
-                              
-                                
-                      
-                        
-                              <a href="/2023/11/07/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/" title="STM32中的GPIO框图解析与软件配置" class="list-group-item list-group-item-action
-           ">
-                                <span class="category-post">
-                                  STM32中的GPIO框图解析与软件配置
-                                </span>
-                              </a>
-                              
-                                
-                      
-                        
-                              <a href="/2023/11/07/STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/" title="STM32中通过EXTI配置外部中断事件" class="list-group-item list-group-item-action
-           ">
-                                <span class="category-post">
-                                  STM32中通过EXTI配置外部中断事件
-                                </span>
-                              </a>
-                              
-                                
-                      
-                        
-                              <a href="/2023/12/08/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/" title="传感器复习随笔" class="list-group-item list-group-item-action
-           ">
-                                <span class="category-post">
-                                  传感器复习随笔
-                                </span>
-                              </a>
-                              
-                                
-                      
-                        
-                              <a href="/2023/11/07/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" title="网络编程实验报告" class="list-group-item list-group-item-action
-           ">
-                                <span class="category-post">
-                                  网络编程实验报告
-                                </span>
-                              </a>
-                              
-                                
-                      
-                        
-                              <a href="/2023/11/30/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/" title="通信原理实验随笔" class="list-group-item list-group-item-action
-           ">
-                                <span class="category-post">
-                                  通信原理实验随笔
-                                </span>
-                              </a>
-                              
-                                
-                      
-                        
-                              <a href="/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/" title="速查：CH340记录" class="list-group-item list-group-item-action
-           ">
-                                <span class="category-post">
-                                  速查：CH340记录
-                                </span>
-                              </a>
-                              
-                                
-                      
-                        
-                              <a href="/2024/01/08/%E9%82%A3%E4%BA%9B%E5%BA%94%E8%AF%A5%E7%94%A8%E5%88%B0%E7%86%9F%E9%80%8F%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/" title="那些应该用到熟透的C语言函数" class="list-group-item list-group-item-action
-           active">
-                                <span class="category-post">
-                                  那些应该用到熟透的C语言函数
-                                </span>
-                              </a>
-                              
-                                
-                      
-                        
-                              <a href="/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/" title="高频电子复习随笔" class="list-group-item list-group-item-action
-           ">
-                                <span class="category-post">
-                                  高频电子复习随笔
-                                </span>
-                              </a>
-                              
-                                
-                </div>
-                
-                                
-                </div>
-          </div>
-          
-                  </div>
-
-  </aside>
-
 
     </div>
 
@@ -517,75 +437,63 @@
             <h1 id="seo-header">那些应该用到熟透的C语言函数</h1>
             
             
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：几秒前
-                  
-                
-              </p>
-            <p>
-              
-            </p>
-            
-            
               <div class="markdown-body">
                 
-                <h1 id="1-字符串相关">1 字符串相关</h1>
-<h2 id="1-1-字符串对比">1.1 字符串对比</h2>
-<p><code>strstr</code> 用于在一个字符串中查找另一个字符串的首次出现位置。</p>
+                <h1 id="1-字符串相关"><a href="#1-字符串相关" class="headerlink" title="1 字符串相关"></a>1 字符串相关</h1><h2 id="1-1-字符串对比"><a href="#1-1-字符串对比" class="headerlink" title="1.1 字符串对比"></a>1.1 字符串对比</h2><p><code>strstr</code> 用于在一个字符串中查找另一个字符串的首次出现位置。</p>
 <p>函数原型为：<code>char *strstr(const char *haystack, const char *needle);</code></p>
 <p>这个函数接受两个参数：</p>
 <ol>
-<li><code>haystack</code>：这是你要搜索的字符串。</li>
-<li><code>needle</code>：这是你要在 <code>haystack</code> 中查找的字符串。</li>
+<li>haystack </li>
+<li>needlehaystack</li>
 </ol>
 <p>如果 <code>needle</code> 在 <code>haystack</code> 中找到，那么 <code>strstr</code> 会返回一个指向 <code>haystack</code> 中 <code>needle</code> 首次出现位置的指针。如果 <code>needle</code> 没有在 <code>haystack</code> 中找到，那么 <code>strstr</code> 会返回 <code>NULL</code>。</p>
 <p>例如，在代码中：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">temp_ptr0 = <span class="hljs-built_in">strstr</span>((<span class="hljs-type">char</span> <span class="hljs-type">const</span> *)temp_buffer_ptr, <span class="hljs-string">&quot;MC+WAN+WIFI=&quot;</span>);<br></code></pre></td></tr></table></figure>
-<p>这行代码试图在 <code>temp_buffer_ptr</code> 指向的字符串中查找 “MC+WAN+WIFI=”。如果找到，<code>temp_ptr0</code> 将指向 “MC+WAN+WIFI=” 在 <code>temp_buffer_ptr</code> 中首次出现的位置。如果没有找到，<code>temp_ptr0</code> 将被设置为 <code>NULL</code>。</p>
+
+<p>这行代码试图在 <code>temp_buffer_ptr</code> 指向的字符串中查找 “MC+WAN+WIFI&#x3D;”。如果找到，<code>temp_ptr0</code> 将指向 “MC+WAN+WIFI&#x3D;” 在 <code>temp_buffer_ptr</code> 中首次出现的位置。如果没有找到，<code>temp_ptr0</code> 将被设置为 <code>NULL</code>。</p>
 <p><strong>跟 strcmp 的区别：</strong></p>
 <p><code>strstr</code> 和 <code>strcmp</code> 都是 C 语言中的字符串处理函数，但它们的功能和用途是不同的。</p>
 <p><code>strstr</code> 函数用于在一个字符串（haystack）中查找另一个字符串（needle）的首次出现位置。如果找到，<code>strstr</code> 返回一个指向 <code>haystack</code> 中 <code>needle</code> 首次出现位置的指针。如果没有找到，<code>strstr</code> 返回 <code>NULL</code>。</p>
 <p>例如：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> *s = <span class="hljs-string">&quot;Hello, world!&quot;</span>;<br><span class="hljs-type">char</span> *p = <span class="hljs-built_in">strstr</span>(s, <span class="hljs-string">&quot;world&quot;</span>);<br><span class="hljs-comment">// p 现在指向 &quot;world!&quot;，这是 &quot;world&quot; 在 s 中首次出现的位置</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> *s = <span class="hljs-string">&quot;Hello, world!&quot;</span>;<span class="hljs-type">char</span> *p = <span class="hljs-built_in">strstr</span>(s, <span class="hljs-string">&quot;world&quot;</span>);<span class="hljs-comment">// p 现在指向 &quot;world!&quot;，这是 &quot;world&quot; 在 s 中首次出现的位置</span><br></code></pre></td></tr></table></figure>
+
 <p>而 <code>strcmp</code> 函数用于比较两个字符串。如果两个字符串相等，<code>strcmp</code> 返回 0。如果第一个字符串在字典顺序上小于第二个字符串，<code>strcmp</code> 返回一个负数。如果第一个字符串在字典顺序上大于第二个字符串，<code>strcmp</code> 返回一个正数。</p>
 <p>例如：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> result = <span class="hljs-built_in">strcmp</span>(<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>);<br><span class="hljs-comment">// result 现在是一个负数，因为 &quot;apple&quot; 在字典顺序上小于 &quot;banana&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> result = <span class="hljs-built_in">strcmp</span>(<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>);<span class="hljs-comment">// result 现在是一个负数，因为 &quot;apple&quot; 在字典顺序上小于 &quot;banana&quot;</span><br></code></pre></td></tr></table></figure>
+
 <p>总的来说，<code>strstr</code> 用于查找字符串，而 <code>strcmp</code> 用于比较字符串。</p>
-<h2 id="1-2-类型长度">1.2 类型长度</h2>
-<p>strlen 和 sizeof 的区别</p>
+<h2 id="1-2-类型长度"><a href="#1-2-类型长度" class="headerlink" title="1.2 类型长度"></a>1.2 类型长度</h2><p>strlen 和 sizeof 的区别</p>
 <p><code>strlen</code> 和 <code>sizeof</code> 是 C 语言中的两个函数，它们都用于获取某种类型的“长度”，但是它们的用途和行为是不同的。</p>
 <p><code>strlen</code> 是一个函数，用于获取 C 字符串（以 ‘\0’ 结尾的字符数组）的长度。<code>strlen</code> 返回的是字符串中的字符数量，不包括结束的空字符 ‘\0’。</p>
 <p>例如：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> str[] = <span class="hljs-string">&quot;Hello&quot;</span>;<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%zu\n&quot;</span>, <span class="hljs-built_in">strlen</span>(str));  <span class="hljs-comment">// 输出：5</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> str[] = <span class="hljs-string">&quot;Hello&quot;</span>;<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%zu\n&quot;</span>, <span class="hljs-built_in">strlen</span>(str));  <span class="hljs-comment">// 输出：5</span><br></code></pre></td></tr></table></figure>
+
 <p><code>sizeof</code> 是一个运算符，用于获取某种类型或对象在内存中占用的字节数。对于数组，<code>sizeof</code> 返回的是整个数组在内存中占用的字节数，而不是数组中的元素数量。</p>
 <p>例如：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> str[] = <span class="hljs-string">&quot;Hello&quot;</span>;<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%zu\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(str));  <span class="hljs-comment">// 输出：6</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> str[] = <span class="hljs-string">&quot;Hello&quot;</span>;<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%zu\n&quot;</span>, <span class="hljs-keyword">sizeof</span>(str));  <span class="hljs-comment">// 输出：6</span><br></code></pre></td></tr></table></figure>
+
 <p>在这个例子中，<code>sizeof(str)</code> 返回的是 6，因为 “Hello” 这个字符串包含 5 个字符，加上结束的空字符 ‘\0’，总共占用 6 个字节的内存。</p>
 <p>总的来说，<code>strlen</code> 用于获取字符串的长度，而 <code>sizeof</code> 用于获取类型或对象在内存中的大小。</p>
-<h2 id="1-3-格式化字符串输入">1.3 格式化字符串输入</h2>
-<p>对于一长串的 <code>strcpy</code> <code>strcat</code> 可以使用 <code>snprintf</code> 替代。</p>
+<h2 id="1-3-格式化字符串输入"><a href="#1-3-格式化字符串输入" class="headerlink" title="1.3 格式化字符串输入"></a>1.3 格式化字符串输入</h2><p>对于一长串的 <code>strcpy</code> <code>strcat</code> 可以使用 <code>snprintf</code> 替代。</p>
 <p>可以减少代码的复杂性，并且更加安全，因为该函数会检查输出的长度，防止缓冲区溢出。</p>
 <p><code>snprintf</code> 中的 s for string ，n for number ，该函数将会按照指定的格式生成一个字符串，并最多生成指定数量的字符，原型如下：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">snprintf</span><span class="hljs-params">(<span class="hljs-type">char</span> *str, <span class="hljs-type">size_t</span> size, <span class="hljs-type">const</span> <span class="hljs-type">char</span> *format, ...)</span>;<br></code></pre></td></tr></table></figure>
+
 <ul>
-<li><code>str</code>：这是指向一个字符数组的指针，<code>snprintf</code> 将在这个数组中生成格式化的字符串。</li>
-<li><code>size</code>：这是 <code>str</code> 数组的大小。<code>snprintf</code> 将最多生成 <code>size - 1</code> 个字符，然后在字符串的末尾添加一个空字符（<code>\0</code>），以确保生成的字符串是以空字符结束的。</li>
-<li><code>format</code>：这是一个格式字符串，它定义了生成的字符串的格式。格式字符串可以包含普通的字符（它们将被直接复制到 <code>str</code> 中），以及格式指定符（它们以 <code>%</code> 开头，用于插入 <code>snprintf</code> 的额外参数的值）。</li>
-<li><code>...</code>：这是 <code>snprintf</code> 的额外参数，它们的值将被插入到 <code>str</code> 中，取决于 <code>format</code> 字符串中的格式指定符。</li>
+<li>strsnprintf </li>
+<li>sizestrsnprintfsize - 1\0 </li>
+<li>formatstr%snprintf </li>
+<li>…snprintfstrformat</li>
 </ul>
 <blockquote>
-<p><em>补充：</em><br>
-<code>size_t</code> 是一种无符号整数类型，在 c 语言中主要用来表示对象的大小、数组的长度，并且以字节为单位。使用这种类型定义有如下好处：</p>
+<p><em>补充：</em><br> <code>size_t</code> 是一种无符号整数类型，在 c 语言中主要用来表示对象的大小、数组的长度，并且以字节为单位。使用这种类型定义有如下好处：</p>
 <ul>
-<li>可移植，size_t 的大小会根据平台自动调整</li>
-<li>防止溢出，无符号可以防止表示负数</li>
-<li>一致性，c 语言标准库函数都会使用 size_t ，提高可读性</li>
+<li></li>
+<li></li>
+<li></li>
 </ul>
 </blockquote>
-<h1 id="2-结束与换行符">2 结束与换行符</h1>
-<p>0x0D 和 0x0A 是 ASCII 码的十六进制表示，它们分别对应于十进制的 13 和 10。在 ASCII 表中，0x0D 对应的字符是 CR（Carriage Return，回车，\r），0x0A 对应的字符是 LF（Line Feed，换行，\n）。</p>
+<h1 id="2-结束与换行符"><a href="#2-结束与换行符" class="headerlink" title="2 结束与换行符"></a>2 结束与换行符</h1><p>0x0D 和 0x0A 是 ASCII 码的十六进制表示，它们分别对应于十进制的 13 和 10。在 ASCII 表中，0x0D 对应的字符是 CR（Carriage Return，回车，\r），0x0A 对应的字符是 LF（Line Feed，换行，\n）。</p>
 <p>所以，0x0D 0x0A 组合在一起，通常用于表示文本中的新行。这种表示方法在 Windows 系统中常见。在 Unix 或 Linux 系统中，通常只使用 0x0A（LF）来表示新行。</p>
 <p>而字符串的结束符是 ‘\0’，在 ASCII 中对应的十六进制是 0x00。</p>
 
@@ -659,7 +567,7 @@
               
                 <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
                   <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
+                    <i class="iconfont icon-cc-by"></i>
                   </span>
                 </a>
               
@@ -700,50 +608,6 @@
             </div>
 
             
-  
-  
-    <article id="comments">
-      
-    <div id="giscus" class="giscus"></div>
-    <script type="text/javascript">
-      Fluid.utils.loadComments('#giscus', function() {
-        var options = {"repo":"Sagi-Rastar/Sagi-Rastar.github.io","repo-id":"R_kgDOJOGzsw","category":"Announcements","category-id":"DIC_kwDOJOGzs84CaurY","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
-        var attributes = {};
-        for (let option in options) {
-          if (!option.startsWith('theme-')) {
-            var key = option.startsWith('data-') ? option : 'data-' + option;
-            attributes[key] = options[option];
-          }
-        }
-        var light = 'light';
-        var dark = 'dark';
-        window.GiscusThemeLight = light;
-        window.GiscusThemeDark = dark;
-        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
-        for (let attribute in attributes) {
-          var value = attributes[attribute];
-          if (value === undefined || value === null || value === '') {
-            delete attributes[attribute];
-          }
-        }
-        var s = document.createElement('script');
-        s.setAttribute('src', 'https://giscus.app/client.js');
-        s.setAttribute('crossorigin', 'anonymous');
-        for (let attribute in attributes) {
-          s.setAttribute(attribute, attributes[attribute]);
-        }
-        var ss = document.getElementsByTagName('script');
-        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
-        e.parentNode.insertBefore(s, e.nextSibling);
-      });
-    </script>
-    <noscript>Please enable JavaScript to view the comments</noscript>
-
-
-    </article>
-  
-
-
           </article>
         </div>
       </div>
@@ -792,11 +656,6 @@
   
 
 
-  
-  
-
-
-
 
 
 
@@ -841,33 +700,8 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> </div> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
-  
-  
-    <div class="statistics">
-  
-  
-
-  
-    
-      <span id="busuanzi_container_site_pv" style="display: none">
-        总访问量 
-        <span id="busuanzi_value_site_pv"></span>
-         次
-      </span>
-    
-    
-      <span id="busuanzi_container_site_uv" style="display: none">
-        总访客数 
-        <span id="busuanzi_value_site_uv"></span>
-         人
-      </span>
-    
-    
-  
-</div>
-
   
   
   
@@ -914,9 +748,7 @@
 
 
   
-    
-      <script  src="/js/img-lazyload.js" ></script>
-    
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -930,7 +762,63 @@
     var boardCtn = jQuery('#board-ctn');
     var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init(Object.assign({
+    function isExpandAllEnabled() {
+      return CONFIG.toc && CONFIG.toc.expand_all === true;
+    }
+    function expandAllToc() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .tocbot-is-collapsed').removeClass('tocbot-is-collapsed');
+    }
+    function updateTocToggle($li, $childList) {
+      var $toggle = $li.children('.toc-toggle');
+      if ($toggle.length === 0) { return; }
+      var collapsed = $childList.hasClass('tocbot-is-collapsed');
+      $toggle
+        .toggleClass('toc-toggle-collapsed', collapsed)
+        .toggleClass('toc-toggle-expanded', !collapsed);
+    }
+    function bindTocToggle() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .toc-list-item').each(function() {
+        var $li = jQuery(this);
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) {
+          if ($li.children('.toc-toggle').length === 0) {
+            $li.prepend('<span class="toc-toggle toc-toggle-placeholder" aria-hidden="true">›</span>');
+          }
+          return;
+        }
+
+        if ($li.children('.toc-toggle').length === 0) {
+          $li.prepend('<span class="toc-toggle toc-toggle-expanded" aria-hidden="true">›</span>');
+        }
+        updateTocToggle($li, $childList);
+      });
+      jQuery('#toc-body').off('click.tocToggle').on('click.tocToggle', '.toc-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $li = jQuery(this).parent('.toc-list-item');
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) { return; }
+        $childList.toggleClass('tocbot-is-collapsed');
+        updateTocToggle($li, $childList);
+      });
+      if (!window.__tocToggleObserver) {
+        window.__tocToggleObserver = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') { return; }
+            var $list = jQuery(mutation.target);
+            var $li = $list.parent('.toc-list-item');
+            if ($li.length === 0) { return; }
+            updateTocToggle($li, $list);
+          });
+        });
+        jQuery('#toc-body ol').each(function() {
+          window.__tocToggleObserver.observe(this, { attributes: true });
+        });
+      }
+    }
+    var tocConfig = Object.assign({
       tocSelector     : '#toc-body',
       contentSelector : '.markdown-body',
       linkClass       : 'tocbot-link',
@@ -941,10 +829,16 @@
       scrollSmooth    : true,
       includeTitleTags: true,
       headingsOffset  : -boardTop,
-    }, CONFIG.toc));
+    }, CONFIG.toc);
+    if (isExpandAllEnabled()) {
+      tocConfig.collapseDepth = 6;
+    }
+    window.tocbot.init(tocConfig);
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }
+    expandAllToc();
+    bindTocToggle();
 
     Fluid.events.registerRefreshCallback(function() {
       if ('tocbot' in window) {
@@ -956,6 +850,8 @@
         if (toc.find('.toc-list-item').length > 0) {
           toc.css('visibility', 'visible');
         }
+        expandAllToc();
+        bindTocToggle();
       }
     });
   });
@@ -969,7 +865,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
     window.anchors.options = {
       placement: CONFIG.anchorjs.placement,
       visible  : CONFIG.anchorjs.visible
@@ -1017,13 +913,12 @@
 
   <script  src="/js/local-search.js" ></script>
 
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
 
 
 
   
-<script src="/js/duration.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/photoWall.js"></script>
 
 
 
