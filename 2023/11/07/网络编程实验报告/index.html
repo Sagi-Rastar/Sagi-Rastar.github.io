@@ -19,12 +19,12 @@
   <meta name="author" content="SagiRastar">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1 linux作业 | 网络编程1.1 作业实验环境 树莓派3b+  Raspbian GNU&#x2F;Linux 11 (bullseye)  vscode远程ssh  gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1)  1.2 作业概述通过实际运行tcp&#x2F;udp实例代码，了解linux网络编程，熟悉linux网络编程基本过程。">
+    <meta name="description" content="1 linux作业 | 网络编程  1.1 作业实验环境  树莓派3b+ Raspbian GNU&#x2F;Linux 11 (bullseye) vscode远程ssh gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1)   1.2 作业概述 通过实际运行tcp&#x2F;udp实例代码，了解linux网络编程，熟悉linux网络编程基本过程。本次作业报告分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络编程实验报告">
 <meta property="og:url" content="https://sagi-rastar.github.io/2023/11/07/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/index.html">
 <meta property="og:site_name" content="SagiRastar&#39;s Blog">
-<meta property="og:description" content="1 linux作业 | 网络编程1.1 作业实验环境 树莓派3b+  Raspbian GNU&#x2F;Linux 11 (bullseye)  vscode远程ssh  gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1)  1.2 作业概述通过实际运行tcp&#x2F;udp实例代码，了解linux网络编程，熟悉linux网络编程基本过程。">
+<meta property="og:description" content="1 linux作业 | 网络编程  1.1 作业实验环境  树莓派3b+ Raspbian GNU&#x2F;Linux 11 (bullseye) vscode远程ssh gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1)   1.2 作业概述 通过实际运行tcp&#x2F;udp实例代码，了解linux网络编程，熟悉linux网络编程基本过程。本次作业报告分">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png">
@@ -51,6 +51,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -445,40 +447,55 @@
             
               <div class="markdown-body">
                 
-                <h1 id="1-linux作业-网络编程"><a href="#1-linux作业-网络编程" class="headerlink" title="1 linux作业 | 网络编程"></a>1 linux作业 | 网络编程</h1><h2 id="1-1-作业实验环境"><a href="#1-1-作业实验环境" class="headerlink" title="1.1 作业实验环境"></a>1.1 作业实验环境</h2><ul>
-<li>树莓派3b+ </li>
-<li>Raspbian GNU&#x2F;Linux 11 (bullseye) </li>
-<li>vscode远程ssh </li>
+                <h1 id="1-linux作业-网络编程"><a class="markdownIt-Anchor" href="#1-linux作业-网络编程"></a> 1 linux作业 | 网络编程</h1>
+<h2 id="11-作业实验环境"><a class="markdownIt-Anchor" href="#11-作业实验环境"></a> 1.1 作业实验环境</h2>
+<ul>
+<li>树莓派3b+</li>
+<li>Raspbian GNU/Linux 11 (bullseye)</li>
+<li>vscode远程ssh</li>
 <li>gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1)</li>
 </ul>
-<h2 id="1-2-作业概述"><a href="#1-2-作业概述" class="headerlink" title="1.2 作业概述"></a>1.2 作业概述</h2><p>通过实际运行tcp&#x2F;udp实例代码，了解linux网络编程，熟悉linux网络编程基本过程。本次作业报告分为两个部分：</p>
+<h2 id="12-作业概述"><a class="markdownIt-Anchor" href="#12-作业概述"></a> 1.2 作业概述</h2>
+<p>通过实际运行tcp/udp实例代码，了解linux网络编程，熟悉linux网络编程基本过程。本次作业报告分为两个部分：</p>
 <ul>
 <li></li>
 <li></li>
 </ul>
-<h2 id="1-3-TCP回环实验测试"><a href="#1-3-TCP回环实验测试" class="headerlink" title="1.3 TCP回环实验测试"></a>1.3 TCP回环实验测试</h2><h3 id="1-3-1-实验效果"><a href="#1-3-1-实验效果" class="headerlink" title="1.3.1 实验效果"></a>1.3.1 实验效果</h3><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png" srcset="/img/loading.gif" lazyload><br> 如上图所示，左侧为 <code>tcp_client</code> 端，右侧为 <code>tcp_server</code> 端，对应为各自所运行的终端。</p>
+<h2 id="13-tcp回环实验测试"><a class="markdownIt-Anchor" href="#13-tcp回环实验测试"></a> 1.3 TCP回环实验测试</h2>
+<h3 id="131-实验效果"><a class="markdownIt-Anchor" href="#131-实验效果"></a> 1.3.1 实验效果</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png" srcset="/img/loading.gif" lazyload alt="" />
+如上图所示，左侧为 <code>tcp_client</code> 端，右侧为 <code>tcp_server</code> 端，对应为各自所运行的终端。</p>
 <ul>
-<li>server127.0.0.1 55566client </li>
-<li>clientserverclientipport127.0.0.1:41292client </li>
-<li>clientserverserver </li>
-<li>clientquitserverserverquit </li>
+<li>server127.0.0.1 55566client</li>
+<li>clientserverclientipport127.0.0.1:41292client</li>
+<li>clientserverserver</li>
+<li>clientquitserverserverquit</li>
 <li>serverfget</li>
 </ul>
-<h3 id="1-3-2-tcp-client端过程"><a href="#1-3-2-tcp-client端过程" class="headerlink" title="1.3.2 tcp_client端过程"></a>1.3.2 tcp_client端过程</h3><h4 id="1-3-2-1-定义变量"><a href="#1-3-2-1-定义变量" class="headerlink" title="1.3.2.1 定义变量"></a>1.3.2.1 定义变量</h4><ul>
-<li><p>int sockfd;<br>用于存储后面创建的套接字 </p>
+<h3 id="132-tcp_client端过程"><a class="markdownIt-Anchor" href="#132-tcp_client端过程"></a> 1.3.2 tcp_client端过程</h3>
+<h4 id="1321-定义变量"><a class="markdownIt-Anchor" href="#1321-定义变量"></a> 1.3.2.1 定义变量</h4>
+<ul>
+<li>
+<p>int sockfd;
+用于存储后面创建的套接字</p>
 </li>
-<li><p>struct sockaddr_in serveraddr;server<br>存储地址与端口</p>
+<li>
+<p>struct sockaddr_in serveraddr;server
+存储地址与端口</p>
 <p>sockaddr_in</p>
 <p>源码注释：</p>
-<p>&#x2F;* Structure describing an Internet socket address.  *&#x2F;</p>
+<p>/* Structure describing an Internet socket address.  */</p>
 <p>后面暂时看不懂，手敲了一下好像有四个成员变量（ #need_to_search</p>
-<p>) </p>
+<p>)</p>
 </li>
 <li></li>
 </ul>
-<h4 id="1-3-2-2-异常处理"><a href="#1-3-2-2-异常处理" class="headerlink" title="1.3.2.2 异常处理"></a>1.3.2.2 异常处理</h4><ul>
+<h4 id="1322-异常处理"><a class="markdownIt-Anchor" href="#1322-异常处理"></a> 1.3.2.2 异常处理</h4>
+<ul>
 <li></li>
-<li><p>socket<br>AF_INET</p>
+<li>
+<p>socket
+AF_INET</p>
 <ul>
 <li>Address Family_Internet - IPv4地址族</li>
 </ul>
@@ -495,10 +512,12 @@
 <p>，并设置全局变量</p>
 <p>errno</p>
 <p>来指示发生了什么错误。通常情况下，如果连接失败，可以通过调用</p>
-<p>perror(“socket error”);</p>
-<p>来输出与连接失败相关的错误消息。 </p>
+<p>perror(&quot;socket error&quot;);</p>
+<p>来输出与连接失败相关的错误消息。</p>
 </li>
-<li><p>serveraddr<br>sin_family</p>
+<li>
+<p>serveraddr
+sin_family</p>
 <ul>
 <li>用于指定地址族</li>
 </ul>
@@ -506,31 +525,41 @@
 <p>与</p>
 <p>sin_addr</p>
 <ul>
-<li><p>端口和地址</p>
+<li>
+<p>端口和地址</p>
 </li>
-<li><p>sin_addr.s_addr</p>
+<li>
+<p>sin_addr.s_addr</p>
 </li>
 </ul>
 <blockquote>
 <p><strong>拓展搜索</strong>：<code>sin_addr.s_addr</code> 表示了 <code>struct sockaddr_in</code> 结构体中的 IP 地址字段。这样的结构设计是为了与网络编程中的网络字节序（大端Big-endian）相一致，同时也考虑了C语言的底层数据表示。</p>
 </blockquote>
 <ul>
-<li><p>inet_addr </p>
+<li>
+<p>inet_addr</p>
 </li>
-<li><p>atoihtons<br>一个是把阿斯克码转整形</p>
+<li>
+<p>atoihtons
+一个是把阿斯克码转整形</p>
 <p>一个是把16位整数转网络字节序 （不是，那为啥port为啥不像addr一样分一个s_port啊</p>
 </li>
 </ul>
 </li>
-<li><p>connect套接字地址信息server<br>sockfd</p>
+<li>
+<p>connect套接字地址信息server
+sockfd</p>
 <ul>
 <li>存储的套接字</li>
 </ul>
 <p>(struct sockaddr *)&amp;serveraddr</p>
 <ul>
-<li><p>一个指向服务器地址信息的指针</p>
+<li>
+<p>一个指向服务器地址信息的指针</p>
 </li>
-<li><p>serveraddrstruct sockaddr_insockaddr<br>拓展搜索：</p>
+<li>
+<p>serveraddrstruct sockaddr_insockaddr
+拓展搜索：</p>
 <p>serveraddr</p>
 <p>|</p>
 <p>serveraddr_in</p>
@@ -538,9 +567,9 @@
 <p>serveraddr_in6</p>
 <p>之间的关系</p>
 <ul>
-<li>serveraddr_inserveraddr_in6serveraddr_in_in6 </li>
-<li>inInternet </li>
-<li>sockaddr_in </li>
+<li>serveraddr_inserveraddr_in6serveraddr_in_in6</li>
+<li>inInternet</li>
+<li>sockaddr_in</li>
 <li>sockaddr_in6</li>
 </ul>
 </li>
@@ -554,18 +583,22 @@
 <p>，并设置全局变量</p>
 <p>errno</p>
 <p>来指示发生了什么错误。通常情况下，如果连接失败，可以通过调用</p>
-<p>perror(“connect error”);</p>
+<p>perror(&quot;connect error&quot;);</p>
 <p>来输出与连接失败相关的错误消息。</p>
 </li>
 </ul>
-<h4 id="1-3-2-3-主循环"><a href="#1-3-2-3-主循环" class="headerlink" title="1.3.2.3 主循环"></a>1.3.2.3 主循环</h4><ul>
-<li><p>fgetbuf’\0’ </p>
+<h4 id="1323-主循环"><a class="markdownIt-Anchor" href="#1323-主循环"></a> 1.3.2.3 主循环</h4>
+<ul>
+<li>
+<p>fgetbuf'\0'</p>
 </li>
-<li><p>send<br>前面三个参数没啥说的，主要是可选标志：</p>
+<li>
+<p>send
+前面三个参数没啥说的，主要是可选标志：</p>
 <ol>
 <li></li>
-<li>MSG_DONTWAITMSG_DONTWAITsendsend </li>
-<li>MSG_NOSIGNALSIGPIPE </li>
+<li>MSG_DONTWAITMSG_DONTWAITsendsend</li>
+<li>MSG_NOSIGNALSIGPIPE</li>
 <li>send</li>
 </ol>
 <p>若发送失败返回</p>
@@ -573,28 +606,40 @@
 <p>，并设置全局变量</p>
 <p>errno</p>
 <p>来指示发生了什么错误。通常情况下，如果连接失败，可以通过调用</p>
-<p>perror(“send error”);</p>
-<p>来输出与连接失败相关的错误消息。 </p>
+<p>perror(&quot;send error&quot;);</p>
+<p>来输出与连接失败相关的错误消息。</p>
 </li>
-<li><p>strncmpquit </p>
+<li>
+<p>strncmpquit</p>
 </li>
-<li><p>recvsend </p>
+<li>
+<p>recvsend</p>
 </li>
-<li><p>printf</p>
+<li>
+<p>printf</p>
 </li>
 </ul>
 <p>没了</p>
-<h3 id="1-3-3-tcp-server端过程"><a href="#1-3-3-tcp-server端过程" class="headerlink" title="1.3.3 tcp_server端过程"></a>1.3.3 tcp_server端过程</h3><h4 id="1-3-3-1-定义变量"><a href="#1-3-3-1-定义变量" class="headerlink" title="1.3.3.1 定义变量"></a>1.3.3.1 定义变量</h4><p>这部分和 <code>client</code> 端差不多，套接字描述符多了一个 <code>acceptfd</code> ，用于接受客户端用的，sockaddr_in 结构体也多了一个 <code>clientaddr</code> ，用于存储客户端的地址信息<br> <code>bzero</code> 函数将服务端和客户端的地址信息结构体初始化为零</p>
-<h4 id="1-3-3-2-异常处理"><a href="#1-3-3-2-异常处理" class="headerlink" title="1.3.3.2 异常处理"></a>1.3.3.2 异常处理</h4><ul>
+<h3 id="133-tcp_server端过程"><a class="markdownIt-Anchor" href="#133-tcp_server端过程"></a> 1.3.3 tcp_server端过程</h3>
+<h4 id="1331-定义变量"><a class="markdownIt-Anchor" href="#1331-定义变量"></a> 1.3.3.1 定义变量</h4>
+<p>这部分和 <code>client</code> 端差不多，套接字描述符多了一个 <code>acceptfd</code> ，用于接受客户端用的，sockaddr_in 结构体也多了一个 <code>clientaddr</code> ，用于存储客户端的地址信息
+<code>bzero</code> 函数将服务端和客户端的地址信息结构体初始化为零</p>
+<h4 id="1332-异常处理"><a class="markdownIt-Anchor" href="#1332-异常处理"></a> 1.3.3.2 异常处理</h4>
+<ul>
 <li></li>
 <li></li>
-<li><p>serveraddr </p>
+<li>
+<p>serveraddr</p>
 </li>
-<li><p>bindserveraddr </p>
+<li>
+<p>bindserveraddr</p>
 </li>
-<li><p>listen5 </p>
+<li>
+<p>listen5</p>
 </li>
-<li><p>acceptclientclient<br>(struct sockaddr *)&amp;clientaddr</p>
+<li>
+<p>acceptclientclient
+(struct sockaddr *)&amp;clientaddr</p>
 <p>：这是一个指向</p>
 <p>clientaddr</p>
 <p>结构体的指针，用于存储客户端的地址信息。当</p>
@@ -622,17 +667,20 @@
 <blockquote>
 <p><strong>拓展搜索</strong>：这个 <code>accept</code> 套接字和<code>sockfd</code> 有什么区别，为什么要设置两个套接字？</p>
 <ul>
-<li>acceptsockfd </li>
+<li>acceptsockfd</li>
 <li>sockfdacceptfdacceptfd</li>
 </ul>
 </blockquote>
 <ul>
 <li>IPport</li>
 </ul>
-<h4 id="1-3-3-3-主循环"><a href="#1-3-3-3-主循环" class="headerlink" title="1.3.3.3 主循环"></a>1.3.3.3 主循环</h4><p>跟 <code>client</code> 端稍稍有点区别</p>
+<h4 id="1333-主循环"><a class="markdownIt-Anchor" href="#1333-主循环"></a> 1.3.3.3 主循环</h4>
+<p>跟 <code>client</code> 端稍稍有点区别</p>
 <ul>
-<li><p>recvacceptfd<br>没东西就</p>
-<p>perror(“no data”);</p>
+<li>
+<p>recvacceptfd
+没东西就</p>
+<p>perror(&quot;no data&quot;);</p>
 <p>客户端叫</p>
 <p>quit</p>
 <p>就退出，</p>
@@ -646,17 +694,22 @@
 </li>
 </ul>
 <p>没了</p>
-<h2 id="1-4-UDP回环实验测试"><a href="#1-4-UDP回环实验测试" class="headerlink" title="1.4 UDP回环实验测试"></a>1.4 UDP回环实验测试</h2><h3 id="1-4-1-实验效果"><a href="#1-4-1-实验效果" class="headerlink" title="1.4.1 实验效果"></a>1.4.1 实验效果</h3><p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png" srcset="/img/loading.gif" lazyload><br> 实验效果跟tcp大差不差，只是右侧的 <code>server</code> 端的显示每一次接收到消息都会打印出地址和端口</p>
-<h3 id="1-4-2-udp-client端过程"><a href="#1-4-2-udp-client端过程" class="headerlink" title="1.4.2 udp_client端过程"></a>1.4.2 udp_client端过程</h3><p>跟上面tcp的过程也差不多，主要留意几个区别的地方：</p>
+<h2 id="14-udp回环实验测试"><a class="markdownIt-Anchor" href="#14-udp回环实验测试"></a> 1.4 UDP回环实验测试</h2>
+<h3 id="141-实验效果"><a class="markdownIt-Anchor" href="#141-实验效果"></a> 1.4.1 实验效果</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png" srcset="/img/loading.gif" lazyload alt="" />
+实验效果跟tcp大差不差，只是右侧的 <code>server</code> 端的显示每一次接收到消息都会打印出地址和端口</p>
+<h3 id="142-udp_client端过程"><a class="markdownIt-Anchor" href="#142-udp_client端过程"></a> 1.4.2 udp_client端过程</h3>
+<p>跟上面tcp的过程也差不多，主要留意几个区别的地方：</p>
 <ul>
-<li><p>套接字类型：</p>
+<li>
+<p>套接字类型：</p>
 <ul>
-<li>SOCK_STREAM面向连接的、可靠的、基于流 </li>
+<li>SOCK_STREAM面向连接的、可靠的、基于流</li>
 <li>SOCK_DGRAM面向数据包的、不可靠的</li>
 </ul>
 <p>连接性：</p>
 <ul>
-<li>socketbindlistenaccept </li>
+<li>socketbindlistenaccept</li>
 <li></li>
 </ul>
 <p>可靠性：</p>
@@ -665,11 +718,13 @@
 </ul>
 </li>
 </ul>
-<h3 id="1-4-3-udp-server端过程"><a href="#1-4-3-udp-server端过程" class="headerlink" title="1.4.3 udp_server端过程"></a>1.4.3 udp_server端过程</h3><p>跟tcp差不多，主要有这个区别：</p>
+<h3 id="143-udp_server端过程"><a class="markdownIt-Anchor" href="#143-udp_server端过程"></a> 1.4.3 udp_server端过程</h3>
+<p>跟tcp差不多，主要有这个区别：</p>
 <ul>
 <li>sockfd</li>
 </ul>
-<h2 id="1-5-总结"><a href="#1-5-总结" class="headerlink" title="1.5 总结"></a>1.5 总结</h2><p>在本次udp和tcp回环实验的过程中，发现之前学习的网络编程中有一个误解：之前认为一个套接字绑定的是一个进程，以前一直以为这个“进程”指的是一个.c文件或者这个.c文件编译出的可执行文件，但是通过tcp的实验发现，貌似并不是这样。</p>
+<h2 id="15-总结"><a class="markdownIt-Anchor" href="#15-总结"></a> 1.5 总结</h2>
+<p>在本次udp和tcp回环实验的过程中，发现之前学习的网络编程中有一个误解：之前认为一个套接字绑定的是一个进程，以前一直以为这个“进程”指的是一个.c文件或者这个.c文件编译出的可执行文件，但是通过tcp的实验发现，貌似并不是这样。</p>
 
                 
               </div>
@@ -834,6 +889,11 @@
 
 
   
+
+
+  
+  
+
 
 
 

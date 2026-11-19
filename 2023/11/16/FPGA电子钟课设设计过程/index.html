@@ -19,12 +19,12 @@
   <meta name="author" content="SagiRastar">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1 前言本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：  主要就是三个功能：      另外虽然课设没有要求，不过课上教的是VHDL，期末考也多半是，所以用的是VHDL语言。 主要设计思路如下：        扩展部分预计实现功能：       下面将开始逐步介绍设计过程，由于扩展部分的加入，因此完整的顶层文件设计过程将在扩展部分">
+    <meta name="description" content="1 前言 本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：  主要就是三个功能：      另外虽然课设没有要求，不过课上教的是VHDL，期末考也多半是，所以用的是VHDL语言。 主要设计思路如下：        扩展部分预计实现功能：       下面将开始逐步介绍设计过程，由于扩展部分的加入，因此完整的顶层文件设计过程将在扩展">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FPGA电子钟课设设计过程">
 <meta property="og:url" content="https://sagi-rastar.github.io/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/index.html">
 <meta property="og:site_name" content="SagiRastar&#39;s Blog">
-<meta property="og:description" content="1 前言本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：  主要就是三个功能：      另外虽然课设没有要求，不过课上教的是VHDL，期末考也多半是，所以用的是VHDL语言。 主要设计思路如下：        扩展部分预计实现功能：       下面将开始逐步介绍设计过程，由于扩展部分的加入，因此完整的顶层文件设计过程将在扩展部分">
+<meta property="og:description" content="1 前言 本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：  主要就是三个功能：      另外虽然课设没有要求，不过课上教的是VHDL，期末考也多半是，所以用的是VHDL语言。 主要设计思路如下：        扩展部分预计实现功能：       下面将开始逐步介绍设计过程，由于扩展部分的加入，因此完整的顶层文件设计过程将在扩展">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231116153820589.png">
 <meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231117162109699.png">
@@ -56,6 +56,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -450,7 +452,10 @@
             
               <div class="markdown-body">
                 
-                <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h1><p>本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：<br> <img src="/img/legacy/5cb00eec2e65/image-20231116153820589.png" srcset="/img/loading.gif" lazyload><br> <strong>主要就是三个功能：</strong></p>
+                <h1 id="1-前言"><a class="markdownIt-Anchor" href="#1-前言"></a> 1 前言</h1>
+<p>本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：
+<img src="/img/legacy/5cb00eec2e65/image-20231116153820589.png" srcset="/img/loading.gif" lazyload alt="" />
+<strong>主要就是三个功能：</strong></p>
 <ul>
 <li></li>
 <li></li>
@@ -473,11 +478,13 @@
 <li></li>
 </ul>
 <p>下面将开始逐步介绍设计过程，由于扩展部分的加入，因此完整的顶层文件设计过程将在扩展部分中进行记录。</p>
-<h1 id="2-设计过程"><a href="#2-设计过程" class="headerlink" title="2 设计过程"></a>2 设计过程</h1><h2 id="2-1-开发环境与硬件资源"><a href="#2-1-开发环境与硬件资源" class="headerlink" title="2.1 开发环境与硬件资源"></a>2.1 开发环境与硬件资源</h2><p><strong>本次课设开发环境与硬件平台介绍如下：</strong></p>
+<h1 id="2-设计过程"><a class="markdownIt-Anchor" href="#2-设计过程"></a> 2 设计过程</h1>
+<h2 id="21-开发环境与硬件资源"><a class="markdownIt-Anchor" href="#21-开发环境与硬件资源"></a> 2.1 开发环境与硬件资源</h2>
+<p><strong>本次课设开发环境与硬件平台介绍如下：</strong></p>
 <ul>
 <li></li>
 <li></li>
-<li>主控：ALTERA 公司 Cyclone IV 系列的 EP4CE6F17C8 </li>
+<li>主控：ALTERA 公司 Cyclone IV 系列的 EP4CE6F17C8</li>
 <li></li>
 <li></li>
 <li></li>
@@ -489,7 +496,9 @@
 <li></li>
 <li></li>
 </ul>
-<h2 id="2-2-基础部分模块设计过程"><a href="#2-2-基础部分模块设计过程" class="headerlink" title="2.2 基础部分模块设计过程"></a>2.2 基础部分模块设计过程</h2><h3 id="2-2-1-分频器："><a href="#2-2-1-分频器：" class="headerlink" title="2.2.1 分频器："></a>2.2.1 分频器：</h3><p>分频器负责将原始频率分为整个系统所需要的所有时钟频率。</p>
+<h2 id="22-基础部分模块设计过程"><a class="markdownIt-Anchor" href="#22-基础部分模块设计过程"></a> 2.2 基础部分模块设计过程</h2>
+<h3 id="221-分频器"><a class="markdownIt-Anchor" href="#221-分频器"></a> 2.2.1 分频器：</h3>
+<p>分频器负责将原始频率分为整个系统所需要的所有时钟频率。</p>
 <p><strong>根据设想，整个系统所需要的频率有：</strong></p>
 <ul>
 <li></li>
@@ -497,77 +506,83 @@
 <li></li>
 <li></li>
 </ul>
-<h4 id="2-2-1-1-代码实现"><a href="#2-2-1-1-代码实现" class="headerlink" title="2.2.1.1 代码实现"></a>2.2.1.1 代码实现</h4><p>原理为提前定义好各个频率所需常数，每隔N个原始时钟周期后，将输出的时钟信号翻转一次，从而得到各个系统所需的时钟频率。</p>
+<h4 id="2211-代码实现"><a class="markdownIt-Anchor" href="#2211-代码实现"></a> 2.2.1.1 代码实现</h4>
+<p>原理为提前定义好各个频率所需常数，每隔N个原始时钟周期后，将输出的时钟信号翻转一次，从而得到各个系统所需的时钟频率。</p>
 <p>代码实现摘录如下：</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity diver is  port  (    clk    : in std_logic; -- 输入时钟，原始的时钟频率    clk_ot : out std_logic; -- 点报时蜂鸣器频率，1kHz    clk_os : out std_logic; -- 秒报时蜂鸣器频率，500Hz    clk1   : out std_logic; -- 输出时钟，设置界面分频，闹钟和校时功能,10Hz    clk0   : out std_logic -- 输出时钟，正常计时分频，1Hz  );end diver;</span><br></code></pre></td></tr></table></figure>
-
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构体定义 ------------------------------------------------------------------------------architecture bhv of diver is  signal m_clk0     : std_logic; -- 正常计时频率为1Hz   signal m_clk1     : std_logic; -- 校时频率为10Hz   signal m_clk_os   : std_logic; -- 秒报时蜂鸣器频率为500Hz  signal m_clk_ot   : std_logic; -- 点报时蜂鸣器频率为1kHz  constant c_cnt_0  : integer := 25000000; -- 50MHz时钟，分频为50M/25000000 * 1/2 = 1Hz  constant c_cnt_1  : integer := 2500000; -- 50MHz时钟，分频为50M/2500000 * 1/2 = 10Hz  constant c_cnt_os : integer := 50000; -- 50MHz时钟，分频为50M/50000 * 1/2 = 500Hz  constant c_cnt_ot : integer := 25000; -- 50MHz时钟，分频为50M/25000 * 1/2 = 1kHzbegin  process (clk)    variable cnt_0  : integer range 0 to c_cnt_0;    variable cnt_1  : integer range 0 to c_cnt_1;    variable cnt_os : integer range 0 to c_cnt_os;    variable cnt_ot : integer range 0 to c_cnt_ot;  begin    if (clk&#x27;event and clk = &#x27;1&#x27;) then -- 若上升沿，则计数      cnt_0  := cnt_0 + 1;      cnt_1  := cnt_1 + 1;      cnt_os := cnt_os + 1;      cnt_ot := cnt_ot + 1;      if (cnt_0 = c_cnt_0) then -- 计数到c_cnt_0，输出正常计时时钟信号        cnt_0 := 0;        m_clk0 &lt;= not m_clk0;  -- 反转时钟信号      end if;      if (cnt_1 = c_cnt_1) then -- 计数到c_cnt_1，输出设置界面时钟信号        cnt_1 := 0;        m_clk1 &lt;= not m_clk1;      end if;      if (cnt_os = c_cnt_os) then -- 计数到c_cnt_os，输出秒报时蜂鸣器时钟信号        cnt_os := 0;        m_clk_os &lt;= not m_clk_os;      end if;      if (cnt_ot = c_cnt_ot) then -- 计数到c_cnt_ot，输出点报时蜂鸣器时钟信号        cnt_ot := 0;        m_clk_ot &lt;= not m_clk_ot;      end if;    end if;  end process;  clk0   &lt;= m_clk0;  clk1   &lt;= m_clk1;  clk_os &lt;= m_clk_os;  clk_ot &lt;= m_clk_ot;end bhv;</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="2-2-1-2-实际测试波形"><a href="#2-2-1-2-实际测试波形" class="headerlink" title="2.2.1.2 实际测试波形"></a>2.2.1.2 实际测试波形</h4><p><img src="/img/legacy/5cb00eec2e65/image-20231117162109699.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="2212-实际测试波形"><a class="markdownIt-Anchor" href="#2212-实际测试波形"></a> 2.2.1.2 实际测试波形</h4>
+<p><img src="/img/legacy/5cb00eec2e65/image-20231117162109699.png" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p>根据实际测量波形可知，原始时钟经过分频产生了四种预期中的频率信号，成功验证代码。</p>
-<h3 id="2-2-2-计数器模块"><a href="#2-2-2-计数器模块" class="headerlink" title="2.2.2 计数器模块"></a>2.2.2 计数器模块</h3><p>用于实现正常时钟的计数器，本质为24&#x2F;60进制计数器。</p>
-<h4 id="2-2-2-1-代码实现"><a href="#2-2-2-1-代码实现" class="headerlink" title="2.2.2.1 代码实现"></a>2.2.2.1 代码实现</h4><p>由所需实现的功能可知，本次需要编写的计数器为异步清零和同步使能的加法计数器。正常情况下，秒计数器的时钟源由正常计数时钟（1Hz）提供，分钟和小时计数器的时钟源由上一位的进位信号提供。</p>
+<h3 id="222-计数器模块"><a class="markdownIt-Anchor" href="#222-计数器模块"></a> 2.2.2 计数器模块</h3>
+<p>用于实现正常时钟的计数器，本质为24/60进制计数器。</p>
+<h4 id="2221-代码实现"><a class="markdownIt-Anchor" href="#2221-代码实现"></a> 2.2.2.1 代码实现</h4>
+<p>由所需实现的功能可知，本次需要编写的计数器为异步清零和同步使能的加法计数器。正常情况下，秒计数器的时钟源由正常计数时钟（1Hz）提供，分钟和小时计数器的时钟源由上一位的进位信号提供。</p>
 <p>代码实现摘录如下，以秒计时器为例：</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity count_60_sec is  port  (    clk, rst, en : in std_logic;    q0, q1       : out std_logic_vector(3 downto 0);    cout         : out std_logic  );end count_60_sec;</span><br></code></pre></td></tr></table></figure>
-
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构体定义 -------------------------------------------------------------------------------architecture a of count_60_sec is  signal m_clk      : std_logic;  signal num0, num1 : std_logic_vector(3 downto 0); -- num0：个位数，num1：十位数begin  cout &lt;= &#x27;1&#x27; when (num0 = &quot;1001&quot; and num1 = &quot;0101&quot; and en = &#x27;1&#x27;) else    &#x27;0&#x27;; -- 59时输出进位信号  process (rst, clk)  begin    m_clk &lt;= clk; -- 用于计数的时钟信号    if (rst = &#x27;0&#x27;) then -- 低电平复位      num0 &lt;= &quot;0000&quot;;      num1 &lt;= &quot;0000&quot;;    elsif (m_clk&#x27;event and m_clk = &#x27;0&#x27;) then -- 若下降沿，则计数      if (en = &#x27;1&#x27;) then        if (num0 = &quot;1001&quot;) then -- 个位数计数到9，个位数归零          num0 &lt;= &quot;0000&quot;;          if (num1 = &quot;0101&quot;) then -- 个位数计数到9 &amp; 十位数计数到5，十位数归零            num1 &lt;= &quot;0000&quot;;          else            num1 &lt;= num1 + 1;          end if;        else          num0 &lt;= num0 + 1;        end if;      end if;    end if;  end process;  q0 &lt;= num0; -- 输出个位数  q1 &lt;= num1; -- 输出十位数end a;</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="2-2-2-2-实际测试波形"><a href="#2-2-2-2-实际测试波形" class="headerlink" title="2.2.2.2 实际测试波形"></a>2.2.2.2 实际测试波形</h4><p><img src="/img/legacy/5cb00eec2e65/image-20231117171919293.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="2222-实际测试波形"><a class="markdownIt-Anchor" href="#2222-实际测试波形"></a> 2.2.2.2 实际测试波形</h4>
+<p><img src="/img/legacy/5cb00eec2e65/image-20231117171919293.png" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p>根据实际测量波形可知，以秒计时器为例，从图中可以看出模块输出为60进制加法器，成功验证代码。</p>
-<h3 id="2-2-3-校时模块"><a href="#2-2-3-校时模块" class="headerlink" title="2.2.3 校时模块"></a>2.2.3 校时模块</h3><p>由题目可知，需要分配两个按键出来为分钟和小时位提供校时功能，也就是当按下按键之后，对应的计数器时钟源切换为频率较快的（10Hz）频率源，从而快速调整对应位的计数。因此可以编写二选一选择器以实现这个功能，由位选信号，也就是按键信号，来选择提供给计数器的时钟源。</p>
-<h4 id="2-2-3-1-代码实现"><a href="#2-2-3-1-代码实现" class="headerlink" title="2.2.3.1 代码实现"></a>2.2.3.1 代码实现</h4><p>二选一选择器代码实现摘录如下：</p>
+<h3 id="223-校时模块"><a class="markdownIt-Anchor" href="#223-校时模块"></a> 2.2.3 校时模块</h3>
+<p>由题目可知，需要分配两个按键出来为分钟和小时位提供校时功能，也就是当按下按键之后，对应的计数器时钟源切换为频率较快的（10Hz）频率源，从而快速调整对应位的计数。因此可以编写二选一选择器以实现这个功能，由位选信号，也就是按键信号，来选择提供给计数器的时钟源。</p>
+<h4 id="2231-代码实现"><a class="markdownIt-Anchor" href="#2231-代码实现"></a> 2.2.3.1 代码实现</h4>
+<p>二选一选择器代码实现摘录如下：</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity mux21a is  port  (    a, b, s : in std_logic;    y       : out std_logic  );end mux21a;</span><br></code></pre></td></tr></table></figure>
-
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 --------------------------------------------------------------------------------architecture behav of mux21a isbegin  process (a, b, s)  begin    if s = &#x27;0&#x27; then -- 按下按键，低电平      y &lt;= b;    else      y &lt;= a;    end if;  end process;end behav;</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="2-2-3-2-实际测试波形"><a href="#2-2-3-2-实际测试波形" class="headerlink" title="2.2.3.2 实际测试波形"></a>2.2.3.2 实际测试波形</h4><p><img src="/img/legacy/5cb00eec2e65/image-20231117173417345.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="2232-实际测试波形"><a class="markdownIt-Anchor" href="#2232-实际测试波形"></a> 2.2.3.2 实际测试波形</h4>
+<p><img src="/img/legacy/5cb00eec2e65/image-20231117173417345.png" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p>根据实际测量波形可知，以分计数器为例，正常情况下，时钟信号为来自秒计数器的进位信号，当按下按键的时候，时钟信号切换为10Hz，成功验证代码。</p>
-<h3 id="2-2-4-整点报时模块"><a href="#2-2-4-整点报时模块" class="headerlink" title="2.2.4 整点报时模块"></a>2.2.4 整点报时模块</h3><p>检测到分达到59时，秒达到50、54、56、58时，向蜂鸣器输出500Hz的信号，检测分和秒都达到59的时候，向蜂鸣器输出1kHz的信号。</p>
-<h4 id="2-2-4-1-代码实现"><a href="#2-2-4-1-代码实现" class="headerlink" title="2.2.4.1 代码实现"></a>2.2.4.1 代码实现</h4><p>代码实现摘录如下：</p>
+<h3 id="224-整点报时模块"><a class="markdownIt-Anchor" href="#224-整点报时模块"></a> 2.2.4 整点报时模块</h3>
+<p>检测到分达到59时，秒达到50、54、56、58时，向蜂鸣器输出500Hz的信号，检测分和秒都达到59的时候，向蜂鸣器输出1kHz的信号。</p>
+<h4 id="2241-代码实现"><a class="markdownIt-Anchor" href="#2241-代码实现"></a> 2.2.4.1 代码实现</h4>
+<p>代码实现摘录如下：</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity alarm is  port  (    min0, min1, sec0, sec1 : in std_logic_vector(3 downto 0); -- 分计时器和秒计时器输入    h_buz                  : in std_logic; -- hour报时 接diver给的频率    s_buz                  : in std_logic; -- sec报时 接diver给的频率    speak                  : out std_logic -- 蜂鸣器输入端口  );end alarm;</span><br></code></pre></td></tr></table></figure>
-
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 --------------------------------------------------------------------------------architecture behav of alarm isbegin  process (min1, min0, sec1, sec0)  begin    if (min1 = &quot;0101&quot; and min0 = &quot;1001&quot; and sec1 = &quot;0101&quot; and sec0 = &quot;1001&quot;) then      speak &lt;= h_buz;    elsif (min1 = &quot;0101&quot; and min0 = &quot;1001&quot; and sec1 = &quot;0101&quot;) and (sec0 = &quot;0000&quot; or sec0 = &quot;0010&quot; or sec0 = &quot;0100&quot; or sec0 = &quot;0110&quot; or sec0 = &quot;1000&quot;) then      speak &lt;= s_buz;    else      speak &lt;= &#x27;1&#x27;;    end if;  end process;end behav;</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="2-2-4-2-实际测试波形"><a href="#2-2-4-2-实际测试波形" class="headerlink" title="2.2.4.2 实际测试波形"></a>2.2.4.2 实际测试波形</h4><p><img src="/img/legacy/5cb00eec2e65/image-20231117174839213.png" srcset="/img/loading.gif" lazyload><br> <em>整秒500Hz报时</em></p>
-<p><img src="/img/legacy/5cb00eec2e65/image-20231117174931426.png" srcset="/img/loading.gif" lazyload><br> <em>整点1kHz报时</em></p>
+<h4 id="2242-实际测试波形"><a class="markdownIt-Anchor" href="#2242-实际测试波形"></a> 2.2.4.2 实际测试波形</h4>
+<p><img src="/img/legacy/5cb00eec2e65/image-20231117174839213.png" srcset="/img/loading.gif" lazyload alt="" />
+<em>整秒500Hz报时</em></p>
+<p><img src="/img/legacy/5cb00eec2e65/image-20231117174931426.png" srcset="/img/loading.gif" lazyload alt="" />
+<em>整点1kHz报时</em></p>
 <p>根据实际测量波形可知，当分和秒计数器达到指定位置时，开始按照要求向蜂鸣器输出指定频率的信号，成功验证代码。</p>
-<h3 id="2-2-5-数码管显示模块"><a href="#2-2-5-数码管显示模块" class="headerlink" title="2.2.5 数码管显示模块"></a>2.2.5 数码管显示模块</h3><p>该模块 <code>seg_show.vhd</code> 包含有一个子模块 <code>seg_dsp.vhd</code> 其中 <code>seg_show.vhd</code> 负责进行扫描操作与输出电平信号给数码管的部分， <code>seg_dsp.vhd</code> 负责描述数据和实际数码管的对应关系，与告知 <code>seg_show.vhd</code> 当前时刻数码管的数据与位号的部分。</p>
-<h4 id="2-2-5-1-代码实现"><a href="#2-2-5-1-代码实现" class="headerlink" title="2.2.5.1 代码实现"></a>2.2.5.1 代码实现</h4><p><code>seg_dsp.vhd</code> 代码实现摘录如下：</p>
+<h3 id="225-数码管显示模块"><a class="markdownIt-Anchor" href="#225-数码管显示模块"></a> 2.2.5 数码管显示模块</h3>
+<p>该模块 <code>seg_show.vhd</code> 包含有一个子模块 <code>seg_dsp.vhd</code> 其中 <code>seg_show.vhd</code> 负责进行扫描操作与输出电平信号给数码管的部分， <code>seg_dsp.vhd</code> 负责描述数据和实际数码管的对应关系，与告知 <code>seg_show.vhd</code> 当前时刻数码管的数据与位号的部分。</p>
+<h4 id="2251-代码实现"><a class="markdownIt-Anchor" href="#2251-代码实现"></a> 2.2.5.1 代码实现</h4>
+<p><code>seg_dsp.vhd</code> 代码实现摘录如下：</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity seg_dsp is  port  (    -- 小数点    dot : in std_logic;    -- 数码管数字    dat_num : in integer range 0 to 9;    -- 选择数码管    sel_num : in integer range 0 to 6;    -- 输出引脚    seg_sel  : out std_logic_vector(5 downto 0);    seg_data : out std_logic_vector(7 downto 0)  );end seg_dsp;</span><br></code></pre></td></tr></table></figure>
-
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 ------------------------------------------------------------------------------architecture bhv of seg_dsp is  signal dat : std_logic_vector(6 downto 0) := (others =&gt; &#x27;1&#x27;);  signal sel : std_logic_vector(5 downto 0) := (others =&gt; &#x27;1&#x27;);begin  process (dat_num)  begin    -- 根据数码管点亮表进行赋值    case(dat_num) is      when 0      =&gt; dat      &lt;= &quot;1000000&quot;;      when 1      =&gt; dat      &lt;= &quot;1111001&quot;;      when 2      =&gt; dat      &lt;= &quot;0100100&quot;;      when 3      =&gt; dat      &lt;= &quot;0110000&quot;;      when 4      =&gt; dat      &lt;= &quot;0011001&quot;;      when 5      =&gt; dat      &lt;= &quot;0010010&quot;;      when 6      =&gt; dat      &lt;= &quot;0000010&quot;;      when 7      =&gt; dat      &lt;= &quot;1111000&quot;;      when 8      =&gt; dat      &lt;= &quot;0000000&quot;;      when 9      =&gt; dat      &lt;= &quot;0010000&quot;;      when others =&gt; dat &lt;= &quot;1111111&quot;;    end case;  end process;  process (sel_num)  begin    -- 选择数码管    case(sel_num) is      when 0      =&gt; sel      &lt;= &quot;111110&quot;;      when 1      =&gt; sel      &lt;= &quot;111101&quot;;      when 2      =&gt; sel      &lt;= &quot;111011&quot;;      when 3      =&gt; sel      &lt;= &quot;110111&quot;;      when 4      =&gt; sel      &lt;= &quot;101111&quot;;      when 5      =&gt; sel      &lt;= &quot;011111&quot;;      when 6      =&gt; sel      &lt;= &quot;111111&quot;;      when others =&gt; sel &lt;= &quot;111111&quot;;    end case;  end process;  seg_data &lt;= dot &amp; dat;  seg_sel &lt;= sel;end bhv;</span><br></code></pre></td></tr></table></figure>
-
 <p><code>seg_show.vhd</code> 代码实现摘录如下：</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity seg_show is  port  (    clk : in std_logic; -- 扫描时钟    -- 数码管数据，每个数码管4个字节    data : in std_logic_vector(23 downto 0);    -- 输出引脚    seg_sel  : out std_logic_vector(5 downto 0);    seg_data : out std_logic_vector(7 downto 0)  );end seg_show;</span><br></code></pre></td></tr></table></figure>
-
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构体定义 ------------------------------------------------------------------------------architecture bhv of seg_show is  -- 中间信号  signal n1, n2, n3, n4, n5, n6 : integer range 0 to 9;  signal st                     : integer range 0 to 6;  signal nownum : integer range 0 to 9;  signal nowsel : integer range 0 to 5;  signal nowdot : std_logic;  -- 数码管显示模块，数据与显示的映射关系  component seg_dsp    port    (      dot      : in std_logic;      dat_num  : in integer range 0 to 9;      sel_num  : in integer range 0 to 5;      seg_sel  : out std_logic_vector(5 downto 0);      seg_data : out std_logic_vector(7 downto 0)    );  end component;begin  -- 顺序扫描   process (clk)  begin    if (clk&#x27;event and clk = &#x27;1&#x27;) then -- 上升沿触发      if (st &lt; 6) then -- st为扫描的位数，循环扫描        st &lt;= st + 1;      else        st &lt;= 0;      end if;    end if;  end process;  -- 赋值扫描数据 st变化时触发  process (st)  begin    -- 将六个数字分开来，低位在前    n1 &lt;= to_integer(unsigned(data(3 downto 0)));    n2 &lt;= to_integer(unsigned(data(7 downto 4)));    n3 &lt;= to_integer(unsigned(data(11 downto 8)));    n4 &lt;= to_integer(unsigned(data(15 downto 12)));    n5 &lt;= to_integer(unsigned(data(19 downto 16)));    n6 &lt;= to_integer(unsigned(data(23 downto 20)));    case(st) is      when 0 =&gt; nownum &lt;= n1;      nowsel           &lt;= 0;      nowdot           &lt;= &#x27;1&#x27;;      when 1 =&gt; nownum &lt;= n2;      nowsel           &lt;= 1;      nowdot           &lt;= &#x27;1&#x27;;      when 2 =&gt; nownum &lt;= n3;      nowsel           &lt;= 2;      nowdot           &lt;= &#x27;0&#x27;;      when 3 =&gt; nownum &lt;= n4;      nowsel           &lt;= 3;      nowdot           &lt;= &#x27;1&#x27;;      when 4 =&gt; nownum &lt;= n5;      nowsel           &lt;= 4;      nowdot           &lt;= &#x27;0&#x27;;      when 5 =&gt; nownum &lt;= n6;      nowsel           &lt;= 5;      nowdot           &lt;= &#x27;1&#x27;;      when others =&gt; null;    end case;  end process;  --例化数码管显示模块	  u1 : seg_dsp port map  (    dot      =&gt; nowdot,    dat_num  =&gt; nownum,    sel_num  =&gt; nowsel,    seg_sel  =&gt; seg_sel,    seg_data =&gt; seg_data  );end bhv;</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="2-2-5-2-实际现象"><a href="#2-2-5-2-实际现象" class="headerlink" title="2.2.5.2 实际现象"></a>2.2.5.2 实际现象</h4><p><img src="/img/legacy/5cb00eec2e65/image-20231117180301795.jpeg" srcset="/img/loading.gif" lazyload></p>
+<h4 id="2252-实际现象"><a class="markdownIt-Anchor" href="#2252-实际现象"></a> 2.2.5.2 实际现象</h4>
+<p><img src="/img/legacy/5cb00eec2e65/image-20231117180301795.jpeg" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p>根据实际现象成功验证代码。</p>
-<h2 id="2-3-基础部分顶层设计"><a href="#2-3-基础部分顶层设计" class="headerlink" title="2.3 基础部分顶层设计"></a>2.3 基础部分顶层设计</h2><p>经过各个模块的编写与实际验证，在顶层文件部分便可以将模块例化，再按照事先设计的方式将各个模块连接起来，以下为顶层文件各个部分的具体设计记录。</p>
-<h3 id="2-3-1-顶层端口定义"><a href="#2-3-1-顶层端口定义" class="headerlink" title="2.3.1 顶层端口定义"></a>2.3.1 顶层端口定义</h3><p>以下为顶层文件的端口定义代码摘录：</p>
+<h2 id="23-基础部分顶层设计"><a class="markdownIt-Anchor" href="#23-基础部分顶层设计"></a> 2.3 基础部分顶层设计</h2>
+<p>经过各个模块的编写与实际验证，在顶层文件部分便可以将模块例化，再按照事先设计的方式将各个模块连接起来，以下为顶层文件各个部分的具体设计记录。</p>
+<h3 id="231-顶层端口定义"><a class="markdownIt-Anchor" href="#231-顶层端口定义"></a> 2.3.1 顶层端口定义</h3>
+<p>以下为顶层文件的端口定义代码摘录：</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------entity mainDesign is  port  (    clk                        : in std_logic; -- 50MHz    key_shift                  : in std_logic; -- 切换功能按键 原始按键信号    key_sec, key_min, key_hour : in std_logic; -- 校时按键    seg_sel                    : buffer std_logic_vector(5 downto 0); -- 数码管位选    seg_data                   : buffer std_logic_vector(7 downto 0); -- 数码管数据    test1 : out std_logic_vector(7 downto 0); -- 测试信号    speak : buffer std_logic -- 整点报时、闹钟  );end mainDesign;</span><br></code></pre></td></tr></table></figure>
-
 <p><strong>各个端口的解释如下：</strong></p>
 <ul>
-<li>clk </li>
-<li>key_shift </li>
-<li>key_sec, key_min, key_hour </li>
-<li>seg_selseg_data </li>
-<li>test1 </li>
+<li>clk</li>
+<li>key_shift</li>
+<li>key_sec, key_min, key_hour</li>
+<li>seg_selseg_data</li>
+<li>test1</li>
 <li>speak</li>
 </ul>
-<h3 id="2-3-2-顶层结构体定义"><a href="#2-3-2-顶层结构体定义" class="headerlink" title="2.3.2 顶层结构体定义"></a>2.3.2 顶层结构体定义</h3><h4 id="2-3-2-1-引入元件"><a href="#2-3-2-1-引入元件" class="headerlink" title="2.3.2.1 引入元件"></a>2.3.2.1 引入元件</h4><p>基础部分所用到的元件有如下部分：</p>
+<h3 id="232-顶层结构体定义"><a class="markdownIt-Anchor" href="#232-顶层结构体定义"></a> 2.3.2 顶层结构体定义</h3>
+<h4 id="2321-引入元件"><a class="markdownIt-Anchor" href="#2321-引入元件"></a> 2.3.2.1 引入元件</h4>
+<p>基础部分所用到的元件有如下部分：</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 --------------------------------------------------------------------------------architecture behav of mainDesign is-- 组件实例化 --   component diver is -- 分频器     port    (      clk    : in std_logic; -- 输入时钟，原始的时钟频率      clk_ot : out std_logic; -- 点报时蜂鸣器频率，1kHz      clk_os : out std_logic; -- 秒报时蜂鸣器频率，500Hz      clk1   : out std_logic; -- 输出时钟，设置界面分频，闹钟和校时功能,10Hz      clk0   : out std_logic -- 输出时钟，正常计时分频，1Hz    );  end component diver;  component count_24_hour is -- 24进制计数器，时计数    port    (      clk, rst, en : in std_logic; -- 输入时钟，复位信号，使能信号      q0, q1       : out std_logic_vector(3 downto 0); -- 0：个位，1：十位      cout         : out std_logic -- 进位输出    );  end component count_24_hour;  component count_60_min is -- 60进制计数器，分计数    port    (      clk, rst, en : in std_logic;      q0, q1       : out std_logic_vector(3 downto 0); -- 0：个位，1：十位      cout         : out std_logic -- 进位输出    );  end component count_60_min;  component count_60_sec is -- 60进制计数器，秒计数    port    (      clk, rst, en : in std_logic;      q0, q1       : out std_logic_vector(3 downto 0); -- 0：个位，1：十位      cout         : out std_logic -- 进位输出    );  end component count_60_sec;  component seg_show is    port    (      clk : in std_logic; --复位及扫描时钟      --数码管数据，每个数码管4个字节      data : in std_logic_vector(23 downto 0);      --输出引脚      seg_sel  : out std_logic_vector(5 downto 0);      seg_data : out std_logic_vector(7 downto 0)    );  end component seg_show;  component mux21a is -- 二选一实现校时，选择快慢信号，低电平选择快信号b    port    (      a, b, s : in std_logic; -- a：正常进位时钟，b：快信号，s：按键电平      y       : out std_logic -- 输出信号    );  end component mux21a;  component alarm is -- 整点或指定秒数报时    port    (      min0, min1, sec0, sec1 : in std_logic_vector(3 downto 0); -- 分计时器和秒计时器输入      h_buz                  : in std_logic; -- hour报时 接diver给的频率      s_buz                  : in std_logic; -- sec报时 接diver给的频率      speak                  : out std_logic -- 蜂鸣器输入端口    );  end component alarm;</span><br></code></pre></td></tr></table></figure>
-
 <p>由于正常计时器输出的都是各自的个位与十位数据，数码管显示模块的输入需要 24 位的数据，因此在顶层文件中需要将各个计时器的输出组合起来，合并输入到数码管显示模块中：</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-keyword">process</span> (clk_os)<span class="hljs-keyword">begin</span>  seg_show_data &lt;= n6 &amp; n5 &amp; n4 &amp; n3 &amp; n2 &amp; n1;<span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br></code></pre></td></tr></table></figure>
-
 <p>至此，基础部分已基本完成。由于扩展部分的加入，元件引入和例化部分代码有所变更，因此完整的顶层文件代码将在扩展部分逐步论述。</p>
 <blockquote>
 <p>以上为基础部分的课设过程记录，拓展部分待更新。</p>
 </blockquote>
-<h2 id="2-4-扩展部分顶层设计"><a href="#2-4-扩展部分顶层设计" class="headerlink" title="2.4 扩展部分顶层设计"></a>2.4 扩展部分顶层设计</h2>
+<h2 id="24-扩展部分顶层设计"><a class="markdownIt-Anchor" href="#24-扩展部分顶层设计"></a> 2.4 扩展部分顶层设计</h2>
+
                 
               </div>
             
@@ -731,6 +746,11 @@
 
 
   
+
+
+  
+  
+
 
 
 
