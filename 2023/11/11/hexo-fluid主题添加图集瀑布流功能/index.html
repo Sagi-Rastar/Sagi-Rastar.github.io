@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/b138cfda724f/image-20231111164045874.png">
 <meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/b138cfda724f/image-20231111165046333.png">
 <meta property="article:published_time" content="2023-11-11T08:30:59.000Z">
-<meta property="article:modified_time" content="2026-11-19T04:15:00.000Z">
+<meta property="article:modified_time" content="2026-11-19T06:48:08.000Z">
 <meta property="article:author" content="SagiRastar">
 <meta property="article:tag" content="过程记录">
 <meta property="article:tag" content="个人博客">
@@ -392,7 +392,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1.6k 字
         
       </span>
     
@@ -403,7 +403,7 @@
         
         
         
-          13 分钟
+          14 分钟
         
       </span>
     
@@ -458,26 +458,26 @@
 <p>主要的过程在这位大佬的博客里面叙述的非常详细，此处就不重造轮子，重点记录一下后面添加图片以及站点显示的一些文本如何对应源代码设置：
 <img src="/img/legacy/b138cfda724f/image-20231111164045874.png" srcset="/img/loading.gif" lazyload alt="" /></p>
 <ol>
-<li></li>
+<li>导航栏的显示，考虑多语言修改</li>
 </ol>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># file: &quot;/_config.fluid.yml&quot;menu:    - &#123; key: &quot;home&quot;, link: &quot;/&quot;, icon: &quot;iconfont icon-home-fill&quot; &#125;    - &#123; key: &quot;archive&quot;, link: &quot;/archives/&quot;, icon: &quot;iconfont icon-archive-fill&quot; &#125;    - &#123; key: &quot;category&quot;, link: &quot;/categories/&quot;, icon: &quot;iconfont icon-category-fill&quot; &#125;    - &#123; key: &quot;tag&quot;, link: &quot;/tags/&quot;, icon: &quot;iconfont icon-tags-fill&quot; &#125;    - &#123; key: &quot;about&quot;, link: &quot;/about/&quot;, icon: &quot;iconfont icon-user-fill&quot; &#125;    - &#123; key: &quot;links&quot;, link: &quot;/links/&quot;, icon: &quot;iconfont icon-link-fill&quot; &#125;    - &#123; key: &quot;pic&quot;, link: &quot;/pic/&quot;, icon: &quot;iconfont icon-images&quot; &#125; # 此处</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># file: &quot;/node_modules/hexo-theme-fluid/languages/zh-CN.yml&quot;pic:  menu: &#x27;图集&#x27;  title: &#x27;图集&#x27;  subtitle: &#x27;图集&#x27;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># file: &quot;/_config.fluid.yml&quot;</span><br><span class="hljs-attr">menu:</span><br>    <span class="hljs-bullet">-</span> &#123; <span class="hljs-attr">key:</span> <span class="hljs-string">&quot;home&quot;</span>, <span class="hljs-attr">link:</span> <span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-attr">icon:</span> <span class="hljs-string">&quot;iconfont icon-home-fill&quot;</span> &#125;<br>    <span class="hljs-bullet">-</span> &#123; <span class="hljs-attr">key:</span> <span class="hljs-string">&quot;archive&quot;</span>, <span class="hljs-attr">link:</span> <span class="hljs-string">&quot;/archives/&quot;</span>, <span class="hljs-attr">icon:</span> <span class="hljs-string">&quot;iconfont icon-archive-fill&quot;</span> &#125;<br>    <span class="hljs-bullet">-</span> &#123; <span class="hljs-attr">key:</span> <span class="hljs-string">&quot;category&quot;</span>, <span class="hljs-attr">link:</span> <span class="hljs-string">&quot;/categories/&quot;</span>, <span class="hljs-attr">icon:</span> <span class="hljs-string">&quot;iconfont icon-category-fill&quot;</span> &#125;<br>    <span class="hljs-bullet">-</span> &#123; <span class="hljs-attr">key:</span> <span class="hljs-string">&quot;tag&quot;</span>, <span class="hljs-attr">link:</span> <span class="hljs-string">&quot;/tags/&quot;</span>, <span class="hljs-attr">icon:</span> <span class="hljs-string">&quot;iconfont icon-tags-fill&quot;</span> &#125;<br>    <span class="hljs-bullet">-</span> &#123; <span class="hljs-attr">key:</span> <span class="hljs-string">&quot;about&quot;</span>, <span class="hljs-attr">link:</span> <span class="hljs-string">&quot;/about/&quot;</span>, <span class="hljs-attr">icon:</span> <span class="hljs-string">&quot;iconfont icon-user-fill&quot;</span> &#125;<br>    <span class="hljs-bullet">-</span> &#123; <span class="hljs-attr">key:</span> <span class="hljs-string">&quot;links&quot;</span>, <span class="hljs-attr">link:</span> <span class="hljs-string">&quot;/links/&quot;</span>, <span class="hljs-attr">icon:</span> <span class="hljs-string">&quot;iconfont icon-link-fill&quot;</span> &#125;<br>    <span class="hljs-bullet">-</span> &#123; <span class="hljs-attr">key:</span> <span class="hljs-string">&quot;pic&quot;</span>, <span class="hljs-attr">link:</span> <span class="hljs-string">&quot;/pic/&quot;</span>, <span class="hljs-attr">icon:</span> <span class="hljs-string">&quot;iconfont icon-images&quot;</span> &#125; <span class="hljs-comment"># 此处</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># file: &quot;/node_modules/hexo-theme-fluid/languages/zh-CN.yml&quot;</span><br><span class="hljs-attr">pic:</span><br>  <span class="hljs-attr">menu:</span> <span class="hljs-string">&#x27;图集&#x27;</span><br>  <span class="hljs-attr">title:</span> <span class="hljs-string">&#x27;图集&#x27;</span><br>  <span class="hljs-attr">subtitle:</span> <span class="hljs-string">&#x27;图集&#x27;</span><br></code></pre></td></tr></table></figure>
 <ol>
-<li></li>
+<li>页面打字机效果主标题</li>
 </ol>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># file: &quot;source/pic/index.md&quot;---title: 图集 # 此处date: 2023-11-11 15:59:01layout: pic---</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># file: &quot;source/pic/index.md&quot;</span><br><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">图集</span> <span class="hljs-comment"># 此处</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2023-11-11 15:59:01</span><br><span class="hljs-attr">layout:</span> <span class="hljs-string">pic</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
 <p><img src="/img/legacy/b138cfda724f/image-20231111165046333.png" srcset="/img/loading.gif" lazyload alt="" /></p>
 <ol>
-<li></li>
-<li></li>
+<li>图集分类</li>
+<li>图片名称都是本地路径下的文件夹与文件名</li>
 </ol>
 <h1 id="3-结语"><a class="markdownIt-Anchor" href="#3-结语"></a> 3 结语</h1>
 <p>感谢大佬们的博客，此次实现图片瀑布流的过程十分迅速。后期对于显示效果上的优化以及图片的丰富，可以之后再次参考一下大佬们的源代码：</p>
 <ul>
-<li>scripts/createPhotoList.js</li>
-<li>source/pic/index.md</li>
-<li>source/js/photoWall.js</li>
-<li>scripts/injector.js</li>
+<li>scripts/createPhotoList.js ：获取图片信息</li>
+<li>source/pic/index.md ：设置容器样式</li>
+<li>source/js/photoWall.js ：绘制图片容器</li>
+<li>scripts/injector.js ：注入代码</li>
 </ul>
 
                 
