@@ -1,499 +1,132 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-
-  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/fluid.png">
-  <link rel="icon" href="/blog/img/me.png">
   
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070809">
+<title>高频电子复习随笔 · SagiRastar</title>
+<meta name="description" content="SagiRastar 的个人博客">
+<link rel="canonical" href="https://sagi-rastar.github.io/blog/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/atom+xml" title="SagiRastar" href="/blog/atom.xml">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="SagiRastar">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="1 前言 也快学期末了，是时候复习一下专业课了。 今天简单复习一下高频第五章的课，过这么久也就别指望能深入到太原理层面复习了，还是更注重作业题吧。 电路别忘完了啊： 【阻抗Z】&#x3D;【电阻R】+j【电抗X】【阻抗 Z】 &#x3D; 【电阻 R】 + j 【电抗X】 【阻抗Z】&#x3D;【电阻R】+j【电抗X】 【导纳Y】&#x3D;【电导G】+j【电纳B】【导纳Y】&#x3D; 【电导G】+j【电纳B】 【导纳Y】&#x3D;【电导G】+j【电">
-<meta property="og:type" content="article">
-<meta property="og:title" content="高频电子复习随笔">
-<meta property="og:url" content="https://sagi-rastar.github.io/blog/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/index.html">
-<meta property="og:site_name" content="SagiRastar&#39;s Blog">
-<meta property="og:description" content="1 前言 也快学期末了，是时候复习一下专业课了。 今天简单复习一下高频第五章的课，过这么久也就别指望能深入到太原理层面复习了，还是更注重作业题吧。 电路别忘完了啊： 【阻抗Z】&#x3D;【电阻R】+j【电抗X】【阻抗 Z】 &#x3D; 【电阻 R】 + j 【电抗X】 【阻抗Z】&#x3D;【电阻R】+j【电抗X】 【导纳Y】&#x3D;【电导G】+j【电纳B】【导纳Y】&#x3D; 【电导G】+j【电纳B】 【导纳Y】&#x3D;【电导G】+j【电">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231205153417583.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231205162431583.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231205162416529.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231205163126930.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231205204447568.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231205204509726.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231205205101994.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231205210019269.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231205210746731.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231218114739134.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231218114805292.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231120104057754.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231120105429448.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231120105850991.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231120111404241.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231120113846139.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231120154723717.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231120105850991.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231121114539528.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231120111404241.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231121112346858.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204204216164.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204204232192.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204204243769.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204204255664.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204204319356.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204204429856.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204204515826.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204204529547.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204205509118.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204205449785.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204205535366.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204205556239.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204205618475.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204205634194.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204205646770.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204205742098.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204211655617.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204205820997.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204205837587.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204210035406.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204210049015.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204210057901.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204210106640.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204210123520.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204210133548.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204210208353.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204210230642.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231204210249348.png">
-<meta property="article:published_time" content="2023-11-20T02:20:31.000Z">
-<meta property="article:modified_time" content="2026-11-19T06:48:08.000Z">
-<meta property="article:author" content="SagiRastar">
-<meta property="article:tag" content="复习">
-<meta property="article:tag" content="高频">
-<meta property="article:tag" content="专业课">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://sagi-rastar.github.io/img/legacy/cfa9ef67ff22/image-20231205153417583.png">
-  
-  
-  
-  <title>高频电子复习随笔 - SagiRastar&#39;s Blog</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/blog/css/blog.css">
 
 
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
-
-
-<link  rel="stylesheet" href="/blog/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
-  
-
-
-
-  
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap.css">
-<link rel="stylesheet" href="/blog/css/custom.css">
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"sagi-rastar.github.io","root":"/blog/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/blog/js/utils.js" ></script>
-  <script  src="/blog/js/color-schema.js" ></script>
-  
-
-
-  
-<link rel="alternate" href="/blog/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
 </head>
-
-
 <body>
-  
+  <div class="shell">
+    <header class="top">
+  <a class="mark mono" href="/">SAGIRASTAR</a>
 
-  <header>
+  <nav class="rail" aria-label="站内分区">
     
+      <a
+        class="rail-item"
+        href="/"
+        
+      >
+        <span class="rail-idx mono">00</span>
+        <span class="rail-zh">首页</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#memo"
+        
+      >
+        <span class="rail-idx mono">01</span>
+        <span class="rail-zh">碎片</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#gallery"
+        
+      >
+        <span class="rail-idx mono">02</span>
+        <span class="rail-zh">习作</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#tools"
+        
+      >
+        <span class="rail-idx mono">03</span>
+        <span class="rail-zh">工具</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#works"
+        
+      >
+        <span class="rail-idx mono">04</span>
+        <span class="rail-zh">硬件项目</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#about"
+        
+      >
+        <span class="rail-idx mono">05</span>
+        <span class="rail-zh">关于</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#links"
+        
+      >
+        <span class="rail-idx mono">06</span>
+        <span class="rail-zh">友链</span>
+      </a>
+    
+      <a
+        class="rail-item is-current"
+        href="/blog/"
+        aria-current="page"
+      >
+        <span class="rail-idx mono">07</span>
+        <span class="rail-zh">博客</span>
+      </a>
+    
+  </nav>
 
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/blog/">
-      <strong>Fluid</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content (desktop) -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/pic/" target="_self">
-                <i class="iconfont icon-images"></i>
-                <span>图集</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/links/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
+  <div class="top-links mono">
+    <a href="https://github.com/Sagi-Rastar" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:SagiRastar@gmail.com">Mail</a>
+    <a href="/blog/atom.xml">Feed</a>
   </div>
-</nav>
+</header>
 
-<!-- Mobile grid menu overlay -->
-<div id="mobile-grid-menu" class="d-lg-none">
-  <div class="mobile-grid-menu-inner">
-    <div class="container">
-      <div class="row">
+    <main class="page">
+      <article class="post">
+  <header class="post-head">
+    <div class="kicker mono">
+      <span>2023 / 11 / 20</span>
+      <span class="kicker-rule" aria-hidden="true"></span>
+      <span class="kicker-count">18 MIN</span>
+    </div>
+
+    <h1 class="post-title">高频电子复习随笔</h1>
+
+    
+      <div class="post-meta mono">
         
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-home-fill"></i>
-                  <span>首页</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/pic/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-images"></i>
-                  <span>图集</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/categories/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-category-fill"></i>
-                  <span>分类</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/tags/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-tags-fill"></i>
-                  <span>标签</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/archives/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-archive-fill"></i>
-                  <span>归档</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/about/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-user-fill"></i>
-                  <span>关于</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/links/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-link-fill"></i>
-                  <span>友链</span>
-                </div>
-              </a>
-            </div>
-          
+          <span class="post-cat">embed</span>
         
         
-          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
-            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <div class="mobile-grid-item">
-                <i class="iconfont icon-search"></i>
-                <span>搜索</span>
-              </div>
-            </a>
-          </div>
-        
-        
-          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
-               data-label-light="开灯"
-               data-label-dark="关灯">
-            <a href="javascript:;" aria-label="Color Toggle">
-              <div class="mobile-grid-item">
-                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
-                <span id="mobile-color-toggle-label">关灯</span>
-              </div>
-            </a>
-          </div>
+          <span class="post-tags">#复习  #高频  #专业课</span>
         
       </div>
-    </div>
-  </div>
-</div>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/blog/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="高频电子复习随笔"></span>
-          
-        </div>
-
-        
-          
-  <div class="mt-3">
     
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-20 10:20" pubdate>
-          2023年11月20日
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          8.2k 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          69 分钟
-        
-      </span>
-    
-
-    
-    
-  </div>
-
-
-        
-      </div>
-
-      
-    </div>
-  </div>
-</div>
-
-
-
-</div>
-
   </header>
 
-  <main>
-    
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">高频电子复习随笔</h1>
-            
-            
-              <div class="markdown-body">
-                
-                <h1 id="1-前言"><a class="markdownIt-Anchor" href="#1-前言"></a> 1 前言</h1>
+  <div class="post-body prose"><h1 id="1-前言"><a class="markdownIt-Anchor" href="#1-前言"></a> 1 前言</h1>
 <p>也快学期末了，是时候复习一下专业课了。</p>
 <p>今天简单复习一下高频第五章的课，过这么久也就别指望能深入到太原理层面复习了，还是更注重作业题吧。</p>
 <p><strong>电路别忘完了啊：</strong></p>
@@ -509,7 +142,7 @@
 </blockquote>
 <h2 id="22-串联谐振回路"><a class="markdownIt-Anchor" href="#22-串联谐振回路"></a> 2.2 串联谐振回路</h2>
 <h3 id="221-重要参数"><a class="markdownIt-Anchor" href="#221-重要参数"></a> 2.2.1 重要参数</h3>
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231205153417583.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231205153417583.png" alt="" /></p>
 <p>定义 -&gt; 电路 -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span></span></span></span> -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">ρ</span></span></span></span> -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">Q</span></span></span></span> -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ξ</mi></mrow><annotation encoding="application/x-tex">\xi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span></span></span></span> -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N(f)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span></span></span></span> -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>−</mo><mi>ω</mi></mrow><annotation encoding="application/x-tex">\varphi - \omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">φ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span></p>
 <p>串联谐振回路有如下重要参数：</p>
 <ul>
@@ -572,7 +205,7 @@ h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>ξ</mi><mo>≈</mo><msub><mi mathvariant="normal">Q</mi><mn>0</mn></msub><mo>⋅</mo><mfrac><mrow><mn>2</mn><mi mathvariant="normal">Δ</mi><mi>ω</mi></mrow><msub><mi>ω</mi><mn>0</mn></msub></mfrac><mo>=</mo><msub><mi mathvariant="normal">Q</mi><mn>0</mn></msub><mo>⋅</mo><mfrac><mrow><mn>2</mn><mi mathvariant="normal">Δ</mi><mi mathvariant="normal">f</mi></mrow><msub><mi mathvariant="normal">f</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\xi\approx\mathrm{Q}_{0}\cdot\frac{2\Delta\omega}{\omega_{0}}=\mathrm{Q}_{0}\cdot\frac{2\Delta\mathrm{f}}{\mathrm{f}_{0}}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">Q</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">Q</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.20744em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord mathrm" style="margin-right:0.07778em;">f</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord">Δ</span><span class="mord"><span class="mord mathrm" style="margin-right:0.07778em;">f</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
 <ul>
-<li>谐振曲线 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N(f)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span></span></span></span> 描述了回路电流和输入电压频率之间的关系，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">Q</span></span></span></span> 值越大越尖锐，选择性越好，越小越宽，通带宽。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">Q</span></span></span></span> 值不同即表示损耗 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> 不同。 <img src="/blog/img/legacy/cfa9ef67ff22/image-20231205162431583.png" srcset="/blog/img/loading.gif" lazyload alt="" /></li>
+<li>谐振曲线 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N(f)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span></span></span></span> 描述了回路电流和输入电压频率之间的关系，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">Q</span></span></span></span> 值越大越尖锐，选择性越好，越小越宽，通带宽。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">Q</span></span></span></span> 值不同即表示损耗 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> 不同。 <img src="/blog/img/legacy/cfa9ef67ff22/image-20231205162431583.png" alt="" /></li>
 </ul>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mtext>当前回路电流</mtext><mtext>回路谐振电流</mtext></mfrac><mo>=</mo><mrow><mo fence="true">∣</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mi>j</mi><mi>ξ</mi></mrow></mfrac><mo fence="true">∣</mo></mrow></mrow><annotation encoding="application/x-tex">N(f) = \frac{当前回路电流}{回路谐振电流}= \left|\frac1{1+j\xi}\right|
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">回</span><span class="mord cjk_fallback">路</span><span class="mord cjk_fallback">谐</span><span class="mord cjk_fallback">振</span><span class="mord cjk_fallback">电</span><span class="mord cjk_fallback">流</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">当</span><span class="mord cjk_fallback">前</span><span class="mord cjk_fallback">回</span><span class="mord cjk_fallback">路</span><span class="mord cjk_fallback">电</span><span class="mord cjk_fallback">流</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.42999em;vertical-align:-0.9500199999999999em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4799700000000002em;"><span style="top:-1.65598em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.25698em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.85798em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.87897em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.47997em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500199999999999em;"><span></span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord">1</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804400000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4799700000000002em;"><span style="top:-1.65598em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.25698em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.85798em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.87897em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.47997em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500199999999999em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
@@ -615,13 +248,13 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>B</mi><mo>=</mo><mn>2</mn><mi mathvariant="normal">Δ</mi><msub><mi>ω</mi><mrow><mn>0</mn><mo>⋅</mo><mn>7</mn></mrow></msub><mo>=</mo><mfrac><msub><mi>ω</mi><mn>0</mn></msub><mi>Q</mi></mfrac></mrow><annotation encoding="application/x-tex">B=2\Delta\omega_{0\cdot7}=\frac{\omega_0}{Q}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord">2</span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span><span class="mbin mtight">⋅</span><span class="mord mtight">7</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.988em;vertical-align:-0.8804400000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1075599999999999em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804400000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
 <ul>
-<li>相频特性曲线 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>−</mo><mi>ω</mi></mrow><annotation encoding="application/x-tex">\varphi - \omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">φ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span> 呃，好像没怎么用到： <img src="/blog/img/legacy/cfa9ef67ff22/image-20231205162416529.png" srcset="/blog/img/loading.gif" lazyload alt="" /></li>
+<li>相频特性曲线 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>−</mo><mi>ω</mi></mrow><annotation encoding="application/x-tex">\varphi - \omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">φ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span> 呃，好像没怎么用到： <img src="/blog/img/legacy/cfa9ef67ff22/image-20231205162416529.png" alt="" /></li>
 </ul>
 <h3 id="222-能量关系"><a class="markdownIt-Anchor" href="#222-能量关系"></a> 2.2.2 能量关系</h3>
 <p>谐振时，无疑是输出功率最大的（回路电流最大）。电感和电容上存储的瞬时能量最大值相等。整个回路中的能量保持不变，在线圈和电容器之间相互转换。</p>
 <h2 id="23-并联谐振回路"><a class="markdownIt-Anchor" href="#23-并联谐振回路"></a> 2.3 并联谐振回路</h2>
 <p>定义为电感、电容和外加信号源相互并联的电路。但由于电感线圈是有一定的内阻的，为了计算方便，可以将电感内阻转化为电导，如下图所示：
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231205163126930.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231205163126930.png" alt="" /></p>
 <h3 id="231-重要参数"><a class="markdownIt-Anchor" href="#231-重要参数"></a> 2.3.1 重要参数</h3>
 <ul>
 <li>谐振频率 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 高频情况下 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mi>L</mi><mo>&gt;</mo><mo>&gt;</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">\omega L &gt;&gt; R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> ，回路谐振时，电纳为零，谐振频率与电阻无关，依然为：</li>
@@ -678,25 +311,25 @@ M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>ξ</mi><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mtext>失谐时的电抗</mtext><mo stretchy="false">)</mo><mi>X</mi><mo stretchy="false">)</mo></mrow><mi>R</mi></mfrac><mo>≈</mo><msub><mi mathvariant="normal">Q</mi><mn>0</mn></msub><mo>⋅</mo><mfrac><mrow><mn>2</mn><mi mathvariant="normal">Δ</mi><mi>ω</mi></mrow><msub><mi>ω</mi><mn>0</mn></msub></mfrac><mo>=</mo><msub><mi mathvariant="normal">Q</mi><mn>0</mn></msub><mo>⋅</mo><mfrac><mrow><mn>2</mn><mi mathvariant="normal">Δ</mi><mi mathvariant="normal">f</mi></mrow><msub><mi mathvariant="normal">f</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\xi= \frac{((\text{失谐时的电抗})X)}R\approx\mathrm{Q}_{0}\cdot\frac{2\Delta\omega}{\omega_{0}}=\mathrm{Q}_{0}\cdot\frac{2\Delta\mathrm{f}}{\mathrm{f}_{0}}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mopen">(</span><span class="mord text"><span class="mord cjk_fallback">失谐时的电抗</span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">Q</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">Q</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.20744em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord mathrm" style="margin-right:0.07778em;">f</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord">Δ</span><span class="mord"><span class="mord mathrm" style="margin-right:0.07778em;">f</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
 <ul>
-<li>谐振曲线 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N(f)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span></span></span></span> 【回路端电压】在信号源电流不变时，与【频率】的关系。串联回路用电流比表示，而并联回路用电压比来表示。 <img src="/blog/img/legacy/cfa9ef67ff22/image-20231205204447568.png" srcset="/blog/img/loading.gif" lazyload alt="" /></li>
+<li>谐振曲线 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N(f)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span></span></span></span> 【回路端电压】在信号源电流不变时，与【频率】的关系。串联回路用电流比表示，而并联回路用电压比来表示。 <img src="/blog/img/legacy/cfa9ef67ff22/image-20231205204447568.png" alt="" /></li>
 </ul>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mtext>当前回路端电压</mtext><mtext>回路谐振电压</mtext></mfrac><mo>=</mo><mrow><mo fence="true">∣</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mi>j</mi><mi>ξ</mi></mrow></mfrac><mo fence="true">∣</mo></mrow></mrow><annotation encoding="application/x-tex">N (f) = \frac{当前回路端电压}{回路谐振电压}= \left|\frac 1{1+j\xi}\right|
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">回</span><span class="mord cjk_fallback">路</span><span class="mord cjk_fallback">谐</span><span class="mord cjk_fallback">振</span><span class="mord cjk_fallback">电</span><span class="mord cjk_fallback">压</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">当</span><span class="mord cjk_fallback">前</span><span class="mord cjk_fallback">回</span><span class="mord cjk_fallback">路</span><span class="mord cjk_fallback">端</span><span class="mord cjk_fallback">电</span><span class="mord cjk_fallback">压</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.42999em;vertical-align:-0.9500199999999999em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4799700000000002em;"><span style="top:-1.65598em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.25698em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.85798em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.87897em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.47997em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500199999999999em;"><span></span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord">1</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804400000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4799700000000002em;"><span style="top:-1.65598em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.25698em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.85798em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.87897em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.47997em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500199999999999em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
 <p>电路性质：
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231205204509726.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231205204509726.png" alt="" /></p>
 <ul>
 <li>通频带 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> 与串联一致：</li>
 </ul>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>B</mi><mo>=</mo><mn>2</mn><mi mathvariant="normal">Δ</mi><msub><mi>ω</mi><mrow><mn>0</mn><mo>⋅</mo><mn>7</mn></mrow></msub><mo>=</mo><mfrac><msub><mi>ω</mi><mn>0</mn></msub><mi>Q</mi></mfrac></mrow><annotation encoding="application/x-tex">B = 2\Delta\omega_{0\cdot7}=\frac{\omega_0}{Q}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord">2</span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span><span class="mbin mtight">⋅</span><span class="mord mtight">7</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.988em;vertical-align:-0.8804400000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1075599999999999em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804400000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
 <ul>
-<li>相频特性曲线 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>−</mo><mi>ω</mi></mrow><annotation encoding="application/x-tex">\varphi - \omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">φ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span> （） <img src="/blog/img/legacy/cfa9ef67ff22/image-20231205205101994.png" srcset="/blog/img/loading.gif" lazyload alt="" /></li>
+<li>相频特性曲线 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>−</mo><mi>ω</mi></mrow><annotation encoding="application/x-tex">\varphi - \omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">φ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span> （） <img src="/blog/img/legacy/cfa9ef67ff22/image-20231205205101994.png" alt="" /></li>
 </ul>
 <p><strong>负载和内阻对于回路的影响</strong></p>
 <p>并联谐振回路的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">Q_L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">R_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">R_L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 同相变化，因此在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">R_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">R_L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 较大的情况，可以使用并联谐振回路，而获得较好的选择性（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">Q</span></span></span></span> 变大）</p>
 <h2 id="24-等效互换阻抗变换"><a class="markdownIt-Anchor" href="#24-等效互换阻抗变换"></a> 2.4 等效互换，阻抗变换</h2>
 <h3 id="241-电感抽头"><a class="markdownIt-Anchor" href="#241-电感抽头"></a> 2.4.1 电感抽头</h3>
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231205210019269.png" srcset="/blog/img/loading.gif" lazyload alt="" />
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231205210019269.png" alt="" />
 接入系数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>：抽头点电压与端电压的比</p>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">P</mi><mo>=</mo><mfrac><msub><mi>V</mi><mrow><mi>a</mi><mi>b</mi></mrow></msub><msub><mi>V</mi><mrow><mi>d</mi><mi>b</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{P}= \frac{V_{ab}}{V_{db}}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord mathrm">P</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
@@ -709,11 +342,11 @@ M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mi>I</mi><mi>s</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msubsup><mo>=</mo><msub><mi>I</mi><mi>s</mi></msub><mo>⋅</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">I_{s}^{\prime}=I_{s}\cdot P
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.048892em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8018919999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span></span></p>
 <h3 id="242-电容抽头"><a class="markdownIt-Anchor" href="#242-电容抽头"></a> 2.4.2 电容抽头</h3>
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231205210746731.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231205210746731.png" alt="" /></p>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>P</mtext><mo>=</mo><mfrac><mn>1</mn><mtext>n</mtext></mfrac><mo>=</mo><mfrac><msub><mtext>C</mtext><mn>2</mn></msub><msub><mtext>C</mtext><mn>1</mn></msub></mfrac><mo>=</mo><mfrac><msub><mtext>C</mtext><mn>2</mn></msub><mrow><msub><mtext>C</mtext><mn>1</mn></msub><mo>+</mo><msub><mtext>C</mtext><mn>2</mn></msub></mrow></mfrac><mspace width="1em"/><mtext>其中C</mtext><mo>=</mo><mfrac><mrow><msub><mtext>C</mtext><mn>1</mn></msub><msub><mtext>C</mtext><mn>2</mn></msub></mrow><mrow><msub><mtext>C</mtext><mn>1</mn></msub><mo>+</mo><msub><mtext>C</mtext><mn>2</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{P}=\dfrac{1}{\text{n}}=\dfrac{\text{C}_2}{\text{C}_1}=\dfrac{\text{C}_2}{\text{C}_1+\text{C}_2}\quad\text{其中}\text{C}=\dfrac{\text{C}_1\text{C}_2}{\text{C}_1+\text{C}_2}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord">P</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">C</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">C</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">C</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord text"><span class="mord">C</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">C</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord text"><span class="mord cjk_fallback">其中</span></span><span class="mord text"><span class="mord">C</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">C</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord text"><span class="mord">C</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">C</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord text"><span class="mord">C</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231218114739134.png" srcset="/blog/img/loading.gif" lazyload alt="" />
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231218114805292.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231218114739134.png" alt="" />
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231218114805292.png" alt="" /></p>
 <h1 id="3-第三章高频小信号放大器"><a class="markdownIt-Anchor" href="#3-第三章高频小信号放大器"></a> 3 【第三章】高频小信号放大器</h1>
 <h2 id="31-y-参数与等效电路"><a class="markdownIt-Anchor" href="#31-y-参数与等效电路"></a> 3.1 Y 参数与等效电路</h2>
 <h2 id="32-电压增益的计算"><a class="markdownIt-Anchor" href="#32-电压增益的计算"></a> 3.2 电压增益的计算</h2>
@@ -738,7 +371,7 @@ M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <li>工作在丙类/乙类状态</li>
 </ul>
 <blockquote>
-<p>关于放大器的甲/乙/丙等类工作状态，<a href="">找个时间再复习一遍吧</a>目前暂时理解为跟通角 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">\theta_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 有关吧。<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120104057754.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p>关于放大器的甲/乙/丙等类工作状态，<a href="">找个时间再复习一遍吧</a>目前暂时理解为跟通角 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">\theta_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 有关吧。<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120104057754.png" alt="" /></p>
 </blockquote>
 <p>感性上来理解，功率放大器简单说可以看作“能量转换器”，将供给的直流能量转换为交流能量，从而放大信号。</p>
 <p><strong>接下来会随手记录一点本章重点、题目以及个人理解：</strong></p>
@@ -751,20 +384,20 @@ M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <h2 id="52-谐振功率放大器"><a class="markdownIt-Anchor" href="#52-谐振功率放大器"></a> 5.2 谐振功率放大器</h2>
 <h3 id="521-原理"><a class="markdownIt-Anchor" href="#521-原理"></a> 5.2.1 原理</h3>
 <p>牢记老师叮嘱，先上图。</p>
-<p><strong>谐振功率放大器的原理电路：</strong><img src="/blog/img/legacy/cfa9ef67ff22/image-20231120105429448.png" srcset="/blog/img/loading.gif" lazyload alt="" />可分为四个部分：</p>
+<p><strong>谐振功率放大器的原理电路：</strong><img src="/blog/img/legacy/cfa9ef67ff22/image-20231120105429448.png" alt="" />可分为四个部分：</p>
 <ul>
 <li>中间晶体管：起到放大作用的有源器件</li>
 <li>右侧谐振回路：负载</li>
 <li>下方俩直流偏置：为晶体管提供直流能量与静态工作点</li>
 <li>左侧高频信号：输入，提供待放大的信号</li>
 </ul>
-<p><strong>晶体管的特性曲线：</strong><img src="/blog/img/legacy/cfa9ef67ff22/image-20231120105850991.png" srcset="/blog/img/loading.gif" lazyload alt="" />
+<p><strong>晶体管的特性曲线：</strong><img src="/blog/img/legacy/cfa9ef67ff22/image-20231120105850991.png" alt="" />
 左图为输入特性曲线，右图为输出特性曲线很明显是非线性的，所以用理想折线进行近似，此处 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>B</mi><mi>Z</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{BZ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">Z</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 就是截止偏压。由于这玩意工作在丙类状态，要求通角 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">\theta_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 不是要 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>＜</mtext><mn>90</mn><mi mathvariant="normal">°</mi></mrow><annotation encoding="application/x-tex">＜ 90°</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord cjk_fallback">＜</span><span class="mord">9</span><span class="mord">0</span><span class="mord">°</span></span></span></span> 嘛，所以后面通过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>B</mi><mi>B</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{BB}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>B</mi><mi>Z</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{BZ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">Z</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的配合便可以控制通角的范围。具体见下图。</p>
 <p><strong>工作在谐振功率放大器中的晶体管特性曲线：</strong>
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120111404241.png" srcset="/blog/img/loading.gif" lazyload alt="" />
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120111404241.png" alt="" />
 中间就是晶体管的特性曲线，跟上面一样。下方是输入端的曲线，可以看到通过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>B</mi><mi>B</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{BB}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的反向偏置，使得通角被限制在了一定的范围，可以假象一下若没有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>B</mi><mi>B</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{BB}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的反向偏置，通角便会增大。右侧是输出端电流曲线，可以看出输出的集电极电流为尖顶余弦脉冲。尖顶余弦脉冲输入到谐振回路中，经过滤波作用，便可以输出正弦信号了。</p>
 <p><strong>晶体管各部分 V-I 关系曲线</strong>
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120113846139.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120113846139.png" alt="" /></p>
 <h3 id="522-功率与效率"><a class="markdownIt-Anchor" href="#522-功率与效率"></a> 5.2.2 功率与效率</h3>
 <p>谐振功率放大器的功率可以分成三个部分：</p>
 <ul>
@@ -780,8 +413,8 @@ M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.10680899999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mrel mtight">=</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">O</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">O</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">O</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
 <h3 id="523-折线法分析"><a class="markdownIt-Anchor" href="#523-折线法分析"></a> 5.2.3 折线法分析</h3>
 <p>先上图：
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120154723717.png" srcset="/blog/img/loading.gif" lazyload alt="" />
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120105850991.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120154723717.png" alt="" />
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120105850991.png" alt="" /></p>
 <p>折线法分析其实主要是上面第一张图，不过出于个人因素，先记录一下之前模电就没有完全理解的第二张图。</p>
 <p>这里的输出特性曲线，实际上每一次只能挑其中一条看，之前很多时候都误解了这一点。临界线，实际上可以理解为：在很多次不同的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mi>b</mi></msub></mrow><annotation encoding="application/x-tex">e_b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 给定的情况下，随着 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">R_p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> 增长， <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">i_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">i</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 转折的点所拟合出的一条直线。另外在欠压区的这段线，其值约等于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mrow><mi>B</mi><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>=</mo><mo>−</mo><msub><mi>V</mi><mrow><mi>B</mi><mi>B</mi></mrow></msub><mo>+</mo><msub><mi>V</mi><mrow><mi>b</mi><mi>m</mi></mrow></msub></mrow><annotation encoding="application/x-tex">v_{Bmax} = -V_{BB} + V_{bm}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span><span class="mord mathnormal mtight">m</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，也就是包括了基极偏置电压和输入电压的最大值。</p>
 <p>再说一下这第一张图，首先右上角的原型就是输出特性曲线，也就是刚刚说的给定一次 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mi>b</mi></msub></mrow><annotation encoding="application/x-tex">e_b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的情况，左侧为输出电流和输入信号的关系，下方为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">e_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和输入信号的关系。</p>
@@ -789,8 +422,8 @@ M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <h3 id="524-各部分电压变化引起的状态变化"><a class="markdownIt-Anchor" href="#524-各部分电压变化引起的状态变化"></a> 5.2.4 各部分电压变化引起的状态变化</h3>
 <p>下面分三部分讨论一下，改变直流供给电压和输入信号的振幅会引起【工作状态】怎么样的变化。</p>
 <p>为讨论方便，再贴一下图：
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231121114539528.png" srcset="/blog/img/loading.gif" lazyload alt="" />
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120111404241.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231121114539528.png" alt="" />
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231120111404241.png" alt="" /></p>
 <h4 id="5241-改变-v_cc-试试"><a class="markdownIt-Anchor" href="#5241-改变-v_cc-试试"></a> 5.2.4.1 改变 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>C</mi><mi>C</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{CC}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 试试</h4>
 <p>由于只改变 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>C</mi><mi>C</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{CC}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 其他不变，所以：</p>
 <ul>
@@ -809,7 +442,7 @@ M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">i</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
 <p>斜率就是饱和临界线跨导，注意跟输入特性曲线那边的跨导稍微有点区别。</p>
 <h3 id="525-应用电路复合输出回路"><a class="markdownIt-Anchor" href="#525-应用电路复合输出回路"></a> 5.2.5 应用电路（复合输出回路）</h3>
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231121112346858.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231121112346858.png" alt="" /></p>
 <p>原理电路中的谐振回路在复合输出回路中被叫做【中介回路】，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">R_A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">C_A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 一起看，是【辐射电阻】和【等效电容】，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">L_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">C_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 在回路中用作调谐，使得天线回路处于谐振状态，以获取最大的功率。</p>
 <p>从能量的角度来说，复合输出回路有两个地方有耗散功率，首先第一个就是上面讨论过的晶体管【集电极耗散功率】，其次就是中介回路中的【中介回路耗散功率】，因此实际做有用功的只是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>o</mi></msub><mo>−</mo><msub><mi>P</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">P_o - P_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 这部分了。</p>
 <p><strong>这里有几个做题里常见的参量，做一下记录：</strong></p>
@@ -878,506 +511,90 @@ M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <h2 id="84-鉴频电路"><a class="markdownIt-Anchor" href="#84-鉴频电路"></a> 8.4 鉴频电路</h2>
 <h1 id="9-作业"><a class="markdownIt-Anchor" href="#9-作业"></a> 9 作业</h1>
 <h2 id="91-第二章-5"><a class="markdownIt-Anchor" href="#91-第二章-5"></a> 9.1 第二章 5</h2>
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204216164.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204216164.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204232192.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204232192.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204243769.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204243769.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204255664.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204255664.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204319356.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204319356.png" alt="" /></p>
 <hr />
 <h2 id="92-第三章-2"><a class="markdownIt-Anchor" href="#92-第三章-2"></a> 9.2 第三章 2</h2>
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204429856.png" srcset="/blog/img/loading.gif" lazyload alt="" />
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204515826.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204429856.png" alt="" />
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204515826.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204529547.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204204529547.png" alt="" /></p>
 <hr />
 <h2 id="93-第五章-6"><a class="markdownIt-Anchor" href="#93-第五章-6"></a> 9.3 第五章 6</h2>
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205509118.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205509118.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205449785.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205449785.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205535366.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205535366.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205556239.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205556239.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205618475.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205618475.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205634194.png" srcset="/blog/img/loading.gif" lazyload alt="" />
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205646770.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205634194.png" alt="" />
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205646770.png" alt="" /></p>
 <hr />
 <h2 id="94-第六章-2"><a class="markdownIt-Anchor" href="#94-第六章-2"></a> 9.4 第六章 2</h2>
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205742098.png" srcset="/blog/img/loading.gif" lazyload alt="" />
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231204211655617.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205742098.png" alt="" />
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231204211655617.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205820997.png" srcset="/blog/img/loading.gif" lazyload alt="" />
-<img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205837587.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205820997.png" alt="" />
+<img src="/blog/img/legacy/cfa9ef67ff22/image-20231204205837587.png" alt="" /></p>
 <hr />
 <h2 id="95-第七章-6"><a class="markdownIt-Anchor" href="#95-第七章-6"></a> 9.5 第七章 6</h2>
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210035406.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210035406.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210049015.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210049015.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210057901.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210057901.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210106640.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210106640.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210123520.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210123520.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210133548.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210133548.png" alt="" /></p>
 <hr />
 <h2 id="96-第八章-3"><a class="markdownIt-Anchor" href="#96-第八章-3"></a> 9.6 第八章 3</h2>
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210208353.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210208353.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210230642.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210230642.png" alt="" /></p>
 <hr />
-<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210249348.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/embed/" class="category-chain-item">embed</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/blog/tags/%E5%A4%8D%E4%B9%A0/" class="print-no-link">#复习</a>
-      
-        <a href="/blog/tags/%E9%AB%98%E9%A2%91/" class="print-no-link">#高频</a>
-      
-        <a href="/blog/tags/%E4%B8%93%E4%B8%9A%E8%AF%BE/" class="print-no-link">#专业课</a>
-      
-    </div>
-  
+<p><img src="/blog/img/legacy/cfa9ef67ff22/image-20231204210249348.png" alt="" /></p>
 </div>
 
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>高频电子复习随笔</div>
-      <div>https://sagi-rastar.github.io/blog/2023/11/20/高频电子复习随笔/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>SagiRastar</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2023年11月20日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-cc-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/blog/2023/11/21/2023-11-20-%E9%9A%8F%E7%AC%94/" title="2023-11-20-随笔">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2023-11-20-随笔</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/blog/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/" title="FPGA电子钟课设设计过程">
-                        <span class="hidden-mobile">FPGA电子钟课设设计过程</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-  
-  
-
-
-
-
-
-
-
-
+  <nav class="post-nav" aria-label="相邻文章">
     
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      <a class="post-nav-item" href="/blog/2023/11/21/2023-11-20-%E9%9A%8F%E7%AC%94/">
+        <span class="mono">← 更早</span>
+        <span class="post-nav-title">2023-11-20-随笔</span>
       </a>
     
 
     
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
+      <a class="post-nav-item is-next" href="/blog/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/">
+        <span class="mono">更新 →</span>
+        <span class="post-nav-title">FPGA电子钟课设设计过程</span>
+      </a>
+    
+  </nav>
+
+  
+
+</article>
+
+    </main>
+    <footer class="foot mono">
+  <span>2026 <span class="foot-build">07 / BLOG</span></span>
+  <span class="foot-mark">SAGIRASTAR · HW / FW / WORDS</span>
+</footer>
+
   </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-    </div>
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/blog/js/events.js" ></script>
-<script  src="/blog/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/blog/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    function isExpandAllEnabled() {
-      return CONFIG.toc && CONFIG.toc.expand_all === true;
-    }
-    function expandAllToc() {
-      if (!isExpandAllEnabled()) { return; }
-      jQuery('#toc-body .tocbot-is-collapsed').removeClass('tocbot-is-collapsed');
-    }
-    function updateTocToggle($li, $childList) {
-      var $toggle = $li.children('.toc-toggle');
-      if ($toggle.length === 0) { return; }
-      var collapsed = $childList.hasClass('tocbot-is-collapsed');
-      $toggle
-        .toggleClass('toc-toggle-collapsed', collapsed)
-        .toggleClass('toc-toggle-expanded', !collapsed);
-    }
-    function bindTocToggle() {
-      if (!isExpandAllEnabled()) { return; }
-      jQuery('#toc-body .toc-list-item').each(function() {
-        var $li = jQuery(this);
-        var $childList = $li.children('ol');
-        if ($childList.length === 0) {
-          if ($li.children('.toc-toggle').length === 0) {
-            $li.prepend('<span class="toc-toggle toc-toggle-placeholder" aria-hidden="true">›</span>');
-          }
-          return;
-        }
-
-        if ($li.children('.toc-toggle').length === 0) {
-          $li.prepend('<span class="toc-toggle toc-toggle-expanded" aria-hidden="true">›</span>');
-        }
-        updateTocToggle($li, $childList);
-      });
-      jQuery('#toc-body').off('click.tocToggle').on('click.tocToggle', '.toc-toggle', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var $li = jQuery(this).parent('.toc-list-item');
-        var $childList = $li.children('ol');
-        if ($childList.length === 0) { return; }
-        $childList.toggleClass('tocbot-is-collapsed');
-        updateTocToggle($li, $childList);
-      });
-      if (!window.__tocToggleObserver) {
-        window.__tocToggleObserver = new MutationObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-            if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') { return; }
-            var $list = jQuery(mutation.target);
-            var $li = $list.parent('.toc-list-item');
-            if ($li.length === 0) { return; }
-            updateTocToggle($li, $list);
-          });
-        });
-        jQuery('#toc-body ol').each(function() {
-          window.__tocToggleObserver.observe(this, { attributes: true });
-        });
-      }
-    }
-    var tocConfig = Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc);
-    if (isExpandAllEnabled()) {
-      tocConfig.collapseDepth = 6;
-    }
-    window.tocbot.init(tocConfig);
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-    expandAllToc();
-    bindTocToggle();
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-        expandAllToc();
-        bindTocToggle();
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  <script  src="/blog/js/local-search.js" ></script>
-
-
-
-
-  
-<script src="/blog/js/custom.js"></script>
-<script src="/blog/js/photoWall.js"></script>
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/blog/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
 </body>
 </html>

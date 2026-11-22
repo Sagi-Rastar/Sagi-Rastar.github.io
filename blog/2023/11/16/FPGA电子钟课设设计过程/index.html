@@ -1,465 +1,134 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-
-  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/fluid.png">
-  <link rel="icon" href="/blog/img/me.png">
   
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070809">
+<title>FPGA电子钟课设设计过程 · SagiRastar</title>
+<meta name="description" content="SagiRastar 的个人博客">
+<link rel="canonical" href="https://sagi-rastar.github.io/blog/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/atom+xml" title="SagiRastar" href="/blog/atom.xml">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="SagiRastar">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="1 前言 本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：  主要就是三个功能：  正常计时 以快速读分&#x2F;时的方法校时 整点报时功能  另外虽然课设没有要求，不过课上教的是VHDL，期末考也多半是，所以用的是VHDL语言。 主要设计思路如下：  时钟源部分，首先列举出来整个系统可能需要用到的时钟频率，编写一个模块为整个系统提供时钟">
-<meta property="og:type" content="article">
-<meta property="og:title" content="FPGA电子钟课设设计过程">
-<meta property="og:url" content="https://sagi-rastar.github.io/blog/2023/11/16/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/index.html">
-<meta property="og:site_name" content="SagiRastar&#39;s Blog">
-<meta property="og:description" content="1 前言 本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：  主要就是三个功能：  正常计时 以快速读分&#x2F;时的方法校时 整点报时功能  另外虽然课设没有要求，不过课上教的是VHDL，期末考也多半是，所以用的是VHDL语言。 主要设计思路如下：  时钟源部分，首先列举出来整个系统可能需要用到的时钟频率，编写一个模块为整个系统提供时钟">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231116153820589.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231116155650753.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231116155620779.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231116155724788.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231116155813734.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231116155901265.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231117162109699.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231117171919293.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231117173417345.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231117174839213.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231117174931426.png">
-<meta property="og:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231117180301795.jpeg">
-<meta property="article:published_time" content="2023-11-16T07:33:56.000Z">
-<meta property="article:modified_time" content="2026-11-19T06:49:00.000Z">
-<meta property="article:author" content="SagiRastar">
-<meta property="article:tag" content="FPGA">
-<meta property="article:tag" content="过程记录">
-<meta property="article:tag" content="嵌入式">
-<meta property="article:tag" content="作业">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://sagi-rastar.github.io/img/legacy/5cb00eec2e65/image-20231116153820589.png">
-  
-  
-  
-  <title>FPGA电子钟课设设计过程 - SagiRastar&#39;s Blog</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/blog/css/blog.css">
 
 
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
-
-
-<link  rel="stylesheet" href="/blog/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
-  
-
-
-
-  
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap.css">
-<link rel="stylesheet" href="/blog/css/custom.css">
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"sagi-rastar.github.io","root":"/blog/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/blog/js/utils.js" ></script>
-  <script  src="/blog/js/color-schema.js" ></script>
-  
-
-
-  
-<link rel="alternate" href="/blog/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
 </head>
-
-
 <body>
-  
+  <div class="shell">
+    <header class="top">
+  <a class="mark mono" href="/">SAGIRASTAR</a>
 
-  <header>
+  <nav class="rail" aria-label="站内分区">
     
+      <a
+        class="rail-item"
+        href="/"
+        
+      >
+        <span class="rail-idx mono">00</span>
+        <span class="rail-zh">首页</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#memo"
+        
+      >
+        <span class="rail-idx mono">01</span>
+        <span class="rail-zh">碎片</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#gallery"
+        
+      >
+        <span class="rail-idx mono">02</span>
+        <span class="rail-zh">习作</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#tools"
+        
+      >
+        <span class="rail-idx mono">03</span>
+        <span class="rail-zh">工具</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#works"
+        
+      >
+        <span class="rail-idx mono">04</span>
+        <span class="rail-zh">硬件项目</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#about"
+        
+      >
+        <span class="rail-idx mono">05</span>
+        <span class="rail-zh">关于</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#links"
+        
+      >
+        <span class="rail-idx mono">06</span>
+        <span class="rail-zh">友链</span>
+      </a>
+    
+      <a
+        class="rail-item is-current"
+        href="/blog/"
+        aria-current="page"
+      >
+        <span class="rail-idx mono">07</span>
+        <span class="rail-zh">博客</span>
+      </a>
+    
+  </nav>
 
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/blog/">
-      <strong>Fluid</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content (desktop) -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/pic/" target="_self">
-                <i class="iconfont icon-images"></i>
-                <span>图集</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/links/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
+  <div class="top-links mono">
+    <a href="https://github.com/Sagi-Rastar" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:SagiRastar@gmail.com">Mail</a>
+    <a href="/blog/atom.xml">Feed</a>
   </div>
-</nav>
+</header>
 
-<!-- Mobile grid menu overlay -->
-<div id="mobile-grid-menu" class="d-lg-none">
-  <div class="mobile-grid-menu-inner">
-    <div class="container">
-      <div class="row">
+    <main class="page">
+      <article class="post">
+  <header class="post-head">
+    <div class="kicker mono">
+      <span>2023 / 11 / 16</span>
+      <span class="kicker-rule" aria-hidden="true"></span>
+      <span class="kicker-count">31 MIN</span>
+    </div>
+
+    <h1 class="post-title">FPGA电子钟课设设计过程</h1>
+
+    
+      <div class="post-meta mono">
         
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-home-fill"></i>
-                  <span>首页</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/pic/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-images"></i>
-                  <span>图集</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/categories/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-category-fill"></i>
-                  <span>分类</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/tags/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-tags-fill"></i>
-                  <span>标签</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/archives/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-archive-fill"></i>
-                  <span>归档</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/about/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-user-fill"></i>
-                  <span>关于</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/links/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-link-fill"></i>
-                  <span>友链</span>
-                </div>
-              </a>
-            </div>
-          
+          <span class="post-cat">embed</span>
         
         
-          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
-            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <div class="mobile-grid-item">
-                <i class="iconfont icon-search"></i>
-                <span>搜索</span>
-              </div>
-            </a>
-          </div>
-        
-        
-          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
-               data-label-light="开灯"
-               data-label-dark="关灯">
-            <a href="javascript:;" aria-label="Color Toggle">
-              <div class="mobile-grid-item">
-                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
-                <span id="mobile-color-toggle-label">关灯</span>
-              </div>
-            </a>
-          </div>
+          <span class="post-tags">#FPGA  #过程记录  #嵌入式  #作业</span>
         
       </div>
-    </div>
-  </div>
-</div>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/blog/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="FPGA电子钟课设设计过程"></span>
-          
-        </div>
-
-        
-          
-  <div class="mt-3">
     
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-16 15:33" pubdate>
-          2023年11月16日
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          12k 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          101 分钟
-        
-      </span>
-    
-
-    
-    
-  </div>
-
-
-        
-      </div>
-
-      
-    </div>
-  </div>
-</div>
-
-
-
-</div>
-
   </header>
 
-  <main>
-    
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">FPGA电子钟课设设计过程</h1>
-            
-            
-              <div class="markdown-body">
-                
-                <h1 id="1-前言"><a class="markdownIt-Anchor" href="#1-前言"></a> 1 前言</h1>
+  <div class="post-body prose"><h1 id="1-前言"><a class="markdownIt-Anchor" href="#1-前言"></a> 1 前言</h1>
 <p>本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：<br />
-<img src="/blog/img/legacy/5cb00eec2e65/image-20231116153820589.png" srcset="/blog/img/loading.gif" lazyload alt="" /><br />
+<img src="/blog/img/legacy/5cb00eec2e65/image-20231116153820589.png" alt="" /><br />
 <strong>主要就是三个功能：</strong></p>
 <ul>
 <li>正常计时</li>
@@ -500,10 +169,10 @@
 </ul>
 <p><strong>下面是本次课设将会使用到的硬件外设记录：</strong></p>
 <ul>
-<li>按键<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155650753.png" srcset="/blog/img/loading.gif" lazyload alt="" /></li>
-<li>数码管<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155620779.png" srcset="/blog/img/loading.gif" lazyload alt="" /><img src="/blog/img/legacy/5cb00eec2e65/image-20231116155724788.png" srcset="/blog/img/loading.gif" lazyload alt="" /></li>
-<li>蜂鸣器<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155813734.png" srcset="/blog/img/loading.gif" lazyload alt="" /></li>
-<li>外引调试引脚<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155901265.png" srcset="/blog/img/loading.gif" lazyload alt="" /></li>
+<li>按键<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155650753.png" alt="" /></li>
+<li>数码管<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155620779.png" alt="" /><img src="/blog/img/legacy/5cb00eec2e65/image-20231116155724788.png" alt="" /></li>
+<li>蜂鸣器<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155813734.png" alt="" /></li>
+<li>外引调试引脚<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155901265.png" alt="" /></li>
 </ul>
 <h2 id="22-基础部分模块设计过程"><a class="markdownIt-Anchor" href="#22-基础部分模块设计过程"></a> 2.2 基础部分模块设计过程</h2>
 <h3 id="221-分频器"><a class="markdownIt-Anchor" href="#221-分频器"></a> 2.2.1 分频器：</h3>
@@ -518,59 +187,59 @@
 <h4 id="2211-代码实现"><a class="markdownIt-Anchor" href="#2211-代码实现"></a> 2.2.1.1 代码实现</h4>
 <p>原理为提前定义好各个频率所需常数，每隔N个原始时钟周期后，将输出的时钟信号翻转一次，从而得到各个系统所需的时钟频率。</p>
 <p>代码实现摘录如下：</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">entity</span> diver <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">port</span><br>  (<br>    clk    : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 输入时钟，原始的时钟频率</span><br>    clk_ot : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 点报时蜂鸣器频率，1kHz</span><br>    clk_os : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 秒报时蜂鸣器频率，500Hz</span><br>    clk1   : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 输出时钟，设置界面分频，闹钟和校时功能,10Hz</span><br>    clk0   : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span> <span class="hljs-comment">-- 输出时钟，正常计时分频，1Hz</span><br>  );<br><span class="hljs-keyword">end</span> diver;<br></code></pre></td></tr></table></figure>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构体定义 ------------------------------------------------------------------------------</span><br><span class="hljs-keyword">architecture</span> bhv <span class="hljs-keyword">of</span> diver <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">signal</span> m_clk0     : <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 正常计时频率为1Hz </span><br>  <span class="hljs-keyword">signal</span> m_clk1     : <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 校时频率为10Hz </span><br>  <span class="hljs-keyword">signal</span> m_clk_os   : <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 秒报时蜂鸣器频率为500Hz</span><br>  <span class="hljs-keyword">signal</span> m_clk_ot   : <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 点报时蜂鸣器频率为1kHz</span><br>  <span class="hljs-keyword">constant</span> c_cnt_0  : <span class="hljs-built_in">integer</span> := <span class="hljs-number">25000000</span>; <span class="hljs-comment">-- 50MHz时钟，分频为50M/25000000 * 1/2 = 1Hz</span><br>  <span class="hljs-keyword">constant</span> c_cnt_1  : <span class="hljs-built_in">integer</span> := <span class="hljs-number">2500000</span>; <span class="hljs-comment">-- 50MHz时钟，分频为50M/2500000 * 1/2 = 10Hz</span><br>  <span class="hljs-keyword">constant</span> c_cnt_os : <span class="hljs-built_in">integer</span> := <span class="hljs-number">50000</span>; <span class="hljs-comment">-- 50MHz时钟，分频为50M/50000 * 1/2 = 500Hz</span><br>  <span class="hljs-keyword">constant</span> c_cnt_ot : <span class="hljs-built_in">integer</span> := <span class="hljs-number">25000</span>; <span class="hljs-comment">-- 50MHz时钟，分频为50M/25000 * 1/2 = 1kHz</span><br><span class="hljs-keyword">begin</span><br><br>  <span class="hljs-keyword">process</span> (clk)<br>    <span class="hljs-keyword">variable</span> cnt_0  : <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> c_cnt_0;<br>    <span class="hljs-keyword">variable</span> cnt_1  : <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> c_cnt_1;<br>    <span class="hljs-keyword">variable</span> cnt_os : <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> c_cnt_os;<br>    <span class="hljs-keyword">variable</span> cnt_ot : <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> c_cnt_ot;<br>  <span class="hljs-keyword">begin</span><br><br>    <span class="hljs-keyword">if</span> (clk<span class="hljs-symbol">&#x27;event</span> <span class="hljs-keyword">and</span> clk = <span class="hljs-string">&#x27;1&#x27;</span>) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 若上升沿，则计数</span><br>      cnt_0  := cnt_0 + <span class="hljs-number">1</span>;<br>      cnt_1  := cnt_1 + <span class="hljs-number">1</span>;<br>      cnt_os := cnt_os + <span class="hljs-number">1</span>;<br>      cnt_ot := cnt_ot + <span class="hljs-number">1</span>;<br><br>      <span class="hljs-keyword">if</span> (cnt_0 = c_cnt_0) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 计数到c_cnt_0，输出正常计时时钟信号</span><br>        cnt_0 := <span class="hljs-number">0</span>;<br>        m_clk0 &lt;= <span class="hljs-keyword">not</span> m_clk0;  <span class="hljs-comment">-- 反转时钟信号</span><br>      <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br><br>      <span class="hljs-keyword">if</span> (cnt_1 = c_cnt_1) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 计数到c_cnt_1，输出设置界面时钟信号</span><br>        cnt_1 := <span class="hljs-number">0</span>;<br>        m_clk1 &lt;= <span class="hljs-keyword">not</span> m_clk1;<br>      <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br><br>      <span class="hljs-keyword">if</span> (cnt_os = c_cnt_os) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 计数到c_cnt_os，输出秒报时蜂鸣器时钟信号</span><br>        cnt_os := <span class="hljs-number">0</span>;<br>        m_clk_os &lt;= <span class="hljs-keyword">not</span> m_clk_os;<br>      <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br><br>      <span class="hljs-keyword">if</span> (cnt_ot = c_cnt_ot) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 计数到c_cnt_ot，输出点报时蜂鸣器时钟信号</span><br>        cnt_ot := <span class="hljs-number">0</span>;<br>        m_clk_ot &lt;= <span class="hljs-keyword">not</span> m_clk_ot;<br>      <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>    <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br>  clk0   &lt;= m_clk0;<br>  clk1   &lt;= m_clk1;<br>  clk_os &lt;= m_clk_os;<br>  clk_ot &lt;= m_clk_ot;<br><span class="hljs-keyword">end</span> bhv;<br></code></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 实体定义 --------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">entity</span> diver <span class="keyword">is</span></span><br><span class="line">  <span class="keyword">port</span></span><br><span class="line">  (</span><br><span class="line">    clk    : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- 输入时钟，原始的时钟频率</span></span><br><span class="line">    clk_ot : <span class="keyword">out</span> <span class="built_in">std_logic</span>; <span class="comment">-- 点报时蜂鸣器频率，1kHz</span></span><br><span class="line">    clk_os : <span class="keyword">out</span> <span class="built_in">std_logic</span>; <span class="comment">-- 秒报时蜂鸣器频率，500Hz</span></span><br><span class="line">    clk1   : <span class="keyword">out</span> <span class="built_in">std_logic</span>; <span class="comment">-- 输出时钟，设置界面分频，闹钟和校时功能,10Hz</span></span><br><span class="line">    clk0   : <span class="keyword">out</span> <span class="built_in">std_logic</span> <span class="comment">-- 输出时钟，正常计时分频，1Hz</span></span><br><span class="line">  );</span><br><span class="line"><span class="keyword">end</span> diver;</span><br></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 结构体定义 ------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">architecture</span> bhv <span class="keyword">of</span> diver <span class="keyword">is</span></span><br><span class="line">  <span class="keyword">signal</span> m_clk0     : <span class="built_in">std_logic</span>; <span class="comment">-- 正常计时频率为1Hz </span></span><br><span class="line">  <span class="keyword">signal</span> m_clk1     : <span class="built_in">std_logic</span>; <span class="comment">-- 校时频率为10Hz </span></span><br><span class="line">  <span class="keyword">signal</span> m_clk_os   : <span class="built_in">std_logic</span>; <span class="comment">-- 秒报时蜂鸣器频率为500Hz</span></span><br><span class="line">  <span class="keyword">signal</span> m_clk_ot   : <span class="built_in">std_logic</span>; <span class="comment">-- 点报时蜂鸣器频率为1kHz</span></span><br><span class="line">  <span class="keyword">constant</span> c_cnt_0  : <span class="built_in">integer</span> := <span class="number">25000000</span>; <span class="comment">-- 50MHz时钟，分频为50M/25000000 * 1/2 = 1Hz</span></span><br><span class="line">  <span class="keyword">constant</span> c_cnt_1  : <span class="built_in">integer</span> := <span class="number">2500000</span>; <span class="comment">-- 50MHz时钟，分频为50M/2500000 * 1/2 = 10Hz</span></span><br><span class="line">  <span class="keyword">constant</span> c_cnt_os : <span class="built_in">integer</span> := <span class="number">50000</span>; <span class="comment">-- 50MHz时钟，分频为50M/50000 * 1/2 = 500Hz</span></span><br><span class="line">  <span class="keyword">constant</span> c_cnt_ot : <span class="built_in">integer</span> := <span class="number">25000</span>; <span class="comment">-- 50MHz时钟，分频为50M/25000 * 1/2 = 1kHz</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">process</span> (clk)</span><br><span class="line">    <span class="keyword">variable</span> cnt_0  : <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> c_cnt_0;</span><br><span class="line">    <span class="keyword">variable</span> cnt_1  : <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> c_cnt_1;</span><br><span class="line">    <span class="keyword">variable</span> cnt_os : <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> c_cnt_os;</span><br><span class="line">    <span class="keyword">variable</span> cnt_ot : <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> c_cnt_ot;</span><br><span class="line">  <span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (clk<span class="symbol">&#x27;event</span> <span class="keyword">and</span> clk = <span class="string">&#x27;1&#x27;</span>) <span class="keyword">then</span> <span class="comment">-- 若上升沿，则计数</span></span><br><span class="line">      cnt_0  := cnt_0 + <span class="number">1</span>;</span><br><span class="line">      cnt_1  := cnt_1 + <span class="number">1</span>;</span><br><span class="line">      cnt_os := cnt_os + <span class="number">1</span>;</span><br><span class="line">      cnt_ot := cnt_ot + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (cnt_0 = c_cnt_0) <span class="keyword">then</span> <span class="comment">-- 计数到c_cnt_0，输出正常计时时钟信号</span></span><br><span class="line">        cnt_0 := <span class="number">0</span>;</span><br><span class="line">        m_clk0 &lt;= <span class="keyword">not</span> m_clk0;  <span class="comment">-- 反转时钟信号</span></span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (cnt_1 = c_cnt_1) <span class="keyword">then</span> <span class="comment">-- 计数到c_cnt_1，输出设置界面时钟信号</span></span><br><span class="line">        cnt_1 := <span class="number">0</span>;</span><br><span class="line">        m_clk1 &lt;= <span class="keyword">not</span> m_clk1;</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (cnt_os = c_cnt_os) <span class="keyword">then</span> <span class="comment">-- 计数到c_cnt_os，输出秒报时蜂鸣器时钟信号</span></span><br><span class="line">        cnt_os := <span class="number">0</span>;</span><br><span class="line">        m_clk_os &lt;= <span class="keyword">not</span> m_clk_os;</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (cnt_ot = c_cnt_ot) <span class="keyword">then</span> <span class="comment">-- 计数到c_cnt_ot，输出点报时蜂鸣器时钟信号</span></span><br><span class="line">        cnt_ot := <span class="number">0</span>;</span><br><span class="line">        m_clk_ot &lt;= <span class="keyword">not</span> m_clk_ot;</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line">  clk0   &lt;= m_clk0;</span><br><span class="line">  clk1   &lt;= m_clk1;</span><br><span class="line">  clk_os &lt;= m_clk_os;</span><br><span class="line">  clk_ot &lt;= m_clk_ot;</span><br><span class="line"><span class="keyword">end</span> bhv;</span><br></pre></td></tr></table></figure>
 <h4 id="2212-实际测试波形"><a class="markdownIt-Anchor" href="#2212-实际测试波形"></a> 2.2.1.2 实际测试波形</h4>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117162109699.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117162109699.png" alt="" /></p>
 <p>根据实际测量波形可知，原始时钟经过分频产生了四种预期中的频率信号，成功验证代码。</p>
 <h3 id="222-计数器模块"><a class="markdownIt-Anchor" href="#222-计数器模块"></a> 2.2.2 计数器模块</h3>
 <p>用于实现正常时钟的计数器，本质为24/60进制计数器。</p>
 <h4 id="2221-代码实现"><a class="markdownIt-Anchor" href="#2221-代码实现"></a> 2.2.2.1 代码实现</h4>
 <p>由所需实现的功能可知，本次需要编写的计数器为异步清零和同步使能的加法计数器。正常情况下，秒计数器的时钟源由正常计数时钟（1Hz）提供，分钟和小时计数器的时钟源由上一位的进位信号提供。</p>
 <p>代码实现摘录如下，以秒计时器为例：</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">entity</span> count_60_sec <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">port</span><br>  (<br>    clk, rst, en : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>;<br>    q0, q1       : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">3</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>);<br>    cout         : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span><br>  );<br><span class="hljs-keyword">end</span> count_60_sec;<br></code></pre></td></tr></table></figure>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构体定义 -------------------------------------------------------------------------------</span><br><span class="hljs-keyword">architecture</span> a <span class="hljs-keyword">of</span> count_60_sec <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">signal</span> m_clk      : <span class="hljs-built_in">std_logic</span>;<br>  <span class="hljs-keyword">signal</span> num0, num1 : <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">3</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>); <span class="hljs-comment">-- num0：个位数，num1：十位数</span><br><span class="hljs-keyword">begin</span><br><br>  cout &lt;= <span class="hljs-string">&#x27;1&#x27;</span> <span class="hljs-keyword">when</span> (num0 = <span class="hljs-string">&quot;1001&quot;</span> <span class="hljs-keyword">and</span> num1 = <span class="hljs-string">&quot;0101&quot;</span> <span class="hljs-keyword">and</span> en = <span class="hljs-string">&#x27;1&#x27;</span>) <span class="hljs-keyword">else</span><br>    <span class="hljs-string">&#x27;0&#x27;</span>; <span class="hljs-comment">-- 59时输出进位信号</span><br><br>  <span class="hljs-keyword">process</span> (rst, clk)<br>  <span class="hljs-keyword">begin</span><br><br>    m_clk &lt;= clk; <span class="hljs-comment">-- 用于计数的时钟信号</span><br><br>    <span class="hljs-keyword">if</span> (rst = <span class="hljs-string">&#x27;0&#x27;</span>) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 低电平复位</span><br>      num0 &lt;= <span class="hljs-string">&quot;0000&quot;</span>;<br>      num1 &lt;= <span class="hljs-string">&quot;0000&quot;</span>;<br><br>    <span class="hljs-keyword">elsif</span> (m_clk<span class="hljs-symbol">&#x27;event</span> <span class="hljs-keyword">and</span> m_clk = <span class="hljs-string">&#x27;0&#x27;</span>) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 若下降沿，则计数</span><br><br>      <span class="hljs-keyword">if</span> (en = <span class="hljs-string">&#x27;1&#x27;</span>) <span class="hljs-keyword">then</span><br><br>        <span class="hljs-keyword">if</span> (num0 = <span class="hljs-string">&quot;1001&quot;</span>) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 个位数计数到9，个位数归零</span><br>          num0 &lt;= <span class="hljs-string">&quot;0000&quot;</span>;<br><br>          <span class="hljs-keyword">if</span> (num1 = <span class="hljs-string">&quot;0101&quot;</span>) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 个位数计数到9 &amp; 十位数计数到5，十位数归零</span><br>            num1 &lt;= <span class="hljs-string">&quot;0000&quot;</span>;<br><br>          <span class="hljs-keyword">else</span><br>            num1 &lt;= num1 + <span class="hljs-number">1</span>;<br>          <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br><br>        <span class="hljs-keyword">else</span><br>          num0 &lt;= num0 + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>      <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>    <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br>  q0 &lt;= num0; <span class="hljs-comment">-- 输出个位数</span><br>  q1 &lt;= num1; <span class="hljs-comment">-- 输出十位数</span><br><span class="hljs-keyword">end</span> a;<br></code></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 实体定义 --------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">entity</span> count_60_sec <span class="keyword">is</span></span><br><span class="line">  <span class="keyword">port</span></span><br><span class="line">  (</span><br><span class="line">    clk, rst, en : <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">    q0, q1       : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">    cout         : <span class="keyword">out</span> <span class="built_in">std_logic</span></span><br><span class="line">  );</span><br><span class="line"><span class="keyword">end</span> count_60_sec;</span><br></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 结构体定义 -------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">architecture</span> a <span class="keyword">of</span> count_60_sec <span class="keyword">is</span></span><br><span class="line">  <span class="keyword">signal</span> m_clk      : <span class="built_in">std_logic</span>;</span><br><span class="line">  <span class="keyword">signal</span> num0, num1 : <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>); <span class="comment">-- num0：个位数，num1：十位数</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line">  cout &lt;= <span class="string">&#x27;1&#x27;</span> <span class="keyword">when</span> (num0 = <span class="string">&quot;1001&quot;</span> <span class="keyword">and</span> num1 = <span class="string">&quot;0101&quot;</span> <span class="keyword">and</span> en = <span class="string">&#x27;1&#x27;</span>) <span class="keyword">else</span></span><br><span class="line">    <span class="string">&#x27;0&#x27;</span>; <span class="comment">-- 59时输出进位信号</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">process</span> (rst, clk)</span><br><span class="line">  <span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line">    m_clk &lt;= clk; <span class="comment">-- 用于计数的时钟信号</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (rst = <span class="string">&#x27;0&#x27;</span>) <span class="keyword">then</span> <span class="comment">-- 低电平复位</span></span><br><span class="line">      num0 &lt;= <span class="string">&quot;0000&quot;</span>;</span><br><span class="line">      num1 &lt;= <span class="string">&quot;0000&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">elsif</span> (m_clk<span class="symbol">&#x27;event</span> <span class="keyword">and</span> m_clk = <span class="string">&#x27;0&#x27;</span>) <span class="keyword">then</span> <span class="comment">-- 若下降沿，则计数</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (en = <span class="string">&#x27;1&#x27;</span>) <span class="keyword">then</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (num0 = <span class="string">&quot;1001&quot;</span>) <span class="keyword">then</span> <span class="comment">-- 个位数计数到9，个位数归零</span></span><br><span class="line">          num0 &lt;= <span class="string">&quot;0000&quot;</span>;</span><br><span class="line"></span><br><span class="line">          <span class="keyword">if</span> (num1 = <span class="string">&quot;0101&quot;</span>) <span class="keyword">then</span> <span class="comment">-- 个位数计数到9 &amp; 十位数计数到5，十位数归零</span></span><br><span class="line">            num1 &lt;= <span class="string">&quot;0000&quot;</span>;</span><br><span class="line"></span><br><span class="line">          <span class="keyword">else</span></span><br><span class="line">            num1 &lt;= num1 + <span class="number">1</span>;</span><br><span class="line">          <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">          num0 &lt;= num0 + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line">  q0 &lt;= num0; <span class="comment">-- 输出个位数</span></span><br><span class="line">  q1 &lt;= num1; <span class="comment">-- 输出十位数</span></span><br><span class="line"><span class="keyword">end</span> a;</span><br></pre></td></tr></table></figure>
 <h4 id="2222-实际测试波形"><a class="markdownIt-Anchor" href="#2222-实际测试波形"></a> 2.2.2.2 实际测试波形</h4>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117171919293.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117171919293.png" alt="" /></p>
 <p>根据实际测量波形可知，以秒计时器为例，从图中可以看出模块输出为60进制加法器，成功验证代码。</p>
 <h3 id="223-校时模块"><a class="markdownIt-Anchor" href="#223-校时模块"></a> 2.2.3 校时模块</h3>
 <p>由题目可知，需要分配两个按键出来为分钟和小时位提供校时功能，也就是当按下按键之后，对应的计数器时钟源切换为频率较快的（10Hz）频率源，从而快速调整对应位的计数。因此可以编写二选一选择器以实现这个功能，由位选信号，也就是按键信号，来选择提供给计数器的时钟源。</p>
 <h4 id="2231-代码实现"><a class="markdownIt-Anchor" href="#2231-代码实现"></a> 2.2.3.1 代码实现</h4>
 <p>二选一选择器代码实现摘录如下：</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">entity</span> mux21a <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">port</span><br>  (<br>    a, b, s : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>;<br>    y       : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span><br>  );<br><span class="hljs-keyword">end</span> mux21a;<br></code></pre></td></tr></table></figure>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">architecture</span> behav <span class="hljs-keyword">of</span> mux21a <span class="hljs-keyword">is</span><br><span class="hljs-keyword">begin</span><br><br>  <span class="hljs-keyword">process</span> (a, b, s)<br>  <span class="hljs-keyword">begin</span><br><br>    <span class="hljs-keyword">if</span> s = <span class="hljs-string">&#x27;0&#x27;</span> <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 按下按键，低电平</span><br>      y &lt;= b;<br>    <span class="hljs-keyword">else</span><br>      y &lt;= a;<br>    <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br><span class="hljs-keyword">end</span> behav;<br></code></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 实体定义 --------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">entity</span> mux21a <span class="keyword">is</span></span><br><span class="line">  <span class="keyword">port</span></span><br><span class="line">  (</span><br><span class="line">    a, b, s : <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">    y       : <span class="keyword">out</span> <span class="built_in">std_logic</span></span><br><span class="line">  );</span><br><span class="line"><span class="keyword">end</span> mux21a;</span><br></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 结构定义 --------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">architecture</span> behav <span class="keyword">of</span> mux21a <span class="keyword">is</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">process</span> (a, b, s)</span><br><span class="line">  <span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> s = <span class="string">&#x27;0&#x27;</span> <span class="keyword">then</span> <span class="comment">-- 按下按键，低电平</span></span><br><span class="line">      y &lt;= b;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      y &lt;= a;</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line"><span class="keyword">end</span> behav;</span><br></pre></td></tr></table></figure>
 <h4 id="2232-实际测试波形"><a class="markdownIt-Anchor" href="#2232-实际测试波形"></a> 2.2.3.2 实际测试波形</h4>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117173417345.png" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117173417345.png" alt="" /></p>
 <p>根据实际测量波形可知，以分计数器为例，正常情况下，时钟信号为来自秒计数器的进位信号，当按下按键的时候，时钟信号切换为10Hz，成功验证代码。</p>
 <h3 id="224-整点报时模块"><a class="markdownIt-Anchor" href="#224-整点报时模块"></a> 2.2.4 整点报时模块</h3>
 <p>检测到分达到59时，秒达到50、54、56、58时，向蜂鸣器输出500Hz的信号，检测分和秒都达到59的时候，向蜂鸣器输出1kHz的信号。</p>
 <h4 id="2241-代码实现"><a class="markdownIt-Anchor" href="#2241-代码实现"></a> 2.2.4.1 代码实现</h4>
 <p>代码实现摘录如下：</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">entity</span> alarm <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">port</span><br>  (<br>    min0, min1, sec0, sec1 : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">3</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>); <span class="hljs-comment">-- 分计时器和秒计时器输入</span><br>    h_buz                  : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- hour报时 接diver给的频率</span><br>    s_buz                  : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- sec报时 接diver给的频率</span><br>    speak                  : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span> <span class="hljs-comment">-- 蜂鸣器输入端口</span><br>  );<br><span class="hljs-keyword">end</span> alarm;<br></code></pre></td></tr></table></figure>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">architecture</span> behav <span class="hljs-keyword">of</span> alarm <span class="hljs-keyword">is</span><br><span class="hljs-keyword">begin</span><br>  <span class="hljs-keyword">process</span> (min1, min0, sec1, sec0)<br>  <span class="hljs-keyword">begin</span><br>    <span class="hljs-keyword">if</span> (min1 = <span class="hljs-string">&quot;0101&quot;</span> <span class="hljs-keyword">and</span> min0 = <span class="hljs-string">&quot;1001&quot;</span> <span class="hljs-keyword">and</span> sec1 = <span class="hljs-string">&quot;0101&quot;</span> <span class="hljs-keyword">and</span> sec0 = <span class="hljs-string">&quot;1001&quot;</span>) <span class="hljs-keyword">then</span><br>      speak &lt;= h_buz;<br>    <span class="hljs-keyword">elsif</span> (min1 = <span class="hljs-string">&quot;0101&quot;</span> <span class="hljs-keyword">and</span> min0 = <span class="hljs-string">&quot;1001&quot;</span> <span class="hljs-keyword">and</span> sec1 = <span class="hljs-string">&quot;0101&quot;</span>) <span class="hljs-keyword">and</span> (sec0 = <span class="hljs-string">&quot;0000&quot;</span> <span class="hljs-keyword">or</span> sec0 = <span class="hljs-string">&quot;0010&quot;</span> <span class="hljs-keyword">or</span> sec0 = <span class="hljs-string">&quot;0100&quot;</span> <span class="hljs-keyword">or</span> sec0 = <span class="hljs-string">&quot;0110&quot;</span> <span class="hljs-keyword">or</span> sec0 = <span class="hljs-string">&quot;1000&quot;</span>) <span class="hljs-keyword">then</span><br>      speak &lt;= s_buz;<br>    <span class="hljs-keyword">else</span><br>      speak &lt;= <span class="hljs-string">&#x27;1&#x27;</span>;<br>    <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br><span class="hljs-keyword">end</span> behav;<br></code></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 实体定义 --------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">entity</span> alarm <span class="keyword">is</span></span><br><span class="line">  <span class="keyword">port</span></span><br><span class="line">  (</span><br><span class="line">    min0, min1, sec0, sec1 : <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>); <span class="comment">-- 分计时器和秒计时器输入</span></span><br><span class="line">    h_buz                  : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- hour报时 接diver给的频率</span></span><br><span class="line">    s_buz                  : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- sec报时 接diver给的频率</span></span><br><span class="line">    speak                  : <span class="keyword">out</span> <span class="built_in">std_logic</span> <span class="comment">-- 蜂鸣器输入端口</span></span><br><span class="line">  );</span><br><span class="line"><span class="keyword">end</span> alarm;</span><br></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 结构定义 --------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">architecture</span> behav <span class="keyword">of</span> alarm <span class="keyword">is</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  <span class="keyword">process</span> (min1, min0, sec1, sec0)</span><br><span class="line">  <span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span> (min1 = <span class="string">&quot;0101&quot;</span> <span class="keyword">and</span> min0 = <span class="string">&quot;1001&quot;</span> <span class="keyword">and</span> sec1 = <span class="string">&quot;0101&quot;</span> <span class="keyword">and</span> sec0 = <span class="string">&quot;1001&quot;</span>) <span class="keyword">then</span></span><br><span class="line">      speak &lt;= h_buz;</span><br><span class="line">    <span class="keyword">elsif</span> (min1 = <span class="string">&quot;0101&quot;</span> <span class="keyword">and</span> min0 = <span class="string">&quot;1001&quot;</span> <span class="keyword">and</span> sec1 = <span class="string">&quot;0101&quot;</span>) <span class="keyword">and</span> (sec0 = <span class="string">&quot;0000&quot;</span> <span class="keyword">or</span> sec0 = <span class="string">&quot;0010&quot;</span> <span class="keyword">or</span> sec0 = <span class="string">&quot;0100&quot;</span> <span class="keyword">or</span> sec0 = <span class="string">&quot;0110&quot;</span> <span class="keyword">or</span> sec0 = <span class="string">&quot;1000&quot;</span>) <span class="keyword">then</span></span><br><span class="line">      speak &lt;= s_buz;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      speak &lt;= <span class="string">&#x27;1&#x27;</span>;</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line"><span class="keyword">end</span> behav;</span><br></pre></td></tr></table></figure>
 <h4 id="2242-实际测试波形"><a class="markdownIt-Anchor" href="#2242-实际测试波形"></a> 2.2.4.2 实际测试波形</h4>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117174839213.png" srcset="/blog/img/loading.gif" lazyload alt="" /><br />
+<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117174839213.png" alt="" /><br />
 <em>整秒500Hz报时</em></p>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117174931426.png" srcset="/blog/img/loading.gif" lazyload alt="" /><br />
+<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117174931426.png" alt="" /><br />
 <em>整点1kHz报时</em></p>
 <p>根据实际测量波形可知，当分和秒计数器达到指定位置时，开始按照要求向蜂鸣器输出指定频率的信号，成功验证代码。</p>
 <h3 id="225-数码管显示模块"><a class="markdownIt-Anchor" href="#225-数码管显示模块"></a> 2.2.5 数码管显示模块</h3>
 <p>该模块 <code>seg_show.vhd</code> 包含有一个子模块 <code>seg_dsp.vhd</code> 其中 <code>seg_show.vhd</code> 负责进行扫描操作与输出电平信号给数码管的部分， <code>seg_dsp.vhd</code> 负责描述数据和实际数码管的对应关系，与告知 <code>seg_show.vhd</code> 当前时刻数码管的数据与位号的部分。</p>
 <h4 id="2251-代码实现"><a class="markdownIt-Anchor" href="#2251-代码实现"></a> 2.2.5.1 代码实现</h4>
 <p><code>seg_dsp.vhd</code> 代码实现摘录如下：</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">entity</span> seg_dsp <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">port</span><br>  (<br>    <span class="hljs-comment">-- 小数点</span><br>    dot : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>;<br>    <span class="hljs-comment">-- 数码管数字</span><br>    dat_num : <span class="hljs-keyword">in</span> <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> <span class="hljs-number">9</span>;<br>    <span class="hljs-comment">-- 选择数码管</span><br>    sel_num : <span class="hljs-keyword">in</span> <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> <span class="hljs-number">6</span>;<br>    <span class="hljs-comment">-- 输出引脚</span><br>    seg_sel  : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">5</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>);<br>    seg_data : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">7</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>)<br>  );<br><span class="hljs-keyword">end</span> seg_dsp;<br></code></pre></td></tr></table></figure>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 ------------------------------------------------------------------------------</span><br><span class="hljs-keyword">architecture</span> bhv <span class="hljs-keyword">of</span> seg_dsp <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">signal</span> dat : <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">6</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>) := (<span class="hljs-keyword">others</span> =&gt; <span class="hljs-string">&#x27;1&#x27;</span>);<br>  <span class="hljs-keyword">signal</span> sel : <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">5</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>) := (<span class="hljs-keyword">others</span> =&gt; <span class="hljs-string">&#x27;1&#x27;</span>);<br><span class="hljs-keyword">begin</span><br><br>  <span class="hljs-keyword">process</span> (dat_num)<br>  <span class="hljs-keyword">begin</span><br>    <span class="hljs-comment">-- 根据数码管点亮表进行赋值</span><br>    <span class="hljs-keyword">case</span>(dat_num) <span class="hljs-keyword">is</span><br>      <span class="hljs-keyword">when</span> <span class="hljs-number">0</span>      =&gt; dat      &lt;= <span class="hljs-string">&quot;1000000&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">1</span>      =&gt; dat      &lt;= <span class="hljs-string">&quot;1111001&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">2</span>      =&gt; dat      &lt;= <span class="hljs-string">&quot;0100100&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">3</span>      =&gt; dat      &lt;= <span class="hljs-string">&quot;0110000&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">4</span>      =&gt; dat      &lt;= <span class="hljs-string">&quot;0011001&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">5</span>      =&gt; dat      &lt;= <span class="hljs-string">&quot;0010010&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">6</span>      =&gt; dat      &lt;= <span class="hljs-string">&quot;0000010&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">7</span>      =&gt; dat      &lt;= <span class="hljs-string">&quot;1111000&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">8</span>      =&gt; dat      &lt;= <span class="hljs-string">&quot;0000000&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">9</span>      =&gt; dat      &lt;= <span class="hljs-string">&quot;0010000&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-keyword">others</span> =&gt; dat &lt;= <span class="hljs-string">&quot;1111111&quot;</span>;<br>    <span class="hljs-keyword">end</span> <span class="hljs-keyword">case</span>;<br><br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br><br>  <span class="hljs-keyword">process</span> (sel_num)<br>  <span class="hljs-keyword">begin</span><br><br>    <span class="hljs-comment">-- 选择数码管</span><br>    <span class="hljs-keyword">case</span>(sel_num) <span class="hljs-keyword">is</span><br>      <span class="hljs-keyword">when</span> <span class="hljs-number">0</span>      =&gt; sel      &lt;= <span class="hljs-string">&quot;111110&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">1</span>      =&gt; sel      &lt;= <span class="hljs-string">&quot;111101&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">2</span>      =&gt; sel      &lt;= <span class="hljs-string">&quot;111011&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">3</span>      =&gt; sel      &lt;= <span class="hljs-string">&quot;110111&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">4</span>      =&gt; sel      &lt;= <span class="hljs-string">&quot;101111&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">5</span>      =&gt; sel      &lt;= <span class="hljs-string">&quot;011111&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">6</span>      =&gt; sel      &lt;= <span class="hljs-string">&quot;111111&quot;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-keyword">others</span> =&gt; sel &lt;= <span class="hljs-string">&quot;111111&quot;</span>;<br>    <span class="hljs-keyword">end</span> <span class="hljs-keyword">case</span>;<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br>  seg_data &lt;= dot &amp; dat;<br>  seg_sel &lt;= sel;<br><span class="hljs-keyword">end</span> bhv;<br></code></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 实体定义 --------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">entity</span> seg_dsp <span class="keyword">is</span></span><br><span class="line">  <span class="keyword">port</span></span><br><span class="line">  (</span><br><span class="line">    <span class="comment">-- 小数点</span></span><br><span class="line">    dot : <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">    <span class="comment">-- 数码管数字</span></span><br><span class="line">    dat_num : <span class="keyword">in</span> <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">9</span>;</span><br><span class="line">    <span class="comment">-- 选择数码管</span></span><br><span class="line">    sel_num : <span class="keyword">in</span> <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">6</span>;</span><br><span class="line">    <span class="comment">-- 输出引脚</span></span><br><span class="line">    seg_sel  : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">5</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">    seg_data : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">  );</span><br><span class="line"><span class="keyword">end</span> seg_dsp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 结构定义 ------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">architecture</span> bhv <span class="keyword">of</span> seg_dsp <span class="keyword">is</span></span><br><span class="line">  <span class="keyword">signal</span> dat : <span class="built_in">std_logic_vector</span>(<span class="number">6</span> <span class="keyword">downto</span> <span class="number">0</span>) := (<span class="keyword">others</span> =&gt; <span class="string">&#x27;1&#x27;</span>);</span><br><span class="line">  <span class="keyword">signal</span> sel : <span class="built_in">std_logic_vector</span>(<span class="number">5</span> <span class="keyword">downto</span> <span class="number">0</span>) := (<span class="keyword">others</span> =&gt; <span class="string">&#x27;1&#x27;</span>);</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">process</span> (dat_num)</span><br><span class="line">  <span class="keyword">begin</span></span><br><span class="line">    <span class="comment">-- 根据数码管点亮表进行赋值</span></span><br><span class="line">    <span class="keyword">case</span>(dat_num) <span class="keyword">is</span></span><br><span class="line">      <span class="keyword">when</span> <span class="number">0</span>      =&gt; dat      &lt;= <span class="string">&quot;1000000&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">1</span>      =&gt; dat      &lt;= <span class="string">&quot;1111001&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">2</span>      =&gt; dat      &lt;= <span class="string">&quot;0100100&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">3</span>      =&gt; dat      &lt;= <span class="string">&quot;0110000&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">4</span>      =&gt; dat      &lt;= <span class="string">&quot;0011001&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">5</span>      =&gt; dat      &lt;= <span class="string">&quot;0010010&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">6</span>      =&gt; dat      &lt;= <span class="string">&quot;0000010&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">7</span>      =&gt; dat      &lt;= <span class="string">&quot;1111000&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">8</span>      =&gt; dat      &lt;= <span class="string">&quot;0000000&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">9</span>      =&gt; dat      &lt;= <span class="string">&quot;0010000&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="keyword">others</span> =&gt; dat &lt;= <span class="string">&quot;1111111&quot;</span>;</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">case</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">process</span> (sel_num)</span><br><span class="line">  <span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">-- 选择数码管</span></span><br><span class="line">    <span class="keyword">case</span>(sel_num) <span class="keyword">is</span></span><br><span class="line">      <span class="keyword">when</span> <span class="number">0</span>      =&gt; sel      &lt;= <span class="string">&quot;111110&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">1</span>      =&gt; sel      &lt;= <span class="string">&quot;111101&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">2</span>      =&gt; sel      &lt;= <span class="string">&quot;111011&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">3</span>      =&gt; sel      &lt;= <span class="string">&quot;110111&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">4</span>      =&gt; sel      &lt;= <span class="string">&quot;101111&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">5</span>      =&gt; sel      &lt;= <span class="string">&quot;011111&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">6</span>      =&gt; sel      &lt;= <span class="string">&quot;111111&quot;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="keyword">others</span> =&gt; sel &lt;= <span class="string">&quot;111111&quot;</span>;</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">case</span>;</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line">  seg_data &lt;= dot &amp; dat;</span><br><span class="line">  seg_sel &lt;= sel;</span><br><span class="line"><span class="keyword">end</span> bhv;</span><br></pre></td></tr></table></figure>
 <p><code>seg_show.vhd</code> 代码实现摘录如下：</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">entity</span> seg_show <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">port</span><br>  (<br>    clk : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 扫描时钟</span><br>    <span class="hljs-comment">-- 数码管数据，每个数码管4个字节</span><br>    data : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">23</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>);<br>    <span class="hljs-comment">-- 输出引脚</span><br>    seg_sel  : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">5</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>);<br>    seg_data : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">7</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>)<br>  );<br><span class="hljs-keyword">end</span> seg_show;<br></code></pre></td></tr></table></figure>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构体定义 ------------------------------------------------------------------------------</span><br><span class="hljs-keyword">architecture</span> bhv <span class="hljs-keyword">of</span> seg_show <span class="hljs-keyword">is</span><br><br>  <span class="hljs-comment">-- 中间信号</span><br>  <span class="hljs-keyword">signal</span> n1, n2, n3, n4, n5, n6 : <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> <span class="hljs-number">9</span>;<br>  <span class="hljs-keyword">signal</span> st                     : <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> <span class="hljs-number">6</span>;<br><br>  <span class="hljs-keyword">signal</span> nownum : <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> <span class="hljs-number">9</span>;<br>  <span class="hljs-keyword">signal</span> nowsel : <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> <span class="hljs-number">5</span>;<br>  <span class="hljs-keyword">signal</span> nowdot : <span class="hljs-built_in">std_logic</span>;<br><br>  <span class="hljs-comment">-- 数码管显示模块，数据与显示的映射关系</span><br>  <span class="hljs-keyword">component</span> seg_dsp<br>    <span class="hljs-keyword">port</span><br>    (<br>      dot      : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>;<br>      dat_num  : <span class="hljs-keyword">in</span> <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> <span class="hljs-number">9</span>;<br>      sel_num  : <span class="hljs-keyword">in</span> <span class="hljs-built_in">integer</span> <span class="hljs-keyword">range</span> <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> <span class="hljs-number">5</span>;<br>      seg_sel  : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">5</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>);<br>      seg_data : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">7</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>)<br>    );<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">component</span>;<br><br><span class="hljs-keyword">begin</span><br><br>  <span class="hljs-comment">-- 顺序扫描 </span><br>  <span class="hljs-keyword">process</span> (clk)<br>  <span class="hljs-keyword">begin</span><br>    <span class="hljs-keyword">if</span> (clk<span class="hljs-symbol">&#x27;event</span> <span class="hljs-keyword">and</span> clk = <span class="hljs-string">&#x27;1&#x27;</span>) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- 上升沿触发</span><br>      <span class="hljs-keyword">if</span> (st &lt; <span class="hljs-number">6</span>) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- st为扫描的位数，循环扫描</span><br>        st &lt;= st + <span class="hljs-number">1</span>;<br>      <span class="hljs-keyword">else</span><br>        st &lt;= <span class="hljs-number">0</span>;<br>      <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>    <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>;<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br><br>  <span class="hljs-comment">-- 赋值扫描数据 st变化时触发</span><br>  <span class="hljs-keyword">process</span> (st)<br>  <span class="hljs-keyword">begin</span><br>    <span class="hljs-comment">-- 将六个数字分开来，低位在前</span><br>    n1 &lt;= to_integer(<span class="hljs-built_in">unsigned</span>(data(<span class="hljs-number">3</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>)));<br>    n2 &lt;= to_integer(<span class="hljs-built_in">unsigned</span>(data(<span class="hljs-number">7</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">4</span>)));<br>    n3 &lt;= to_integer(<span class="hljs-built_in">unsigned</span>(data(<span class="hljs-number">11</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">8</span>)));<br>    n4 &lt;= to_integer(<span class="hljs-built_in">unsigned</span>(data(<span class="hljs-number">15</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">12</span>)));<br>    n5 &lt;= to_integer(<span class="hljs-built_in">unsigned</span>(data(<span class="hljs-number">19</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">16</span>)));<br>    n6 &lt;= to_integer(<span class="hljs-built_in">unsigned</span>(data(<span class="hljs-number">23</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">20</span>)));<br><br>    <span class="hljs-keyword">case</span>(st) <span class="hljs-keyword">is</span><br>      <span class="hljs-keyword">when</span> <span class="hljs-number">0</span> =&gt; nownum &lt;= n1;<br>      nowsel           &lt;= <span class="hljs-number">0</span>;<br>      nowdot           &lt;= <span class="hljs-string">&#x27;1&#x27;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">1</span> =&gt; nownum &lt;= n2;<br>      nowsel           &lt;= <span class="hljs-number">1</span>;<br>      nowdot           &lt;= <span class="hljs-string">&#x27;1&#x27;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">2</span> =&gt; nownum &lt;= n3;<br>      nowsel           &lt;= <span class="hljs-number">2</span>;<br>      nowdot           &lt;= <span class="hljs-string">&#x27;0&#x27;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">3</span> =&gt; nownum &lt;= n4;<br>      nowsel           &lt;= <span class="hljs-number">3</span>;<br>      nowdot           &lt;= <span class="hljs-string">&#x27;1&#x27;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">4</span> =&gt; nownum &lt;= n5;<br>      nowsel           &lt;= <span class="hljs-number">4</span>;<br>      nowdot           &lt;= <span class="hljs-string">&#x27;0&#x27;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-number">5</span> =&gt; nownum &lt;= n6;<br>      nowsel           &lt;= <span class="hljs-number">5</span>;<br>      nowdot           &lt;= <span class="hljs-string">&#x27;1&#x27;</span>;<br>      <span class="hljs-keyword">when</span> <span class="hljs-keyword">others</span> =&gt; <span class="hljs-keyword">null</span>;<br>    <span class="hljs-keyword">end</span> <span class="hljs-keyword">case</span>;<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br><br>  <span class="hljs-comment">--例化数码管显示模块	</span><br>  u1 : seg_dsp <span class="hljs-keyword">port</span> <span class="hljs-keyword">map</span><br>  (<br>    dot      =&gt; nowdot,<br>    dat_num  =&gt; nownum,<br>    sel_num  =&gt; nowsel,<br>    seg_sel  =&gt; seg_sel,<br>    seg_data =&gt; seg_data<br>  );<br><span class="hljs-keyword">end</span> bhv;<br></code></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 实体定义 --------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">entity</span> seg_show <span class="keyword">is</span></span><br><span class="line">  <span class="keyword">port</span></span><br><span class="line">  (</span><br><span class="line">    clk : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- 扫描时钟</span></span><br><span class="line">    <span class="comment">-- 数码管数据，每个数码管4个字节</span></span><br><span class="line">    data : <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">23</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">    <span class="comment">-- 输出引脚</span></span><br><span class="line">    seg_sel  : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">5</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">    seg_data : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">  );</span><br><span class="line"><span class="keyword">end</span> seg_show;</span><br></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 结构体定义 ------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">architecture</span> bhv <span class="keyword">of</span> seg_show <span class="keyword">is</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">-- 中间信号</span></span><br><span class="line">  <span class="keyword">signal</span> n1, n2, n3, n4, n5, n6 : <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">9</span>;</span><br><span class="line">  <span class="keyword">signal</span> st                     : <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">6</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">signal</span> nownum : <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">9</span>;</span><br><span class="line">  <span class="keyword">signal</span> nowsel : <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">5</span>;</span><br><span class="line">  <span class="keyword">signal</span> nowdot : <span class="built_in">std_logic</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- 数码管显示模块，数据与显示的映射关系</span></span><br><span class="line">  <span class="keyword">component</span> seg_dsp</span><br><span class="line">    <span class="keyword">port</span></span><br><span class="line">    (</span><br><span class="line">      dot      : <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">      dat_num  : <span class="keyword">in</span> <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">9</span>;</span><br><span class="line">      sel_num  : <span class="keyword">in</span> <span class="built_in">integer</span> <span class="keyword">range</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">5</span>;</span><br><span class="line">      seg_sel  : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">5</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">      seg_data : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">    );</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">component</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">-- 顺序扫描 </span></span><br><span class="line">  <span class="keyword">process</span> (clk)</span><br><span class="line">  <span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span> (clk<span class="symbol">&#x27;event</span> <span class="keyword">and</span> clk = <span class="string">&#x27;1&#x27;</span>) <span class="keyword">then</span> <span class="comment">-- 上升沿触发</span></span><br><span class="line">      <span class="keyword">if</span> (st &lt; <span class="number">6</span>) <span class="keyword">then</span> <span class="comment">-- st为扫描的位数，循环扫描</span></span><br><span class="line">        st &lt;= st + <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        st &lt;= <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- 赋值扫描数据 st变化时触发</span></span><br><span class="line">  <span class="keyword">process</span> (st)</span><br><span class="line">  <span class="keyword">begin</span></span><br><span class="line">    <span class="comment">-- 将六个数字分开来，低位在前</span></span><br><span class="line">    n1 &lt;= to_integer(<span class="built_in">unsigned</span>(data(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>)));</span><br><span class="line">    n2 &lt;= to_integer(<span class="built_in">unsigned</span>(data(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">4</span>)));</span><br><span class="line">    n3 &lt;= to_integer(<span class="built_in">unsigned</span>(data(<span class="number">11</span> <span class="keyword">downto</span> <span class="number">8</span>)));</span><br><span class="line">    n4 &lt;= to_integer(<span class="built_in">unsigned</span>(data(<span class="number">15</span> <span class="keyword">downto</span> <span class="number">12</span>)));</span><br><span class="line">    n5 &lt;= to_integer(<span class="built_in">unsigned</span>(data(<span class="number">19</span> <span class="keyword">downto</span> <span class="number">16</span>)));</span><br><span class="line">    n6 &lt;= to_integer(<span class="built_in">unsigned</span>(data(<span class="number">23</span> <span class="keyword">downto</span> <span class="number">20</span>)));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span>(st) <span class="keyword">is</span></span><br><span class="line">      <span class="keyword">when</span> <span class="number">0</span> =&gt; nownum &lt;= n1;</span><br><span class="line">      nowsel           &lt;= <span class="number">0</span>;</span><br><span class="line">      nowdot           &lt;= <span class="string">&#x27;1&#x27;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">1</span> =&gt; nownum &lt;= n2;</span><br><span class="line">      nowsel           &lt;= <span class="number">1</span>;</span><br><span class="line">      nowdot           &lt;= <span class="string">&#x27;1&#x27;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">2</span> =&gt; nownum &lt;= n3;</span><br><span class="line">      nowsel           &lt;= <span class="number">2</span>;</span><br><span class="line">      nowdot           &lt;= <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">3</span> =&gt; nownum &lt;= n4;</span><br><span class="line">      nowsel           &lt;= <span class="number">3</span>;</span><br><span class="line">      nowdot           &lt;= <span class="string">&#x27;1&#x27;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">4</span> =&gt; nownum &lt;= n5;</span><br><span class="line">      nowsel           &lt;= <span class="number">4</span>;</span><br><span class="line">      nowdot           &lt;= <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="number">5</span> =&gt; nownum &lt;= n6;</span><br><span class="line">      nowsel           &lt;= <span class="number">5</span>;</span><br><span class="line">      nowdot           &lt;= <span class="string">&#x27;1&#x27;</span>;</span><br><span class="line">      <span class="keyword">when</span> <span class="keyword">others</span> =&gt; <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">case</span>;</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">--例化数码管显示模块	</span></span><br><span class="line">  u1 : seg_dsp <span class="keyword">port</span> <span class="keyword">map</span></span><br><span class="line">  (</span><br><span class="line">    dot      =&gt; nowdot,</span><br><span class="line">    dat_num  =&gt; nownum,</span><br><span class="line">    sel_num  =&gt; nowsel,</span><br><span class="line">    seg_sel  =&gt; seg_sel,</span><br><span class="line">    seg_data =&gt; seg_data</span><br><span class="line">  );</span><br><span class="line"><span class="keyword">end</span> bhv;</span><br></pre></td></tr></table></figure>
 <h4 id="2252-实际现象"><a class="markdownIt-Anchor" href="#2252-实际现象"></a> 2.2.5.2 实际现象</h4>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117180301795.jpeg" srcset="/blog/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117180301795.jpeg" alt="" /></p>
 <p>根据实际现象成功验证代码。</p>
 <h2 id="23-基础部分顶层设计"><a class="markdownIt-Anchor" href="#23-基础部分顶层设计"></a> 2.3 基础部分顶层设计</h2>
 <p>经过各个模块的编写与实际验证，在顶层文件部分便可以将模块例化，再按照事先设计的方式将各个模块连接起来，以下为顶层文件各个部分的具体设计记录。</p>
 <h3 id="231-顶层端口定义"><a class="markdownIt-Anchor" href="#231-顶层端口定义"></a> 2.3.1 顶层端口定义</h3>
 <p>以下为顶层文件的端口定义代码摘录：</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 实体定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">entity</span> mainDesign <span class="hljs-keyword">is</span><br>  <span class="hljs-keyword">port</span><br>  (<br>    clk                        : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 50MHz</span><br>    key_shift                  : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 切换功能按键 原始按键信号</span><br>    key_sec, key_min, key_hour : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 校时按键</span><br>    seg_sel                    : <span class="hljs-keyword">buffer</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">5</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>); <span class="hljs-comment">-- 数码管位选</span><br>    seg_data                   : <span class="hljs-keyword">buffer</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">7</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>); <span class="hljs-comment">-- 数码管数据</span><br><br>    test1 : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">7</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>); <span class="hljs-comment">-- 测试信号</span><br>    speak : <span class="hljs-keyword">buffer</span> <span class="hljs-built_in">std_logic</span> <span class="hljs-comment">-- 整点报时、闹钟</span><br>  );<br><span class="hljs-keyword">end</span> mainDesign;<br></code></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 实体定义 --------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">entity</span> mainDesign <span class="keyword">is</span></span><br><span class="line">  <span class="keyword">port</span></span><br><span class="line">  (</span><br><span class="line">    clk                        : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- 50MHz</span></span><br><span class="line">    key_shift                  : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- 切换功能按键 原始按键信号</span></span><br><span class="line">    key_sec, key_min, key_hour : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- 校时按键</span></span><br><span class="line">    seg_sel                    : <span class="keyword">buffer</span> <span class="built_in">std_logic_vector</span>(<span class="number">5</span> <span class="keyword">downto</span> <span class="number">0</span>); <span class="comment">-- 数码管位选</span></span><br><span class="line">    seg_data                   : <span class="keyword">buffer</span> <span class="built_in">std_logic_vector</span>(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>); <span class="comment">-- 数码管数据</span></span><br><span class="line"></span><br><span class="line">    test1 : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>); <span class="comment">-- 测试信号</span></span><br><span class="line">    speak : <span class="keyword">buffer</span> <span class="built_in">std_logic</span> <span class="comment">-- 整点报时、闹钟</span></span><br><span class="line">  );</span><br><span class="line"><span class="keyword">end</span> mainDesign;</span><br></pre></td></tr></table></figure>
 <p><strong>各个端口的解释如下：</strong></p>
 <ul>
 <li><code>clk</code> 为整个系统的源时钟，频率为 50MHz。</li>
@@ -583,460 +252,42 @@
 <h3 id="232-顶层结构体定义"><a class="markdownIt-Anchor" href="#232-顶层结构体定义"></a> 2.3.2 顶层结构体定义</h3>
 <h4 id="2321-引入元件"><a class="markdownIt-Anchor" href="#2321-引入元件"></a> 2.3.2.1 引入元件</h4>
 <p>基础部分所用到的元件有如下部分：</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-comment">-- 结构定义 --------------------------------------------------------------------------------</span><br><span class="hljs-keyword">architecture</span> behav <span class="hljs-keyword">of</span> mainDesign <span class="hljs-keyword">is</span><br><br><span class="hljs-comment">-- 组件实例化 -- </span><br>  <span class="hljs-keyword">component</span> diver <span class="hljs-keyword">is</span> <span class="hljs-comment">-- 分频器 </span><br>    <span class="hljs-keyword">port</span><br>    (<br>      clk    : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 输入时钟，原始的时钟频率</span><br>      clk_ot : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 点报时蜂鸣器频率，1kHz</span><br>      clk_os : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 秒报时蜂鸣器频率，500Hz</span><br>      clk1   : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 输出时钟，设置界面分频，闹钟和校时功能,10Hz</span><br>      clk0   : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span> <span class="hljs-comment">-- 输出时钟，正常计时分频，1Hz</span><br>    );<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">component</span> diver;<br><br>  <span class="hljs-keyword">component</span> count_24_hour <span class="hljs-keyword">is</span> <span class="hljs-comment">-- 24进制计数器，时计数</span><br>    <span class="hljs-keyword">port</span><br>    (<br>      clk, rst, en : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- 输入时钟，复位信号，使能信号</span><br>      q0, q1       : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">3</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>); <span class="hljs-comment">-- 0：个位，1：十位</span><br>      cout         : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span> <span class="hljs-comment">-- 进位输出</span><br>    );<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">component</span> count_24_hour;<br><br>  <span class="hljs-keyword">component</span> count_60_min <span class="hljs-keyword">is</span> <span class="hljs-comment">-- 60进制计数器，分计数</span><br>    <span class="hljs-keyword">port</span><br>    (<br>      clk, rst, en : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>;<br>      q0, q1       : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">3</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>); <span class="hljs-comment">-- 0：个位，1：十位</span><br>      cout         : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span> <span class="hljs-comment">-- 进位输出</span><br>    );<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">component</span> count_60_min;<br><br>  <span class="hljs-keyword">component</span> count_60_sec <span class="hljs-keyword">is</span> <span class="hljs-comment">-- 60进制计数器，秒计数</span><br>    <span class="hljs-keyword">port</span><br>    (<br>      clk, rst, en : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>;<br>      q0, q1       : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">3</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>); <span class="hljs-comment">-- 0：个位，1：十位</span><br>      cout         : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span> <span class="hljs-comment">-- 进位输出</span><br>    );<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">component</span> count_60_sec;<br><br>  <span class="hljs-keyword">component</span> seg_show <span class="hljs-keyword">is</span><br>    <span class="hljs-keyword">port</span><br>    (<br>      clk : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">--复位及扫描时钟</span><br>      <span class="hljs-comment">--数码管数据，每个数码管4个字节</span><br>      data : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">23</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>);<br>      <span class="hljs-comment">--输出引脚</span><br>      seg_sel  : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">5</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>);<br>      seg_data : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">7</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>)<br>    );<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">component</span> seg_show;<br><br>  <span class="hljs-keyword">component</span> mux21a <span class="hljs-keyword">is</span> <span class="hljs-comment">-- 二选一实现校时，选择快慢信号，低电平选择快信号b</span><br>    <span class="hljs-keyword">port</span><br>    (<br>      a, b, s : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- a：正常进位时钟，b：快信号，s：按键电平</span><br>      y       : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span> <span class="hljs-comment">-- 输出信号</span><br>    );<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">component</span> mux21a;<br><br>  <span class="hljs-keyword">component</span> alarm <span class="hljs-keyword">is</span> <span class="hljs-comment">-- 整点或指定秒数报时</span><br>    <span class="hljs-keyword">port</span><br>    (<br>      min0, min1, sec0, sec1 : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic_vector</span>(<span class="hljs-number">3</span> <span class="hljs-keyword">downto</span> <span class="hljs-number">0</span>); <span class="hljs-comment">-- 分计时器和秒计时器输入</span><br>      h_buz                  : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- hour报时 接diver给的频率</span><br>      s_buz                  : <span class="hljs-keyword">in</span> <span class="hljs-built_in">std_logic</span>; <span class="hljs-comment">-- sec报时 接diver给的频率</span><br>      speak                  : <span class="hljs-keyword">out</span> <span class="hljs-built_in">std_logic</span> <span class="hljs-comment">-- 蜂鸣器输入端口</span><br>    );<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">component</span> alarm;<br></code></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 结构定义 --------------------------------------------------------------------------------</span></span><br><span class="line"><span class="keyword">architecture</span> behav <span class="keyword">of</span> mainDesign <span class="keyword">is</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 组件实例化 -- </span></span><br><span class="line">  <span class="keyword">component</span> diver <span class="keyword">is</span> <span class="comment">-- 分频器 </span></span><br><span class="line">    <span class="keyword">port</span></span><br><span class="line">    (</span><br><span class="line">      clk    : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- 输入时钟，原始的时钟频率</span></span><br><span class="line">      clk_ot : <span class="keyword">out</span> <span class="built_in">std_logic</span>; <span class="comment">-- 点报时蜂鸣器频率，1kHz</span></span><br><span class="line">      clk_os : <span class="keyword">out</span> <span class="built_in">std_logic</span>; <span class="comment">-- 秒报时蜂鸣器频率，500Hz</span></span><br><span class="line">      clk1   : <span class="keyword">out</span> <span class="built_in">std_logic</span>; <span class="comment">-- 输出时钟，设置界面分频，闹钟和校时功能,10Hz</span></span><br><span class="line">      clk0   : <span class="keyword">out</span> <span class="built_in">std_logic</span> <span class="comment">-- 输出时钟，正常计时分频，1Hz</span></span><br><span class="line">    );</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">component</span> diver;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">component</span> count_24_hour <span class="keyword">is</span> <span class="comment">-- 24进制计数器，时计数</span></span><br><span class="line">    <span class="keyword">port</span></span><br><span class="line">    (</span><br><span class="line">      clk, rst, en : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- 输入时钟，复位信号，使能信号</span></span><br><span class="line">      q0, q1       : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>); <span class="comment">-- 0：个位，1：十位</span></span><br><span class="line">      cout         : <span class="keyword">out</span> <span class="built_in">std_logic</span> <span class="comment">-- 进位输出</span></span><br><span class="line">    );</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">component</span> count_24_hour;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">component</span> count_60_min <span class="keyword">is</span> <span class="comment">-- 60进制计数器，分计数</span></span><br><span class="line">    <span class="keyword">port</span></span><br><span class="line">    (</span><br><span class="line">      clk, rst, en : <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">      q0, q1       : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>); <span class="comment">-- 0：个位，1：十位</span></span><br><span class="line">      cout         : <span class="keyword">out</span> <span class="built_in">std_logic</span> <span class="comment">-- 进位输出</span></span><br><span class="line">    );</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">component</span> count_60_min;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">component</span> count_60_sec <span class="keyword">is</span> <span class="comment">-- 60进制计数器，秒计数</span></span><br><span class="line">    <span class="keyword">port</span></span><br><span class="line">    (</span><br><span class="line">      clk, rst, en : <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">      q0, q1       : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>); <span class="comment">-- 0：个位，1：十位</span></span><br><span class="line">      cout         : <span class="keyword">out</span> <span class="built_in">std_logic</span> <span class="comment">-- 进位输出</span></span><br><span class="line">    );</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">component</span> count_60_sec;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">component</span> seg_show <span class="keyword">is</span></span><br><span class="line">    <span class="keyword">port</span></span><br><span class="line">    (</span><br><span class="line">      clk : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">--复位及扫描时钟</span></span><br><span class="line">      <span class="comment">--数码管数据，每个数码管4个字节</span></span><br><span class="line">      data : <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">23</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">      <span class="comment">--输出引脚</span></span><br><span class="line">      seg_sel  : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">5</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">      seg_data : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">    );</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">component</span> seg_show;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">component</span> mux21a <span class="keyword">is</span> <span class="comment">-- 二选一实现校时，选择快慢信号，低电平选择快信号b</span></span><br><span class="line">    <span class="keyword">port</span></span><br><span class="line">    (</span><br><span class="line">      a, b, s : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- a：正常进位时钟，b：快信号，s：按键电平</span></span><br><span class="line">      y       : <span class="keyword">out</span> <span class="built_in">std_logic</span> <span class="comment">-- 输出信号</span></span><br><span class="line">    );</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">component</span> mux21a;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">component</span> alarm <span class="keyword">is</span> <span class="comment">-- 整点或指定秒数报时</span></span><br><span class="line">    <span class="keyword">port</span></span><br><span class="line">    (</span><br><span class="line">      min0, min1, sec0, sec1 : <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>); <span class="comment">-- 分计时器和秒计时器输入</span></span><br><span class="line">      h_buz                  : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- hour报时 接diver给的频率</span></span><br><span class="line">      s_buz                  : <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">-- sec报时 接diver给的频率</span></span><br><span class="line">      speak                  : <span class="keyword">out</span> <span class="built_in">std_logic</span> <span class="comment">-- 蜂鸣器输入端口</span></span><br><span class="line">    );</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">component</span> alarm;</span><br></pre></td></tr></table></figure>
 <p>由于正常计时器输出的都是各自的个位与十位数据，数码管显示模块的输入需要 24 位的数据，因此在顶层文件中需要将各个计时器的输出组合起来，合并输入到数码管显示模块中：</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-keyword">process</span> (clk_os)<br><span class="hljs-keyword">begin</span><br>  seg_show_data &lt;= n6 &amp; n5 &amp; n4 &amp; n3 &amp; n2 &amp; n1;<br><span class="hljs-keyword">end</span> <span class="hljs-keyword">process</span>;<br></code></pre></td></tr></table></figure>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">process</span> (clk_os)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  seg_show_data &lt;= n6 &amp; n5 &amp; n4 &amp; n3 &amp; n2 &amp; n1;</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">process</span>;</span><br></pre></td></tr></table></figure>
 <p>至此，基础部分已基本完成。由于扩展部分的加入，元件引入和例化部分代码有所变更，因此完整的顶层文件代码将在扩展部分逐步论述。</p>
 <blockquote>
 <p>以上为基础部分的课设过程记录，拓展部分待更新。</p>
 </blockquote>
 <h2 id="24-扩展部分顶层设计"><a class="markdownIt-Anchor" href="#24-扩展部分顶层设计"></a> 2.4 扩展部分顶层设计</h2>
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/embed/" class="category-chain-item">embed</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/blog/tags/FPGA/" class="print-no-link">#FPGA</a>
-      
-        <a href="/blog/tags/%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="print-no-link">#过程记录</a>
-      
-        <a href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="print-no-link">#嵌入式</a>
-      
-        <a href="/blog/tags/%E4%BD%9C%E4%B8%9A/" class="print-no-link">#作业</a>
-      
-    </div>
-  
 </div>
 
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>FPGA电子钟课设设计过程</div>
-      <div>https://sagi-rastar.github.io/blog/2023/11/16/FPGA电子钟课设设计过程/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>SagiRastar</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2023年11月16日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-cc-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/blog/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/" title="高频电子复习随笔">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">高频电子复习随笔</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/blog/2023/11/11/hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/" title="hexo-fluid主题添加图集瀑布流功能">
-                        <span class="hidden-mobile">hexo-fluid主题添加图集瀑布流功能</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-  
-  
-
-
-
-
-
-
-
-
+  <nav class="post-nav" aria-label="相邻文章">
     
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      <a class="post-nav-item" href="/blog/2023/11/20/%E9%AB%98%E9%A2%91%E7%94%B5%E5%AD%90%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/">
+        <span class="mono">← 更早</span>
+        <span class="post-nav-title">高频电子复习随笔</span>
       </a>
     
 
     
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
+      <a class="post-nav-item is-next" href="/blog/2023/11/11/hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/">
+        <span class="mono">更新 →</span>
+        <span class="post-nav-title">hexo-fluid主题添加图集瀑布流功能</span>
+      </a>
+    
+  </nav>
+
+  
+
+</article>
+
+    </main>
+    <footer class="foot mono">
+  <span>2026 <span class="foot-build">07 / BLOG</span></span>
+  <span class="foot-mark">SAGIRASTAR · HW / FW / WORDS</span>
+</footer>
+
   </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-    </div>
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/blog/js/events.js" ></script>
-<script  src="/blog/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/blog/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    function isExpandAllEnabled() {
-      return CONFIG.toc && CONFIG.toc.expand_all === true;
-    }
-    function expandAllToc() {
-      if (!isExpandAllEnabled()) { return; }
-      jQuery('#toc-body .tocbot-is-collapsed').removeClass('tocbot-is-collapsed');
-    }
-    function updateTocToggle($li, $childList) {
-      var $toggle = $li.children('.toc-toggle');
-      if ($toggle.length === 0) { return; }
-      var collapsed = $childList.hasClass('tocbot-is-collapsed');
-      $toggle
-        .toggleClass('toc-toggle-collapsed', collapsed)
-        .toggleClass('toc-toggle-expanded', !collapsed);
-    }
-    function bindTocToggle() {
-      if (!isExpandAllEnabled()) { return; }
-      jQuery('#toc-body .toc-list-item').each(function() {
-        var $li = jQuery(this);
-        var $childList = $li.children('ol');
-        if ($childList.length === 0) {
-          if ($li.children('.toc-toggle').length === 0) {
-            $li.prepend('<span class="toc-toggle toc-toggle-placeholder" aria-hidden="true">›</span>');
-          }
-          return;
-        }
-
-        if ($li.children('.toc-toggle').length === 0) {
-          $li.prepend('<span class="toc-toggle toc-toggle-expanded" aria-hidden="true">›</span>');
-        }
-        updateTocToggle($li, $childList);
-      });
-      jQuery('#toc-body').off('click.tocToggle').on('click.tocToggle', '.toc-toggle', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var $li = jQuery(this).parent('.toc-list-item');
-        var $childList = $li.children('ol');
-        if ($childList.length === 0) { return; }
-        $childList.toggleClass('tocbot-is-collapsed');
-        updateTocToggle($li, $childList);
-      });
-      if (!window.__tocToggleObserver) {
-        window.__tocToggleObserver = new MutationObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-            if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') { return; }
-            var $list = jQuery(mutation.target);
-            var $li = $list.parent('.toc-list-item');
-            if ($li.length === 0) { return; }
-            updateTocToggle($li, $list);
-          });
-        });
-        jQuery('#toc-body ol').each(function() {
-          window.__tocToggleObserver.observe(this, { attributes: true });
-        });
-      }
-    }
-    var tocConfig = Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc);
-    if (isExpandAllEnabled()) {
-      tocConfig.collapseDepth = 6;
-    }
-    window.tocbot.init(tocConfig);
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-    expandAllToc();
-    bindTocToggle();
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-        expandAllToc();
-        bindTocToggle();
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  <script  src="/blog/js/local-search.js" ></script>
-
-
-
-
-  
-<script src="/blog/js/custom.js"></script>
-<script src="/blog/js/photoWall.js"></script>
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/blog/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
 </body>
 </html>

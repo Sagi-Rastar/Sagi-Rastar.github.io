@@ -1,1148 +1,252 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-
-  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/fluid.png">
-  <link rel="icon" href="/blog/img/me.png">
   
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070809">
+<title>SagiRastar · 博客</title>
+<meta name="description" content="SagiRastar 的个人博客">
+<link rel="canonical" href="https://sagi-rastar.github.io/blog/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/atom+xml" title="SagiRastar" href="/blog/atom.xml">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="SagiRastar">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="SagiRastar 的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SagiRastar&#39;s Blog">
-<meta property="og:url" content="https://sagi-rastar.github.io/blog/index.html">
-<meta property="og:site_name" content="SagiRastar&#39;s Blog">
-<meta property="og:description" content="SagiRastar 的个人博客">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="SagiRastar">
-<meta name="twitter:card" content="summary_large_image">
-  
-  
-  
-  <title>SagiRastar&#39;s Blog</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/blog/css/blog.css">
 
 
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
-
-
-<link  rel="stylesheet" href="/blog/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
-  
-
-
-
-  
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap.css">
-<link rel="stylesheet" href="/blog/css/custom.css">
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"sagi-rastar.github.io","root":"/blog/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/blog/js/utils.js" ></script>
-  <script  src="/blog/js/color-schema.js" ></script>
-  
-
-
-  
-<link rel="alternate" href="/blog/atom.xml" title="SagiRastar's Blog" type="application/atom+xml">
 </head>
-
-
 <body>
-  
+  <div class="shell">
+    <header class="top">
+  <a class="mark mono" href="/">SAGIRASTAR</a>
 
-  <header>
+  <nav class="rail" aria-label="站内分区">
     
+      <a
+        class="rail-item"
+        href="/"
+        
+      >
+        <span class="rail-idx mono">00</span>
+        <span class="rail-zh">首页</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#memo"
+        
+      >
+        <span class="rail-idx mono">01</span>
+        <span class="rail-zh">碎片</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#gallery"
+        
+      >
+        <span class="rail-idx mono">02</span>
+        <span class="rail-zh">习作</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#tools"
+        
+      >
+        <span class="rail-idx mono">03</span>
+        <span class="rail-zh">工具</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#works"
+        
+      >
+        <span class="rail-idx mono">04</span>
+        <span class="rail-zh">硬件项目</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#about"
+        
+      >
+        <span class="rail-idx mono">05</span>
+        <span class="rail-zh">关于</span>
+      </a>
+    
+      <a
+        class="rail-item"
+        href="/#links"
+        
+      >
+        <span class="rail-idx mono">06</span>
+        <span class="rail-zh">友链</span>
+      </a>
+    
+      <a
+        class="rail-item is-current"
+        href="/blog/"
+        aria-current="page"
+      >
+        <span class="rail-idx mono">07</span>
+        <span class="rail-zh">博客</span>
+      </a>
+    
+  </nav>
 
-<div class="header-inner" style="height: 100vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/blog/">
-      <strong>Fluid</strong>
+  <div class="top-links mono">
+    <a href="https://github.com/Sagi-Rastar" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:SagiRastar@gmail.com">Mail</a>
+    <a href="/blog/atom.xml">Feed</a>
+  </div>
+</header>
+
+    <main class="page">
+      <header class="page-head">
+  <div class="kicker mono">
+    <span>07 / BLOG</span>
+    <span class="kicker-rule" aria-hidden="true"></span>
+    <span class="kicker-count">25</span>
+  </div>
+
+  <h1 class="lockup">
+    <span class="line line--latin"><span>BLOG</span></span>
+    <span class="line line--zh"><span>博客</span></span>
+  </h1>
+
+  <p class="lede">SagiRastar 的个人博客</p>
+</header>
+
+
+
+<div class="rows">
+  
+    
+    <a class="row" href="/blog/2026/11/05/%E4%B8%80%E5%9D%97%E9%BB%91%E5%B1%8F%E7%9A%84-TFT-%E4%BB%8E-RTT-%E6%97%A5%E5%BF%97%E5%88%B0-QSPI-%E8%99%9A%E7%84%8A/">
+      <span class="row-k mono">01</span>
+      <span class="row-t">
+        <span class="row-name">一块黑屏的 TFT：从 RTT 日志到 QSPI 虚焊</span>
+        <small>EB3 build FCT 不良复盘 · NG_1 64200103255814624264300150 平台：VESPA UI（P…</small>
+      </span>
+      <span class="row-s mono">2026.11.05</span>
     </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content (desktop) -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/pic/" target="_self">
-                <i class="iconfont icon-images"></i>
-                <span>图集</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/links/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Mobile grid menu overlay -->
-<div id="mobile-grid-menu" class="d-lg-none">
-  <div class="mobile-grid-menu-inner">
-    <div class="container">
-      <div class="row">
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-home-fill"></i>
-                  <span>首页</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/pic/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-images"></i>
-                  <span>图集</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/categories/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-category-fill"></i>
-                  <span>分类</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/tags/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-tags-fill"></i>
-                  <span>标签</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/archives/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-archive-fill"></i>
-                  <span>归档</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/about/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-user-fill"></i>
-                  <span>关于</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/blog/links/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-link-fill"></i>
-                  <span>友链</span>
-                </div>
-              </a>
-            </div>
-          
-        
-        
-          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
-            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <div class="mobile-grid-item">
-                <i class="iconfont icon-search"></i>
-                <span>搜索</span>
-              </div>
-            </a>
-          </div>
-        
-        
-          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
-               data-label-light="开灯"
-               data-label-dark="关灯">
-            <a href="javascript:;" aria-label="Color Toggle">
-              <div class="mobile-grid-item">
-                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
-                <span id="mobile-color-toggle-label">关灯</span>
-              </div>
-            </a>
-          </div>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
   
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/blog/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="臆病な会話が天才、安心な体温をちょうだい。,ルールは 終わりを告げるものでしょ,感情戦を君と 練っていきたいんだよ,壊れるのは呆気ない,人類なんだしー 自由自在のはずが,見たいの...　きみの中"></span>
-          
-        </div>
-
-        
-      </div>
-
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
-      
-    </div>
-  </div>
+    
+    <a class="row" href="/blog/2024/11/24/2024-11-24-%E9%9A%8F%E7%AC%94/">
+      <span class="row-k mono">02</span>
+      <span class="row-t">
+        <span class="row-name">2024-11-24-随笔</span>
+        <small>vue教程向案例项目 https://github.com/SD-Gaming/Vue2.0_to_do_list-addName-…</small>
+      </span>
+      <span class="row-s mono">2024.11.24</span>
+    </a>
+  
+    
+    <a class="row" href="/blog/2024/11/22/2024-11-22-%E9%9A%8F%E7%AC%94/">
+      <span class="row-k mono">03</span>
+      <span class="row-t">
+        <span class="row-name">2024-11-22-随笔</span>
+        <small>又是一位早闻大名但是一直没有读的作者，这两天正好核市奇谭出了特别节目，传记译者来电台聊的是真好呀。</small>
+      </span>
+      <span class="row-s mono">2024.11.22</span>
+    </a>
+  
+    
+    <a class="row" href="/blog/2024/11/18/2024-11-18-%E9%9A%8F%E7%AC%94/">
+      <span class="row-k mono">04</span>
+      <span class="row-t">
+        <span class="row-name">2024-11-18-随笔</span>
+        <small>1 参考 1.1 esp32蓝牙接受xbox手柄数据 项目地址： ESP32_connect_XboxController 依赖： …</small>
+      </span>
+      <span class="row-s mono">2024.11.18</span>
+    </a>
+  
+    
+    <a class="row" href="/blog/2024/11/11/2024-11-11-%E9%9A%8F%E7%AC%94/">
+      <span class="row-k mono">05</span>
+      <span class="row-t">
+        <span class="row-name">2024-11-11-随笔</span>
+        <small>利用taio的模版测试之后移动端的博客更新工作流算是打通了</small>
+      </span>
+      <span class="row-s mono">2024.11.11</span>
+    </a>
+  
+    
+    <a class="row" href="/blog/2024/11/01/2024-11-01-%E9%9A%8F%E7%AC%94/">
+      <span class="row-k mono">06</span>
+      <span class="row-t">
+        <span class="row-name">2024-11-01-随笔</span>
+        <small>先不说移动端了吧，现在 pc 端以后换环境应该直接拉 hexo 源代码的这个仓库下来就可以开写了。</small>
+      </span>
+      <span class="row-s mono">2024.11.01</span>
+    </a>
+  
+    
+    <a class="row" href="/blog/2024/04/30/2024-05-01-%E9%9A%8F%E7%AC%94/">
+      <span class="row-k mono">07</span>
+      <span class="row-t">
+        <span class="row-name">2024-05-01-随笔</span>
+        <small>最近能写的还挺多，特别是，</small>
+      </span>
+      <span class="row-s mono">2024.05.01</span>
+    </a>
+  
+    
+    <a class="row" href="/blog/2024/03/22/2024-03-22-%E9%9A%8F%E7%AC%94/">
+      <span class="row-k mono">08</span>
+      <span class="row-t">
+        <span class="row-name">2024-03-22-随笔</span>
+        <small>小学的时候玩的最多的估计除了当时的各类 FPS，就是 mc 和另一个叫 besiege 的游戏了</small>
+      </span>
+      <span class="row-s mono">2024.03.22</span>
+    </a>
+  
+    
+    <a class="row" href="/blog/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/">
+      <span class="row-k mono">09</span>
+      <span class="row-t">
+        <span class="row-name">速查：CH340记录</span>
+        <small>CH340 用的很多，简单来说就是一个能够将 USB 总线转换为各类串口的转换芯片。</small>
+      </span>
+      <span class="row-s mono">2024.03.20</span>
+    </a>
+  
+    
+    <a class="row" href="/blog/2024/03/08/2024-03-09-%E9%9A%8F%E7%AC%94/">
+      <span class="row-k mono">10</span>
+      <span class="row-t">
+        <span class="row-name">2024-03-09-随笔</span>
+        <small>“难得的双休，在下周忙起来之前，今天还是再开一罐啤酒吧。”</small>
+      </span>
+      <span class="row-s mono">2024.03.09</span>
+    </a>
+  
 </div>
 
 
 
-</div>
-
-  </header>
-
-  <main>
+  <nav class="pager mono" aria-label="分页">
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          style="margin-top: 0">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<h1 style="display: none">SagiRastar&#39;s Blog</h1>
-
-  <div class="row mx-auto index-card">
+      <span></span>
     
+
+    <span class="pager-now">1 / 3</span>
+
     
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2026/11/05/%E4%B8%80%E5%9D%97%E9%BB%91%E5%B1%8F%E7%9A%84-TFT-%E4%BB%8E-RTT-%E6%97%A5%E5%BF%97%E5%88%B0-QSPI-%E8%99%9A%E7%84%8A/" target="_self">
-          一块黑屏的 TFT：从 RTT 日志到 QSPI 虚焊
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2026/11/05/%E4%B8%80%E5%9D%97%E9%BB%91%E5%B1%8F%E7%9A%84-TFT-%E4%BB%8E-RTT-%E6%97%A5%E5%BF%97%E5%88%B0-QSPI-%E8%99%9A%E7%84%8A/" target="_self">
-        <div>
-          VESPA UI EB3 build FCT 不良复盘  EB3 build FCT 不良复盘 · NG_1 64200103255814624264300150 平台：VESPA UI（PSoC6 CY8C6144 + LVGL 8.4 + 外挂 XM25QH64D 8MB QSPI Flash，LVGL/页面代码跑在 XIP）   0. 引子：最花时间的，是&quot;曾经好过&quot;的
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-11-05 12:00" pubdate>
-              2026-11-05
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
+      <a class="pager-link" href="/blog/page/2/">更早 →</a>
     
-      <span class="category-chain">
-        
-  <a href="/blog/categories/%E7%A1%AC%E4%BB%B6/" class="category-chain-item">硬件</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/PSoC6/">#PSoC6</a>
-            
-              <a href="/blog/tags/QSPI/">#QSPI</a>
-            
-              <a href="/blog/tags/XIP/">#XIP</a>
-            
-              <a href="/blog/tags/%E7%A1%AC%E4%BB%B6%E8%B0%83%E8%AF%95/">#硬件调试</a>
-            
-              <a href="/blog/tags/FCT/">#FCT</a>
-            
-              <a href="/blog/tags/AI%E8%BE%85%E5%8A%A9/">#AI辅助</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2024/11/24/2024-11-24-%E9%9A%8F%E7%AC%94/" target="_self">
-          2024-11-24-随笔
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2024/11/24/2024-11-24-%E9%9A%8F%E7%AC%94/" target="_self">
-        <div>
-          vue教程向案例项目  https://github.com/SD-Gaming/Vue2.0_to_do_list-addName- https://github.com/SD-Gaming/Vue2.0-ShoppingCart-MOOC https://github.com/SD-Gaming/Vue2.0_CNode.bbs https://github.com/IFmiss/vue-w
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-11-24 17:09" pubdate>
-              2024-11-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/chip/" class="category-chain-item">chip</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/chip/">#chip</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2024/11/22/2024-11-22-%E9%9A%8F%E7%AC%94/" target="_self">
-          2024-11-22-随笔
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2024/11/22/2024-11-22-%E9%9A%8F%E7%AC%94/" target="_self">
-        <div>
-          1 阿加莎 又是一位早闻大名但是一直没有读的作者，这两天正好核市奇谭出了特别节目，传记译者来电台聊的是真好呀。 顺着阿加莎的生平听下来也正好是一个契机，直接下单了五本阿加莎的经典作品，准备爽看。
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-11-22 11:14" pubdate>
-              2024-11-22
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/chip/" class="category-chain-item">chip</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
-            
-              <a href="/blog/tags/%E7%94%B5%E5%8F%B0/">#电台</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2024/11/18/2024-11-18-%E9%9A%8F%E7%AC%94/" target="_self">
-          2024-11-18-随笔
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2024/11/18/2024-11-18-%E9%9A%8F%E7%AC%94/" target="_self">
-        <div>
-          1 参考  1.1 esp32蓝牙接受xbox手柄数据 项目地址：  ESP32_connect_XboxController  依赖：  arduino-XboxControllerNotificationParser  细节：
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-11-18 15:48" pubdate>
-              2024-11-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/chip/" class="category-chain-item">chip</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/chip/">#chip</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2024/11/11/2024-11-11-%E9%9A%8F%E7%AC%94/" target="_self">
-          2024-11-11-随笔
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2024/11/11/2024-11-11-%E9%9A%8F%E7%AC%94/" target="_self">
-        <div>
-          利用taio的模版测试之后移动端的博客更新工作流算是打通了 tags和excerpt好像不能留空？不清楚是tag还是excerpt是不是必须的 插入图片再来测试一下：  Taio默认似乎是这样创建一个assets文件夹来放附件，在ci流程中好像自动部署并不能将assets文件deploy到.io的那个仓库中 尝试一下利用taio的js动作来插入图片吧
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-11-11 17:08" pubdate>
-              2024-11-11
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/chip/" class="category-chain-item">chip</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/test/">#test</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2024/11/01/2024-11-01-%E9%9A%8F%E7%AC%94/" target="_self">
-          2024-11-01-随笔
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2024/11/01/2024-11-01-%E9%9A%8F%E7%AC%94/" target="_self">
-        <div>
-          1 心心念念的自动化部署    _config   可以，总算是可以用了。 先不说移动端了吧，现在 pc 端以后换环境应该直接拉 hexo 源代码的这个仓库下来就可以开写了。 参考了一下这篇博客 去重新把写随笔这边用的博客框架弄了一下，现在应该可以提交 md 文件之后用 github action 自动编译以及部署了。 想弄自动部署的起因其实也蛮简单——想在移动端设备上随手就可以写博客。 之前了
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-11-01 15:44" pubdate>
-              2024-11-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/chip/" class="category-chain-item">chip</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2024/04/30/2024-05-01-%E9%9A%8F%E7%AC%94/" target="_self">
-          2024-05-01-随笔
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2024/04/30/2024-05-01-%E9%9A%8F%E7%AC%94/" target="_self">
-        <div>
-          最近能写的还挺多，特别是， 呃，如果你在看的话， Anyway，从上次提到的米泽穗信老师的小市民系列追完之后到现在，冰菓的小说加上动画也一路追完了——先看的小说，后看的动画。 真是一路幸福的经历，不管是原作的阅读体验还是动画制作的出色改编，能大聊特聊的地方还真是多。 但是真的要让我现在回忆当时的激动与感动，成本实在是太高，也显得太做作。最理想、记录成本最低的方法还是在当下立刻跟朋友 repo，那个
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-05-01 00:55" pubdate>
-              2024-05-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/chip/" class="category-chain-item">chip</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2024/03/22/2024-03-22-%E9%9A%8F%E7%AC%94/" target="_self">
-          2024-03-22-随笔
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2024/03/22/2024-03-22-%E9%9A%8F%E7%AC%94/" target="_self">
-        <div>
-          1 小学的时候玩的最多的估计除了当时的各类 FPS，就是 mc 和另一个叫 besiege 的游戏了 现在回想起来，可能这两个游戏算我的工科启蒙。 虽然这么说，但第一次打开 mc 并不是奔着红石电路和命令方块去的，反而是普通的生存模式： 啊。那个档玩了真的很久，我出生在一个海岛上，第一天的早上只知道撸木头，旁边开着某论坛的攻略，以出生点为圆心，一点一点小心翼翼地推进。现在想起来，有可能是那篇攻略
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-22 11:01" pubdate>
-              2024-03-22
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/chip/" class="category-chain-item">chip</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/%E6%84%9F%E6%83%B3/">#感想</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/" target="_self">
-          速查：CH340记录
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2024/03/20/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/" target="_self">
-        <div>
-          1 概述 首先是数据手册： 然后是各类封装：  CH340 用的很多，简单来说就是一个能够将 USB 总线转换为各类串口的转换芯片。 之前使用的比较多的型号是 CH340C ，能够支持 USB3.0 规范，不过占用体积有点大。公司里用 CH340E 比较多，占用体积比较小，而且能够支持 USB3.1 规范。  2 引脚 CH340E 封装为 MSOP-10 ，引脚定义见上图。 电源部分  VCC
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-20 09:21" pubdate>
-              2024-03-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/embed/" class="category-chain-item">embed</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">#嵌入式</a>
-            
-              <a href="/blog/tags/%E5%8E%9F%E7%90%86/">#原理</a>
-            
-              <a href="/blog/tags/%E5%B8%B8%E7%94%A8%E8%8A%AF%E7%89%87/">#常用芯片</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2024/03/08/2024-03-09-%E9%9A%8F%E7%AC%94/" target="_self">
-          2024-03-09-随笔
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2024/03/08/2024-03-09-%E9%9A%8F%E7%AC%94/" target="_self">
-        <div>
-          1  “难得的双休，在下周忙起来之前，今天还是再开一罐啤酒吧。”  这就是我现在正在喝酒的理由，虽然能不能被叫做“理由”还有待商榷，至少我现在是这么想的。 已经很久都没有写写博客记录随便一点什么东西了。有几次的心痒痒，至于有没有付诸行动，网站的历史记录上已经写着了答案。 把想要打开软件记录一点什么感想，当作一件太过于正式的事情，实在是不好，这几个星期的实践也说明了这一点。如果养成了这种习惯，到头
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-09 00:06" pubdate>
-              2024-03-09
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/chip/" class="category-chain-item">chip</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-
-
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/#board">2</a><a class="page-number" href="/blog/page/3/#board">3</a><a class="extend next" rel="next" href="/blog/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
-    </span>
   </nav>
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
+    </main>
+    <footer class="foot mono">
+  <span>2026 <span class="foot-build">07 / BLOG</span></span>
+  <span class="foot-mark">SAGIRASTAR · HW / FW / WORDS</span>
+</footer>
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
   </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-    </div>
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/blog/js/events.js" ></script>
-<script  src="/blog/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        var texts = ["臆病な会話が天才、安心な体温をちょうだい。","ルールは 終わりを告げるものでしょ","感情戦を君と 練っていきたいんだよ","壊れるのは呆気ない","人類なんだしー 自由自在のはずが","見たいの...　きみの中"];
-        var idx = Math.floor(Math.random() * texts.length);
-        typing(texts[idx]);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/blog/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  <script  src="/blog/js/local-search.js" ></script>
-
-
-
-
-  
-<script src="/blog/js/custom.js"></script>
-<script src="/blog/js/photoWall.js"></script>
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/blog/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
 </body>
 </html>
