@@ -126,3 +126,40 @@ main .gsc-loading-image {
     transform: scale(1);
   }
 }
+
+/* 变量管不到的几处：标题语气、对齐、输入框的直角
+ * giscus 的 DOM 里这两块是 h4.gsc-*，默认是 GitHub 的粗体 16px；
+ * 站点里同级的小标题是等宽、加宽字距、灰色小字，这里对齐它。 */
+main .gsc-reactions-count,
+main .gsc-comments-count {
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: var(--color-fg-muted);
+}
+
+/* 表情行默认居中，站点是左对齐到正文基线：标题和按钮各居各的，giscus 用的是
+ * `#__next .justify-center` / `#__next .text-center`（带 id，压不过），只能 !important */
+main .gsc-reactions-count {
+  text-align: left !important;
+}
+
+main .gsc-reactions > div {
+  justify-content: flex-start !important;
+}
+
+/* 输入区的 tab 与编辑框：站点的直角细线语言 */
+main .gsc-comment-box-tabs .btn,
+main .gsc-comment-box-tabs button {
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  border-radius: 2px 2px 0 0;
+}
+
+main .gsc-comment-box-textarea {
+  font-family: var(--font-family);
+  font-size: 14px;
+  border-radius: 2px;
+}
