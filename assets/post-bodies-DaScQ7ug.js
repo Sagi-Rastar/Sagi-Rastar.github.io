@@ -206,7 +206,7 @@ var e={"2023-11-20-随笔":`<h1>1 博客是拿来记的</h1>
 <li><a href="https://github.com/chengpeiquan/learning-vue3">https://github.com/chengpeiquan/learning-vue3</a></li>
 </ol>
 `,FPGA电子钟课设设计过程:`<h1>1 前言</h1>
-<p>本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：<br><img src="/blog/img/legacy/5cb00eec2e65/image-20231116153820589.png" alt=""><br><strong>主要就是三个功能：</strong></p>
+<p>本次FPGA课设的题目需要三选二，内容都差不多，都是有关定时器的应用。其中我负责写第三题，以下是基础部分题目要求：<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/a934398a_image-20231116153820589.png" alt="a934398a_image-20231116153820589.png"><br><strong>主要就是三个功能：</strong></p>
 <ul>
 <li>正常计时</li>
 <li>以快速读分/时的方法校时</li>
@@ -245,10 +245,10 @@ var e={"2023-11-20-随笔":`<h1>1 博客是拿来记的</h1>
 </ul>
 <p><strong>下面是本次课设将会使用到的硬件外设记录：</strong></p>
 <ul>
-<li>按键<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155650753.png" alt=""></li>
-<li>数码管<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155620779.png" alt=""><img src="/blog/img/legacy/5cb00eec2e65/image-20231116155724788.png" alt=""></li>
-<li>蜂鸣器<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155813734.png" alt=""></li>
-<li>外引调试引脚<img src="/blog/img/legacy/5cb00eec2e65/image-20231116155901265.png" alt=""></li>
+<li>按键<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/68b4669f_image-20231116155650753.png" alt="68b4669f_image-20231116155650753.png"></li>
+<li>数码管<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/1ee53472_image-20231116155620779.png" alt="1ee53472_image-20231116155620779.png"><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/080f0697_image-20231116155724788.png" alt="080f0697_image-20231116155724788.png"></li>
+<li>蜂鸣器<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/631473fe_image-20231116155813734.png" alt="631473fe_image-20231116155813734.png"></li>
+<li>外引调试引脚<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/d2faf987_image-20231116155901265.png" alt="d2faf987_image-20231116155901265.png"></li>
 </ul>
 <h2>2.2 基础部分模块设计过程</h2>
 <h3>2.2.1 分频器：</h3>
@@ -328,7 +328,7 @@ begin
 end bhv;
 </code></pre>
 <h4>2.2.1.2 实际测试波形</h4>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117162109699.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/c2cd0a47_image-20231117162109699.png" alt="c2cd0a47_image-20231117162109699.png"></p>
 <p>根据实际测量波形可知，原始时钟经过分频产生了四种预期中的频率信号，成功验证代码。</p>
 <h3>2.2.2 计数器模块</h3>
 <p>用于实现正常时钟的计数器，本质为24/60进制计数器。</p>
@@ -388,7 +388,7 @@ begin
 end a;
 </code></pre>
 <h4>2.2.2.2 实际测试波形</h4>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117171919293.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/6cb28633_image-20231117171919293.png" alt="6cb28633_image-20231117171919293.png"></p>
 <p>根据实际测量波形可知，以秒计时器为例，从图中可以看出模块输出为60进制加法器，成功验证代码。</p>
 <h3>2.2.3 校时模块</h3>
 <p>由题目可知，需要分配两个按键出来为分钟和小时位提供校时功能，也就是当按下按键之后，对应的计数器时钟源切换为频率较快的（10Hz）频率源，从而快速调整对应位的计数。因此可以编写二选一选择器以实现这个功能，由位选信号，也就是按键信号，来选择提供给计数器的时钟源。</p>
@@ -419,7 +419,7 @@ begin
 end behav;
 </code></pre>
 <h4>2.2.3.2 实际测试波形</h4>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117173417345.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/11f85f44_image-20231117173417345.png" alt="11f85f44_image-20231117173417345.png"></p>
 <p>根据实际测量波形可知，以分计数器为例，正常情况下，时钟信号为来自秒计数器的进位信号，当按下按键的时候，时钟信号切换为10Hz，成功验证代码。</p>
 <h3>2.2.4 整点报时模块</h3>
 <p>检测到分达到59时，秒达到50、54、56、58时，向蜂鸣器输出500Hz的信号，检测分和秒都达到59的时候，向蜂鸣器输出1kHz的信号。</p>
@@ -452,8 +452,8 @@ begin
 end behav;
 </code></pre>
 <h4>2.2.4.2 实际测试波形</h4>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117174839213.png" alt=""><br><em>整秒500Hz报时</em></p>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117174931426.png" alt=""><br><em>整点1kHz报时</em></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/d36cb704_image-20231117174839213.png" alt="d36cb704_image-20231117174839213.png"><br><em>整秒500Hz报时</em></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/fdf28d06_image-20231117174931426.png" alt="fdf28d06_image-20231117174931426.png"><br><em>整点1kHz报时</em></p>
 <p>根据实际测量波形可知，当分和秒计数器达到指定位置时，开始按照要求向蜂鸣器输出指定频率的信号，成功验证代码。</p>
 <h3>2.2.5 数码管显示模块</h3>
 <p>该模块 <code>seg_show.vhd</code> 包含有一个子模块 <code>seg_dsp.vhd</code> 其中 <code>seg_show.vhd</code> 负责进行扫描操作与输出电平信号给数码管的部分， <code>seg_dsp.vhd</code> 负责描述数据和实际数码管的对应关系，与告知 <code>seg_show.vhd</code> 当前时刻数码管的数据与位号的部分。</p>
@@ -616,7 +616,7 @@ begin
 end bhv;
 </code></pre>
 <h4>2.2.5.2 实际现象</h4>
-<p><img src="/blog/img/legacy/5cb00eec2e65/image-20231117180301795.jpeg" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/FPGA%E7%94%B5%E5%AD%90%E9%92%9F%E8%AF%BE%E8%AE%BE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B/0430aa04_image-20231117180301795.jpg" alt="0430aa04_image-20231117180301795.jpg"></p>
 <p>根据实际现象成功验证代码。</p>
 <h2>2.3 基础部分顶层设计</h2>
 <p>经过各个模块的编写与实际验证，在顶层文件部分便可以将模块例化，再按照事先设计的方式将各个模块连接起来，以下为顶层文件各个部分的具体设计记录。</p>
