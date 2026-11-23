@@ -2049,7 +2049,7 @@ hexo s
 </ul>
 <h2>1.3 TCP回环实验测试</h2>
 <h3>1.3.1 实验效果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029154045.png" alt=""><br>如上图所示，左侧为 <code>tcp_client</code> 端，右侧为 <code>tcp_server</code> 端，对应为各自所运行的终端。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/919d1c11_Pasted_image_20231029154045.png" alt="919d1c11_Pasted_image_20231029154045.png"><br>如上图所示，左侧为 <code>tcp_client</code> 端，右侧为 <code>tcp_server</code> 端，对应为各自所运行的终端。</p>
 <ul>
 <li>先运行右侧 <code>server</code> 端，传入参数为 <code>127.0.0.1 55566</code> ，开始阻塞等待 <code>client</code> 端连接</li>
 <li>再运行左侧 <code>client</code> 端，传入参数一致，此时右侧 <code>server</code> 端打印 <code>client</code> 端 <code>ip</code> 与 <code>port</code> ，结果为 <code>127.0.0.1:41292</code> ，可见 <code>client</code> 端程序为其套接字分配了一个随机的未被占用的端口</li>
@@ -2067,7 +2067,7 @@ hexo s
 <li><code>struct sockaddr_in serveraddr;</code> - 存储 <code>server</code> 端信息所用结构体<ul>
 <li>存储地址与端口</li>
 <li><code>sockaddr_in</code> 源码注释： <code>/* Structure describing an Internet socket address. \xA0*/</code></li>
-<li>后面暂时看不懂，手敲了一下好像有四个成员变量（ #need_to_search<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029160553.png" alt="">)</li>
+<li>后面暂时看不懂，手敲了一下好像有四个成员变量（ #need_to_search<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/713e0cd7_Pasted_image_20231029160553.png" alt="713e0cd7_Pasted_image_20231029160553.png">)</li>
 </ul>
 </li>
 <li>地址长度和缓冲区略</li>
@@ -2182,7 +2182,7 @@ hexo s
 <p>没了</p>
 <h2>1.4 UDP回环实验测试</h2>
 <h3>1.4.1 实验效果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/Pasted%20image%2020231029174022.png" alt=""><br>实验效果跟tcp大差不差，只是右侧的 <code>server</code> 端的显示每一次接收到消息都会打印出地址和端口</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/baa655fb_Pasted_image_20231029174022.png" alt="baa655fb_Pasted_image_20231029174022.png"><br>实验效果跟tcp大差不差，只是右侧的 <code>server</code> 端的显示每一次接收到消息都会打印出地址和端口</p>
 <h3>1.4.2 udp_client端过程</h3>
 <p>跟上面tcp的过程也差不多，主要留意几个区别的地方：</p>
 <ul>
