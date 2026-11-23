@@ -2215,7 +2215,7 @@ hexo s
 <p><del>水一篇博客</del></p>
 <p>记录一下通信原理实验过程中的东西，后面复习方便查一些概念。</p>
 <h1>2 【第四章】信道 √</h1>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204150329617.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/cae98bc6_image-20231204150329617.png" alt="cae98bc6_image-20231204150329617.png"></p>
 <h2>2.1 信道分类</h2>
 <p>信道的定义：一种物理媒质，用来将来自发送设备的信号传送到接收端信道的分类：</p>
 <ul>
@@ -2225,15 +2225,15 @@ hexo s
 </ul>
 <h3>2.1.1 无线信道</h3>
 <p>电磁波在自由空间所经历的传播路径</p>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204154416510.png" alt="">
- <img src="/blog/img/legacy/1278fe455610/image-20231204154423646.png" alt="">
- <img src="/blog/img/legacy/1278fe455610/image-20231204154457383.png" alt="">
- <img src="/blog/img/legacy/1278fe455610/image-20231204154442872.png" alt="">
- <img src="/blog/img/legacy/1278fe455610/image-20231204154522479.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/fb0e6861_image-20231204154416510.png" alt="fb0e6861_image-20231204154416510.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/efa7a4ed_image-20231204154423646.png" alt="efa7a4ed_image-20231204154423646.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/ca1624db_image-20231204154457383.png" alt="ca1624db_image-20231204154457383.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/10cf8c41_image-20231204154442872.png" alt="10cf8c41_image-20231204154442872.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/b1e545e4_image-20231204154522479.png" alt="b1e545e4_image-20231204154522479.png"></p>
 <h3>2.1.2 有线信道</h3>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204154610417.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/a4395b8e_image-20231204154610417.png" alt="a4395b8e_image-20231204154610417.png"></p>
 <h3>2.1.3 调制信道</h3>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204152704453.png" alt="">
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/9f0a9a78_image-20231204152704453.png" alt="9f0a9a78_image-20231204152704453.png">
  若按照调制信道出发，信道可分为恒参信道、随参信道</p>
 <p>$$
 e_{<em>o}(t)=k(t)e</em>{_i}(t)+n(t)
@@ -2245,19 +2245,19 @@ $$</p>
 P_{e}={P(0)P(1/0)+}{P(1)P(0/1)}
 $$</p>
 <h2>2.2 噪声</h2>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204154107137.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/611511c5_image-20231204154107137.png" alt="611511c5_image-20231204154107137.png"></p>
 <h2>2.3 信道容量（计算题）</h2>
 <p>信道容量的定义：无差错传输时的最大平均信息速率</p>
 <p>香农公式：
- <img src="/blog/img/legacy/1278fe455610/image-20231204150426553.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/3e2e76f6_image-20231204150426553.png" alt="3e2e76f6_image-20231204150426553.png"></p>
 <p>$$
 C=B\\log_{2}\\left(1+\\frac{S}{N}\\right)
 $$</p>
 <p>例题：
- <img src="/blog/img/legacy/1278fe455610/image-20231204154825211.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/f17ddd28_image-20231204154825211.png" alt="f17ddd28_image-20231204154825211.png"></p>
 <h2>2.4 作业</h2>
 <p>作业题：
- <img src="/blog/img/legacy/1278fe455610/image-20231204160057286.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/175ff59d_image-20231204160057286.png" alt="175ff59d_image-20231204160057286.png"></p>
 <h2>2.5 理解</h2>
 <h1>3 【第六章】数字基带传播系统</h1>
 <h2>3.1 （实验部分）基带传输的常用码型</h2>
@@ -2266,7 +2266,7 @@ $$</p>
 <p>对于给定的二进制信息：</p>
 <p><code>x = [1 1 1 1 1 0 0 1 1 0 1 0 0 1 0 0 0 0 1 0 1 0 1 1 1 0 1 1 0 0 0];</code></p>
 <p>四种基本码型图像如下：</p>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231130203426708.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/e35d5e71_image-20231130203426708.png" alt="e35d5e71_image-20231130203426708.png"></p>
 <p>四种码型各自的一些特点：</p>
 <ul>
 <li>单极性不归零：极性单一，有直流分量，简单常用 </li>
@@ -2290,16 +2290,16 @@ $$</p>
 <p>常用传输码型：</p>
 <ul>
 <li>$AMI$ 码 </li>
-<li>$HDB_3$ 码 <img src="/blog/img/legacy/1278fe455610/image-20231204165514170.png" alt=""> <img src="/blog/img/legacy/1278fe455610/image-20231204165525185.png" alt=""></li>
+<li>$HDB_3$ 码 <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/600b29ba_image-20231204165514170.png" alt="600b29ba_image-20231204165514170.png"> <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/d7ae2ee4_image-20231204165525185.png" alt="d7ae2ee4_image-20231204165525185.png"></li>
 </ul>
 <h2>3.3 消除码间串扰</h2>
 <h2>3.4 提高抗噪性能</h2>
 <h2>3.5 眼图</h2>
 <h2>3.6 改善系统性能</h2>
 <h2>3.7 作业</h2>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204162139170.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/b060c643_image-20231204162139170.png" alt="b060c643_image-20231204162139170.png"></p>
 <hr>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204162155779.png" alt="">
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/36d44f97_image-20231204162155779.png" alt="36d44f97_image-20231204162155779.png">
  稳态波和交变波的功率谱叠加后的总公式：</p>
 <p>$$
 P_s(f)=P_{\\nu}(f) + P_{u}\\left(f\\right)
@@ -2316,7 +2316,7 @@ $$</p>
 P = 1/2
 $$</p>
 <p>三角脉冲所以：
- <img src="/blog/img/legacy/1278fe455610/image-20231204163454922.png" alt="">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/6d78d817_image-20231204163454922.png" alt="6d78d817_image-20231204163454922.png">
  $G_2$ 零码直接为 0 所以带入公式后有：</p>
 <p>$$
 \\begin{aligned}
@@ -2326,24 +2326,24 @@ P_{s}(f)&amp; =f_{\\mathrm{B}}P(1-P)\\big|G(f)\\big|^{2}+\\sum_{-\\infty}^{\\inf
 \\end{aligned}
 $$</p>
 <hr>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204164424521.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/6b4e2a0b_image-20231204164424521.png" alt="6b4e2a0b_image-20231204164424521.png"></p>
 <hr>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204164439484.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/186367f4_image-20231204164439484.png" alt="186367f4_image-20231204164439484.png"></p>
 <hr>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204164507266.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/10ffdf32_image-20231204164507266.png" alt="10ffdf32_image-20231204164507266.png"></p>
 <hr>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204164529054.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/fd9f64fe_image-20231204164529054.png" alt="fd9f64fe_image-20231204164529054.png"></p>
 <h1>4 【第七章】数字调制</h1>
 <h2>4.1 $2ASK$</h2>
 <h2>4.2 $2FSK$</h2>
 <h2>4.3 $2PSK/2DPSK$</h2>
 <h2>4.4 抗噪性能，误码率</h2>
 <h2>4.5 作业</h2>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204170918484.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/c19533a3_image-20231204170918484.png" alt="c19533a3_image-20231204170918484.png"></p>
 <hr>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204170946101.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/bed72c88_image-20231204170946101.png" alt="bed72c88_image-20231204170946101.png"></p>
 <hr>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204171108879.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/6416d38b_image-20231204171108879.png" alt="6416d38b_image-20231204171108879.png"></p>
 <hr>
 <h1>5 【第十章】信源编码</h1>
 <h2>5.1 抽样过程</h2>
@@ -2351,13 +2351,13 @@ $$</p>
 <h2>5.3 PCM编译码过程</h2>
 <h2>5.4 TDM 原理和 E1 帧结构</h2>
 <h2>5.5 作业</h2>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204171154313.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/a0ca1c1d_image-20231204171154313.png" alt="a0ca1c1d_image-20231204171154313.png"></p>
 <hr>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204171204659.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/a5ff0c13_image-20231204171204659.png" alt="a5ff0c13_image-20231204171204659.png"></p>
 <hr>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204171215334.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/cc72c27d_image-20231204171215334.png" alt="cc72c27d_image-20231204171215334.png"></p>
 <hr>
-<p><img src="/blog/img/legacy/1278fe455610/image-20231204171228666.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E9%9A%8F%E7%AC%94/3d6be104_image-20231204171228666.png" alt="3d6be104_image-20231204171228666.png"></p>
 <h1>6 【第十三章】同步</h1>
 <h2>6.1 载波同步</h2>
 <h2>6.2 位同步</h2>
