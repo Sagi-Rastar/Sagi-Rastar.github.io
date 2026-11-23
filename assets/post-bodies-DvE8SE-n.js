@@ -1294,14 +1294,14 @@ GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
 <p>由于硬件与地址上的动态性（暂不展开），因此需要NVIC (Nested Vectored Interrupt Controller) 执行管理中断源与分配优先级两个工作，一般译为“嵌套中断向量控制器”。其中，中断源向NVIC输出的通道一般译为“中断通道”，需要注意的是一个中断源可能会占用多个中断通道，事实上中断源一般都占用多个中断通道。</p>
 <p>本文将主要记录外部中断中GPIO的原理与配置过程，作为学习笔记记录。</p>
 <h2>1.2 EXTI工作原理</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/rect234.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/5a3302c0_rect234.png" alt="5a3302c0_rect234.png"></p>
 <p>EXTI作为检测外部中断的中断源，对GPIO进行监测是其最主要的功能。EXTI在对GPIO的检测上一般有16个输入通道（注意这里是EXTI的输入通道而不是“中断通道”），但是GPIO每一个port口都有0-15总计16个pin，如果要检测所有的GPIO明显16个输入通道不够用。</p>
 <p>于是在STM32上需要用到AFIO这个“选择器”。具体的工作原理就是让相同的Pin口对应到同一条输入通道，例如<code>PX0 =&gt; EXTI0</code>,<code>PX1 =&gt;EXTI1</code>……以此类推，换句话说每个输入通道同时只能监测一个port口，这也就是为什么相同的pin口不能同时触发中断的原因。</p>
 <p>解决了监测所有GPIO口的问题之后，所有的输入信号便可以通过EXTI被处理。在EXTI中做的处理通俗来讲就是通过一些寄存器，配置触发方式以及选择响应是“中断”还是“事件”。</p>
 <p>在STM32中EXTI提供了一个新的响应，“事件”相对于软件上进入NVIC的“中断”而言有所不同，“事件”响应是硬件上的响应，事件响应是输出一个脉冲信号，以便用于与其他外设相互联动，例如触发ADC或DMA之类的。</p>
 <blockquote>
 <p>具体工作框图可以参考：
- <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230105143832.png" alt="EXTI系统框图"></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/5864b2eb_20230105143832.png" alt="5864b2eb_20230105143832.png"></p>
 </blockquote>
 <p>如上图所示，EXTI的输入通道经过“边沿检测”电路，此电路由两个寄存器控制，用于配置EXTI是<code>上升沿触发</code>还是<code>下降沿触发</code>或是<code>双边沿触发</code>。随后信号经过一个或门，此处或门的作用在于可以通过软件中断寄存器决定是否直接由软件触发中断。当或门的信号输出之后，分成<code>中断响应</code>和<code>事件响应</code>，两种响应都可以通过利用与门和“xx屏蔽寄存器”选择放行与否。</p>
 <p>其中关于ST公司对EXTI中断通道的精简有必要提一嘴（……）</p>
@@ -1314,7 +1314,7 @@ GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
 <p>本节例程参考野火的&lt;STM32 HAL库开发实战指南——F103系列&gt;。</p>
 </blockquote>
 <p>本次使用的开发板是<code>野火的F103-MINI 开发板</code>，下面是本次例程所涉及的硬件原理图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111151132.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/STM32%E4%B8%AD%E9%80%9A%E8%BF%87EXTI%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6/4b30062d_20230111151132.png" alt="4b30062d_20230111151132.png"></p>
 <hr>
 <p>下面是中断编程要点：</p>
 <ul>
