@@ -1977,7 +1977,7 @@ hexo s
 </blockquote>
 <h1>2 音乐剧！不是！歌剧！</h1>
 <p>当我们提到音乐剧，也许大家脑海中的刻板印象是一座富丽堂皇的剧院，身着正装的贵族一样的绅士小姐们缓缓就座，然后在几个小时的美声中享受灵魂的洗礼，最后各自离场……</p>
-<p><img src="https://image.gcores.com/677a22d1-9506-4475-815d-1b2931998a39.jpg?x-oss-process=image/quality,q_90/format,webp/watermark,image_d2F0ZXJtYXJrLnBuZw,g_se,x_10,y_10" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/b2a501c6_677a22d1-9506-4475-815d-1b2931998a39.webp" alt="b2a501c6_677a22d1-9506-4475-815d-1b2931998a39.webp"></p>
 <p>网图，米兰斯卡拉歌剧院内景。</p>
 <p>事实上，唱腔用美声唱、音乐风格一般偏向古典的、一部剧下来没有什么边唱边跳的部分……等等的这些特点都是歌剧的特点。</p>
 <p>文字去形容音乐风格似乎略显得苍白，要不先来两首歌听听！</p>
@@ -1994,27 +1994,27 @@ hexo s
 </ul>
 <h1>3 音乐剧只有一种音乐种类？</h1>
 <p>正好相反！音乐种类的多元性恰恰是音乐剧的一大特点，有时甚至一部音乐剧中有数种曲风。事实上，从音乐剧起初开始发展的时候，很多剧就是对当下流行音乐风格的巧妙化用。我们刚刚听的《Guns and Ships》便是融合了说唱的曲目。事实上，《汉密尔顿？是第一个将说唱元素融入音乐剧的作品（见图一）。</p>
-<p><img src="https://image.gcores.com/5bf7e25b-9b80-4527-bf5a-bb8be7d0d149.png?x-oss-process=image/quality,q_90/format,webp/watermark,image_d2F0ZXJtYXJrLnBuZw,g_se,x_10,y_10" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/077099b6_5bf7e25b-9b80-4527-bf5a-bb8be7d0d149.webp" alt="077099b6_5bf7e25b-9b80-4527-bf5a-bb8be7d0d149.webp"></p>
 <p>图一：白宫诵读晚会邀请汉密尔顿作者表演，林巨巨说</p>
 <p>像《Rent》（吉屋出租，图二）这部剧中音乐元素的多元性更是被表现的淋漓尽致，在这部歌颂波西米亚精神的作品中音乐风格甚至涵盖了摇滚乐、福音歌、蓝调、歌剧、爵士一众风格。</p>
-<p><img src="https://image.gcores.com/3b1178bb-e754-450c-8c81-b8f6af8a8ebe.png?x-oss-process=image/quality,q_90/format,webp/watermark,image_d2F0ZXJtYXJrLnBuZw,g_se,x_10,y_10" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/f803bdd7_3b1178bb-e754-450c-8c81-b8f6af8a8ebe.webp" alt="f803bdd7_3b1178bb-e754-450c-8c81-b8f6af8a8ebe.webp"></p>
 <p>图二：戏剧性而富有对比的构图</p>
 <p>就算是以说唱音乐为主的汉密尔顿中，曲风在《What’d I Miss》中Jefferson出场时也会突变，变成Jazz。（为了不剧透咱就不说为啥了哈哈哈哈哈，图三）</p>
-<p><img src="https://image.gcores.com/a5e60540-a141-4787-bf0c-31eaaa90e673.png?x-oss-process=image/quality,q_90/format,webp/watermark,image_d2F0ZXJtYXJrLnBuZw,g_se,x_10,y_10" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/6145bcb4_a5e60540-a141-4787-bf0c-31eaaa90e673.webp" alt="6145bcb4_a5e60540-a141-4787-bf0c-31eaaa90e673.webp"></p>
 <p>图三：紫衣服的是Jefferson，看过剧之后会发现他非常可爱</p>
 <p>让我再举一个例子，在《来自远方》（Come from Away，图四）中的音乐风格极具地域风情，有兴趣可以听这两首：《Welcome To the Rock》（开场曲），《In the Bar / Heave Away》（酒馆大聚会）</p>
-<p><img src="https://image.gcores.com/82386f38-7395-4a4f-872a-5e694e9e7f82.png?x-oss-process=image/quality,q_90/format,webp/watermark,image_d2F0ZXJtYXJrLnBuZw,g_se,x_10,y_10" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/641684ea_82386f38-7395-4a4f-872a-5e694e9e7f82.webp" alt="641684ea_82386f38-7395-4a4f-872a-5e694e9e7f82.webp"></p>
 <p>图四：富有地方特色且温暖的小镇</p>
 <p>音乐剧吸引到我的一个最精妙的地方实际上也是音乐种类的多元性。</p>
 <p>在享受不同的音乐风格的同时我们也在目睹音乐风格是如何和故事融合在一起，从而形成一个叙述整体。而这种独特而又富有魅力的叙述系统不仅仅为我们提供了听感上的愉悦，其中融合的故事又是另外一种全新的审美体验。故事的文学性丰富并充实了音乐，反过来，音乐的感染性渲染了故事，调动了我们情绪，使得这一个个富有特色的故事能够更加生动的展现在我们面前！</p>
 <p>音乐和故事相互交融，这真的是一种非常有趣的体验！（图五，That’s true←汉密尔顿梗)</p>
-<p><img src="https://image.gcores.com/60ce6fd9-1c5e-4b1e-8aba-dada5ce335a5.png?x-oss-process=image/quality,q_90/format,webp/watermark,image_d2F0ZXJtYXJrLnBuZw,g_se,x_10,y_10" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/44d29b2e_60ce6fd9-1c5e-4b1e-8aba-dada5ce335a5.webp" alt="44d29b2e_60ce6fd9-1c5e-4b1e-8aba-dada5ce335a5.webp"></p>
 <p>图五：汉密尔顿作者的表情包，同时也是本剧原卡司中的男主</p>
 <h1>4 音乐剧只有“音乐”和“剧情”？舞台编排也很精彩！</h1>
 <p>如果说这个艺术系统在音乐和剧情的融合上已经带给我们听觉和感觉上的双重享受，那么相比若我们为这个系统再提供一个巧妙的舞台，那么他一定会更加的美妙！</p>
 <p>音乐剧中的最后一个字“剧”决定了他演出的性质。如果说音乐和故事是前两个我们能够欣赏的点，那么舞台编排就是第三个更加富有细节的欣赏点。</p>
 <p>音乐剧的舞台一般不会太大（见图六），当舞台不太大的时候，根据故事前进的进度，场景往往也会变化。在有限的场景中并且不破坏顺畅演出的条件下，如何简单变换场景，如何变换演员动作，甚至搭配好音乐和故事。而这也是常是一部音乐剧非常巧妙的地方。</p>
-<p><img src="https://image.gcores.com/5ed769b6-1847-4fe2-bfa2-3c3555c7ab51.png?x-oss-process=image/quality,q_90/format,webp/watermark,image_d2F0ZXJtYXJrLnBuZw,g_se,x_10,y_10" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E5%BD%93%E9%9F%B3%E4%B9%90%E9%81%87%E8%A7%81%E6%95%85%E4%BA%8B%E4%B8%80%E8%B5%B7%E8%B5%B0%E4%B8%8A%E8%88%9E%E5%8F%B0/80cb9647_5ed769b6-1847-4fe2-bfa2-3c3555c7ab51.webp" alt="80cb9647_5ed769b6-1847-4fe2-bfa2-3c3555c7ab51.webp"></p>
 <p>图六：来自远方（Come from Away）百老汇舞台</p>
 <p>冷冰的文字可能不太能描述灵动的舞台，那么下面的这一个例子一定能让大家感受到舞台编排的巧妙之处！</p>
 <p>以防万一，如果有朋友觉得舞台变化涉及剧透的话在这里可以先略过gif演示，自行观看《来自远方》后再继续阅读！（这也是笔者推荐的方式！）</p>
