@@ -1509,9 +1509,9 @@ layout: pic
 </ul>
 <p>考试题型：选填 + 客观题，客观题为给出一个场景，利用所学传感器给出测量方案。</p>
 <h1>2 【第一章】概述部分</h1>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208101940636.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/ad741115_image-20231208101940636.png" alt="ad741115_image-20231208101940636.png"></p>
 <p>这张图会贯穿后面所有具体的传感器章节，举例如下【第四章】：</p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208102126356.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/29c8a7cf_image-20231208102126356.png" alt="29c8a7cf_image-20231208102126356.png"></p>
 <h2>2.1 传感器的定义</h2>
 <blockquote>
 <p>能感受被测量并按照一定的规律转换成可用输出信号的器件或装置，通常由敏感元件和转换元件组成。</p>
@@ -1529,7 +1529,7 @@ layout: pic
 \\gamma_\\mathrm{L}=\\frac{\\Delta\\mathrm{L}<em>\\mathrm{max}}{Y</em>\\mathrm{FS}}\\times100%
 $$</p>
 <p>其中：\${\\Delta\\mathrm{L}<em>\\mathrm{max}}$ 为最大偏差，\${Y</em>\\mathrm{FS}}$ 为输出的满量程值（Full Scale）</p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208104449219.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/826dd2f6_image-20231208104449219.png" alt="826dd2f6_image-20231208104449219.png"></p>
 <p><strong>灵敏度（Sensitivity）</strong> 稳态情况下输出变化量比上输入变化量（某点斜率），平均灵敏度为拟合直线的斜率
  <strong>迟滞（Hysteresis）</strong> 又叫回程误差，就是正反行程中曲线不一致，其指标与线性度指标类似，不做赘述
  <strong>重复性（Repeatability）</strong> 多次测试中曲线的一致程度，指标也类似，不做赘述
@@ -1546,24 +1546,24 @@ $$</p>
 <p>$$
 y=\\frac{b_0}{a_0}x
 $$</p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208110802500.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/3c345dd8_image-20231208110802500.png" alt="3c345dd8_image-20231208110802500.png"></p>
 <h4>3.2.1.2 一阶</h4>
 <p>$$
 \\frac{a_1}{a_0}\\frac{dy(t)}{dt}+y(t)=\\frac{b_0}{a_0}x(t)
 $$</p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208110729842.png" alt="">
- <img src="/blog/img/legacy/3b80085553b6/image-20231208110833864.png" alt="">
- <img src="/blog/img/legacy/3b80085553b6/image-20231208110940384.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/91baaaa4_image-20231208110729842.png" alt="91baaaa4_image-20231208110729842.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/8e556c7b_image-20231208110833864.png" alt="8e556c7b_image-20231208110833864.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/258a2286_image-20231208110940384.png" alt="258a2286_image-20231208110940384.png"></p>
 <h4>3.2.1.3 二阶</h4>
 <p>$$
 \\frac{a_2}{a_0}\\frac{d^2y(t)}{dt^2}+\\frac{a_1}{a_0}\\frac{dy(t)}{dt}+y(t)=\\frac{b_0}{a_0}x(t)
 $$</p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208111045175.png" alt="">
- <img src="/blog/img/legacy/3b80085553b6/image-20231208111049836.png" alt="">
- <img src="/blog/img/legacy/3b80085553b6/image-20231208111139273.png" alt="">
- <img src="/blog/img/legacy/3b80085553b6/image-20231208111150694.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/2e2f513c_image-20231208111045175.png" alt="2e2f513c_image-20231208111045175.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/60041163_image-20231208111049836.png" alt="60041163_image-20231208111049836.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/070f19c8_image-20231208111139273.png" alt="070f19c8_image-20231208111139273.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/70f46cbc_image-20231208111150694.png" alt="70f46cbc_image-20231208111150694.png"></p>
 <h4>3.2.1.4 动态参数的选择</h4>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208111601692.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/9d4eea2b_image-20231208111601692.png" alt="9d4eea2b_image-20231208111601692.png"></p>
 <h2>3.3 作业</h2>
 <p>一阶系统的一般表达式为：</p>
 <p>$$
@@ -1582,7 +1582,7 @@ $$</p>
 <h1>4 【第三章】电阻式传感器</h1>
 <h2>4.1 工作原理</h2>
 <p>❗
- <img src="/blog/img/legacy/3b80085553b6/image-20231208153027303.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/73e80db1_image-20231208153027303.png" alt="73e80db1_image-20231208153027303.png"></p>
 <h3>4.1.1 应变与应力</h3>
 <p><strong>（轴向）应变 $\\varepsilon$</strong> 指的是轴向形变比上原先长度轴向应变和径向应变的关系如下：</p>
 <p>$$
@@ -1597,14 +1597,14 @@ $$</p>
 $$</p>
 <p>其中：$\\rho$ 为电阻率</p>
 <p>应变效应与压阻效应：
- <img src="/blog/img/legacy/3b80085553b6/image-20231208115632989.png" alt="">
- <img src="/blog/img/legacy/3b80085553b6/image-20231208115814816.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/fc191ff7_image-20231208115632989.png" alt="fc191ff7_image-20231208115632989.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/3a0dc2e1_image-20231208115814816.png" alt="3a0dc2e1_image-20231208115814816.png"></p>
 <blockquote>
 <p>压阻效应：半导体电阻应变片的工作原理，单晶半导体材料沿某一轴向受到外力作用时，其电阻率发生变化的现象</p>
 </blockquote>
 <h2>4.2 测量电路</h2>
 <h3>4.2.1 直流电桥</h3>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208152124643.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/1853a9a6_image-20231208152124643.png" alt="1853a9a6_image-20231208152124643.png"></p>
 <p>相邻两电阻的比值相等，$R_L$ 视作开路，则输出电压 $U_o$ 为 0；若相邻电阻的比值设作 $n$ ，则有：</p>
 <p>$$
 U_{o}=E\\frac{n}{\\left(1+n\\right)^{2}}\\cdot\\frac{\\Delta R_{1}}{R_{1}}
@@ -1628,14 +1628,14 @@ $$</p>
 $$</p>
 <p>非线性误差改进方法有二：</p>
 <p><strong>半桥差动：</strong> 将 $R_1$ 和 $R_2$ 都作为可变电阻：
- <img src="/blog/img/legacy/3b80085553b6/image-20231208152912024.png" alt="">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/b20553fd_image-20231208152912024.png" alt="b20553fd_image-20231208152912024.png">
  ❗灵敏度为单臂的两倍：</p>
 <p>$$
 K_{\\mathrm{U}}=\\frac{E}{2} \\tag{半桥差动灵敏度}
 $$</p>
 <p>❗没有非线性误差</p>
 <p><strong>全桥差动：</strong> 四个电阻都作为可变电阻：
- <img src="/blog/img/legacy/3b80085553b6/image-20231208152957762.png" alt="">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/59e2f9a8_image-20231208152957762.png" alt="59e2f9a8_image-20231208152957762.png">
  ❗灵敏度为单臂的四倍：</p>
 <p>$$
 K_{\\mathrm{U}}={E}\\tag{全桥差动灵敏度}
@@ -1651,8 +1651,8 @@ $$</p>
 $$</p>
 </blockquote>
 <h2>5.1 变磁阻电感式传感器</h2>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208162410963.png" alt=""></p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208162438686.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/04c8e431_image-20231208162410963.png" alt="04c8e431_image-20231208162410963.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/c13b7d11_image-20231208162438686.png" alt="c13b7d11_image-20231208162438686.png"></p>
 <h3>5.1.1 磁阻</h3>
 <p>❗仿照电阻的定义，磁阻有以下定义式：</p>
 <p>$$
@@ -1665,42 +1665,42 @@ L=\\frac\\psi i=\\frac{N\\phi}i=\\frac{N^2}{R_m}
 $$</p>
 <h3>5.1.2 工作原理</h3>
 <p>❗<strong>变气隙厚度式自感传感器：</strong></p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208160831054.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/f69501b2_image-20231208160831054.png" alt="f69501b2_image-20231208160831054.png"></p>
 <p>当衔铁上下移动的时候，灵敏度有以下关系：</p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208161225187.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/28f6fd6b_image-20231208161225187.png" alt="28f6fd6b_image-20231208161225187.png"></p>
 <p>非线性误差有:
- <img src="/blog/img/legacy/3b80085553b6/image-20231208161253085.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/4219190b_image-20231208161253085.png" alt="4219190b_image-20231208161253085.png"></p>
 <p>改进方法：
- <img src="/blog/img/legacy/3b80085553b6/image-20231208162002612.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/bae63f2a_image-20231208162002612.png" alt="bae63f2a_image-20231208162002612.png"></p>
 <p><strong>螺线管式自感传感器：</strong></p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208163540193.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/f921583b_image-20231208163540193.png" alt="f921583b_image-20231208163540193.png"></p>
 <h3>5.1.3 测量电路</h3>
 <h4>5.1.3.1 交流电桥</h4>
 <p><strong>差动自感式交流电桥：</strong></p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208162231040.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/16e5f57d_image-20231208162231040.png" alt="16e5f57d_image-20231208162231040.png"></p>
 <p><strong>变压器式交流电桥：</strong></p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208162330985.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/040e5678_image-20231208162330985.png" alt="040e5678_image-20231208162330985.png"></p>
 <p>输出电压的计算公式都是一样的。</p>
 <h2>5.2 差动变压器电感式传感器</h2>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208163337878.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/bb811276_image-20231208163337878.png" alt="bb811276_image-20231208163337878.png"></p>
 <h3>5.2.1 工作原理</h3>
 <p>❗两个二次绕组反向串接，以差动方式输出</p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208163211122.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/546115d4_image-20231208163211122.png" alt="546115d4_image-20231208163211122.png"></p>
 <blockquote>
-<p>与上一节的对比：<img src="/blog/img/legacy/3b80085553b6/image-20231208163727453.png" alt=""></p>
+<p>与上一节的对比：<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/8114e278_image-20231208163727453.png" alt="8114e278_image-20231208163727453.png"></p>
 </blockquote>
 <h3>5.2.2 测量电路</h3>
 <p>输出为电压，直接测就完了，无非就加一个放大器</p>
 <h2>5.3 电涡流电感式传感器</h2>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208164013282.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/154dfb16_image-20231208164013282.png" alt="154dfb16_image-20231208164013282.png"></p>
 <h3>5.3.1 工作原理</h3>
 <p><strong>电涡流效应：</strong> 感生电流的磁通总是力图阻碍引起感生电流的磁通变化，此磁场会反作用于原磁场，电涡流的产生导致励磁线圈的电感、品质因数、阻抗等参数发生变化。
- <img src="/blog/img/legacy/3b80085553b6/image-20231208164143126.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/f3578e48_image-20231208164143126.png" alt="f3578e48_image-20231208164143126.png"></p>
 <h3>5.3.2 测量电路</h3>
 <p>输出的是阻抗，直接用前述的交流电桥即可</p>
 <h1>6 【第五章】电容式传感器</h1>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208170214201.png" alt="">
- <img src="/blog/img/legacy/3b80085553b6/image-20231208171604592.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/2fee644c_image-20231208170214201.png" alt="2fee644c_image-20231208170214201.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/b93ca9ca_image-20231208171604592.png" alt="b93ca9ca_image-20231208171604592.png"></p>
 <h2>6.1 工作原理</h2>
 <p><strong>电容定义：</strong></p>
 <p>$$
@@ -1716,10 +1716,10 @@ $$</p>
 {K}=\\frac{\\frac{\\Delta C}{C_0}}{\\Delta\\delta}\\approx{\\frac2{\\delta_0}}
 $$</p>
 <h2>6.2 额外的两种测量电路</h2>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208171540172.png" alt=""></p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231208171545595.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/987bd369_image-20231208171540172.png" alt="987bd369_image-20231208171540172.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/b06e287f_image-20231208171545595.png" alt="b06e287f_image-20231208171545595.png"></p>
 <h1>7 【第六章】压电式传感器</h1>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231212155504641.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/7c3f23a4_image-20231212155504641.png" alt="7c3f23a4_image-20231212155504641.png"></p>
 <h2>7.1 工作原理</h2>
 <p>基于正逆压电效应：</p>
 <ul>
@@ -1732,18 +1732,18 @@ $$</p>
 <li>陶瓷 锆钛酸铅 </li>
 <li>半导体硫化锌</li>
 </ul>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231212155411008.png" alt="">
- <img src="/blog/img/legacy/3b80085553b6/image-20231212155556154.png" alt=""></p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231212155450614.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/a5557c36_image-20231212155411008.png" alt="a5557c36_image-20231212155411008.png">
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/ddff8399_image-20231212155556154.png" alt="ddff8399_image-20231212155556154.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/96eb0afd_image-20231212155450614.png" alt="96eb0afd_image-20231212155450614.png"></p>
 <h2>7.2 测量电路</h2>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231212155539576.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/2a662e37_image-20231212155539576.png" alt="2a662e37_image-20231212155539576.png"></p>
 <h2>7.3 典型应用</h2>
 <p>超声波：发送：使用了逆压电效应（外加电场产生振动发出超声波）接收：使用了正压电效应（接收机械振动波，进行电气输出）
- <img src="/blog/img/legacy/3b80085553b6/image-20231212160021281.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/87c84cfd_image-20231212160021281.png" alt="87c84cfd_image-20231212160021281.png"></p>
 <h1>8 【第七章】磁敏式传感器</h1>
 <h2>8.1 磁电感应式传感器</h2>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231212160254352.png" alt=""></p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231212160409096.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/8628f2ec_image-20231212160254352.png" alt="8628f2ec_image-20231212160254352.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/47b27733_image-20231212160409096.png" alt="47b27733_image-20231212160409096.png"></p>
 <h2>8.2 霍尔式传感器</h2>
 <blockquote>
 <p>霍尔效应：半导体或金属薄片置于磁场中，当有电流流过时，在垂直于磁场和电流的方向上会产生电动势。</p>
@@ -1753,31 +1753,31 @@ $$</p>
 <blockquote>
 <p>热电效应：两种不同材质的导体 A&amp;B 首尾焊接，两个焊接点有温差时，便产生热电流测量端：焊接一起的两个导体显示端：冷端</p>
 </blockquote>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231212161053810.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/665a75c2_image-20231212161053810.png" alt="665a75c2_image-20231212161053810.png"></p>
 <p>$$
 E_{AB}(T,T_{0})={E_{AB}(T)-E_{AB}(T_{0})+E_{B}(T,T_{0})-E_{A}(T,T_{0})}
 $$</p>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231212161147661.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/98d5cc16_image-20231212161147661.png" alt="98d5cc16_image-20231212161147661.png"></p>
 <p>$$
 E_{AB}(T,T_0)\\approx{E_{AB}(T)-E_{AB}(T_0)}
 $$</p>
 <p>分度表：
- <img src="/blog/img/legacy/3b80085553b6/image-20231212161328808.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/721c2cc1_image-20231212161328808.png" alt="721c2cc1_image-20231212161328808.png"></p>
 <blockquote>
 <p>中间导体定律在热电偶测温回路内接入中间导体（第三种导体），只要第三种导体的两端温度相同，对回路的总热电势没有影响。</p>
 </blockquote>
 <blockquote>
 <p>中间温度定律热电偶回路的两接点（温度为 T、T 0）间的热电势，等于热电偶在 T、Tn 时的热电势与在 Tn、T 0 时的热电势的代数和。
- <img src="/blog/img/legacy/3b80085553b6/image-20231212161457745.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/546f5983_image-20231212161457745.png" alt="546f5983_image-20231212161457745.png"></p>
 </blockquote>
-<p><img src="/blog/img/legacy/3b80085553b6/image-20231212161511228.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/c84c396e_image-20231212161511228.png" alt="c84c396e_image-20231212161511228.png"></p>
 <h2>9.2 热电阻</h2>
 <p>测量电路：二线制：短距离测量，低精度
- <img src="/blog/img/legacy/3b80085553b6/image-20231212161551902.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/9af84962_image-20231212161551902.png" alt="9af84962_image-20231212161551902.png"></p>
 <p>三线制，远距离工业测量，一般精度
- <img src="/blog/img/legacy/3b80085553b6/image-20231212161618921.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/0ff81cb6_image-20231212161618921.png" alt="0ff81cb6_image-20231212161618921.png"></p>
 <p>四线制，实验室测量，高精度
- <img src="/blog/img/legacy/3b80085553b6/image-20231212161636934.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/f2fe4d85_image-20231212161636934.png" alt="f2fe4d85_image-20231212161636934.png"></p>
 <h2>9.3 热敏电阻</h2>
 <p>电阻值随温度显著变化，灵敏度高出热电阻 1~2 个数量级。</p>
 <h2>9.4 热释电</h2>
@@ -1787,7 +1787,7 @@ $$</p>
 <p>热释电型传感器：</p>
 <p>当红外辐射照射到已经极化的铁电体薄片表面上时引起薄片温度升高，使其极化强度降低，表面电荷减少，这相当于释放一部分电荷，所以叫做热释电型传感器。</p>
 <p>如果将负载电阻与铁电体薄片相连，则负载电阻上便产生一个电信号输出。输出信号的强弱取决于薄片温度变化的快慢，从而反映出入射的红外辐射的强弱，热释电型红外传感器的电压响应率正比于入射光辐射率变化的速率。当铁电体薄片的温度达到平衡值时，表面电荷达到平衡浓度，不再释放电荷，将无输出信号。因此，热释电型传感器用于测量动态信号。
- <img src="/blog/img/legacy/3b80085553b6/image-20231212162131083.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%A4%8D%E4%B9%A0%E9%9A%8F%E7%AC%94/cb155e34_image-20231212162131083.png" alt="cb155e34_image-20231212162131083.png"></p>
 <h1>10 作业</h1>
 `,关于我使用obsidian加hexo部署个人博客的过程:`<h1>1 前言</h1>
 <p>从很早之前就一直希望搭建一个属于自己的博客。不管是折腾各种有趣项目还是在看完了那些精彩的文学作品，总觉得没有留下一点什么，实在是可惜。发空间或者朋友圈这样的形式，实在不足以记录当时的心情，向有文章区的社交网站投稿文章，又显得不大合适。</p>
