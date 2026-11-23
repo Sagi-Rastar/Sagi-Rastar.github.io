@@ -2365,7 +2365,7 @@ $$</p>
 <h2>6.4 作业</h2>
 `,"速查：CH340记录":`<h1>1 概述</h1>
 <p>首先是数据手册：</p>
-<p>然后是各类封装：<br><img src="/blog/img/legacy/1caef24c8fa9/image-20240320092657061.png" alt=""></p>
+<p>然后是各类封装：<br><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/5933bb2c_image-20240320092657061.png" alt="5933bb2c_image-20240320092657061.png"></p>
 <p>CH340 用的很多，简单来说就是一个能够将 USB 总线转换为各类串口的转换芯片。</p>
 <p>之前使用的比较多的型号是 CH340C ，能够支持 USB3.0 规范，不过占用体积有点大。公司里用 CH340E 比较多，占用体积比较小，而且能够支持 USB3.1 规范。</p>
 <h1>2 引脚</h1>

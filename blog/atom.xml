@@ -211,7 +211,7 @@
     <published>2024-03-20T01:21:07.000Z</published>
     <updated>2026-11-19T06:49:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="1-概述"><a class="markdownIt-Anchor" href="#1-概述"></a> 1 概述</h1><p>首先是数据手册：</p><p>然后是各类封装：<br /><img src="/img/legacy/1caef24c8fa9/image-20240320092657061.png" alt="" /></p><p>CH340 用的很多，简单来说就是一个能够将 USB 总线转换为各类串口的转换芯片。</p><p>之前使用的比较多的型号是 CH340C ，能够支持 USB3.0 规范，不过占用体积有点大。公司里用 CH340E 比较多，占用体积比较小，而且能够支持 USB3.1 规范。</p><h1 id="2-引脚"><a class="markdownIt-Anchor" href="#2-引脚"></a> 2 引脚</h1><p>CH340E 封装为 MSOP-10 ，引脚定义见上图。</p><p><strong>电源部分</strong></p><ul><li>VCC 外接 0.1uF 退耦电容</li><li>GND 直连 USB 总线的地</li><li>V3 电源<ul><li>3.3V 时直接连接 VCC</li><li>5.0V 时外接 0.1uF 退耦电容</li></ul></li></ul><p><strong>USB 信号部分</strong></p><ul><li>UD+ 直接连接 D+</li><li>UD- 直接连接 D-</li></ul><p><strong>MODEM 信号部分</strong></p><ul><li>CTS# 清除发送</li><li>DTR# 数据终端就绪</li><li>RTS# 请求发送</li></ul><p><strong>指示信号</strong></p><ul><li>TNOW 串口发送正在进行状态指示，高电平有效</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="1-概述"><a class="markdownIt-Anchor" href="#1-概述"></a> 1 概述</h1><p>首先是数据手册：</p><p>然后是各类封装：<br /><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E9%80%9F%E6%9F%A5%EF%BC%9ACH340%E8%AE%B0%E5%BD%95/5933bb2c_image-20240320092657061.png" alt="5933bb2c_image-20240320092657061.png" /></p><p>CH340 用的很多，简单来说就是一个能够将 USB 总线转换为各类串口的转换芯片。</p><p>之前使用的比较多的型号是 CH340C ，能够支持 USB3.0 规范，不过占用体积有点大。公司里用 CH340E 比较多，占用体积比较小，而且能够支持 USB3.1 规范。</p><h1 id="2-引脚"><a class="markdownIt-Anchor" href="#2-引脚"></a> 2 引脚</h1><p>CH340E 封装为 MSOP-10 ，引脚定义见上图。</p><p><strong>电源部分</strong></p><ul><li>VCC 外接 0.1uF 退耦电容</li><li>GND 直连 USB 总线的地</li><li>V3 电源<ul><li>3.3V 时直接连接 VCC</li><li>5.0V 时外接 0.1uF 退耦电容</li></ul></li></ul><p><strong>USB 信号部分</strong></p><ul><li>UD+ 直接连接 D+</li><li>UD- 直接连接 D-</li></ul><p><strong>MODEM 信号部分</strong></p><ul><li>CTS# 清除发送</li><li>DTR# 数据终端就绪</li><li>RTS# 请求发送</li></ul><p><strong>指示信号</strong></p><ul><li>TNOW 串口发送正在进行状态指示，高电平有效</li></ul>]]></content>
     
     
       
@@ -219,7 +219,7 @@
     <summary type="html">&lt;h1 id=&quot;1-概述&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1-概述&quot;&gt;&lt;/a&gt; 1 概述&lt;/h1&gt;
 &lt;p&gt;首先是数据手册：&lt;/p&gt;
 &lt;p&gt;然后是各类封装：&lt;br /&gt;
-&lt;img src=&quot;/img/legacy/1caef24c8fa9/</summary>
+&lt;img src=&quot;https://cdn.jsdelivr.net/</summary>
       
     
     
