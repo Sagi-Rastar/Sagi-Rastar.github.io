@@ -221,12 +221,12 @@
 </blockquote>
 <p>设置完成之后obsidian的相关设置应该长这样：</p>
 <ul>
-<li>设置 - 第三方插件设置 - Custom Attachment Location <img src="/blog/img/legacy/ec5e25ea0716/image-20231110115126650.png" alt="" /></li>
-<li>设置 - 文件与链接 <img src="/blog/img/legacy/ec5e25ea0716/image-20231110115305759.png" alt="" /></li>
+<li>设置 - 第三方插件设置 - Custom Attachment Location <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/88781f3a_image-20231110115126650.png" alt="88781f3a_image-20231110115126650.png" /></li>
+<li>设置 - 文件与链接 <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/d19bb655_image-20231110115305759.png" alt="d19bb655_image-20231110115305759.png" /></li>
 </ul>
 <p>这样设置完了之后，在后面用obsidian编写博客直接粘贴图片到编辑区后，就会在与当前笔记同级的同名子文件夹中保存图片，并且在正文中插入后面Hexo那边也可以识别的markdown图片链接，效果如下：
-<img src="/blog/img/legacy/ec5e25ea0716/image-20231110115759893.png" alt="" /></p>
-<p><img src="/blog/img/legacy/ec5e25ea0716/image-20231110115742882.png" alt="" /></p>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/87305750_image-20231110115759893.png" alt="87305750_image-20231110115759893.png" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/7d017255_image-20231110115742882.png" alt="7d017255_image-20231110115742882.png" /></p>
 <h5 id="31142-hexo端设置"><a class="markdownIt-Anchor" href="#31142-hexo端设置"></a> 3.1.1.4.2 Hexo端设置</h5>
 <p>修改 <code>_config.yml</code> 文件中的这个选项，这样可以生成一个同名的资源目录，用于存放同名文章使用的资产。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">marked:</span> <span class="comment"># 如果原本有就更改下面的这些选项，如果没有就添加</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
