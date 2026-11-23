@@ -1452,7 +1452,7 @@ void KEY2_IRQHandler(void)
 <p>Hexo 注入代码的方法：<em>编写注入代码，需要在博客的根目录下创建 <code>scripts</code> 文件夹，然后在里面任意命名创建一个 js 文件即可。</em></p>
 </blockquote>
 <p>主要的过程在这位大佬的博客里面叙述的非常详细，此处就不重造轮子，重点记录一下后面添加图片以及站点显示的一些文本如何对应源代码设置：
- <img src="/blog/img/legacy/b138cfda724f/image-20231111164045874.png" alt=""></p>
+ <img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/755a6108_image-20231111164045874.png" alt="755a6108_image-20231111164045874.png"></p>
 <ol>
 <li>导航栏的显示，考虑多语言修改</li>
 </ol>
@@ -1482,7 +1482,7 @@ date: 2023-11-11 15:59:01
 layout: pic
 ---
 </code></pre>
-<p><img src="/blog/img/legacy/b138cfda724f/image-20231111165046333.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/532710b4_image-20231111165046333.png" alt="532710b4_image-20231111165046333.png"></p>
 <ol>
 <li>图集分类 </li>
 <li>图片名称都是本地路径下的文件夹与文件名</li>
