@@ -160,7 +160,7 @@ var e={"2023-11-20-随笔":`<h1>1 博客是拿来记的</h1>
 <p>之前了解到 github action、CI/CD 的时候想尝鲜就在拿 mkdocs 搭的技术笔记那边浅尝了一下 github 的羊毛，发现还蛮好用，移动端只要能推送 md 文件到仓库上之后就可以发布博客，自动化程度还是蛮高的，编译静态网站文件之类的操作也不用太耗时，直接薅 github 羊毛还挺合适。</p>
 <p>不过日常随笔这边有一个比较尴尬的点就是 hexo 新建一篇博客的时候还是得用 <code>hexo new 博客名称 </code> （靠）。</p>
 <p>其实好像通过 <code>hexo new</code> 这条指令新建的 md 文件也没有添加啥东西，就是自动生成的日期 meta 元素而已。后面可以考虑用 obsidian 的模板插件搞一个跨平台的写作环境。</p>
-<p><img src="/blog/img/legacy/ed5631d5495f/image-20241101164054129.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/2024-11-01-%E9%9A%8F%E7%AC%94/58290dd2_image-20241101164054129.png" alt="58290dd2_image-20241101164054129.png"></p>
 <blockquote>
 <p>这篇博客的 meta 信息</p>
 </blockquote>
