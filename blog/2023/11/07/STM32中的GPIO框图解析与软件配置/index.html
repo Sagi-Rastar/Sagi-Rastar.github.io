@@ -129,7 +129,7 @@
   <div class="post-body prose"><h1 id="1-学习笔记stm32中的gpio框图解析与软件配置"><a class="markdownIt-Anchor" href="#1-学习笔记stm32中的gpio框图解析与软件配置"></a> 1 【学习笔记】STM32中的GPIO框图解析与软件配置</h1>
 <h2 id="11-gpio简介"><a class="markdownIt-Anchor" href="#11-gpio简介"></a> 1.1 GPIO简介</h2>
 <p>GPIO全称为General-purpose I/O ports，一般译为“通用输入输出端口”，是STM32单片机中最基础的外设之一。
-<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106182513.png" alt="" /></p>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/eea5898c_20230106182513.png" alt="eea5898c_20230106182513.png" /></p>
 <blockquote>
 <p>STM32芯片架构简图 参考&lt;STM32库开发实战指南——基于野火MINI开发板&gt;</p>
 </blockquote>
@@ -140,7 +140,7 @@
 <p><code>输出功能</code>可以实现控制引脚输出高低电平，实现开关控制，也可以接入继电器# 【学习笔记】STM32中的GPIO框图解析与软件配置</p>
 <h2 id="12-gpio简介"><a class="markdownIt-Anchor" href="#12-gpio简介"></a> 1.2 GPIO简介</h2>
 <p>GPIO全称为General-purpose I/O ports，一般译为“通用输入输出端口”，是STM32单片机中最基础的外设之一。
-<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106182513.png" alt="" /></p>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/eea5898c_20230106182513.png" alt="eea5898c_20230106182513.png" /></p>
 <blockquote>
 <p>STM32芯片架构简图 参考&lt;STM32库开发实战指南——基于野火MINI开发板&gt;</p>
 </blockquote>
@@ -155,7 +155,7 @@
 <p>过一遍理解就可，有个印象</p>
 </blockquote>
 <h2 id="13-gpio基本框图"><a class="markdownIt-Anchor" href="#13-gpio基本框图"></a> 1.3 GPIO基本框图</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106151230.png" alt="GPIO基本框图" />
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/768974d0_20230106151230.png" alt="768974d0_20230106151230.png" />
 虽然标注的有点花花绿绿（）但是大致上可以分为三个部分：</p>
 <ul>
 <li>紫色为引脚与外部设备连接的端口。</li>
@@ -211,7 +211,7 @@
 <p>对bsp的个人理解：不同外设的控制代码。</p>
 </blockquote>
 <p>本次使用的开发板是<code>野火的F103-MINI 开发板</code>，下面是本次例程所涉及的硬件原理图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111150900.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/c93a6652_20230111150900.png" alt="c93a6652_20230111150900.png" /></p>
 <p>如图所示容易看出，若将这两个GPIO引脚设置为低电平即可点亮LED。</p>
 <p>本次例程中关于引脚定义的宏：</p>
 <blockquote>
@@ -224,7 +224,7 @@
 <p><code>BSRR</code>和<code>ODR</code>在前文详解GPIO框图的输出模式时候提到过
 <code>BSRR</code>：置位/复位寄存器 GPIOx_BSRR，Bit Set/Reset Register
 <code>ODR</code>：输出数据寄存器GPIOx_ODR，Output Data Register
-<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111155258.png" alt="" /></p>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/32373744_20230111155258.png" alt="32373744_20230111155258.png" /></p>
 </blockquote>
 <blockquote>
 <p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。
@@ -298,7 +298,7 @@ AF for alternate function，复用功能
 <p>过一遍理解就可，有个印象</p>
 </blockquote>
 <h2 id="16-gpio基本框图"><a class="markdownIt-Anchor" href="#16-gpio基本框图"></a> 1.6 GPIO基本框图</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230106151230.png" alt="GPIO基本框图" />
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/768974d0_20230106151230.png" alt="768974d0_20230106151230.png" />
 虽然标注的有点花花绿绿（）但是大致上可以分为三个部分：</p>
 <ul>
 <li>紫色为引脚与外部设备连接的端口。</li>
@@ -354,7 +354,7 @@ AF for alternate function，复用功能
 <p>对bsp的个人理解：不同外设的控制代码。</p>
 </blockquote>
 <p>本次使用的开发板是<code>野火的F103-MINI 开发板</code>，下面是本次例程所涉及的硬件原理图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111150900.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/c93a6652_20230111150900.png" alt="c93a6652_20230111150900.png" /></p>
 <p>如图所示容易看出，若将这两个GPIO引脚设置为低电平即可点亮LED。</p>
 <p>本次例程中关于引脚定义的宏：</p>
 <blockquote>
@@ -367,7 +367,7 @@ AF for alternate function，复用功能
 <p><code>BSRR</code>和<code>ODR</code>在前文详解GPIO框图的输出模式时候提到过
 <code>BSRR</code>：置位/复位寄存器 GPIOx_BSRR，Bit Set/Reset Register
 <code>ODR</code>：输出数据寄存器GPIOx_ODR，Output Data Register
-<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/20230111155258.png" alt="" /></p>
+<img src="https://cdn.jsdelivr.net/gh/Sagi-Rastar/SagiImg@main/img/STM32%E4%B8%AD%E7%9A%84GPIO%E6%A1%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/32373744_20230111155258.png" alt="32373744_20230111155258.png" /></p>
 </blockquote>
 <blockquote>
 <p>由<code>输出数据寄存器GPIOx_ODR</code>开始，单片机可以对该寄存器修改值，从而给输出控制一个信号。
