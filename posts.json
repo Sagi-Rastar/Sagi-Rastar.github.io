@@ -1,11 +1,6 @@
 {
- "generatedAt": "2026-11-24T00:24:56.270Z",
+ "generatedAt": "2026-11-24T00:26:27.350Z",
  "posts": [
-  {
-   "title": "一块黑屏的 TFT：从 RTT 日志到 QSPI 虚焊",
-   "url": "/blog/2026/11/04/%E4%B8%80%E5%9D%97%E9%BB%91%E5%B1%8F%E7%9A%84-TFT-%E4%BB%8E-RTT-%E6%97%A5%E5%BF%97%E5%88%B0-QSPI-%E8%99%9A%E7%84%8A/",
-   "date": "2026-11-04"
-  },
   {
    "title": "2024-11-24-随笔",
    "url": "/blog/2024/11/24/2024-11-24-%E9%9A%8F%E7%AC%94/",
@@ -100,6 +95,11 @@
    "title": "hexo-fluid主题添加图集瀑布流功能",
    "url": "/blog/2023/11/11/hexo-fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E7%80%91%E5%B8%83%E6%B5%81%E5%8A%9F%E8%83%BD/",
    "date": "2023-11-11"
+  },
+  {
+   "title": "关于我使用obsidian加hexo部署个人博客的过程",
+   "url": "/blog/2023/11/10/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BD%BF%E7%94%A8obsidian%E5%8A%A0hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/",
+   "date": "2023-11-10"
   }
  ]
 }
